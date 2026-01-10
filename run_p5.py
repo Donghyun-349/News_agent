@@ -248,8 +248,8 @@ def init_sheet(sheet_id: str, tab_name: str):
         adapter.worksheet.clear()
         
         # 헤더
+        # 헤더
         headers = [
-            [f"=== {tab_name} Results ===", "", "", "", "", "", ""],
             ["Category", "Topic Title", "News Count", "Reason", "Publisher", "Title", "URL"]
         ]
         adapter.worksheet.insert_rows(headers, 1)
