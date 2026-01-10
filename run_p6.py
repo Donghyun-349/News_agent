@@ -208,32 +208,35 @@ def curate_articles(articles: List[Dict[str, Any]], max_candidates: int = 12) ->
 
     return selected
 
-def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dict, news_db: DatabaseAdapter, model: Any, system_prompt: str) -> tuple:
+def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dict, model: Any, system_prompt: str) -> tuple:
     """Worker function for parallel execution"""
     try:
         if not topic_ids:
             return section_name, "특이사항 없음."
 
-        # Gather full data
-        section_context_data = []
-        for tid in topic_ids:
-            if tid in topic_map:
-                t_obj = topic_map[tid]
-                # Efficiently parse only if needed, though here we need it for fetch functions
-                news_ids = json.loads(t_obj['news_ids_json'])
-                articles = fetch_article_details(news_db, news_ids)
-                
-                # Token Optimization: Truncate snippets/remove extra fields if needed here
-                # For now, we trust fetch_article_details output or can filter it
-                
-                # Curation
-                curated_articles = curate_articles(articles, max_candidates=12)
+        # Create independent DB connection for this thread
+        local_db = DatabaseAdapter(db_type=DB_TYPE, database=DB_NAME)
+        local_db.connect()
 
-                section_context_data.append({
-                    "title": t_obj['title'],
-                    "count": t_obj['count'],
-                    "articles": curated_articles
-                })
+        try:
+            # Gather full data
+            section_context_data = []
+            for tid in topic_ids:
+                if tid in topic_map:
+                    t_obj = topic_map[tid]
+                    news_ids = json.loads(t_obj['news_ids_json'])
+                    articles = fetch_article_details(local_db, news_ids)
+                    
+                    # Curation
+                    curated_articles = curate_articles(articles, max_candidates=12)
+
+                    section_context_data.append({
+                        "title": t_obj['title'],
+                        "count": t_obj['count'],
+                        "articles": curated_articles
+                    })
+        finally:
+            local_db.close()
         
         sec_prompt = get_section_body_prompt(section_name)
         sec_json = json.dumps(section_context_data, ensure_ascii=False, indent=2)
@@ -244,27 +247,34 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         logger.error(f"Error processing section '{section_name}': {e}")
         return section_name, "생성 중 오류 발생"
 
-def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict, news_db: DatabaseAdapter, model: Any, system_prompt: str) -> tuple:
+def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict, model: Any, system_prompt: str) -> tuple:
     """Worker function for Executive Summary"""
     try:
         if not exec_summary_ids:
             return "Executive Summary", "N/A (No topics selected)"
             
-        exec_context_data = []
-        for tid in exec_summary_ids:
-            if tid in topic_map:
-                t_obj = topic_map[tid]
-                news_ids = json.loads(t_obj['news_ids_json'])
-                articles = fetch_article_details(news_db, news_ids)
-                # Curation
-                curated_articles = curate_articles(articles, max_candidates=12)
+        # Create independent DB connection for this thread
+        local_db = DatabaseAdapter(db_type=DB_TYPE, database=DB_NAME)
+        local_db.connect()
 
-                exec_context_data.append({
-                    "title": t_obj['title'],
-                    "category": t_obj['display_category'],
-                    "count": t_obj['count'],
-                    "articles": curated_articles
-                })
+        try:
+            exec_context_data = []
+            for tid in exec_summary_ids:
+                if tid in topic_map:
+                    t_obj = topic_map[tid]
+                    news_ids = json.loads(t_obj['news_ids_json'])
+                    articles = fetch_article_details(local_db, news_ids)
+                    # Curation
+                    curated_articles = curate_articles(articles, max_candidates=12)
+
+                    exec_context_data.append({
+                        "title": t_obj['title'],
+                        "category": t_obj['display_category'],
+                        "count": t_obj['count'],
+                        "articles": curated_articles
+                    })
+        finally:
+            local_db.close()
         
         exec_prompt = get_key_takeaways_prompt()
         exec_json = json.dumps(exec_context_data, ensure_ascii=False, indent=2)
@@ -434,14 +444,14 @@ def main():
         # 6-1. Submit Executive Summary Task
         futures.append(executor.submit(
             process_executive_summary_task, 
-            exec_summary_ids, topic_map, news_db, model, system_prompt
+            exec_summary_ids, topic_map, model, system_prompt
         ))
         
         # 6-2. Submit Section Tasks
         for section_name, topic_ids in section_picks.items():
             futures.append(executor.submit(
                 process_section_task,
-                section_name, topic_ids, topic_map, news_db, model, system_prompt
+                section_name, topic_ids, topic_map, model, system_prompt
             ))
             
         # 6-3. Collect Results
