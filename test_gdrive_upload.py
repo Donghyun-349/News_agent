@@ -9,11 +9,25 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 # Import the new adapter
 from src.exporters.gdrive import GDriveAdapter
+import logging
+
+# Configure logging to show everything
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def main():
     print("="*60)
     print("📂 Google Drive Upload Test")
     print("="*60)
+
+    # Debug: Check Env Var
+    token_val = os.getenv("GOOGLE_TOKEN_JSON")
+    if token_val:
+        print(f"ℹ️ GOOGLE_TOKEN_JSON found. Length: {len(token_val)}")
+        print(f"   First 10 chars: {token_val[:10]}...")
+    else:
+        print("⚠️ GOOGLE_TOKEN_JSON is NOT set or empty.")
+
+    # 1. Check Folder ID
 
     # 1. Check Folder ID
     folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
