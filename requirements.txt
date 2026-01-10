@@ -1,0 +1,16 @@
+python-dotenv
+requests
+beautifulsoup4
+lxml
+lxml_html_clean
+pandas
+newspaper3k
+feedparser
+google-generativeai
+openai
+schedule
+pytz
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
