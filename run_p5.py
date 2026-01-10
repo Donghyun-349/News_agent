@@ -388,8 +388,8 @@ def main():
     sorted_categories = sorted(grouped.keys())
 
     # 4. Sheet Init (Clear & Headers) - BEFORE Loop
-    # tab_name = datetime.now().strftime("%y%m%d") # 날짜별 탭 생성 대신 고정 탭 사용
-    tab_name = "5.Topics" 
+    tab_name = datetime.now().strftime("%y%m%d")
+    # tab_name = "5.Topics"  
     if not args.no_export:
         init_sheet(GOOGLE_SHEET_ID, tab_name)
     
