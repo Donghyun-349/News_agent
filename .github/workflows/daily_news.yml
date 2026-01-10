@@ -27,21 +27,22 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Write Google service account file
+      env:
+        GOOGLE_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+      run: |
+        mkdir -p credentials
+        echo "$GOOGLE_JSON" > credentials/service_account.json
+
     - name: Create .env file
       run: |
         echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
         echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
         echo "GOOGLE_SHEET_ID=${{ secrets.GOOGLE_SHEET_ID }}" >> .env
-        # Add other necessary env vars here, using secrets or defaults
+        echo "GOOGLE_SERVICE_ACCOUNT_PATH=credentials/service_account.json" >> .env
         echo "LOG_LEVEL=INFO" >> .env
         echo "DB_TYPE=sqlite" >> .env
         echo "RESET_MODE=true" >> .env
-
-    - name: Create dummy service account (if needed)
-      # If your code Strictly requires the file to exist even if not used, create a dummy
-      run: |
-        mkdir -p credentials
-        echo '{}' > credentials/service_account.json
 
     - name: Run Daily Pipeline
       run: |
