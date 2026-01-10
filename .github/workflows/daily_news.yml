@@ -45,8 +45,11 @@ jobs:
         echo "LOG_LEVEL=INFO" >> .env
         echo "DB_TYPE=sqlite" >> .env
         echo "RESET_MODE=true" >> .env
+        echo "GOOGLE_DRIVE_FOLDER_ID=${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}" >> .env
 
     - name: Run Daily Pipeline
+      env:
+        GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
       run: |
         python daily_runner.py
 

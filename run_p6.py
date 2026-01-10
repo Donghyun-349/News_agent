@@ -497,6 +497,27 @@ def main():
             f.write(final_md)
         logger.info(f"✅ [Markdown] Report saved to: {md_output_file}")
     
+    # 8. Upload to Google Drive (Optional)
+    google_drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
+    if google_drive_folder_id:
+        logger.info(f"📤 Uploading reports to Google Drive (Folder ID: {google_drive_folder_id})...")
+        try:
+            from src.exporters.gdrive import GDriveAdapter
+            drive_adapter = GDriveAdapter()
+            
+            # Upload JSON
+            if "json" in args.formats:
+                drive_adapter.upload_file(str(json_output_file), google_drive_folder_id, mime_type="application/json")
+                
+            # Upload Markdown
+            if "markdown" in args.formats:
+                drive_adapter.upload_file(str(md_output_file), google_drive_folder_id, mime_type="text/markdown")
+                
+        except Exception as e:
+            logger.error(f"❌ Google Drive Upload Failed: {e}")
+    else:
+        logger.info("ℹ️ GOOGLE_DRIVE_FOLDER_ID not set. Skipping Drive upload.")
+
     topics_db.close()
     news_db.close()
 
