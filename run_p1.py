@@ -288,11 +288,12 @@ def main():
         save_to_database(results, db_adapter)
         db_adapter.close()
     
-    # 3. 출력
-    if any(r["success"] and r["count"] > 0 for r in results.values()):
-        export_to_google_sheet(results, SHEET_ID)
-    else:
-        logger.warning("수집된 데이터가 없어 시트 출력을 건너뜁니다.")
+    # 3. 출력 (Phase 1, 2, 4는 시트 출력 생략 요청으로 주석 처리)
+    #if any(r["success"] and r["count"] > 0 for r in results.values()):
+    #    export_to_google_sheet(results, SHEET_ID)
+    #else:
+    #    logger.warning("수집된 데이터가 없어 시트 출력을 건너뜁니다.")
+    pass
 
 if __name__ == "__main__":
     main()

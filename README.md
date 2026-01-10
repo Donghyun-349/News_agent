@@ -49,7 +49,22 @@ To run the full pipeline manually:
 python daily_runner.py
 ```
 
-To schedule on Windows:
+### Option A: GitHub Actions (Recommended)
+
+You can run this pipeline entirely for free on GitHub without a dedicated server.
+
+1. **Push the code** to a GitHub repository.
+2. **Go to Settings > Secrets and variables > Actions**.
+3. Add the following **Repository secrets**:
+    - `GOOGLE_API_KEY`: Your Gemini API Key
+    - `OPENAI_API_KEY`: Your OpenAI API Key
+    - `GOOGLE_SHEET_ID`: The ID of your Google Sheet
+4. The workflow is configured in `.github/workflows/daily_news.yml` to run daily at **7:00 AM KST** (22:00 UTC).
+5. You can also trigger it manually from the **Actions** tab.
+
+### Option B: Windows Task Scheduler (Local)
+
+To schedule on your local Windows PC:
 
 1. Open **Task Scheduler**.
 2. Create a new Basic Task.

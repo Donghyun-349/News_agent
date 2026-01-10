@@ -308,9 +308,10 @@ def main():
     logger.info(f"✅ Completed. {run_stats['processed']} processed (KEEP: {run_stats['KEEP']}, DROP: {run_stats['DROP']})")
     
     
-    # 3. 결과 출력
-    if not args.no_export:
-        export_to_gsheet(run_stats, GOOGLE_SHEET_ID, db)
+    # 3. 결과 출력 (생략)
+    # if not args.no_export:
+    #     export_to_gsheet(run_stats, GOOGLE_SHEET_ID, db)
+    pass
 
     # 4. DROP 기사 삭제 (Cleanup)
     delete_dropped_articles(db)

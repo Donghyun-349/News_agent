@@ -132,9 +132,10 @@ def main():
         db_adapter.close()
         return
 
-    # 3. 결과 출력
-    if not args.no_export:
-        export_to_gsheet(stats, GOOGLE_SHEET_ID)
+    # 3. 결과 출력 (생략)
+    # if not args.no_export:
+    #     export_to_gsheet(stats, GOOGLE_SHEET_ID)
+    pass
     
     logger.info("\n" + "="*80)
     logger.info("✅ Phase 2 Deduplication 완료")
