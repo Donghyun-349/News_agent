@@ -205,9 +205,32 @@ def main():
             "dropped_examples": dropped_examples
         }
         
-        # 5. 결과 출력
-        if not args.no_export:
-            export_to_gsheet(stats, GOOGLE_SHEET_ID)
+        # Stats Collection
+        try:
+            from src.utils.stats_collector import StatsCollector
+            sc = StatsCollector()
+            sc.set_stat("keyword_filtered", stats["total_kept"]) # Or total_dropped? Summary script expects 'keyword filtered' count? 
+            # run_summary.py uses 'keyword_filtered' key.
+            # Usually meant 'how many remain after filter' or 'how many filtered OUT'?
+            # Actually, P3 is "Keyword Filtering". The summary column usually tracks "Survivor Count" at each stage.
+            # Col 1: Total Collected
+            # Col 2: Dedup Removed (This is removed count)
+            # Col 3: Keyword Filtered (This could be meaningful as survivors or removed)
+            # Let's check run_summary.py logic or standard pattern.
+            # Let's log SURVIVORS for clarity or REMOVED?
+            # run_summary just prints the value.
+            # Let's store 'total_kept' as 'keyword_filtered_kept' ? Or store 'dropped'?
+            # Let's stick to storing 'total_dropped' as 'keyword_filtered_dropped' if the column header implies action.
+            # Run Summary Header: "Keyword Filtered" -> ambiguous.
+            # Let's assumed it means "Articles Filtered Out". 
+            sc.set_stat("keyword_filtered", stats["total_dropped"])
+        except Exception as e:
+            logger.error(f"Stats collection failed: {e}")
+        
+        # 5. 결과 출력 (생략)
+        # if not args.no_export:
+        #     export_to_gsheet(stats, GOOGLE_SHEET_ID)
+        pass
             
         logger.info("\n" + "="*80)
         logger.info("✅ Phase 3 Filtering 완료")
