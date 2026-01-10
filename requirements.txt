@@ -1,0 +1,26 @@
+# Core
+python-dotenv
+requests
+beautifulsoup4
+lxml
+pandas
+newspaper3k
+feedparser
+
+# AI/LLM
+google-generativeai
+openai
+
+# Database
+# psycopg2-binary  # Uncomment if using PostgreSQL
+# pymysql          # Uncomment if using MySQL
+
+# Utilities
+schedule
+pytz
+
+# Google Sheets (if used via API)
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client

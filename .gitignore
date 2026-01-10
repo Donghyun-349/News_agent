@@ -1,0 +1,27 @@
+# Environment Variables
+.env
+
+# Dependencies
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Data & Logs
+data/
+logs/
+outputs/
+backup/
+
+# Credentials
+credentials/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

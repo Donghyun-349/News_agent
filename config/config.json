@@ -1,0 +1,82 @@
+{
+  "settings": {
+    "us_real_estate_target_count": 15,
+    "big_tech_target_count": 30
+  },
+  "rss_feeds": {
+    "Korean Economy": {
+      "feeds": {
+        "한국경제": "https://www.hankyung.com/feed/economy",
+        "매일경제": "https://www.mk.co.kr/rss/30100041/",
+        "서울경제": "https://www.sedaily.com/rss/economy",
+        "파이낸셜뉴스": "https://www.fnnews.com/rss/r20/fn_realnews_economy.xml",
+        "이투데이": "https://rss.etoday.co.kr/eto/political_economic_news.xml",
+        "이데일리": "https://rss.edaily.co.kr/economic_news.xml"
+      },
+      "options": {
+        "use_ssl_context": false,
+        "custom_processor": "korean_economy_processor"
+      }
+    },
+    "FT": {
+      "feeds": {
+        "FT Main": "https://www.ft.com/?format=rss",
+        "FT Markets": "https://www.ft.com/markets?format=rss",
+        "FT Companies": "https://www.ft.com/companies?format=rss"
+      },
+      "options": {
+        "use_ssl_context": true,
+        "custom_processor": null
+      }
+    },
+    "Investing": {
+      "feeds": {
+        "Investing (Economy)": "https://www.investing.com/rss/news_14.rss",
+        "Investing (Commodities)": "https://www.investing.com/rss/news_11.rss",
+        "Investing (Forex)": "https://www.investing.com/rss/news_1.rss",
+        "Investing (Stocks)": "https://www.investing.com/rss/news_25.rss"
+      },
+      "options": {
+        "use_ssl_context": false,
+        "custom_processor": null
+      }
+    }
+  },
+  "search_queries": {
+    "Big Tech": {
+      "Tesla": {
+        "primary": "Tesla (Optimus OR \"Tesla Bot\" OR humanoid OR Autopilot OR FSD OR robotaxi OR battery OR \"4680 cell\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -\"stock price\" -stock -chart -forecast -blog",
+        "fallback": "Tesla (Optimus OR \"Tesla Bot\" OR humanoid OR Autopilot OR FSD OR robotaxi OR battery OR \"4680 cell\") when:1d -\"stock price\" -stock -chart -forecast -blog"
+      },
+      "Nvidia": {
+        "primary": "Nvidia (\"Cosmos platform\" OR Cosmos OR \"physical AI\" OR \"digital twin\" OR Omniverse OR GPU OR Blackwell OR H100 OR \"AI factory\" OR \"data center\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -stock -chart",
+        "fallback": "Nvidia (\"Cosmos platform\" OR Cosmos OR \"physical AI\" OR \"digital twin\" OR Omniverse OR GPU OR Blackwell OR H100 OR \"AI factory\" OR \"data center\") when:1d -stock -chart"
+      },
+      "Microsoft": {
+        "primary": "Microsoft (\"nuclear energy\" OR \"power grid\" OR \"data center energy\" OR \"Three Mile Island\" OR Copilot OR Azure OR OpenAI OR \"AI infrastructure\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -stock",
+        "fallback": "Microsoft (\"nuclear energy\" OR \"power grid\" OR \"data center energy\" OR \"Three Mile Island\" OR Copilot OR Azure OR OpenAI OR \"AI infrastructure\") when:1d -stock"
+      },
+      "Google": {
+        "primary": "Google (\"clean energy\" OR \"geothermal\" OR \"nuclear power\" OR \"data center power\" OR Gemini OR TPU OR \"AI Overviews\" OR cloud) (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -stock",
+        "fallback": "Google (\"clean energy\" OR \"geothermal\" OR \"nuclear power\" OR \"data center power\" OR Gemini OR TPU OR \"AI Overviews\" OR cloud) when:1d -stock"
+      },
+      "General Humanoid & AI DC": {
+        "primary": "(\"humanoid robot\" OR \"AI data center\" OR \"AI power consumption\" OR \"liquid cooling\" OR \"Figure AI\" OR \"Boston Dynamics\" OR 1X) (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:techcrunch.com) when:1d",
+        "fallback": "(\"humanoid robot\" OR \"AI data center\" OR \"AI power consumption\" OR \"liquid cooling\" OR \"Figure AI\" OR \"Boston Dynamics\" OR 1X) when:1d"
+      }
+    },
+    "US Real Estate": {
+      "Market": {
+        "primary": "(\"housing market\" OR \"real estate market\" OR \"home prices\" OR \"mortgage rates\" OR \"housing inventory\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:cnbc.com OR site:redfin.com OR site:zillow.com) when:1d",
+        "fallback": "(\"housing market\" OR \"real estate market\" OR \"home prices\" OR \"mortgage rates\" OR \"housing inventory\") when:1d"
+      },
+      "Policy": {
+        "primary": "(\"housing policy\" OR \"Fed rate cut\" OR \"federal reserve\" OR \"mortgage bad rates\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:cnbc.com) when:1d",
+        "fallback": "(\"housing policy\" OR \"Fed rate cut\" OR \"federal reserve\" OR \"mortgage rates\") when:1d"
+      },
+      "Commercial": {
+        "primary": "(\"commercial real estate\" OR \"CRE\" OR \"office vacancy\" OR \"retail space\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com) when:1d"
+      }
+    }
+  }
+}
