@@ -55,7 +55,7 @@ def main():
         "Dedup Removed", "Keyword Filtered", "LLM Keep", "LLM Drop"
     ]
     
-    TAB_NAME = "1.news_scrap"
+    TAB_NAME = "log"
     
     try:
         adapter = GSheetAdapter(sheet_id=GOOGLE_SHEET_ID, worksheet_name=TAB_NAME)
