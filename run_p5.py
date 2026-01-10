@@ -31,16 +31,16 @@ from storage.db_adapter import DatabaseAdapter
 from src.exporters.gsheet import GSheetAdapter
 from src.utils.logger import setup_logger
 from config.settings import (
-    DB_TYPE, DB_NAME, LOG_LEVEL, OPENAI_API_KEY, GOOGLE_SHEET_ID, BASE_DIR
+    DB_TYPE, DB_NAME, LOG_LEVEL, OPENAI_API_KEY, GOOGLE_API_KEY, GEMINI_MODEL, GOOGLE_SHEET_ID, BASE_DIR
 )
 from config.prompts.topic_clustering import get_topic_clustering_prompt
 
-# OpenAI available check
+# Google Generative AI check
 try:
-    from openai import OpenAI
-    OPENAI_AVAILABLE = True
+    import google.generativeai as genai
+    GENAI_AVAILABLE = True
 except ImportError:
-    OPENAI_AVAILABLE = False
+    GENAI_AVAILABLE = False
 
 # 로거 설정
 logger = setup_logger(log_level=LOG_LEVEL)
@@ -210,8 +210,8 @@ def normalize_clusters(parsed: Any) -> List[Dict[str, Any]]:
     return valid_clusters
 
 
-def cluster_step1(client: OpenAI, category: str, articles: List[Dict[str, Any]], model: str = "gpt-4o") -> List[Dict[str, Any]]:
-    """Step 1: 1차 클러스터링 (Reason 기반)"""
+def cluster_step1(model: Any, category: str, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Step 1: 1차 클러스터링 (Reason 기반) - Gemini Version"""
     if not articles:
         return []
     
@@ -224,17 +224,11 @@ def cluster_step1(client: OpenAI, category: str, articles: List[Dict[str, Any]],
         for a in articles
     ]
     user_content = json.dumps(input_data, ensure_ascii=False, indent=2)
+    full_prompt = f"{system_prompt}\n\nCategory: {category}\n\nArticles:\n{user_content}"
 
     try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"Category: {category}\n\nArticles:\n{user_content}"}
-            ],
-            temperature=0.0,
-        )
-        content = clean_llm_json_output(response.choices[0].message.content)
+        response = model.generate_content(full_prompt)
+        content = clean_llm_json_output(response.text)
         parsed = robust_json_load(content)
         return normalize_clusters(parsed)
 
@@ -352,12 +346,16 @@ def main():
         topics_db.close()
         return
 
-    if not OPENAI_AVAILABLE or not OPENAI_API_KEY:
-        logger.error("❌ OpenAI API Key is missing.")
+    if not GENAI_AVAILABLE:
+        logger.error("❌ google-generativeai package is not installed.")
+        return
+        
+    if not GOOGLE_API_KEY:
+        logger.error("❌ GOOGLE_API_KEY is missing.")
         return
 
     logger.info("="*80)
-    logger.info("🚀 Phase 5: Event Clustering Start")
+    logger.info(f"🚀 Phase 5: Event Clustering Start (Model: {GEMINI_MODEL})")
     logger.info("="*80)
 
     # 1. DB 연결 (News DB)
@@ -378,7 +376,9 @@ def main():
         cat = a["category"] or "Uncategorized"
         grouped[cat].append(a)
 
-    client = OpenAI(api_key=OPENAI_API_KEY)
+    # Initialize Gemini
+    genai.configure(api_key=GOOGLE_API_KEY)
+    model = genai.GenerativeModel(GEMINI_MODEL)
     
     # 결과를 모을 리스트
     all_results = []
@@ -402,7 +402,7 @@ def main():
         logger.info(f"Processing Category: {category} ({len(items)} articles)")
         
         # --- Step 1: Clustering ---
-        step1_clusters = cluster_step1(client, category, items)
+        step1_clusters = cluster_step1(model, category, items)
         
         # Add category info to results
         for c in step1_clusters:
