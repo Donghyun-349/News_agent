@@ -45,7 +45,7 @@ GOOGLE_SERVICE_ACCOUNT_PATH = os.getenv(
     "GOOGLE_SERVICE_ACCOUNT_PATH",
     str(BASE_DIR / "credentials" / "service_account.json")
 )
-GOOGLE_SHEET_ID = os.getenv("GOOGLE_SHEET_ID", "1XA0G4Po7hCR81IyibTRgzguD4hyB36rHJSVgDRCW-pg")
+GOOGLE_SHEET_ID = os.getenv("GOOGLE_SHEET_ID", "")
 GOOGLE_WORKSHEET_NAME = os.getenv("GOOGLE_WORKSHEET_NAME", "Sheet1")
 ENABLE_GOOGLE_SHEETS = os.getenv("ENABLE_GOOGLE_SHEETS", "true").lower() == "true"
 ENABLE_DEBUG_OUTPUT = os.getenv("ENABLE_DEBUG_OUTPUT", "true").lower() == "true"  # 개발 중 기본값: 활성화
