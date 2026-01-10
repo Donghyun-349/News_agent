@@ -49,7 +49,8 @@ def main():
         "run_p3.py",  # Pre-processing (deprecated? check logic) - Wait, run_p3 is usually keyword filtering
         "run_p4.py",  # LLM Classification
         "run_p5.py",  # Clustering/Topic Generation
-        "run_p6.py"   # Report Generation
+        "run_p6.py",   # Report Generation
+        "run_summary.py" # Final Summary Export
     ]
     
     for script in scripts:

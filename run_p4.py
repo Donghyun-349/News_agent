@@ -307,6 +307,15 @@ def main():
             
     logger.info(f"✅ Completed. {run_stats['processed']} processed (KEEP: {run_stats['KEEP']}, DROP: {run_stats['DROP']})")
     
+    # Stats Collection
+    try:
+        from src.utils.stats_collector import StatsCollector
+        sc = StatsCollector()
+        sc.set_stat("llm_keep", run_stats['KEEP'])
+        sc.set_stat("llm_drop", run_stats['DROP'])
+    except Exception as e:
+        logger.error(f"Stats collection failed: {e}")
+    
     
     # 3. 결과 출력 (생략)
     # if not args.no_export:

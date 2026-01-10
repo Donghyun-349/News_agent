@@ -127,6 +127,15 @@ def main():
     try:
         deduplicator = TitleDeduplicator(db_adapter)
         stats = deduplicator.process()
+        
+        # Stats Collection
+        try:
+            from src.utils.stats_collector import StatsCollector
+            sc = StatsCollector()
+            sc.set_stat("dedup_removed", stats["total_duplicates_removed"])
+        except Exception as e:
+            logger.error(f"Stats collection failed: {e}")
+            
     except Exception as e:
         logger.error(f"❌ Deduplication 처리 중 오류 발생: {e}", exc_info=True)
         db_adapter.close()

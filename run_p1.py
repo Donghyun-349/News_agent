@@ -142,6 +142,18 @@ def collect_all_sources() -> Dict[str, Dict[str, Any]]:
                 logger.error(f"Error collecting {name}: {e}")
                 collection_results[name] = {"success": False, "articles": [], "count": 0}
                 
+    # Stats Collection
+    try:
+        from src.utils.stats_collector import StatsCollector
+        stats_collector = StatsCollector()
+        for name, data in collection_results.items():
+            if data["success"]:
+                stats_collector.update_collection(name, data["count"])
+            else:
+                stats_collector.update_collection(name, 0)
+    except Exception as e:
+        logger.error(f"Stats collection failed: {e}")
+
     return collection_results
 
 
