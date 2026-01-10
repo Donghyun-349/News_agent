@@ -32,7 +32,7 @@ jobs:
         GOOGLE_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
       run: |
         mkdir -p credentials
-        echo "$GOOGLE_JSON" > credentials/service_account.json
+        python -c "import os; f = open('credentials/service_account.json', 'w', encoding='utf-8'); f.write(os.environ['GOOGLE_JSON']); f.close()"
 
     - name: Create .env file
       run: |
