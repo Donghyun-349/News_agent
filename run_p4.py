@@ -80,7 +80,7 @@ def get_articles_to_process(db: DatabaseAdapter, limit: int = None, force_all: b
         logger.error(f"❌ Failed to fetch articles: {e}")
         return []
 
-def call_llm_batch(client: OpenAI, articles: List[Dict[str, Any]], model: str = "gpt-4o") -> List[Dict[str, Any]]:
+def call_llm_batch(client: OpenAI, articles: List[Dict[str, Any]], model: str = "gpt-4o-mini") -> List[Dict[str, Any]]:
     """LLM 배치 호출"""
     if not articles:
         return []
@@ -147,7 +147,7 @@ def call_llm_batch(client: OpenAI, articles: List[Dict[str, Any]], model: str = 
         return []
 
 # 재정의: response_format 없이 호출하는 버전 (Array 반환을 위해)
-def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], model: str = "gpt-4o") -> List[Dict[str, Any]]:
+def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], model: str = "gpt-4o-mini") -> List[Dict[str, Any]]:
     system_prompt = get_p4_topic_classification_prompt()
     user_content_data = [
         {"id": str(a["id"]), "title": a["title"], "snippet": a["snippet"][:200]} # 스니펫 200자로 제한 
