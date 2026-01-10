@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       folder_id:
-        description: 'Google Drive Folder ID (Optional if set in Secrets)'
-        required: false
+        description: 'Google Drive Folder ID'
+        required: true
+        default: '1cz9Jf5xlZeJN190s5Pt7yQqmqkzop6JH'
 
 jobs:
   test-upload:
