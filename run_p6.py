@@ -61,6 +61,14 @@ CATEGORY_MAP = {
     'RealEstate_K': 'Real Estate > Korea'
 }
 
+# Trusted Publishers List for Curation Priority
+TRUSTED_PUBLISHERS = [
+    # Global Major
+    "Reuters", "Bloomberg", "Financial Times", "Wall Street Journal", "CNBC", "TechCrunch", "The Verge",
+    # Korean Major
+    "Yonhap News", "Maeil Business", "Korea Economic Daily", "Electronic Times", "Hankyung", "MoneyToday"
+]
+
 # Check Google Generative AI availability
 try:
     import google.generativeai as genai
