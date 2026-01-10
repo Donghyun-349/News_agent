@@ -256,15 +256,21 @@ def main():
     db_adapter = None
     if not args.no_db:
         try:
+            from config.settings import RESET_MODE  # Import here to ensure avoiding circular imports if any
+            
             db_type = os.getenv("DB_TYPE", DB_TYPE)
             db_adapter = DatabaseAdapter(db_type=db_type)
             db_adapter.connect()
             
-            if args.reset_db:
-                logger.warning("⚠️  DB 초기화 모드: 모든 테이블을 삭제하고 재생성합니다.")
+            # Check for Reset Mode (Arg > Env > Settings)
+            should_reset = args.reset_db or RESET_MODE
+            
+            if should_reset:
+                logger.warning("⚠️  DB 초기화 모드 (RESET_MODE=True): 모든 테이블을 삭제하고 재생성합니다.")
                 db_adapter.reset_database()
-            elif args.create_tables:
-                logger.info("테이블 생성 중...")
+            else:
+                # Always ensure tables exist (Safe 'IF NOT EXISTS' check)
+                logger.info("DB 테이블 확인 및 생성 중...")
                 db_adapter.create_tables()
                 
         except Exception as e:
