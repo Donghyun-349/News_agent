@@ -20,7 +20,7 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements_v2.txt ]; then pip install -r requirements_v2.txt; fi
 
-    - name: Write Service Account File (Method A: echo)
+    - name: "Write Service Account File (Method A: echo)"
       env:
         GOOGLE_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
       run: |
