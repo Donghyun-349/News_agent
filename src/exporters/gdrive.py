@@ -14,23 +14,47 @@ class GDriveAdapter:
         self.scopes = ['https://www.googleapis.com/auth/drive.file']
 
     def authenticate(self):
-        """Authenticate with Google Drive API"""
+        """Authenticate with Google Drive API (Service Account or OAuth Token)"""
         if self.service:
             return
 
-        if not os.path.exists(self.service_account_path):
-            logger.error(f"Service account file not found: {self.service_account_path}")
-            raise FileNotFoundError(f"Service account file not found: {self.service_account_path}")
+        # 1. Try OAuth Token (User Credentials) - For Personal Drive Uploads
+        token_json = os.getenv("GOOGLE_TOKEN_JSON")
+        if token_json:
+            try:
+                from google.oauth2.credentials import Credentials
+                import json
+                
+                # Check if it's a file path or direct JSON string
+                if os.path.isfile(token_json):
+                    self.creds = Credentials.from_authorized_user_file(token_json, self.scopes)
+                else:
+                    info = json.loads(token_json)
+                    self.creds = Credentials.from_authorized_user_info(info, self.scopes)
+                
+                self.service = build('drive', 'v3', credentials=self.creds)
+                logger.info("✅ Google Drive Authenticated (User OAuth)")
+                return
+            except Exception as e:
+                logger.warning(f"⚠️ Failed to auth with GOOGLE_TOKEN_JSON: {e}")
 
-        try:
-            self.creds = service_account.Credentials.from_service_account_file(
-                self.service_account_path, scopes=self.scopes
-            )
-            self.service = build('drive', 'v3', credentials=self.creds)
-            logger.info("✅ Google Drive API Authenticated")
-        except Exception as e:
-            logger.error(f"❌ Google Drive Auth Failed: {e}")
-            raise
+        # 2. Fallback to Service Account (Only works for Shared Drives or Workspace)
+        if not os.path.exists(self.service_account_path):
+             # Just log warning, maybe user only provided Token
+             logger.warning(f"Service account file not found: {self.service_account_path}")
+        else:
+            try:
+                self.creds = service_account.Credentials.from_service_account_file(
+                    self.service_account_path, scopes=self.scopes
+                )
+                self.service = build('drive', 'v3', credentials=self.creds)
+                logger.info("✅ Google Drive Authenticated (Service Account)")
+                return
+            except Exception as e:
+                logger.error(f"❌ Service Account Auth Failed: {e}")
+                
+        if not self.service:
+            raise Exception("No valid Google Drive credentials found (Token or Service Account).")
 
     def upload_file(self, file_path: str, folder_id: str, mime_type: str = None) -> str:
         """Upload a file to a specific Google Drive folder"""
