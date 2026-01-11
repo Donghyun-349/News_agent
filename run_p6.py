@@ -499,6 +499,11 @@ def main():
     
     # 8. Upload to Google Drive (Optional)
     google_drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
+    google_token_json = os.getenv("GOOGLE_TOKEN_JSON")
+    
+    logger.info(f"🔍 GOOGLE_DRIVE_FOLDER_ID: {'✅ Set' if google_drive_folder_id else '❌ Not Set'}")
+    logger.info(f"🔍 GOOGLE_TOKEN_JSON: {'✅ Set' if google_token_json else '❌ Not Set'}")
+    
     if google_drive_folder_id:
         logger.info(f"📤 Uploading reports to Google Drive (Folder ID: {google_drive_folder_id})...")
         try:
@@ -507,14 +512,26 @@ def main():
             
             # Upload JSON
             if "json" in args.formats:
-                drive_adapter.upload_file(str(json_output_file), google_drive_folder_id, mime_type="application/json")
+                logger.info(f"📄 Uploading JSON: {json_output_file}")
+                result = drive_adapter.upload_file(str(json_output_file), google_drive_folder_id, mime_type="application/json")
+                if result:
+                    logger.info(f"✅ JSON uploaded successfully (File ID: {result})")
+                else:
+                    logger.error("❌ JSON upload returned None")
                 
             # Upload Markdown
             if "markdown" in args.formats:
-                drive_adapter.upload_file(str(md_output_file), google_drive_folder_id, mime_type="text/markdown")
+                logger.info(f"📄 Uploading Markdown: {md_output_file}")
+                result = drive_adapter.upload_file(str(md_output_file), google_drive_folder_id, mime_type="text/markdown")
+                if result:
+                    logger.info(f"✅ Markdown uploaded successfully (File ID: {result})")
+                else:
+                    logger.error("❌ Markdown upload returned None")
                 
         except Exception as e:
             logger.error(f"❌ Google Drive Upload Failed: {e}")
+            import traceback
+            logger.error(f"Traceback: {traceback.format_exc()}")
     else:
         logger.info("ℹ️ GOOGLE_DRIVE_FOLDER_ID not set. Skipping Drive upload.")
 

@@ -3,8 +3,8 @@ import json
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-# 권한 범위 (전체 Drive 접근 - 파일 업로드/다운로드)
-SCOPES = ['https://www.googleapis.com/auth/drive']
+# 권한 범위 (파일 열람 및 생성/편집)
+SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
 def main():
     print("="*60)
