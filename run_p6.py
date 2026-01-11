@@ -150,7 +150,7 @@ def generate_content(model: Any, system_prompt: str, user_prompt: str, context_d
     logger.error("❌ Gemini generation failed after all retries.")
     return "생성 실패 (API Error)"
 
-def curate_articles(articles: List[Dict[str, Any]], max_candidates: int = 12) -> List[Dict[str, Any]]:
+def curate_articles(articles: List[Dict[str, Any]], trusted_publishers: List[str], max_candidates: int = 12) -> List[Dict[str, Any]]:
     """
     Selects a subset of articles.
     Priority 1: Title contains 'Exclusive' or '단독'
@@ -174,7 +174,7 @@ def curate_articles(articles: List[Dict[str, Any]], max_candidates: int = 12) ->
             continue
             
         # Priority 2
-        is_trusted = any(tp.lower() in pub for tp in TRUSTED_PUBLISHERS)
+        is_trusted = any(tp.lower() in pub for tp in trusted_publishers)
         if is_trusted:
             trusted.append(art)
         else:
@@ -216,7 +216,7 @@ def curate_articles(articles: List[Dict[str, Any]], max_candidates: int = 12) ->
 
     return selected
 
-def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dict, model: Any, system_prompt: str) -> tuple:
+def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str]) -> tuple:
     """Worker function for parallel execution"""
     try:
         if not topic_ids:
@@ -236,7 +236,7 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
                     articles = fetch_article_details(local_db, news_ids)
                     
                     # Curation
-                    curated_articles = curate_articles(articles, max_candidates=12)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=12)
 
                     section_context_data.append({
                         "title": t_obj['title'],
@@ -255,7 +255,7 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         logger.error(f"Error processing section '{section_name}': {e}")
         return section_name, "생성 중 오류 발생"
 
-def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict, model: Any, system_prompt: str) -> tuple:
+def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str]) -> tuple:
     """Worker function for Executive Summary"""
     try:
         if not exec_summary_ids:
@@ -273,7 +273,7 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
                     news_ids = json.loads(t_obj['news_ids_json'])
                     articles = fetch_article_details(local_db, news_ids)
                     # Curation
-                    curated_articles = curate_articles(articles, max_candidates=12)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=12)
 
                     exec_context_data.append({
                         "title": t_obj['title'],
@@ -452,14 +452,14 @@ def main():
         # 6-1. Submit Executive Summary Task
         futures.append(executor.submit(
             process_executive_summary_task, 
-            exec_summary_ids, topic_map, model, system_prompt
+            exec_summary_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS
         ))
         
         # 6-2. Submit Section Tasks
         for section_name, topic_ids in section_picks.items():
             futures.append(executor.submit(
                 process_section_task,
-                section_name, topic_ids, topic_map, model, system_prompt
+                section_name, topic_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS
             ))
             
         # 6-3. Collect Results

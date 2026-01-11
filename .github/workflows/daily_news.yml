@@ -57,6 +57,8 @@ jobs:
       run: |
         git config --global user.name 'GitHub Actions Bot'
         git config --global user.email 'actions@github.com'
+        # Pull latest changes first to avoid conflicts
+        git pull --rebase origin main || echo "No remote changes to pull"
         # Force add outputs directory if it exists
         if [ -d "outputs" ]; then
           git add -f outputs/
@@ -64,4 +66,5 @@ jobs:
           echo "outputs directory not found, skipping..."
         fi
         git commit -m "📈 Auto-generated Daily Report [skip ci]" || echo "No changes to commit"
-        git push
+        # Push with retry logic
+        git push || (git pull --rebase origin main && git push)
