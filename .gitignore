@@ -12,6 +12,7 @@ env/
 # Data & Logs
 data/
 logs/
+outputs/
 backup/
 
 # Credentials
