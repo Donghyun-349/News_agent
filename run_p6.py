@@ -31,6 +31,7 @@ sys.path.insert(0, str(project_root))
 
 from storage.db_adapter import DatabaseAdapter
 from src.utils.logger import setup_logger
+from src.utils.timezone_utils import get_kst_now, format_kst_date, format_kst_datetime
 from config.settings import (
     DB_TYPE, DB_NAME, LOG_LEVEL, GOOGLE_API_KEY, GEMINI_MODEL, BASE_DIR
 )
@@ -305,54 +306,161 @@ def parse_selection_json(json_text: str) -> Dict[str, Any]:
         return {"executive_summary_ids": [], "section_picks": {}}
 
 
-def format_report(sections: Dict[str, str], date_str: str) -> str:
+def parse_section_content(raw_text: str) -> List[Dict[str, Any]]:
+    """
+    Parse raw LLM output into structured blocks (Text + Links).
+    Returns a List of Dicts: [{'text': '...', 'links': [...]}, ...]
+    """
+    lines = raw_text.split('\n')
+    blocks = []
+    
+    current_text = []
+    current_links = []
+    
+    def flush_block():
+        nonlocal current_text, current_links
+        if current_text or current_links:
+            blocks.append({
+                "text": "\n".join(current_text).strip(),
+                "links": list(current_links)
+            })
+            current_text = []
+            current_links = []
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            continue
+            
+        # Check for link markers
+        is_link = stripped.startswith('>') or stripped.startswith('•') or stripped.startswith('- ') or stripped.startswith('*-')
+        
+        if is_link:
+            # Parse Markdown Link: >• [Title](URL) - (Source)
+            # Regex to capture: [Title], (URL), (Source)
+            # We must be careful about variations.
+            # Expected: [Title](URL) - (Source)
+            
+            # 1. Try strict format
+            # Clean markers first
+            link_content = re.sub(r'^[>•\-\*]+\s*', '', stripped).replace('**', '').strip()
+            
+            # Regex: \[ (title) \] \( (url) \) ... \( (source) \)
+            # using non-greedy matchers
+            match = re.search(r'\[(.*?)\]\((.*?)\)\s*-\s*\((.*?)\)', link_content)
+            
+            if match:
+                link_obj = {
+                    "title": match.group(1).strip(),
+                    "url": match.group(2).strip(),
+                    "source": match.group(3).strip()
+                }
+                current_links.append(link_obj)
+            else:
+                # Fallback: Try just [Title](URL) - Source (no parens around source)
+                match_weak = re.search(r'\[(.*?)\]\((.*?)\)\s*-\s*(.*)', link_content)
+                if match_weak:
+                    link_obj = {
+                        "title": match_weak.group(1).strip(),
+                        "url": match_weak.group(2).strip(),
+                        "source": match_weak.group(3).strip()
+                    }
+                    current_links.append(link_obj)
+                else:
+                    # Fallback: Raw string
+                    current_links.append(link_content)
+
+        else:
+            # If we were collecting links and now see text, it's a new block (unless it's empty?)
+            if current_links:
+                flush_block()
+            
+            # Clean text line
+            clean_line = stripped.replace('**', '').replace('__', '')
+            clean_line = re.sub(r'^#+\s*', '', clean_line)
+            current_text.append(clean_line)
+            
+    # Final flush
+    flush_block()
+    return blocks
+
+
+def format_report(sections: Dict[str, Any], date_str: str) -> str:
     """Combine sections into final Markdown"""
+    
+    def get_sec_text(key):
+        val = sections.get(key, '특이사항 없음.')
+        if isinstance(val, list):
+             # Reconstruct markdown from structured blocks
+             full_text = []
+             for block in val:
+                 text = block.get('text', '')
+                 links = block.get('links', [])
+                 
+                 block_str = text
+                 if links:
+                     link_strs = []
+                     for link in links:
+                         if isinstance(link, dict):
+                             # Reconstruct: >• [Title](URL) - (Source)
+                             link_strs.append(f"> • [{link['title']}]({link['url']}) - ({link['source']})")
+                         else:
+                             link_strs.append(f"> • {link}")
+                     block_str += "\n" + "\n".join(link_strs)
+                 full_text.append(block_str)
+             
+             return "\n\n".join(full_text)
+        elif isinstance(val, dict):
+             # Specific fallback if legacy dict format somehow remains
+             return val.get('summary', '')
+        return val
+
     md = f"""# 📊 Daily Market Intelligence
 **Date:** {date_str}
 
 ---
 
 ## 1. Executive Summary
-{sections.get('Executive Summary', '정보 없음')}
+{get_sec_text('Executive Summary')}
 
 ---
 
 ## 2. 🌍 Global Market
 ### 📉 Macro (Economy/Rates)
-{sections.get('Global > Macro', '특이사항 없음.')}
+{get_sec_text('Global > Macro')}
 
 ### 🚀 Market (Stock/Indices)
-{sections.get('Global > Market', '특이사항 없음.')}
+{get_sec_text('Global > Market')}
 
 ### 🤖 Tech (AI/Semiconductors)
-{sections.get('Global > Tech', '특이사항 없음.')}
+{get_sec_text('Global > Tech')}
 
 ### 🌏 Region (China/Eurozone)
-{sections.get('Global > Region', '특이사항 없음.')}
+{get_sec_text('Global > Region')}
 
 ---
 
 ## 3. 🇰🇷 Korea Market
 ### 🚀 Market (Stock/Indices)
-{sections.get('Korea > Market', '특이사항 없음.')}
+{get_sec_text('Korea > Market')}
 
 ### 💸 Macro (FX/Rates)
-{sections.get('Korea > Macro', '특이사항 없음.')}
+{get_sec_text('Korea > Macro')}
 
 ### 🏭 Industry (Company/Sector)
-{sections.get('Korea > Industry', '특이사항 없음.')}
+{get_sec_text('Korea > Industry')}
 
 ---
 
 ## 4. 🏢 Real Estate
 ### 🌐 Global Real Estate
-{sections.get('Real Estate > Global', '특이사항 없음.')}
+{get_sec_text('Real Estate > Global')}
 
 ### 🇰🇷 Korea Real Estate
-{sections.get('Real Estate > Korea', '특이사항 없음.')}
+{get_sec_text('Real Estate > Korea')}
 
 ---
-*Generated by Auto-DMI System at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*
+*Generated by Auto-DMI System at {format_kst_datetime()}*
 """
     return md
 
@@ -439,7 +547,7 @@ def main():
     
     logger.info(f"✅ Selected {len(exec_summary_ids)} topics for Executive Summary.")
     logger.info(f"✅ Selected picks for {len(section_picks)} sections.")
-
+    
     # 6. [Step 3 & 4: RETRIEVE & WRITE] Generate Content (Parallel)
     generated_sections = {}
     
@@ -472,18 +580,24 @@ def main():
     logger.info(f"✨ All sections generated in {duration:.2f} seconds.")
 
     # 7. Format & Save
-    today_str = datetime.now().strftime("%Y-%m-%d")
+    today_str = format_kst_date("%Y-%m-%d")
+    today_str_filename = format_kst_date("%Y_%m_%d")
+
+    # STRUCTURING: Parse content into {summary, links}
+    structured_sections = {}
+    for key, val in generated_sections.items():
+        structured_sections[key] = parse_section_content(val)
 
     # 7. Render & Save Outputs based on CLI args
     if "json" in args.formats:
-        json_output_file = OUTPUT_DIR / f"Daily_Market_Intelligence_{today_str}.json"
+        json_output_file = OUTPUT_DIR / f"Daily_Brief_{today_str_filename}.json"
         report_data = {
             "meta": {
                 "date": today_str,
-                "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                "version": "1.0"
+                "generated_at": format_kst_datetime(),
+                "version": "2.0" # Version bump for new structure
             },
-            "sections": generated_sections
+            "sections": structured_sections
         }
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         with open(json_output_file, "w", encoding="utf-8") as f:
@@ -491,8 +605,11 @@ def main():
         logger.info(f"✅ [JSON] Report saved to: {json_output_file}")
 
     if "markdown" in args.formats:
-        final_md = format_report(generated_sections, today_str)
-        md_output_file = OUTPUT_DIR / f"Daily_Market_Intelligence_{today_str}.md"
+        # Reconstruct markdown from structured sections to keep it readable
+        final_md = format_report(structured_sections, today_str)
+        md_output_file = OUTPUT_DIR / f"Daily_Brief_{today_str_filename}.md"
+        # md_output_file = OUTPUT_DIR / f"Daily_Brief_{today_str}.md" # Original name style in case user prefers
+        
         with open(md_output_file, "w", encoding="utf-8") as f:
             f.write(final_md)
         logger.info(f"✅ [Markdown] Report saved to: {md_output_file}")
@@ -500,9 +617,6 @@ def main():
     # 8. Upload to Google Drive (Optional)
     google_drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
     google_token_json = os.getenv("GOOGLE_TOKEN_JSON")
-    
-    logger.info(f"🔍 GOOGLE_DRIVE_FOLDER_ID: {'✅ Set' if google_drive_folder_id else '❌ Not Set'}")
-    logger.info(f"🔍 GOOGLE_TOKEN_JSON: {'✅ Set' if google_token_json else '❌ Not Set'}")
     
     if google_drive_folder_id:
         logger.info(f"📤 Uploading reports to Google Drive (Folder ID: {google_drive_folder_id})...")
@@ -516,8 +630,6 @@ def main():
                 result = drive_adapter.upload_file(str(json_output_file), google_drive_folder_id, mime_type="application/json")
                 if result:
                     logger.info(f"✅ JSON uploaded successfully (File ID: {result})")
-                else:
-                    logger.error("❌ JSON upload returned None")
                 
             # Upload Markdown
             if "markdown" in args.formats:
@@ -525,18 +637,36 @@ def main():
                 result = drive_adapter.upload_file(str(md_output_file), google_drive_folder_id, mime_type="text/markdown")
                 if result:
                     logger.info(f"✅ Markdown uploaded successfully (File ID: {result})")
-                else:
-                    logger.error("❌ Markdown upload returned None")
                 
         except Exception as e:
             logger.error(f"❌ Google Drive Upload Failed: {e}")
-            import traceback
-            logger.error(f"Traceback: {traceback.format_exc()}")
     else:
         logger.info("ℹ️ GOOGLE_DRIVE_FOLDER_ID not set. Skipping Drive upload.")
 
     topics_db.close()
     news_db.close()
+
+    # 9. Telegram Alert (Send Sections)
+    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+    TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+    
+    if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+        try:
+            from src.exporters.telegram_exporter import TelegramExporter
+            logger.info("🚀 Sending report to Telegram...")
+            
+            exporter = TelegramExporter(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
+            
+            header = f"📊 *Daily Market Intelligence* ({today_str})\n\n주요 시장 동향 브리핑입니다."
+            # Pass the structured sections directly!
+            exporter.send_report_sections(structured_sections, header_text=header)
+            
+        except Exception as e:
+            logger.error(f"❌ Telegram Export Failed: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+    else:
+        logger.info("ℹ️ Telegram configuration missing. Skipping Telegram export.")
 
 if __name__ == "__main__":
     main()

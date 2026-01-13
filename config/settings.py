@@ -89,3 +89,8 @@ DB_NAME = os.getenv("DB_NAME", "news_db" if DB_TYPE != "sqlite" else str(BASE_DI
 DB_USER = os.getenv("DB_USER", "postgres" if DB_TYPE == "postgresql" else "root")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 DB_CONNECTION_STRING = os.getenv("DB_CONNECTION_STRING", "")  # 전체 연결 문자열 (선택적)
+
+# Telegram 설정
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+ENABLE_TELEGRAM_KEYBOARD = os.getenv("ENABLE_TELEGRAM_KEYBOARD", "false").lower() == "true"

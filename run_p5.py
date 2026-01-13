@@ -30,6 +30,7 @@ sys.path.insert(0, str(project_root))
 from storage.db_adapter import DatabaseAdapter
 from src.exporters.gsheet import GSheetAdapter
 from src.utils.logger import setup_logger
+from src.utils.timezone_utils import format_kst_date
 from config.settings import (
     DB_TYPE, DB_NAME, LOG_LEVEL, OPENAI_API_KEY, GOOGLE_API_KEY, GEMINI_MODEL, GOOGLE_SHEET_ID, BASE_DIR
 )
@@ -388,7 +389,7 @@ def main():
     sorted_categories = sorted(grouped.keys())
 
     # 4. Sheet Init (Clear & Headers) - BEFORE Loop
-    tab_name = datetime.now().strftime("%y%m%d")
+    tab_name = format_kst_date("%y%m%d")
     # tab_name = "5.Topics"  
     if not args.no_export:
         init_sheet(GOOGLE_SHEET_ID, tab_name)

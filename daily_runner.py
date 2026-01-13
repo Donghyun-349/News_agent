@@ -12,13 +12,18 @@ sys.path.append(str(BASE_DIR))
 # Import settings to get configuration
 try:
     from config.settings import LOG_LEVEL
+    from src.utils.timezone_utils import format_kst_datetime
 except ImportError:
     LOG_LEVEL = "INFO"
+    # Fallback if timezone_utils not available
+    from datetime import datetime
+    def format_kst_datetime(fmt="%Y-%m-%d %H:%M:%S"):
+        return datetime.now().strftime(fmt)
 
 def run_script(script_name):
     """Run a python script and check for errors"""
     script_path = BASE_DIR / script_name
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] Starting {script_name}...")
+    print(f"[{format_kst_datetime('%H:%M:%S')}] Starting {script_name}...")
     
     try:
         # Run the script using the same python interpreter
@@ -27,7 +32,7 @@ def run_script(script_name):
             check=True,
             capture_output=False  # Let output flow to console
         )
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] {script_name} completed successfully.\n")
+        print(f"[{format_kst_datetime('%H:%M:%S')}] {script_name} completed successfully.\n")
         return True
     except subprocess.CalledProcessError as e:
         print(f"\n[ERROR] {script_name} failed with exit code {e.returncode}")
@@ -39,7 +44,7 @@ def run_script(script_name):
 def main():
     start_time = time.time()
     print("="*60)
-    print(f" Daily News Agent Automation - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f" Daily News Agent Automation - {format_kst_datetime('%Y-%m-%d %H:%M:%S')}")
     print("="*60)
     
     # List of scripts to run in order

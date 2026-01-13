@@ -9,6 +9,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.utils.stats_collector import StatsCollector
 from src.exporters.gsheet import GSheetAdapter
+from src.utils.timezone_utils import format_kst_date
 from config.settings import GOOGLE_SHEET_ID, LOG_LEVEL
 from src.utils.logger import setup_logger
 
@@ -33,7 +34,7 @@ def main():
     ]
     
     # Prepare Row Data
-    date_str = stats.get("date", datetime.now().strftime("%Y-%m-%d"))
+    date_str = stats.get("date", format_kst_date("%Y-%m-%d"))
     total_collected = stats.get("total_collected", 0)
     
     row = [date_str, total_collected]
