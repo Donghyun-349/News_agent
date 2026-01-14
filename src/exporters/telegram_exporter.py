@@ -87,8 +87,8 @@ class TelegramExporter:
         # 1. Send Header
         if header_text:
             self.send_message(header_text)
-            time.sleep(1) # Simple pacing
-
+            time.sleep(2) # Increased from 1s
+        
         # 2. defined order for sections
         ordered_keys = [
             'Executive Summary',
@@ -135,22 +135,33 @@ class TelegramExporter:
                 
                 # Iterate Blocks
                 for block in blocks:
+                    title = block.get("title", "")
                     text = block.get("text", "")
                     links = block.get("links", [])
                     
-                    # 1. Send Text Block with Header Context
-                    if text:
-                        # Prepend Header to EVERY text block
-                        full_msg = f"*{emoji} {key}*\n\n{text}"
+                    # 1. Send Content Block (Title + Text)
+                    full_msg = ""
+                    
+                    # Section Header Context (Always)
+                    full_msg += f"*{emoji} {key}*\n"
+                    
+                    # Topic Title (if exists)
+                    if title:
+                        full_msg += f"\n*{title}*"
                         
+                    # Body Text
+                    if text:
+                         full_msg += f"\n{text}"
+                    
+                    if full_msg.strip():
                         if len(full_msg) > 4000:
                             chunks = [full_msg[i:i+4000] for i in range(0, len(full_msg), 4000)]
                             for chunk in chunks:
                                 self.send_message(chunk)
-                                time.sleep(0.5)
+                                time.sleep(1) # Increased from 0.5s
                         else:
                             self.send_message(full_msg)
-                            time.sleep(0.5)
+                            time.sleep(1) # Increased from 0.5s
                     
                     # 2. Send Links (Individual Messages)
                     for link in links:
@@ -176,8 +187,8 @@ class TelegramExporter:
                             link_msg = f"🔗 {link.strip()}"
                             self.send_message(link_msg, parse_mode=None) 
                         
-                        time.sleep(0.3)
+                        time.sleep(0.5) # Increased from 0.3s
                             
-                time.sleep(1.0) # Pause between sections to avoid flood limits
-
+                time.sleep(2.0) # Increased from 1.0s - pause between sections
+        
         logger.info("✅ Sent all report sections to Telegram.")

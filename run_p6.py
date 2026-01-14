@@ -752,11 +752,16 @@ def main():
             from src.exporters.telegram_exporter import TelegramExporter
             logger.info("🚀 Sending report to Telegram...")
             
-            exporter = TelegramExporter(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)
+            # Support multiple chat IDs separated by comma
+            chat_ids = [cid.strip() for cid in TELEGRAM_CHAT_ID.split(',')]
             
             header = f"📊 *Daily Market Intelligence* ({today_str})\n\n주요 시장 동향 브리핑입니다."
-            # Pass the structured sections directly!
-            exporter.send_report_sections(structured_sections, header_text=header)
+            
+            for chat_id in chat_ids:
+                logger.info(f"  → Sending to: {chat_id}")
+                exporter = TelegramExporter(TELEGRAM_BOT_TOKEN, chat_id)
+                exporter.send_report_sections(structured_sections, header_text=header)
+                logger.info(f"  ✅ Sent to {chat_id}")
             
         except Exception as e:
             logger.error(f"❌ Telegram Export Failed: {e}")
