@@ -1,0 +1,615 @@
+{
+  "meta": {
+    "date": "2026-01-15",
+    "generated_at": "2026-01-15 07:25:36",
+    "version": "2.0"
+  },
+  "sections": {
+    "K_region": [
+      {
+        "title": "부산 외국인직접투자, 목표 대비 252% 초과 달성",
+        "text": "부산진해경제자유구역청(BJFEZ)은 2025년 외국인직접투자(FDI) 유치 실적이 신고액 기준 4억 5300만 달러를 기록하며, 연간 목표액 1억 8000만 달러를 252% 초과 달성했습니다. 특히 신고액 대비 97%에 달하는 높은 도착률은 글로벌 경기 불확실성 속에서도 투자가 실제 집행으로 안정적으로 이어지고 있음을 보여줍니다. 이러한 성과는 지속적인 투자 환경 개선과 전략적인 기업 유치 노력이 결실을 맺은 결과로, 부산 지역의 경제 활성화 및 동북아 핵심 글로벌 투자 거점으로서의 위상 강화에 긍정적인 영향을 미칠 것으로 전망됩니다.",
+        "links": [
+          {
+            "title": "해외 투자자 모이는 부산경자청… 작년에만 4억5천만弗 유치",
+            "url": "https://www.fnnews.com/news/202601141855583584",
+            "source": "파이낸셜뉴스"
+          }
+        ]
+      }
+    ],
+    "Executive Summary": [
+      {
+        "title": "",
+        "text": "1.  베선트 美 재무 발언에 원/달러 환율 급락, 환율 변동성 확대 주목\n2.  미중 AI 칩 규제 혼선 지속, 엔비디아 H200 中 수출 불확실성 고조\n3.  견조한 美 소매 판매 및 완만한 생산자 물가, 미국 경제 회복 탄력성 부각",
+        "links": []
+      }
+    ],
+    "Korea > Macro": [
+      {
+        "title": "원/달러 환율 1,480원 육박 및 美 재무부의 이례적 개입 시사",
+        "text": "원/달러 환율이 1,480원에 근접하며 변동성이 확대되자, 스콧 베선트 미국 재무부 장관이 구윤철 경제부총리를 만나 원화 약세가 한국의 견고한 경제 펀더멘털에 부합하지 않는다고 이례적으로 언급했습니다. 이러한 원화 약세는 해외 투자 증가, 한미 금리차, 국내 통화량 확대 등의 복합적인 요인과 함께 기업 대외 채무 부담을 가중시키는 상황입니다. 미국 재무부의 구두 개입은 외환시장 불안이 한국의 대미 투자 집행에 부정적인 영향을 미칠 수 있다는 우려를 반영한 것으로, 단기적인 환율 안정에는 기여할 수 있으나 구조적 수급 불균형이 해소되지 않으면 지속적인 변동성 확대를 야기할 수 있습니다.",
+        "links": [
+          {
+            "title": "이러다 대미 투자 물 건너갈라…원화에 '강력' 구두 개입한 美재무",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393488",
+            "source": "Infomax"
+          },
+          {
+            "title": "\"한국 펀더멘털에 안 맞아\"…베선트 한마디에 환율 '수직 낙하' (종합)",
+            "url": "https://www.hankyung.com/article/2026011514227",
+            "source": "한국경제"
+          },
+          {
+            "title": "왜 高환율 계속될까...“고령화·서학개미·국민연금”",
+            "url": "https://www.fnnews.com/news/202601141530204182",
+            "source": "파이낸셜뉴스"
+          },
+          {
+            "title": "눈 뜨고 코 베인다더니…환율 10원 오를 때 기업 대외채무 1.8조↑",
+            "url": "https://www.mk.co.kr/news/economy/11933482",
+            "source": "매일경제"
+          },
+          {
+            "title": "Bessent says Korean won’s depreciation not in line with fundamentals",
+            "url": "https://www.investing.com/news/forex-news/bessent-says-korean-wons-depreciation-not-in-line-with-fundamentals-4447623",
+            "source": "Investing"
+          }
+        ]
+      },
+      {
+        "title": "국내 고용 시장 둔화 및 통화량 증가에 따른 경제 리스크 증대",
+        "text": "지난해 국내 취업자 수 증가 폭은 19만3천명으로 2년 연속 10만명대에 그쳤으며, 특히 건설업과 제조업에서 약 20만명의 일자리가 감소하는 등 고용 시장의 둔화가 뚜렷했습니다. 이러한 고용 부진은 경기 침체와 제조업 경쟁력 약화에 기인하며, 명목 GDP 대비 광의 통화(M2) 비율이 미국의 두 배에 달하는 유동성 과잉 현상과 맞물려 통화 정책의 딜레마를 심화시키고 있습니다. 고용 시장의 불균형 심화와 통화량 증가 추세는 실물 경제의 활력 저하와 잠재적 인플레이션 압력으로 작용하여, 향후 경기 회복과 통화 정책 방향 설정에 중대한 과제로 부상할 전망입니다.",
+        "links": [
+          {
+            "title": "(속보) 지난해 취업자수 19만3천명 증가…2년 연속 10만명대",
+            "url": "https://www.mk.co.kr/news/economy/11932379",
+            "source": "매일경제"
+          },
+          {
+            "title": "(속보) '경기 침체' 작년 건설·제조업 취업자 20만명 줄었다",
+            "url": "https://www.fnnews.com/news/202601140755358808",
+            "source": "파이낸셜뉴스"
+          },
+          {
+            "title": "韓GDP 대비 통화량, 미국의 두 배 (Pick코노미)",
+            "url": "https://www.sedaily.com/NewsView/2K7B8R2EFR",
+            "source": "서울경제"
+          },
+          {
+            "title": "산업연구원 “대외 리스크 중 경제 리스크 '초고위험' \\\"",
+            "url": "https://www.fnnews.com/news/202601141046335976",
+            "source": "파이낸셜뉴스"
+          },
+          {
+            "title": "KDI \"장시간 근로·조직문화 경직에 근로자 인지역량 감소…보상체계 바꿔야\"",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393388",
+            "source": "Infomax"
+          }
+        ]
+      }
+    ],
+    "Real Estate > Korea": [
+      {
+        "title": "주택담보대출 감소세 속 주택가격 상승 및 DSR 규제 논의 심화",
+        "text": "최근 주택담보대출 규모가 34개월 만에 최대 폭으로 감소했음에도 불구하고 주택가격은 49주 연속 상승세를 이어가고 있으며, 정부는 무주택자를 제외한 DSR(총부채원리금상환비율) 강화 방안을 검토 중입니다. 이는 고금리 기조와 금융 당국의 대출 규제 강화가 대출 수요를 위축시킨 반면, 여전히 견고한 주택 수요와 제한적인 공급이 가격 상승 압력으로 작용하는 복합적인 상황을 반영합니다. 무주택자를 배려한 DSR 규제 강화는 실수요를 보호하면서 투기적 수요를 억제하려는 시도이나, 근본적인 공급 확대 및 세제 개편이 동반되지 않으면 주택시장의 안정화는 단기적인 효과에 그치거나 예상치 못한 부작용을 초래할 수 있습니다.",
+        "links": [
+          {
+            "title": "무주택자 뺀 DSR 강화도 검토 대상에…\\\"정밀 공급·세제개편 없인 집값 못잡아\\\"",
+            "url": "https://www.sedaily.com/NewsView/2K7ATWMO89",
+            "source": "서울경제"
+          },
+          {
+            "title": "주담대 34개월來 최대 감소…집값은 49주째 상승",
+            "url": "https://www.sedaily.com/NewsView/2K7ATS6QXT",
+            "source": "서울경제"
+          }
+        ]
+      }
+    ],
+    "Real Estate > Global": [
+      {
+        "title": "미국 기존 주택 판매, 2023년 이후 최고치 기록",
+        "text": "12월 미국 기존 주택 판매량이 전월 대비 5.1% 급증하며 연율 435만 채를 기록, 2023년 이후 가장 빠른 판매 속도를 보였습니다. 이러한 판매 증가는 모기지 금리 하락과 주택 가격 완화로 인해 주택 구매 능력이 개선되고 구매 심리가 회복된 데 주로 기인합니다. 모기지 금리가 우호적으로 유지된다면 이러한 주택 판매 회복세는 미국 주택 시장의 안정화와 점진적 개선을 시사하며, 더 많은 구매자와 매물을 유인할 잠재력이 있습니다.",
+        "links": [
+          {
+            "title": "US Home Resales Climb to Strongest Pace Since 2023",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMnBMRW9QMVhJX1JJLS1OTDhTWDNVWVIyeExRQ3ZCMkVFaEpMRDRNYWFSTVFhTzE0dTlYSW9pSFBrWDJBU0k4YjhEMHZkemxnb2tkaWJHa2ZrWmxHYlFKTGs2UjBnSDVwczZ3YnRrTHpsamhMbWV0bnFKTFFaRzZPd05laFA0dTdrZjVBbWptTkx5RXdzNXJmVUtfR0N3aWdnRVZxbWdSYTA3Y2FZdmY4",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Existing home sales end 2025 with a strong beat, as prices ease further",
+            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNemE0UEhJQmlWc0c5a2VRVy1hRHZnejJ1OVQ3VERXeGoyM0xhM3ZUV2E5dFJkbmlBVUtzbURMQnVITHhDTTduQ2x3aGY2TVFlbXpHVzdIaDRiUm1RSDg4VlFqdXAyZDJnWEVZWnk5Tjk3Zkxuek1zMlRYcGlvdWFZYWoyNjlUUGQ0bFdDY0k0Z9IBlwFBVV95cUxOTU5sc1AzQ0xsNk1rZVBsZVdETVlYa2pJcTJxMnEyOVY2YUtfUEM2NkxVa3J4cTdwRmxuZ3BVSHZTdU1uNHNEbGo5RVdzOHMyak4yWVlHVU9odVBpOTNwaE5DdnZOOUhFX1VIM2xqRVhIN2w4Wm9aY3F5bTR4dTNCUmZmVUR6U2xxejNCbTlWLTNSNWhZRTlR",
+            "source": "CNBC"
+          },
+          {
+            "title": "美 12월 기존주택 판매 전월비 5.1% 급증…약 3년래 최대폭",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393491",
+            "source": "Infomax"
+          },
+          {
+            "title": "US Home Resales Climb to Fastest Pace Since 2023",
+            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaHRpN2hfTUtTRFhvaHRzbU1BSVN3dmd6VW01Y2JVYm1IS08tMks5Z0dEUmhILUNwWHVvQ3p6YWxnSVBISkJnQXJ4QmZPV0ZhUTlYS2F1NTBuc1JMdlhFTEFLMWk0eDJmcEljNFlFeFd0dGhpWWVnQ1RDMGMzSlBXbDFLQ252TEZ1eWQxSDFybmQyZTlQaUxPN2l6UUFNLUZCOEY0OU1R",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "미국 모기지 금리 2022년 이후 최저 수준, 재융자 수요 급증",
+        "text": "미국 모기지 금리가 2022년 이후 최저 수준으로 하락하면서 주택 재융자 수요가 40% 급증하는 등 상당한 증가세를 보였습니다. 이러한 금리 하락은 연방준비제도(Fed)의 잠재적 금리 인하 기대감과 국채 수익률 완화가 복합적으로 작용한 결과입니다. 낮은 모기지 금리는 주택 구매 수요와 재융자 활동을 지속적으로 촉진하여 주택 가격을 지지하고 주택 소유자의 소비력을 높이는 데 기여할 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "US Mortgage Rates Slide to One of the Lowest Levels Since 2022",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUjlZVE9ObUZEWXpRRW5pRVI3ZENzclQ1Yk1ockNLVHFVell0TWVEbEhuNXB1OU5yMXdZZElET1ZCWmppWTRhYnpzclZpNS1JcGxPWFRjczVXSHJiUm92dFJCWGNpU2xvRGpKNW5hU2o2OFhWeGtjZzQyYTlFTmo1WGFOcTJFVHE2S2lHaENJVWdMQ1N6aTFKSUdNZlIyVV9OXzhsaEgzT3lzZUVsVW9GWk1fcw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Mortgage refinance demand surges 40% higher after Trump post briefly tanks interest rates",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPcTR0NlJyOVVVYlFLQ09DaTN3VUJ6S3NqVWRkblVXTVMxRHcxSk9jOEVtdzZBLXVMZG00YlZtZF9lYkJ5ajE4TGlORFRQUkRlUHFrWUloejltMkFoZm9ibmc1aVRQWEJ6YW9rb294U0FVZHlWY0xybFpTTlY2b25SMmU5elJ5UHM0N3B3QjFzeDHSAZYBQVVfeXFMT3RQdElGZUNEQjM0U3RjZlE1RlBibHY3dWZzcG13aVhCLXVNMElCM2JyVTJBQVJjMHZPZVRGRzhRNzRNUDZnTEE1SUwyd0lHRHA0YTRtamxFblBPWGcydnpUOG1nMnZTR3RNaHZNMWd3dGRZSXk3a3Utb0g4Zm93Z3p1V2Q4TXdQVV95WmpRdU9IM2xVZ2x3",
+            "source": "CNBC"
+          },
+          {
+            "title": "Aggressive Fed Cuts Won't Mean Lower Mortgage Rates: Deutsche Bank's Luzzetti",
+            "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOW5NZzVVd1I2ZkxaU0NyNDRSZndYWFdKWTRXZWxha3NnMU9mVHNsck5OZzZvUlpCWVM3cklHZklYaFFQTFFoZmNzbkRWNEU5dG9pR2lwZ2RZT3lVMlNJMzAyMklFUF8xenFvRFJRZjZaZ0IyT0xXNm9aOXB6RDJ5WUwyWEhjbXJfdDdPVkRvSE9CUEJ5NkJoMGJIT0Zjd1ltSFB5ZXpPX25qc2pleTVGeUpGNXZLV2VyUE5ZeWlHZHVNSVFkQWs0",
+            "source": "Bloomberg"
+          }
+        ]
+      }
+    ],
+    "Global > Market": [
+      {
+        "title": "🌍 글로벌 시장 동향: 귀금속 랠리, 미 증시 하락 및 환율 변동성 확대",
+        "text": "귀금속 시장에서 금, 은, 구리는 지정학적 불확실성 지속 및 안전자산 선호 심리 강화에 힘입어 사상 최고치를 경신했으며, 특히 은은 온스당 90달러를 돌파했습니다. 반면 국제유가는 이란 위기 완화 조짐 및 미국 휘발유 재고 증가 소식에 일시적으로 하락세를 보이다가 이후 혼조세를 나타냈습니다. 이는 전반적인 시장 불안정성이 귀금속 수요를 견인하고 유가는 지정학적 상황과 수급에 민감하게 반응하는 복합적인 시장 심리를 반영합니다. 투자자들은 당분간 지속될 지정학적 긴장과 인플레이션 압력이 귀금속 가격을 지지하고, 유가는 중동 정세 변화에 따라 변동성이 클 것으로 전망됩니다.",
+        "links": [
+          {
+            "title": "Blistering Metals Rally Sends Gold, Silver, Copper to Records",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUXJFbTJGQkV5SFZCbEtZRlN6Q2FzUTAxNlFJU3ZWWnNHT3JoV2FRcTR4eHhyR244aGlXdEo5R0dVcmdObFlXcmR0U2JRUmhXcW9YZXYteTRHeklpYWVESGc1MDBZZHVoa2I0YVVVYlh1M2JYd1RFUjl5ZFhfd2j1dE4yNGppY0EtSmIyaDFwMUtlbDhnNlF1eElhaU9NZ0hnVkd3Vl8yTHVsa2xCUVNscW5B",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Gold, silver extend record-breaking rallies as uncertainty persists",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPMDVHbjVCZURFTGl4X1FWMGtPSnh1NmN5NkhXdndsLWxnbWFJNTRUUUJseHV2T0VfWWhWc3pucUpUOHVRSEVWR2JKaXZwTVc5UnpZWmxOMWtXV3FqT3RIQXRzbmdORlRhMkg4UGNrUFFFdUJJaDNxTDg1UTRfSmlPNV85U0VnQ2NLNkRtTW96bUxvQjlNNEh3dkx3MW5NdGtERlRLc1Fhc3M",
+            "source": "Reuters"
+          },
+          {
+            "title": "금·은·구리 모두 사상 최고치…은 90달러 넘어서",
+            "url": "https://www.hankyung.com/article/202601141155i",
+            "source": "한국경제"
+          },
+          {
+            "title": "Oil prices drop as Trump signals de-escalation in Iran crisis",
+            "url": "https://www.investing.com/news/commodities-news/oil-prices-drop-as-trump-signals-deescalation-in-iran-crisis-4448076",
+            "source": "Investing"
+          },
+          {
+            "title": "\"은값 곧 200달러 간다\" 외친 부자아빠, 80달러 뚫자 돌연 \"고점에 근접, 조심하라\"",
+            "url": "https://www.sedaily.com/NewsView/2K7ATT83SU",
+            "source": "서울경제"
+          }
+        ]
+      },
+      {
+        "title": "🌍 미 증시, 기술주 및 금융주 약세로 이틀 연속 하락",
+        "text": "뉴욕 증시의 주요 3대 지수(S&P 500, 나스닥, 다우존스)가 기술주와 금융주의 동반 약세에 따라 이틀 연속 하락 마감했습니다. 이는 실망스러운 은행 실적 발표와 12월 소비자물가지수(CPI) 데이터 소화 과정, 그리고 기술주 매도세가 이어진 결과입니다. 향후 시장은 인플레이션 압력, 기업 실적 및 연방준비제도(Fed)의 통화정책 방향성에 대한 투자자들의 평가가 계속되면서 업종 간 순환매가 가속화되고 변동성이 확대될 가능성이 있습니다.",
+        "links": [
+          {
+            "title": "Wall Street indexes end lower, led by drop in tech and bank shares",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHJZZWd1XzNMc0xEUDZNaTV5dHZRSktyNV92UjduLWFwUnZkU3hmMDVVeVkzT0VuQkdPQ2ZzalFJbktXZkNESWQ5S1ZDcmtTM0JZOVhtTEpCSjcyY09YV0R2dTZ4TWNSQlZxTEdwSnhEdUQ5S0doWTJ4VnFZa0xkZkZfVlpWLXFZUV9DQk1fRWZqclRHQXRPLTVveXE",
+            "source": "Reuters"
+          },
+          {
+            "title": "Stock Market Today: S&P 500 Slips After Bank Earnings; Gold, Silver Hit Records — Live Updates",
+            "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxQOG5icjFFZmY3a3hyd0R0RGRmbUlFdjN0NkY5QmNBZzZVVWwxYUk2WExoN08wSFNFYXpSXzQzOXVHcmx3VmhyRFJrazdIOVdWQm5nVlVDWWVnYnJYbHdnY1dMelp0VkUyMngwWHdFMmR4M2dOTlJkZTdydURmWmZGb0x3QXFEeENTaFhVYVU0RldMdWlFOXpxdkpKbFNvT2pPU3NyS1lIMHBScW03VzZrbE1JYmwxbEFPVlJDUElxY3d0clVxUkFyd2hVdVVWZG5RU0JjZ1p6SlJDZXVhYVRxSUo5dHBlaU44bGE3cGpCS1NranEwZVNBTEwydjJsSkZTOWNSUWYtTmh1YUpMTnJmWVhsWThwQ3dsdzRBd1FMMmpiTWlIbEZhNDhKOVYtRnZINGE3SzRwa2QtQzBaWDVlVG5COWRxUWRBLUloa1BWQldUczVTbHdvSlpBbU1zZmhwVVl6RDdfcFJiZ0p4by1LTmVIb3RrZ0I5MWlVU29TSzJRS1hCX0hxeXJmXzM",
+            "source": "WSJ"
+          },
+          {
+            "title": "美증시, 양호한 데이터에도 이틀째 하락",
+            "url": "https://www.hankyung.com/article/202601151328i",
+            "source": "한국경제"
+          },
+          {
+            "title": "기술주·금융주 동반 약세에 일제 하락…국제유가 1%대 ↓(뉴욕증시)",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0005706898&office_id=277",
+            "source": "아시아경제"
+          },
+          {
+            "title": "(속보)뉴욕증시 이틀 연속 하락…기술주 급락 속 ‘순환매 장세’ 가속",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0006200937&office_id=018",
+            "source": "이데일리"
+          }
+        ]
+      },
+      {
+        "title": "🌍 미 재무장관 구두 개입에 달러 약세 전환, 원/엔 동반 강세",
+        "text": "미국 재무장관의 구두 개입으로 달러화 가치가 하락했으며, 이는 원화 약세가 바람직하지 않다는 평가에 따라 달러-원 환율이 10원 이상 급락한 1,464원에 마감하고 달러-엔 환율도 158엔대 초반으로 내려가는 결과를 초래했습니다. 국내 상장 미국 ETF를 통한 달러 유출이 원화 약세의 주요 원인으로 지목된 가운데, 외환 당국의 노력에도 불구하고 외환 시장의 수요 폭증과 공급 부족 현상이 심화되었습니다. 이러한 당국의 개입은 단기적인 환율 안정에 기여할 수 있으나, 근본적인 경제 펀더멘털과 자본 유출입 역학 관계가 중장기적인 환율 추세에 더 큰 영향을 미칠 것으로 보입니다.",
+        "links": [
+          {
+            "title": "(단독) ‘달러 유출’ 서학개미 탓했는데…국내상장 美ETF가 진짜 주범",
+            "url": "https://www.mk.co.kr/news/economy/11933166",
+            "source": "매일경제"
+          },
+          {
+            "title": "달러-원, 美 재무장관 구두개입에 10원 넘게 급락…1,464원 마감",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393492",
+            "source": "Infomax"
+          },
+          {
+            "title": "미 달러화 약세…美재무 구두개입에 원·엔 일제히 추가 강세",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393484",
+            "source": "Infomax"
+          },
+          {
+            "title": "Dollar stabilizes after losses; yen continues to weaken",
+            "url": "https://www.investing.com/news/forex-news/dollar-stabilizes-after-losses-yen-continues-to-weaken-4446324",
+            "source": "Investing"
+          },
+          {
+            "title": "수요폭증·공급부족…달러, 서울부동산 닮아간다",
+            "url": "https://www.mk.co.kr/news/economy/11933161",
+            "source": "매일경제"
+          }
+        ]
+      }
+    ],
+    "Global > Region": [
+      {
+        "title": "중국의 역대 최대 무역 흑자와 글로벌 경제 영향",
+        "text": "중국은 관세 부과에도 불구하고 사상 최대인 1조 2천억 달러의 무역 흑자를 달성하며 예상을 뛰어넘는 경제 회복력을 보였습니다. 이는 미국 관세에 대응하여 아세안 및 아프리카 등으로 수출 시장을 다변화하고, 글로벌 시장에서 중국산 제품에 대한 견조한 수요가 지속되었기 때문입니다. 이러한 기록적인 흑자는 중국 경제의 회복 탄력성을 시사하지만, 서방과의 무역 긴장을 심화시켜 전 세계적인 무역 역학 관계에 영향을 미칠 전망입니다.",
+        "links": [
+          {
+            "title": "China’s Record Trade Surplus Defies Expectations for Tariff-Driven Slowdown",
+            "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxNWTVMX1NkY295MHBEa1huUmtnMFZSeG9fOGc1MnAwbXlBektUaXI5d3REelV1cVhpcHMzOXpVc05UUTdjSDJqcUFlWG82dmEtNXBuV0R6bzR1b2Fxai00WldsS1dQMnAyQVJTdk5ZOWliR05FVW1PVXRJSXdhODU0VVFYTzRsc1pvdE9xamhRQ3FEemY5UDlLTlNHQVBiN3prRURnMFJhd1pFVlFTYTdBeC04OU5CbUFEeThKZmxNSERZc3otbkpDUmJqdkFmM0hGUHBSeTJhQzI4QnRZT21DeDcxN0hYZGl2bkUycHZqM0RNOGNBMVp3ZmJnOEU4cHhkTnV6SENSSUpZdFh0dlVzZDBKdFA2ZFlkSlp2SnZaazZXRklyODFTeGkydk1NNTJjU1B3OFF6LTZQLUlBT20xeFBuanN5VTJkMkFGZ1JwQUpVWEpTUzFwTHNjTG1va01MZVdWS0haX1J3eDBwOU4xS1BxZU1PcXR1eXJSa3UwQnVWN3BnVlZoYjd3LTVpY0FPVmNvczBUaXlXR0s0RGpoYjdzN19tbXFhSjFWM3FOZWJ6ell5WlptRktEU1U",
+            "source": "WSJ"
+          },
+          {
+            "title": "China’s 2025 Trade Surplus Hits Record $1.2 Trillion Despite US Tariffs",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVVljblZJaXN1WkhMZ3FtVy1mV0cxcDdQTlN6eGlzVjRHa3JhV1dzR0cwdlZvOEdHZTlqM2ZYR1pKYmJpT1pGbWc0bDRmak5EZlBLZ1hsRHBNaDV0NHBHMXRFbEZDNGJBYnROV2w2OWtoRHhNUW12WWVuYWEwYkN2cXZtU0lOci1uZ0xVNlhfcmtmLXlBZnhVX3J5UmxVcFQ1WGFJU0xjQV96STNOSDFHTWdpX18",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "China blames US for trade imbalances as surplus hits record $1.2tn",
+            "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzeG1LMlJLaTJnUmZrY1k1cFVjLU5WRlY4dWtHLWR3RzEzNjJLQURJbjh0NUNJeVk2aUVWa2FrYk1tNzlxZjIydVF1V2hFaWdKbjJ3MlhxeWpVUlZIbWRBQ2RWMXEyVzVuZGlzRFhMVGY",
+            "source": "FT"
+          },
+          {
+            "title": "中, 對美 수출 급락에도 '역대 최대 흑자' 달성...아세안·아프리카로 활로 개척",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/2026011413253217300c8c1c064d_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "· ‘차이나 쇼크 2.0’의 역설... 中 무역 흑자는 서구 소비가 만든 합작품",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/2026011414331234520c8c1c064d_1",
+            "source": "GEnews"
+          }
+        ]
+      },
+      {
+        "title": "일본 엔화의 급격한 변동성 및 아시아 외환 시장 영향",
+        "text": "일본 엔화가 달러 대비 1년 반 만에 최저치를 기록한 후 반등하는 등 급격한 환율 변동성을 보였습니다. 이러한 움직임은 일본 총선에 대한 추측과 일본은행(BOJ)의 통화 정책 스탠스, 그리고 광범위한 달러 강세에 대한 기대로 인해 촉발되었습니다. 엔화의 지속적인 약세는 일본 수출 기업에 유리하게 작용할 수 있으나, 수입 물가 상승으로 이어져 지역 경제 안정성에 복합적인 영향을 미칠 수 있습니다.",
+        "links": [
+          {
+            "title": "Japan’s Takaichi election plans pressure yen- Citi",
+            "url": "https://www.investing.com/news/forex-news/japans-takaichi-election-plans-pressure-yen-citi-93CH-4447017",
+            "source": "Investing"
+          },
+          {
+            "title": "Asia FX: yen hits 1-1/2yr low on Japan election talk; China trade data in focus",
+            "url": "https://www.investing.com/news/forex-news/asia-fx-yen-hits-112yr-low-on-japan-election-talk-china-trade-data-in-focus-4446041",
+            "source": "Investing"
+          },
+          {
+            "title": "Japanese yen rebounds from 18-month low against dollar",
+            "url": "https://www.investing.com/news/economy-news/dollar-rebounds-with-cpi-data-in-line-bankers-back-powell-4445939",
+            "source": "Investing"
+          },
+          {
+            "title": "Sustained Yen Weakness Isn't Vs Dollar: 3-Minutes MLIV",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcXZQcGVpeUl1ZHBUc28zZkRYdndEZUgzSkFQRWU0OVJENnlGRWVJR2FqbW5pZllKRV84TmNCWEdCRTBURTFEQkZjQ1hscGxRcHVSTXJfcDZhQ05aamhrcml6Um9ldXJUTDVCMks4WHpqejk5UG91WFVrelEtdjkwU3FIV2d2UWRfZjB4ejcwaElDc24zaWlTajV1eWxSdjB4QUtPQnR3SWl1WVRfdUgtYWhOZFZzOUhxcUJaUlc3U0pBMms",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "중국의 기술 자립 가속화 및 글로벌 기술 시장 재편",
+        "text": "중국 정부는 국내 기업들에게 미국 및 이스라엘 사이버 보안 소프트웨어 사용을 중단하도록 지시했으며, 자체 반도체 장비 자립률을 35% 이상으로 끌어올렸습니다. 이러한 움직임은 지정학적 긴장과 공급망 취약성에 대응하여 기술 독립을 가속화하려는 중국의 의지를 반영합니다. 결과적으로 이는 글로벌 기술 디커플링을 심화시키고, 특히 사이버 보안 및 반도체 분야에서 기업들이 공급망 및 시장 전략을 재평가하도록 강제할 것입니다.",
+        "links": [
+          {
+            "title": "Exclusive: Beijing tells Chinese firms to stop using US and Israeli cybersecurity software, sources say",
+            "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZmNIRDZEN3d5ZXRyNnN5eHc2X0NlZkppN2dnSlpzeFQtTVhDVjJmeWx2aDg4QjQtM0wyRjkxY0ZuNnlOWlJNUmhRSWl4SzJMc1VjT0F1ZDBKMGNsZzJFc3ZodTd3S3dGRnBhRDlqZVdhZ1RwMVlQU1c1SkZQcXNjTGg1V0gxQTZGc004Y0tXeFpTRXZlQTNCdHJvb2tjRTNKTzVfMUdicjRWeHMxa2FhNlNDWGZxUjJBMWljYm9mYUEydGI1OC1z",
+            "source": "Reuters"
+          },
+          {
+            "title": "中, 기업들에 \\\"미국·이스라엘 보안 SW 쓰지마\\\"",
+            "url": "https://www.hankyung.com/article/202601141216i",
+            "source": "한국경제"
+          },
+          {
+            "title": "· 中, 반도체 장비 자립 35% 돌파…韓 소부장, ‘가성비 공습’에 비상",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/202601141852432555fbbec65dfb_1",
+            "source": "GEnews"
+          }
+        ]
+      }
+    ],
+    "Korea > Industry": [
+      {
+        "title": "한화그룹, 지배구조 개편 위한 ㈜한화 인적분할 결정",
+        "text": "㈜한화가 인적분할을 통해 테크 및 서비스 사업 부문을 신설 지주회사인 한화머시너리앤서비스홀딩스(가칭)로 분리하며 지배구조 개편에 나섰습니다. 이는 김승연 회장 삼형제 간의 사업 구도를 명확히 하고 향후 계열 분리를 위한 초석을 다지려는 의도로 해석되지만, 한화 측은 금융 부문의 추가 분할이나 대주주 간 지분 교환 계획은 없다고 밝혔습니다. 이번 분할은 각 사업 부문의 전문성을 강화하고 성장 동력을 확보하는 데 기여할 것으로 기대되지만, 장기적인 그룹 승계 및 지배구조 변화 가능성에 대한 시장의 관심은 지속될 것입니다.",
+        "links": [
+          {
+            "title": "한화, 계열 분리 시동…3남 김동선 '테크·라이프' 떼낸다",
+            "url": "https://www.hankyung.com/article/2026011409951",
+            "source": "한국경제"
+          },
+          {
+            "title": "한화 \\\"금융 추가 분할·대주주간 지분 교환 계획 없다\\\"(종합)",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393440",
+            "source": "Infomax"
+          },
+          {
+            "title": "'삼남' 김동선 사업 떼냈다…한화家 삼형제 계열분리 시동",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393396",
+            "source": "Infomax"
+          },
+          {
+            "title": "한화 \\\"최대주주 간 금융 등 추가 계열분리 계획 없다\\\"(상보)",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393427",
+            "source": "Infomax"
+          },
+          {
+            "title": "한화 \\\"최대주주 간 금융 등 추가 계열분리 계획 없다\\\"",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393426",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "태광산업·유암코 컨소시엄, 동성제약 인수 추진",
+        "text": "태광산업이 연합자산관리(유암코)와 컨소시엄을 구성해 중견 제약회사 동성제약을 인수한다고 발표했습니다. 이번 인수는 기존 화학·섬유 중심의 사업구조에서 벗어나 뷰티·헬스케어 영역으로 사업 포트폴리오를 확장하고 신성장 동력을 확보하기 위한 전략적 결정입니다. 태광산업은 코스메틱 전문법인 '실(SIL)' 설립에 이어 동성제약 인수를 통해 제약·염모제·더마 및 헤어케어를 아우르는 '뷰티·헬스케어 플랫폼' 구축을 가속화하며 시장 내 경쟁력을 높일 것으로 보입니다.",
+        "links": [
+          {
+            "title": "태광산업·유암코 컨소시엄, 동성제약 인수…\\\"포트폴리오 확장\\\"",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393408",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "빙그레, 경영 환경 악화에 따른 희망퇴직 단행",
+        "text": "빙그레가 해태아이스크림을 포함한 전 직원을 대상으로 희망퇴직을 단행하며, 팀장급에게 월 급여 15개월치, 팀원급에게 12개월치 특별 위로금을 지급합니다. 이번 조치는 합병에 따른 구조조정보다는 악화된 경영 환경에 대응하고 중장기적인 경쟁력 강화를 위한 효율화 작업의 일환으로 진행됩니다. 비용 효율화를 통해 수익성 개선을 꾀하려는 빙그레의 전략은 단기적으로 재무구조에 긍정적 영향을 줄 수 있으나, 장기적으로는 인력 재편에 따른 조직 안정화 및 생산성 유지에 대한 관리가 중요해질 것입니다.",
+        "links": [
+          {
+            "title": "빙그레, 전 직원 대상 희망퇴직 단행",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393465",
+            "source": "Infomax"
+          }
+        ]
+      }
+    ],
+    "Korea > Market": [
+      {
+        "title": "🇰🇷 코스피, 사상 최고치 경신하며 4,700선 돌파",
+        "text": "코스피 지수가 9거래일 연속 상승하며 사상 처음으로 4,700선을 돌파, 4,723.10에 장을 마감했으며, 지난 1년간 국내 증시 시가총액은 약 80% 급증했습니다. 원화 약세에 따른 외국인 매도세에도 불구하고 기관이 6,220억원 순매수하며 지수를 견인했고, 인공지능(AI) 인프라 투자 확대의 수혜주인 삼성전자와 SK하이닉스, 그리고 현대차그룹주 및 방산, 2차전지 등 주요 업종의 강세가 지수 상승을 이끌었습니다. 미국 증시의 하락과 단기 급등에 따른 피로감에도 불구하고, 반도체 및 순환매 장세가 지속되며 당분간 국내 증시의 상승 동력이 유지될 것으로 예상됩니다.",
+        "links": [
+          "(증시-마감) 코스피 9일 연속 올라 4,723선으로…'사업재편' 한화 급등(Infomax)",
+          "'코스피 4700 새 역사' 주역은 기관…외국인은 2.7조 '매도 폭탄'(뉴스1)",
+          "“난 주식 한주도 없는데, 1년 새 시총 80% 껑충”…삼전·하이닉스 끌어올려(매일경제)",
+          "코스피 사상 첫 4,700선 터치…美증시 부담·피로감 속 방향성 탐색(Infomax)",
+          "4700 넘은 코스피… 투자자 선택은 저마다 달랐다(국민일보)"
+        ]
+      },
+      {
+        "title": "🇰🇷 국내 투자 상품, 경쟁 심화 속 성과 두각",
+        "text": "종합투자계좌(IMA)와 발행어음 상품이 큰 호응을 얻으며 금융권 내 자금 유치 경쟁이 본격화되었고, 특히 한국투자증권은 IMA 1호의 성공에 이어 연 4% 수익률의 2호 상품을 출시하며 1조원 추가 자금을 모집하고 있습니다. 금융당국의 생산적 금융 기조에 따라 발행어음 사업자가 4곳에서 7곳으로 확대되는 등 규제 완화와 함께 고금리 시대 투자자들의 안정적인 수익 추구 수요가 맞물려 신규 투자 상품에 대한 관심이 증대되었습니다. 증권사 및 은행 간 투자 상품 경쟁이 더욱 심화될 것으로 예상되며, 이는 투자자들에게는 더욱 다양한 선택지와 잠재적으로 높은 수익률 기회를 제공할 것입니다.",
+        "links": [
+          "한투증권, 두번째 IMA 상품 출시…'연 4% 수익률' 1조 추가 모집(Infomax)",
+          "IMA 흥행에 증권사 자금 유치 경쟁 본격화… IB 핵심 변수 부상(머니S)",
+          "(자본시장 대변혁) 무한경쟁 발행어음…하우스별 운용조직과 전략은(Infomax)",
+          "“은행이 투자도 잘하네” 카뱅 목표전환형 펀드, 45일만 수익률 조기달성(매일경제)",
+          "\"국장 개인 수급전략 적중\"…RISE 동학개미 ETF, 코스피 상승률 앞질러(Infomax)"
+        ]
+      },
+      {
+        "title": "🇰🇷 주요 개별 기업 이슈: 한화그룹 강세 및 지배구조 리스크 부각",
+        "text": "한화그룹주는 인적분할을 통한 사업 구조 재편 소식에 25% 이상 폭등하며 그룹주 전반이 급등세를 보였으나, 파멥신은 상장폐지 결정 효력정지 가처분 기각으로 정리매매 절차를 밟게 되었고, 솔루엠은 1,200억원 규모의 신주발행 무효 소송에 행동주의 펀드 얼라인파트너스까지 가세하며 논란이 커지고 있습니다. 한화그룹은 사업 구조 효율화 및 계열 분리를 통한 지배구조 개선 기대감이 주가 상승을 견인한 반면, 파멥신은 기업 지속성 요건 미달로 인한 법원의 가처분 기각 결정이 상장 폐지로 이어졌고, 솔루엠은 신주 발행 방식에 대한 소액 주주 및 행동주의 펀드의 지배권 희석 우려가 소송의 배경입니다. 한화그룹의 사례는 기업 구조 개편이 시장에서 긍정적으로 평가될 수 있음을 보여주나, 파멥신 및 솔루엠의 사례는 상장 기업의 재무 건전성 및 지배구조 투명성이 투자 심리에 중대한 영향을 미치며, 투자자들은 개별 기업의 리스크 요소를 더욱 면밀히 평가해야 할 것입니다.",
+        "links": [
+          "\"계열 분리 시동 걸었다\"…한화그룹주, 나란히 급등(한국경제)",
+          "(증시-마감) 코스피 9일 연속 올라 4,723선으로…'사업재편' 한화 급등(Infomax)",
+          "파멥신, 상장폐지 효력정지 가처분 기각…정리매매·상폐 수순(Infomax)",
+          "솔루엠 1천200억 규모 신주발행 무효 소송에 '얼라인'도 가세(종합)(Infomax)",
+          "\"현대차그룹주 지금 사도 될까요\"…맥쿼리 \"주가 더 오른다\" (줍줍 리포트)(서울경제)"
+        ]
+      }
+    ],
+    "Global > Tech": [
+      {
+        "title": "미중 AI 칩 규제 복잡성 및 엔비디아 H200 수출 불확실성",
+        "text": "미국 정부가 엔비디아의 H200 AI 칩 대중국 수출에 대한 새로운 규정을 발표하며 특정 조건 하에 판매를 허용했으나, 중국 세관 당국이 H200 반입을 금지하거나 특별한 경우에만 허용할 수 있다는 상반된 보고가 나왔습니다. 이는 미국이 중국의 첨단 기술 접근을 제한하려는 의도와 중국의 AI 자립 및 보복 조치 사이의 지속적인 지정학적 긴장과 무역 분쟁에서 비롯된 것입니다. 이러한 불확실성은 엔비디아의 중국 시장 전략에 상당한 제약을 가하고 글로벌 AI 칩 공급망에 지속적인 변동성을 초래하며, 중국 내 AI 개발 속도에도 영향을 미칠 것으로 전망됩니다.",
+        "links": [
+          {
+            "title": "US Clears Path for Nvidia to Sell H200s to China Via New Rule",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZW96anVYZFUtQUIwalJsUElVTkFmSTdmQUN2MjBuS2R1OUowbC1oWGhWekNYUlpGZnduamJiWDR5VzVHelBnbmtnbUtRR1BGSXlEUUljT2tkQ1FxcWU1TE1OMGZKVnhpV0xQbmhsc3RxejVuQXhpNmVzdDhwellsOE1BejBPeUk2Vm1DcjNvbkRobUNTQUNZa0FrNmczOWZ0T0FjTnB3NnpSVWk3enQ4ZHNR",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "\\\"中 세관당국, 엔비디아 H200 반입 금지 지시\\\"",
+            "url": "https://www.hankyung.com/article/202601141194i",
+            "source": "한국경제"
+          },
+          {
+            "title": "U.S. posts official H200 and MI325X AI GPU export rules to China, but with plenty of caveats — a string of requirments greatly limits the total number of GPUs that can be shipped to China",
+            "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxQY0JvUUpfMnVGTHNkcHNKcDB5SzNfQ3Z2R0FkaGRfQUNEejdZeVRPaGtaVTN1dkFkelR0SmJWVmVueG1hMEF6bEJRTzA3Vk1aVG8yZjBtM0lzc0RmUlBFbUFaSWhVeXIwbUQwV3J5VG1CTThjdm5POVBNbWhHT09oMTNCMmxwaFZ1RGtQSFhRaHJPOVIxcm1ITDlINFN0aERKbXNOWjZfeWxKXzJCYXdHQXlWa0Z6SW5Ea3ZHa085YlQ1TzdpMXdVak42X24xbVBnM09weGRfd2g3M240TTJjOS1kTHdzX0tiTF9CeDJBRTg1b3M1Q3hZNlZqWER6YVNpRldId1ZEOXljcXlyUjh4STR4dk9zTlNpbXNPZGJLa3VpMUdrX3NCYXpwY085VHZxQXE2QVBpeHRJN3pSNTdHbHI5c20yM2p4M2YzVFBKbTRMSm9NVm9VcDJmRjFRMnRUSDJsT01rMlpDQQ",
+            "source": "Tom's Hardware"
+          },
+          {
+            "title": "Beijing reportedly limiting H200 purchases to those with ‘special circumstances’ — sources suggest only university R&D labs can acquire Nvidia GPUs in China",
+            "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOcWFLMUhBdU1ULVhBdjQ1cUhleTM5djhrT0RnNDc3LWMwVnZrM0puUG9uSzVRbTdHRVRCSVhCRG9SUThzX00yWjZuVlNjX0NDOUd3YTBXejkzNkM4N0JYR0x6Y1diWFQ1YXQxWDdVMjNWc1VpXzJzcUNYN2dGa2ktVk5YOVhoVWF1cGYxUHZrZnFFektVZHNuRTU3a2xLMlFRSVFtclhHNnhwTkh1UEwyU0Vsa0czY1d2d1RpQ01vTjRRbWRvYXRGbGRpeXFpbnhPdk1ZNEFxdzlrSW5NVnl6Z2ZhVWY2bFpVVDVVaFpBV21Bc1NrRTBDUE82VTktNm1kMVJ5elpsYmI2aHFwbG1OM1c0MDNsNkVfVUtKTGw2cGM3R29TMXhLbGhzcGtWR05VcVhwS0RkampVbDU2NTlrX1ZVUk53dw",
+            "source": "Tom's Hardware"
+          },
+          {
+            "title": "Trump Administration Enacts Security Rules for Nvidia’s China Chip Sales",
+            "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxPdklfYjdwWG9BQmhQMWN0SHhwdjQ1bWkxOXI0MzdtUHpJTjg0dEhVWjhkdWx1Z0dPWktUV0FqbHg3c3R6eXlYM0VkbXRnVy00TERGSE54enRKWXhPMTFNUDM5OEFINmVCTVdYMHBVekFJTGIydGRzZThGRlNZZkp5ajd3MzFsNzdCd25hNVh4WmNPQlBucGxKd1o3SGU4SmY4bkZqUmNYU3VKd0tMWDdQVGxnTllkNTB3cUxnU1pURnhmUUxjRVRPeHF4ejZhbTVacWlORzNOcDM5b21ORTkzbVlBbFRDYTcxNkQtaEJTN0U4VVF1dk8tWEVPLXlYZmg2RnlnN05PTGR6d1lTZWpzMXF6Vnk2QzRqQXJyZnNXWDBRVXNqQTRzYTd3STRpQ3o3WUJZM2x0Wlo1RE9OUzZzVGhnS1ZyMURqOU9EbUprcDhMOGQzXzl5OGtUbDNGQnpUVHVhR19pazJsRXBiNzhNUFlpa1ppaDJ4RUVtQTY4RjE2T2hORkNWWWJWV2tKR1NDTGh0RmlKMTZoN09iSm9FRFJyMnZsNE5FVEg4MjBYVkxUSU1TcVFhYXZOYzk",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "AI 기술의 광범위한 확산 및 산업별 투자 가속화",
+        "text": "AI 기술의 혁신이 로봇 공학, 생명 공학, 금융 등 다양한 산업 분야에서 투자를 가속화하며 활발히 진행되고 있으며, 구글 제미니와 같은 고급 AI 모델의 기능 확장과 엔비디아의 제약 산업 협력 사례가 이를 뒷받침합니다. 이는 인공지능이 단순한 기술을 넘어 산업 전반의 효율성 증대와 새로운 비즈니스 모델 창출의 핵심 동력으로 인식되고 있기 때문이며, 선도 기업들이 미래 성장 동력 확보를 위해 적극적으로 기술 개발 및 협력에 나서고 있습니다. 이러한 추세는 AI 기술의 상용화를 더욱 앞당기고 관련 시장의 성장을 촉진할 것이며, AI 기반 서비스 도입을 통한 기업들의 생산성 향상과 혁신 경쟁이 심화될 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "Lilly and NVIDIA unveil $1B co-innovation lab in SF",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSWNZUF9YTllnbE1HeDdVbTNhTXd1di0yanp0OXZfS2ZBSUlBc3FPRVZlb050MWJ4V3RrVW9mc09YTVhxNU51VWVMRGVSbFpBWlZNbjJUem9hTFJpQnRXVjBkbUNETmdiZjJrRzhLQjBPY182TlJBZnQwSFdTQk8xalhfUk1XUGh6TGpfTkFKcko",
+            "source": "drugdiscoverytrends.com"
+          },
+          {
+            "title": "Artificial Intelligencer: The AI gold rush is coming for your gadgets",
+            "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNTWMyS29UbE9BVTVyWEJ6U3dJSkhWV09QaTNsSnEtLXJkOHBqT3puYnFjX1hSSnJSWDJUc1dVR21DOFpPNmk2a0VsZ1RNVU50bHRLUkQtY1pKNlBicGZSYjNHZXpSWDRSeFFtMjBJWnN6b1dDVmxweFZiT2lVT2hRV3M4V1VZMjE0aXlVQm9VZnpsc2JrZkFQU05lMlA0SDloT0ZpUmJlbEVraWRLUGtZV1JRQTJFLXVPRTd3UmZuNEREdkl6bExYVEIwaw",
+            "source": "Reuters"
+          },
+          {
+            "title": "Google Gemini Can Proactively Analyze Users’ Gmail, Photos, Searches",
+            "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNV202X2tZQ0xIb0xUOGxOVlo4SFJVVTZtdHZFa0JlaEJsbUhuU0IxWTl6ek4xRHEwV2ROTy1PNzNBMnJkOVBJZEoydjlMYkJiOVg4WTNaelJwa1A4OUFnbVdHV1ZxTGp1VGJtdUdUb1d4Z01UdzZJUHFrS1RFWHQyalZYWWZuU0xucFBpTWxadkhUR3hVWk1ESzk1MjJSVl9ia0MzNWQ5MEVXLUVieWpLLUFMVkw1U3lPeml1NDZHd3doZDRXQQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Robotics Startup Skild AI Valued Above $14 Billion in New Funding Round",
+            "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWWx3RF9OU1NKSDQxVGl3ZGdiNjY2cmxXXzFwdE1DdnM3VmRBdjBOUlRFZjhHVEZBbXV5TWdjNFJRaUVOTTRKMk9zbTMyWDM5ZUQ1VnAwS1l6VVNCMGJkeC1XeUhNQW11Q0JmZjFfbnpNUWlhejk0ZWFDazduYm5NVFpFV0FxcHJNakUzbmVILTlkQ2xDVmZtQnhuRnh4akhZOVRIS09kdHl0QzFUZXFURENkbUM4dGlzSTdBd21LdW9FZDEyM1JSOFZB",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "베이조스·페이지·브린, 자산 2500억 달러 돌파…AI 투자 열풍, '3000억 달러 클럽' 진입 눈앞",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/202601140736259029fbbec65dfb_1",
+            "source": "GEnews"
+          }
+        ]
+      },
+      {
+        "title": "마이크로소프트, '커뮤니티 우선' AI 인프라 구축 및 AI 경쟁력 강화",
+        "text": "마이크로소프트는 '커뮤니티 우선(Community-First)' AI 인프라 구축을 위한 5대 계획을 발표하고, 엔트로픽(Anthropic)에 연간 약 5억 달러를 투자하는 등 AI 전략을 강화하며 클라우드 기반 AI 생태계 확장에 주력하고 있습니다. 이는 AI 기술이 미래 기업 가치의 핵심 동력임을 인식하고, 개발자 커뮤니티와의 협력을 통해 개방적이고 포괄적인 AI 생태계를 조성하여 시장 지배력을 공고히 하려는 전략적 움직임입니다. 마이크로소프트의 이러한 투자는 애저(Azure) 클라우드 플랫폼의 AI 역량을 더욱 강화하고, AI 서비스의 광범위한 확산을 촉진하며, 경쟁사 대비 기술적 우위를 확보하는 데 기여할 것으로 분석됩니다.",
+        "links": [
+          {
+            "title": "Microsoft Unveils 5-Point Plan for ‘Community-First AI Infrastructure’",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTXNCc2hxay04MU0wbTZfdV9RM2FjcWV5ck56RGtmYWJOWjFHUTdONzl3V1FGT1ItUTJPU3V0d01TcjVTckgwRVJyek5XTzRqYnc2REYzenpTSWFjcms0NjBUN3YtZmJQRlVPZWlBS3VubGRYaC1VZEY4MjNuY0lSNGp4MV9LNElhclVqUTJnM1IteURSa1NldXc2WDRSVE5OMGVLdHVpNGJQZw",
+            "source": "AI Insider"
+          },
+          {
+            "title": "Microsoft Spending on Anthropic Approaches $500 Million a Year",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWVIwR19MM2NXYVFTS3hZN0NWWmNpWHRpUUNMcFRtTXhpNTBTNHlxbDRHRWdhdDFIMmNVaHpsS1BPWERHMDVGTWJfUWowTy1Halp4d1Q5VTBha0o0YS1YeE5GVDg4NHZVNzJMb1FNVFhEV2ZSYWhwY3dnc3hfSGlEcXNLRnprT1FmOTdMaF9pbWRNQUM3OE1vd3dUWFpKb0tHSGJMRTBMSmdJU0tZS0o5Wmtqc3AxS2s",
+            "source": "PYMNTS.com"
+          },
+          {
+            "title": "Microsoft named a Leader in IDC MarketScape for Unified AI Governance Platforms",
+            "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUzN3TWFZRHhPLVVyNVVCV0FyTTljVmRvcXI2YTM4VGx6RkZHMzRqSEU2X0sxNXE5cVI1TllIZnd4ekUtS2ktNDBEYTRIeFNDQmI3TlBScXl2NHZlU2FkeDhVLVdyYjg5Y2JqUWZ5YnpqcGdtWmZsS1k2SFdNclo5U0E2ZEFUM19vck8yTEUxSnNqM0FBZEVTZUQyZ05ORXJac19pOWNuZFdBX0FIMDVfcVoyRzVxZEdLTFhzSXZEallZU3J3cHVaYXpwMlhFd0JOZElr",
+            "source": "Microsoft"
+          },
+          {
+            "title": "SymphonyAI Introduces CPG-Focused Industrial AI Apps on Microsoft Azure",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUmZDdTNYb1pubUlyb2phUEUxZHpxbVY3MlpNRlhTb0Z1REZlcFdQN2p0ekhmaHIyc2c5YjVMdXBWZ1o4ZnBmUFFjcjF0elRUWmJpdFJYOTBFUVpNeVlFUmg1bVh6SVZVZ1U5UnZzdEdpOXdRRDQxbDJ6dm9NSDhaQVNxaEMwZnBENHh1bXNRM3U4N0toM25NZGxXWVY3cjN3NEtxeXByb3R5eFVJU1hpVU5fNjZ0dGxtMUdKQzVR",
+            "source": "HPCwire"
+          },
+          {
+            "title": "“中, 서방 밖 AI 경쟁서 앞서”…마이크로소프트, 딥시크 확산에 경고",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/2026011323261245359a1f309431_1",
+            "source": "GEnews"
+          }
+        ]
+      }
+    ],
+    "Global > Macro": [
+      {
+        "title": "미국 경제 지표 혼조세 속 연준 정책 불확실성 증대",
+        "text": "미국 경제는 11월 강력한 소매 판매와 은행들의 대출 수익 증가로 견고한 회복세를 보였으며, 생산자 물가도 완만한 상승을 기록했으나, 30년 만기 국채 금리는 안전자산 선호 심리 속에서 하락세를 연장했습니다. 이러한 혼조세는 견조한 소비 지표와 기업 실적에도 불구하고 시장이 장기적인 경제 둔화나 연방준비제도(Fed)의 향후 통화 정책 변화 가능성을 반영하고 있음을 시사합니다. 따라서 연준은 경제의 실제적인 강세와 시장이 반영하는 기대치 사이의 균형점을 찾아야 하는 상황에 직면했으며, 이는 당분간 통화 정책 경로에 대한 불확실성을 가중시킬 전망입니다.",
+        "links": [
+          {
+            "title": "Strong US retail sales in November showcase economy's resilience",
+            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOS0pKdkllUXV5ZW1Lbmp5eG0zemJMNmR0aTFSYWN2ZU1mXzZDQTEyOFpFeW5abk84dkJGMUxtYmJ1UGJIUUdwUWZsRVNjYnh2T2hXZ3pGbEZLNDhpTEV2eWVQYVJCSDhQMzg2a2QwTUxMMDJUdXYzZDMwWmhUYTVnVWJ2YmFqQ0ZmVUJKOWNjY0tTSjRraGVYRVRHS0JXbGJKc0NaR3dn",
+            "source": "Reuters"
+          },
+          {
+            "title": "Treasury 30-Year Yield Extends Slide Amid Haven Demand",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQX2dwMVZnbnNzSzdmQWtkOGtpTjJzX1pla0ZjSnRWNUFIeHg5WFJxOGVKWWhDSlBOMmt2Z216RmUyUWhDUWVWMi01dEZaWG9NUXpVemV4d0RjY254c29EcE9rbHBtLU1oVV9FQkEwcDRYbHRMN0lkaG5fR093aXFWVDAtQ1dNMV81NFA2Y2Uzbm96NHhvTC04UFh0enpnNS1tMzNJeGZmcUE",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "US producer prices increase moderately in November",
+            "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUnFlZUhya0pMWXQza1ZGbnhOeHdQOWxlOXgxR1pZbGE1SlNPOG9zTW1RTEY3TE1Wb0hZOGd2SlQtXzNxVWtTMU1vVFlhMlRVMFNZclQ0Si10ZkZsQm9idHNqNXU0MDRPZ1RzYWZLR0VyTWtlbEJ2d2xNR2ZNSlpMbHUydjlBZGVHVXhUOS1WdENhRS1samNv",
+            "source": "Reuters"
+          },
+          {
+            "title": "US banking giants reap bigger profits as borrowers seek more loans",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNazlFY0J6U0xuV2lYeWRYTVUxT3BpWUNPYTJGRVBTX0VudUdiS1haeFFXTU9JSjNzNUpwMzNtY0xQTF9kMGpyd3lLM0pqSmVtZEJUbGRTVkhhc3RMaGlJWVZIRUFSVi1FT1U5dnZSc1h6WEFSeklnUTdUbVZFeDMzMWNHOTkxOGRKV2NzYTdDamphaVVvN1NicHRXTVc2eEJzMGxfQk44YUUwRDZtLWxBTGlrWWhINGM",
+            "source": "Reuters"
+          },
+          {
+            "title": "Fed survey suggests slight upgrade to US economy",
+            "url": "https://www.investing.com/news/economy-news/us-economic-activity-mostly-increased-in-recent-weeks-fed-survey-shows-4448006",
+            "source": "Investing"
+          }
+        ]
+      },
+      {
+        "title": "미국-이란 갈등 고조, 중동 정세 불안정 심화",
+        "text": "미국과 이란 간의 긴장이 고조되면서 미국이 일부 중동 기지에서 병력을 예방적으로 철수하고 있으며, 이란은 미국의 공격 시 중동 내 미군 기지를 타격하겠다고 위협했습니다. 이러한 상황은 양국 간 핵 프로그램 및 역내 영향력에 대한 지속적인 분쟁에서 비롯된 것으로, 도널드 트럼프 행정부의 잠재적 군사 개입 우려를 키우고 있습니다. 중동의 지정학적 리스크 심화는 유가 상승 압력과 안전자산 선호 심리를 자극하며 글로벌 금융 시장의 변동성을 확대시키고, 역내 무역로 교란 가능성까지 높여 중대한 경제적 파급 효과를 야기할 수 있습니다.",
+        "links": [
+          {
+            "title": "Exclusive: US withdrawing some troops from key Middle East bases as precaution, US official says",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZ08xeWpWcUdLc2tQTmpteTJuNENWaHhXbUFJNUxySldUUGxmZmhpVjRZYVVINFNlZVNYNjRSMlB1SHU4bF9PSzl5ZmpPT3hKZndockNEQWJoYnlhQVZjOHVTTk04S0ZmQXU0dzEyZFVrMm90ZVRGVVg0cnlWOHBwdjllLUJMN2Y5S1hNSnh6OE9tSjRBc0V2TlMteGtyTC10Y2ppM2JjMV9SVTkwRUtZVnZLVFZRcmYxTzZtaWxDT2dfM2M",
+            "source": "Reuters"
+          },
+          {
+            "title": "뉴욕증시, 이란 군사 개입 저울질하는 트럼프…하락 마감",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0015847890&office_id=001",
+            "source": "연합뉴스"
+          },
+          {
+            "title": "The dangers of a trigger-happy US president",
+            "url": "https://www.ft.com/content/64917371-c076-449d-aa93-f15ee03037a5",
+            "source": "FT"
+          },
+          {
+            "title": "이란 “美 공격 시 중동 내 미군 기지 타격할 것”…역내 동맹국에 경고",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/2026011419514069519a1f309431_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "Dozens of ships anchor outside Iran's ports as US tensions rise",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQ2M3aE93bEc5TWhMUC14WElCcmQ3SlNwMFpfYjAxV1BmUUZRVWs4OWhCZFlLUUxlUThGb2h5MWd6bGJaZTJTbE9Ba1FTbVU2Zm9UZ0dtbm5LbmNJNUlYNGtJTW4xVmdYX3ZBVU1CaDlfcFNfSzZyUlZITTRzUGRGT2xXd1NpTWJtd2tpRm0zbzNtVl9YSzh4UXY5NG5xZ21YWnI4MmhNNzRUaGlDbWM0",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "국제 유가, 지정학적 리스크 확대로 변동성 심화",
+        "text": "우크라이나의 에너지 비상사태 선포와 카자흐스탄의 흑해 유조선 공격에 따른 원유 운송 안보 지원 요청 등 지정학적 사건들이 국제 유가를 움직였습니다. 이는 흑해 등 주요 지역의 공급망 취약성과 군사 분쟁이 유조선 보험료 급등에서 나타나듯이 에너지 공급 차질 및 운영 비용 증가에 대한 우려를 증폭시켰기 때문입니다. 이러한 핵심 에너지 생산 및 운송 지역의 지속적인 지정학적 불안정성은 원유 시장의 변동성을 높이고 에너지 가격에 상승 압력을 유지하여, 글로벌 인플레이션과 경제 성장 전망에 지속적인 영향을 미칠 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "Ukraine's Zelenskiy to declare energy emergency to tackle aftermath of Russian attacks",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNExhOEREMmVad0ViUEtDRFRLY2VWZkVtLUlMLWM3NlRGZ0NCVlZvV0xkUnUwb1lDMkxQd3lQZ1poSTdYdnBjeEk1Q3VOVElSRV84d1lSbWFDSS0wSTNVRWlZemtOd1BxSDdMTm8tTEJFWk1uOHQwUzdEYWlFR1ZZVGszV2tqTm04NzJhUnVydFRUYnU3ZG9lSDFPcXMwZjdwMXNheVBfVXQ0VkRVdEx5Ujl6LUw5VnNNMWc",
+            "source": "Reuters"
+          },
+          {
+            "title": "Surging Oil Tanker Insurance Points to Growing Black Sea Chaos",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPa3JjamphRC1qMHI1OXBXdzRBSm5IVy1sZ2ZhajdVcE1lWjJtS3N6WWM3cjhQN0Y4a3ZuQV90Vnp1WGs5SVEzUEd0OWFGenRLUmRsSkhTM19ORVZSaGdsc3F5UW9BbjQ3enJuU045andWR3Fyc1NGZE9wSHpPWjRkQWZWRlJUbFJIZGl1ZHJIclN5QXUxdGxTSGR4WkpHRDlUSlRzYXZtbGdxYVFTcVdFMmxzcw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Kazakhstan urges US and Europe to help secure oil transport after tanker attacks in Black Sea",
+            "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZWJLa05Lc0VJWUZoV3ktRU0wRUx2MUJZYXZSNlhIeW40Y2FYeWx4Q2NQUjBxSmlzSm9VTFp1MUlQUGtlYXFrNkpGczhlUllPTDJnSnFjOUE0ZS03c1NaTGxlQ25Ua3dvNEVDdVczUFg0MFpNZ2Vpa1Eyby15ZFB2ZmdiMlltZUc4ei1MdVdfWU9ObDdkaS1XdTRubm1jQjZFOElZNWFjZXVldm9Lak50TmdPdE9qcTJmQkJ4S2Zncw",
+            "source": "Reuters"
+          },
+          {
+            "title": "World’s largest oilfield services company to pounce on Trump’s Venezuela opening",
+            "url": "https://www.ft.com/content/0412ec3e-a127-45f7-b2a2-46576af802bb",
+            "source": "FT"
+          },
+          {
+            "title": "· 트럼프발 '석유 패권'에 맞선 중국... \"하루 100만 배럴\" 블랙홀 매수",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/202601141810066768fbbec65dfb_1",
+            "source": "GEnews"
+          }
+        ]
+      }
+    ]
+  }
+}
