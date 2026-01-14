@@ -217,6 +217,60 @@ def curate_articles(articles: List[Dict[str, Any]], trusted_publishers: List[str
 
     return selected
 
+def sanitize_article_data(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Clean article titles and URLs to prevent Markdown/JSON issues and reduce data size"""
+    import re
+    from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+    
+    def clean_url(url: str) -> str:
+        """Remove unnecessary query parameters to reduce data size"""
+        if not url:
+            return ""
+        
+        try:
+            parsed = urlparse(url)
+            
+            # Keep only essential parameters (article identifiers)
+            # Remove: utm_*, ref*, tracking*, fbclid, gclid, mode, type, page, date, etc.
+            essential_params = ['article_id', 'office_id', 'idxno', 'id', 'no', 'seq']
+            
+            if parsed.query:
+                params = parse_qs(parsed.query, keep_blank_values=False)
+                # Filter to keep only essential params
+                cleaned_params = {k: v for k, v in params.items() 
+                                if any(essential in k.lower() for essential in essential_params)}
+                
+                # Rebuild query string (take first value of each param)
+                new_query = urlencode({k: v[0] for k, v in cleaned_params.items()})
+                
+                # Rebuild URL without fragment
+                return urlunparse((parsed.scheme, parsed.netloc, parsed.path, 
+                                 parsed.params, new_query, ''))
+            else:
+                # No query params, just remove fragment
+                return urlunparse((parsed.scheme, parsed.netloc, parsed.path, 
+                                 parsed.params, '', ''))
+        except Exception:
+            # If parsing fails, return original URL
+            return url
+    
+    cleaned = []
+    for art in articles:
+        c_art = art.copy()
+        
+        # Clean title: Remove brackets and unescape HTML
+        raw_title = str(c_art.get('title', ''))
+        clean_title = html.unescape(raw_title)
+        clean_title = clean_title.replace('[', '(').replace(']', ')')
+        c_art['title'] = clean_title
+        
+        # Clean URL: Remove unnecessary parameters
+        raw_url = c_art.get('url', '')
+        c_art['url'] = clean_url(raw_url) if raw_url else ""
+            
+        cleaned.append(c_art)
+    return cleaned
+
 def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str]) -> tuple:
     """Worker function for parallel execution"""
     try:
@@ -236,8 +290,19 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
                     news_ids = json.loads(t_obj['news_ids_json'])
                     articles = fetch_article_details(local_db, news_ids)
                     
+                    # Sanitize Data
+                    articles = sanitize_article_data(articles)
+
+                    # DEBUG: Check URLs after sanitization
+                    urls_after_sanitize = [bool(a.get('url')) for a in articles]
+                    logger.debug(f"[{section_name}] Topic {tid}: URLs after sanitize: {urls_after_sanitize}")
+
                     # Curation
                     curated_articles = curate_articles(articles, trusted_publishers, max_candidates=12)
+                    
+                    # DEBUG: Check URLs after curation
+                    urls_after_curate = [bool(a.get('url')) for a in curated_articles]
+                    logger.debug(f"[{section_name}] Topic {tid}: URLs after curate: {urls_after_curate}")
 
                     section_context_data.append({
                         "title": t_obj['title'],
@@ -249,6 +314,16 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         
         sec_prompt = get_section_body_prompt(section_name)
         sec_json = json.dumps(section_context_data, ensure_ascii=False, indent=2)
+        
+        # VALIDATION: Verify URLs are present in context before sending to LLM
+        total_articles = sum(len(topic.get("articles", [])) for topic in section_context_data)
+        articles_with_urls = sum(
+            sum(1 for art in topic.get("articles", []) if art.get("url")) 
+            for topic in section_context_data
+        )
+        logger.info(f"[{section_name}] Sending to LLM: {total_articles} articles, {articles_with_urls} have URLs")
+        if articles_with_urls < total_articles:
+            logger.warning(f"[{section_name}] ⚠️ {total_articles - articles_with_urls} articles are missing URLs in context!")
         
         content = generate_content(model, system_prompt, sec_prompt, sec_json)
         return section_name, content
@@ -273,6 +348,10 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
                     t_obj = topic_map[tid]
                     news_ids = json.loads(t_obj['news_ids_json'])
                     articles = fetch_article_details(local_db, news_ids)
+                    
+                    # Sanitize Data
+                    articles = sanitize_article_data(articles)
+                    
                     # Curation
                     curated_articles = curate_articles(articles, trusted_publishers, max_candidates=12)
 
@@ -306,6 +385,8 @@ def parse_selection_json(json_text: str) -> Dict[str, Any]:
         return {"executive_summary_ids": [], "section_picks": {}}
 
 
+import html
+
 def parse_section_content(raw_text: str) -> List[Dict[str, Any]]:
     """
     Parse raw LLM output into structured blocks (Text + Links).
@@ -314,40 +395,42 @@ def parse_section_content(raw_text: str) -> List[Dict[str, Any]]:
     lines = raw_text.split('\n')
     blocks = []
     
+    current_title = ""
     current_text = []
     current_links = []
     
     def flush_block():
-        nonlocal current_text, current_links
-        if current_text or current_links:
+        nonlocal current_title, current_text, current_links
+        # A block must have at least some content
+        if current_title or current_text or current_links:
             blocks.append({
+                "title": current_title.strip(),
                 "text": "\n".join(current_text).strip(),
                 "links": list(current_links)
             })
+            current_title = ""
             current_text = []
             current_links = []
 
     for line in lines:
+        # Decode HTML entities (e.g., &quot; -> ") immediately
         stripped = line.strip()
+        
         if not stripped:
             continue
             
         # Check for link markers
         is_link = stripped.startswith('>') or stripped.startswith('•') or stripped.startswith('- ') or stripped.startswith('*-')
         
+        # Check for Title Header (### or **Title**)
+        # Usually LLM output format: ### **[Title]** or ### Title
+        is_header = stripped.startswith('###') or (stripped.startswith('**') and stripped.endswith('**') and len(stripped) < 100)
+        
         if is_link:
             # Parse Markdown Link: >• [Title](URL) - (Source)
-            # Regex to capture: [Title], (URL), (Source)
-            # We must be careful about variations.
-            # Expected: [Title](URL) - (Source)
-            
-            # 1. Try strict format
-            # Clean markers first
             link_content = re.sub(r'^[>•\-\*]+\s*', '', stripped).replace('**', '').strip()
-            
-            # Regex: \[ (title) \] \( (url) \) ... \( (source) \)
-            # using non-greedy matchers
-            match = re.search(r'\[(.*?)\]\((.*?)\)\s*-\s*\((.*?)\)', link_content)
+            # IMPROVED REGEX: Greedy match for Title to handle potential nested brackets
+            match = re.search(r'\[(.*)\]\((.*?)\)\s*-\s*\((.*?)\)', link_content)
             
             if match:
                 link_obj = {
@@ -357,8 +440,7 @@ def parse_section_content(raw_text: str) -> List[Dict[str, Any]]:
                 }
                 current_links.append(link_obj)
             else:
-                # Fallback: Try just [Title](URL) - Source (no parens around source)
-                match_weak = re.search(r'\[(.*?)\]\((.*?)\)\s*-\s*(.*)', link_content)
+                match_weak = re.search(r'\[(.*)\]\((.*?)\)\s*-\s*(.*)', link_content)
                 if match_weak:
                     link_obj = {
                         "title": match_weak.group(1).strip(),
@@ -367,15 +449,22 @@ def parse_section_content(raw_text: str) -> List[Dict[str, Any]]:
                     }
                     current_links.append(link_obj)
                 else:
-                    # Fallback: Raw string
                     current_links.append(link_content)
 
-        else:
-            # If we were collecting links and now see text, it's a new block (unless it's empty?)
-            if current_links:
+        elif is_header:
+            if current_title or current_text or current_links:
                 flush_block()
             
-            # Clean text line
+            clean_title = stripped.replace('###', '').replace('**', '').replace('__', '').strip()
+            if clean_title.startswith('[') and clean_title.endswith(']'):
+                clean_title = clean_title[1:-1]
+            
+            current_title = clean_title
+            
+        else:
+            if current_links:
+                flush_block()
+
             clean_line = stripped.replace('**', '').replace('__', '')
             clean_line = re.sub(r'^#+\s*', '', clean_line)
             current_text.append(clean_line)
@@ -394,20 +483,28 @@ def format_report(sections: Dict[str, Any], date_str: str) -> str:
              # Reconstruct markdown from structured blocks
              full_text = []
              for block in val:
+                 title = block.get('title', '')
                  text = block.get('text', '')
                  links = block.get('links', [])
                  
-                 block_str = text
+                 # Construct Block: ### Title \n Text \n Links
+                 parts = []
+                 if title:
+                     parts.append(f"### {title}")
+                 
+                 if text:
+                     parts.append(text)
+                     
                  if links:
                      link_strs = []
                      for link in links:
                          if isinstance(link, dict):
-                             # Reconstruct: >• [Title](URL) - (Source)
                              link_strs.append(f"> • [{link['title']}]({link['url']}) - ({link['source']})")
                          else:
                              link_strs.append(f"> • {link}")
-                     block_str += "\n" + "\n".join(link_strs)
-                 full_text.append(block_str)
+                     parts.append("\n".join(link_strs))
+                 
+                 full_text.append("\n".join(parts))
              
              return "\n\n".join(full_text)
         elif isinstance(val, dict):

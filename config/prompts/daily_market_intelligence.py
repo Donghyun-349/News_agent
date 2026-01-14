@@ -116,8 +116,10 @@ Analyze the provided news topics and write the **"{section_name}"** section.
    - **Sentence 1 (Fact - 현황):** What happened? (Include key numbers/entities).
    - **Sentence 2 (Cause - 원인):** Why did it happen? (Context/Background).
    - **Sentence 3 (Outlook - 전망):** What is the market impact? (Future implication).
-4. **Citations (Max 5):**
+4. **Citations (Max 5) - CRITICAL FORMAT REQUIREMENT:**
    - List **exactly 5 citations** maximum per topic.
+   - **MANDATORY FORMAT:** EVERY citation MUST follow this EXACT format: `>• [Article Title](URL) - (Publisher)`
+   - **URL IS REQUIRED:** You MUST include the URL field from the provided data. DO NOT omit URLs under any circumstances.
    - **Priority 1 (Representative):**
      - **Condition A:** IF an article title contains **'Exclusive(단독)'**, you **MUST** select it as Reference #1.
      - **Condition B:** IF NO 'Exclusive' article exists, select the most important article from a **Major/Trusted Publisher** as Reference #1.
