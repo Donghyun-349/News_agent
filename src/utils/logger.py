@@ -5,6 +5,19 @@ import os
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
+import time
+import sys
+
+# Add project root to path to import timezone_utils
+project_root = Path(__file__).parent.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+try:
+    from src.utils.timezone_utils import get_kst_now, format_kst_date
+    KST_AVAILABLE = True
+except ImportError:
+    KST_AVAILABLE = False
 
 
 def setup_logger(
@@ -32,10 +45,25 @@ def setup_logger(
     logger.handlers.clear()
     
     # 로그 포맷 설정
-    formatter = logging.Formatter(
-        '[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S'
-    )
+    if KST_AVAILABLE:
+        # Custom formatter with KST timezone
+        class KSTFormatter(logging.Formatter):
+            def formatTime(self, record, datefmt=None):
+                kst_time = get_kst_now()
+                if datefmt:
+                    return kst_time.strftime(datefmt)
+                else:
+                    return kst_time.strftime('%Y-%m-%d %H:%M:%S')
+        
+        formatter = KSTFormatter(
+            '[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+    else:
+        formatter = logging.Formatter(
+            '[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
     
     # 콘솔 핸들러
     if console_output:
@@ -49,7 +77,10 @@ def setup_logger(
     log_path.mkdir(exist_ok=True)
     
     # 일별 로그 파일
-    today = datetime.now().strftime('%Y-%m-%d')
+    if KST_AVAILABLE:
+        today = format_kst_date('%Y-%m-%d')
+    else:
+        today = datetime.now().strftime('%Y-%m-%d')
     log_file = log_path / f"app_{today}.log"
     
     file_handler = logging.FileHandler(log_file, encoding='utf-8')

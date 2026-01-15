@@ -238,6 +238,67 @@ def cluster_step1(model: Any, category: str, articles: List[Dict[str, Any]]) -> 
         return []
 
 
+def translate_titles(model: Any, titles: List[str]) -> List[str]:
+    """
+    Translate foreign article titles to Korean using Gemini.
+    Returns list of translated titles (or empty string if already Korean).
+    """
+    if not titles:
+        return []
+    
+    # Filter out empty titles
+    non_empty_titles = [(i, title) for i, title in enumerate(titles) if title]
+    
+    if not non_empty_titles:
+        return ["" for _ in titles]
+    
+    logger.info(f"🌐 Translating {len(non_empty_titles)} article titles to Korean...")
+    
+    # Create a prompt for batch translation
+    titles_json = json.dumps([{"id": i, "title": title} for i, title in non_empty_titles], ensure_ascii=False)
+    
+    prompt = f"""You are a professional translator. Translate the following article titles to Korean.
+
+Rules:
+1. If a title is already in Korean, return an empty string "" for that title
+2. If a title is in a foreign language (English, etc.), translate it to natural Korean
+3. Keep proper nouns (company names, people names, places) in their original form
+4. Return ONLY a valid JSON array in this exact format:
+[
+  {{"id": 0, "translation": "번역된 제목 또는 빈 문자열"}},
+  {{"id": 1, "translation": "번역된 제목 또는 빈 문자열"}}
+]
+
+Titles to translate:
+{titles_json}
+
+Return ONLY the JSON array, no other text."""
+    
+    try:
+        response = model.generate_content(prompt)
+        content = clean_llm_json_output(response.text)
+        parsed = robust_json_load(content)
+        
+        # Create result array with same length as input
+        translations = ["" for _ in titles]
+        
+        if isinstance(parsed, list):
+            for item in parsed:
+                if isinstance(item, dict) and "id" in item and "translation" in item:
+                    idx = item["id"]
+                    # Map back to original indices
+                    for orig_idx, orig_title in non_empty_titles:
+                        if orig_idx == idx:
+                            translations[orig_idx] = item["translation"] or ""
+                            break
+        
+        return translations
+    
+    except Exception as e:
+        logger.error(f"❌ Translation Failed: {e}")
+        return ["" for _ in titles]
+
+
 def init_sheet(sheet_id: str, tab_name: str):
     """시트 초기화 (Clear & Header)"""
     if not sheet_id:
@@ -249,9 +310,8 @@ def init_sheet(sheet_id: str, tab_name: str):
         adapter.worksheet.clear()
         
         # 헤더
-        # 헤더
         headers = [
-            ["Category", "Topic Title", "News Count", "Reason", "Publisher", "Title", "URL"]
+            ["Category", "Topic Title", "News Count", "Reason", "Publisher", "Title", "Title (Korean)", "URL"]
         ]
         adapter.worksheet.insert_rows(headers, 1)
         logger.info(f"✅ Initialized sheet '{tab_name}'")
@@ -259,7 +319,7 @@ def init_sheet(sheet_id: str, tab_name: str):
         logger.error(f"❌ Sheet Init Failed ({tab_name}): {e}")
 
 
-def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[str, Any]], news_db: DatabaseAdapter):
+def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[str, Any]], news_db: DatabaseAdapter, model: Any = None):
     """결과 리스트를 구글 시트에 추가 (Append)"""
     if not sheet_id or not topic_list:
         return
@@ -311,18 +371,26 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             for r in rows:
                 title_text = r[0]
                 url = r[3]
-                titles_list.append(f"- {title_text}")
-                urls_list.append(f"- {url}" if url else "-")
+                titles_list.append(title_text)
+                urls_list.append(url if url else "")
 
-            reasons_list = [f"- {r[1] or ''}" for r in rows]
-            pubs_list = [f"- {r[2] or ''}" for r in rows]
+            reasons_list = [r[1] or "" for r in rows]
+            pubs_list = [r[2] or "" for r in rows]
             
             reasons_str = "\n".join(reasons_list)
             pubs_str = "\n".join(pubs_list)
             titles_str = "\n".join(titles_list)
             urls_str = "\n".join(urls_list)
             
-            sheet_rows.append([category, title, len(news_ids), reasons_str, pubs_str, titles_str, urls_str])
+            # Translate titles if model is available
+            if model:
+                titles_kr_list = translate_titles(model, titles_list)
+            else:
+                titles_kr_list = ["" for _ in titles_list]
+            
+            titles_kr_str = "\n".join(titles_kr_list)
+            
+            sheet_rows.append([category, title, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_str, urls_str])
 
         if sheet_rows:
             adapter.worksheet.append_rows(sheet_rows)
@@ -425,7 +493,8 @@ def main():
                 GOOGLE_SHEET_ID, 
                 tab_name,
                 step1_clusters, 
-                news_db
+                news_db,
+                model  # Pass model for title translation
             )
 
     logger.info(f"✅ Completed. Generated {len(all_results)} topics.")
