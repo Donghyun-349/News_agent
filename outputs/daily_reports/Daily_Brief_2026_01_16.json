@@ -1,0 +1,585 @@
+{
+  "meta": {
+    "date": "2026-01-16",
+    "generated_at": "2026-01-16 07:32:03",
+    "version": "2.0"
+  },
+  "sections": {
+    "Executive Summary": [
+      {
+        "title": "오늘의 헤드라인 (Today's Headlines)",
+        "text": "1.  TSMC의 실적 호조와 대규모 투자 발표로 글로벌 반도체 및 AI 관련주가 강세를 보이며 뉴욕 증시가 반등했습니다.\n2.  미국 재무장관의 이례적인 원화 약세 구두 개입과 한국 정부의 신규 외환 건전성 규제 도입 검토 소식에 원/달러 환율 변동성이 주목받고 있습니다.\n3.  한국 정부의 독자 AI 파운데이션 모델 개발 프로젝트 1차 평가에서 네이버클라우드가 탈락하고 LG AI연구원, SK텔레콤, 업스테이지 등 3개 팀이 2단계에 진출했습니다.",
+        "links": []
+      }
+    ],
+    "Real Estate > Global": [
+      {
+        "title": "글로벌 주택 시장, 고금리 지속에 거래 둔화 및 가격 하락 압력 가중",
+        "text": "전 세계 주요국의 주택 시장은 6%대의 높은 모기지 금리와 매수 심리 위축으로 인해 거래량이 급감하고 주택 가격 하락 압력에 직면하고 있으며, 특히 미국과 캐나다 등 북미 지역에서 이러한 현상이 두드러지고 있습니다. 이는 각국 중앙은행의 인플레이션 억제를 위한 지속적인 금리 인상 기조가 주택 구매자들의 대출 부담을 가중시키고 시장의 유동성을 저해하며, 주택 담보대출 변동금리의 상승으로 기존 차주들의 상환 부담 또한 커지고 있기 때문입니다. 고금리 환경이 장기화될 경우 주택 시장의 침체는 더욱 심화될 것이며, 이는 전반적인 소비 심리 위축과 건설 경기 둔화로 이어져 거시 경제 전반에 부정적인 영향을 미칠 수 있습니다.",
+        "links": [
+          {
+            "title": "Mortgages at 6% Pose Critical Test for Frozen Housing Market",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcndtMEhrS2ttc1MyaG9odkp6a2U1d3laM2l6TVJQODBBWmRESmhFUGNzSW4zV0RBd0tvb2FwaTBlX0YxRmxBcm0zTER1dGZUQU9RVXk1UUFGYVg0X2J2eC02RWlMVkg0T3d6OTVrZjYtb1lXRms5TjVERWMzM3hUSEhieXJ3NjhYeWFoeUFhWWtUeVVCNUo1RDhyT0V2RFQ4QzkxemhoakN3TVlWS0dDdzU3dw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Canadian Housing Market in Winter Freeze as Prices, Sales Decline",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcjhyVC1MSUo5eFpGdG9rX01BNDBsY09vWWN4OUE0TWx4Q2JLR0IydXhOZ2VnU2xJU2h3R25NbjctNGUyT2RSZW5UZHBYc1lkR0ktY3lKSUh3TS02RzJfTDZGdjVGOXZYVG9wc0tRTnJvREF5R0NfbFNKUEV4R3NEWnJQckN5TWFNVGt2eVBvSWJObzFGejhPX29hbnpTVFcyNFFqXy1ZZ1Q3VGhlUWJndjVkbmhSZw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "주담대 변동금리 또 오른다…코픽스 넉달째 상승",
+            "url": "https://www.sedaily.com/NewsView/2K7BAC6IXK",
+            "source": "서울경제"
+          }
+        ]
+      }
+    ],
+    "Global > Region": [
+      {
+        "title": "🌏 주요 글로벌 지역 경제 동향 분석",
+        "text": "영국 경제가 예상치를 상회하는 성장을 기록하며 경기 침체 우려를 완화하고 외국인 직접 투자(FDI) 순위도 AI 및 청정에너지 부문의 활성화에 힘입어 상승했습니다. 서비스 부문의 회복세와 정부의 전략적 투자 유치 노력, 그리고 미래 산업 분야의 성장이 이러한 긍정적인 추세를 이끌었습니다. 이는 영국 경제가 회복세를 지속할 수 있다는 신호를 제공하며, 특히 첨단 기술 분야에 대한 투자 매력을 높여 중장기적인 성장 동력을 확보할 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "U.K. Economy Grows More Than Expected",
+            "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxQamdBcUV3a0ZvRW5EWEVhQ2VjSndldGxHWm1IUVphR0l3aFFOUEZZMmNna3dLazkxOWFiU0QtaWQzcUN0MlF1QWFlSDcySUJTa0I5eXRyaV9qbGFSQmNoeFVDTVF1MjUtVE9KLUdFNmNaZUZ5V205UUQxRGtfVHVzeld5bDZaczVqdnZ3LXNWc2FOV3FnbnVuX2pzU1g3OU4zRFR4enREYl9USng1eEEzN2JJYlRFaDhMaElIOV84bXZveTlycXlRc0REM2NQclNiNnprUFRaUnVMZWdXeUJscGZmVlRlTEwzU0ROWXVQRGVjbTV6OTVVcFgybXplTGRyNUFuM29nYnRDeFN6UFpsUlJpbVIxUC1veVpoVjliOEs5MV9SM3JDdHlQX1RWSHZsdGJmMjJzUXNvUE9Wd3VSaHhJWG83dlRsR2pCNjZOekZxQ1pmdUtHazNkbjJWaUVjMW9zZGV6TzMyUHBYTWZna3YzOG1qSkMyaXRZNWxDcU5TcTQ",
+            "source": "WSJ"
+          },
+          {
+            "title": "UK climbs FDI rankings on AI and clean energy booms, McKinsey says",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaVhISHM5Z1dBUEtHWXZ0clNha1FxYThwT1Q0VEpfcldHS0JDSGd6bU5NNTRtU0d5ZHRfRTJIZ2JRMmltdUc0aGhPVEVBOG9XWGVHSlM1aEdoSll2QU9HQlN5Ry1jUmZRMU5Z1lKdnloUVBSOWxpSFh3YjBVUGNndnFZeVJPRV9FVWVGbXA1MklaN0dSMXhZSnUwT2Vzb194NGUwREthZ3FYT25zMFhKblphdVItOTZkWXlUNHFSeEYyQQ",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "중국의 신규 대출 규모가 2018년 이후 최저치를 기록하며 대출 수요가 크게 약화된 가운데, 중국 중앙은행은 구조적 정책 도구 금리를 인하했습니다. 부동산 시장 침체 장기화와 소비 및 기업 투자 심리 위축이 대출 수요 감소의 주된 원인이며, 중앙은행은 경기 부양을 위해 유동성 공급 확대를 통한 금리 인하 조치를 단행했습니다. 이러한 조치에도 불구하고 대출 수요 부진이 지속될 경우 경기 회복세가 둔화될 수 있으며, 추가적인 금리 인하 압력이 커질 수 있어 시장의 불확실성이 확대될 전망입니다.",
+        "links": [
+          {
+            "title": "China’s Central Bank Lowers Rates on Structural Policy Tools",
+            "url": "https://news.google.com/rss/articles/CBMiowNBVV95cUxOU0YyUEZfMlRMVkJJQ2ZJejh1S1RxR0htNURHXzRWTXB3M0pPemdFNDE3V2kxUVJrSTl3cmtfdm9FZG9lZmRpTWR3aXlManBpS_VTLS1GaC1JZnFIVm9iS3paa2ZwMnZDNzRHQXBmcVZnd0RzYmVNUzdPRG9TWS13ejMwUzRCTDRUdE5vR2JpZnZDY1hFV3BZN2Fqc0xNNnVTUUtaNlJkcGNHS3FWR3h3dnRfdGNSaXpnang2SFhEN1NPT1paaENpN0ZwR3g5aUJaQ2dhNTNhZDVnOVNadWpjQUl2VVU5QnU4M1puMU5semN6UVNMR19CVkdSSmtwSEFNb181OTNEMkt0R2w5R2pfakdfSjg1UG41cnlhSmNESm56N1Q4SWtEeVlYNmJXZ0tkZnduc0k4WnFmVFZDbnNROEN4SzctREVRZ19tUk50MjBoN2dUYk42SWc1dzc1ZDB5SEUwTW4wZ1VKanRBMnJZY3hrXzdmck1JTHQ3MFpGUkJZRmg0NUFQelFIT0pQa25fd0FkbFh6eEZTekZEdUZyMTdRRQ",
+            "source": "WSJ"
+          },
+          {
+            "title": "China New Loans Shrink to Least Since 2018 as Demand Weakens",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdkJfU1gzV1pIWE5oMEMzNmN3NXRKUWx3bVVibHZNMXR6a1o3bmZJZXBsMExQZ1hyWUQ0Z2lNblJJZ2UzeERaOGJHamVKMzdUNlcxNV9Qb0VtLThpem9Fd2hWVVcyQm1uWUR2RC1zYW5MUkt3Zmo3SzRFR1Q2dFJLbWFRNUpTeXVTam1oYkhzVklKZDkxVUVRcTdUcmd3U2dFT2FVSlphcFlXZGRvdkZTOFptaXQwUQ",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "독일 경제가 2022년 이후 처음으로 성장을 기록하며 경기 침체 국면에서 벗어났습니다. 견고한 소비 지출과 수출 회복세가 성장을 견인했으며, 에너지 가격 안정화와 공급망 문제 완화가 긍정적인 영향을 미쳤습니다. 이는 유럽 경제의 주요 동력인 독일이 회복 궤도에 진입했음을 시사하며, 유로존 전체의 경제 회복 기대감을 높여 투자 심리에 긍정적인 영향을 미칠 것으로 보입니다.",
+        "links": [
+          {
+            "title": "Germany’s Economy Grows for First Time Since 2022",
+            "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxNcHU1azRhMjhPeFNWV3dacGN4ZXpZWE1yZUozdS1Jd2J2T3JXdjRYaDB2bVRLbThTTjhnMW5xVTdBNUxyN2h5My02bGJRWUZ2MmtUOGo0aVJIZ091dV9VVHFGTUFsbkx0cFVJUGFrWVNkZnl2V25QallLX01rdUdSVURiblVVN2ZlYXc1Y1YwZTVYOUdqNGNveGhoYTBIal9JT3FjTmtObDhrcnR4aDFGNlRVVUEzR3FfQ19ENjRjSDBMTldBRWNlTEtMRFk3U1FaU0JEZEVlQ25mZDlZMmk2QThFU045S1FRYlJjeUJkbU9wTDFWRFpGT0ZrSnpET0hqVjE2R2NlNkFyakhXWjVaWlNOajBUdDdZNm1ZbGlJbTNZRk41cTZMUDk3cHdCU2RLb0pPeFVxcGoyVm9LcGJOZkdjZ2JJZVBGYkptT0tvT3BmelpHa2ZRa2hCNmtrbDdGZDZZYlpOOGowczlBWnI2dEFBVDJ6UkIyLVVkYUpIb1AzNjVSNHgyTTRBTldkNXBHM05Fcw",
+            "source": "WSJ"
+          }
+        ]
+      }
+    ],
+    "Global > Market": [
+      {
+        "title": "TSMC 실적 호조에 따른 글로벌 반도체 시장 활성화",
+        "text": "대만 TSMC가 4분기 시장 기대치를 뛰어넘는 35% 급증한 순이익을 기록하며 사상 최고 실적을 발표했고, 이는 ASML의 시가총액이 5천억 달러를 돌파하는 등 전 세계 반도체 주식 랠리를 촉발했습니다. 이러한 강력한 실적은 인공지능(AI) 관련 첨단 칩에 대한 견고한 수요에 힘입은 것으로, 반도체 산업의 회복세와 TSMC의 공격적인 투자 계획을 시사합니다. TSMC의 긍정적인 실적은 광범위한 기술주 랠리를 촉진하며, 반도체 산업의 강력한 성장 모멘텀이 지속될 것이라는 기대를 높여 전체 시장의 낙관론을 강화할 것으로 보입니다.",
+        "links": [
+          {
+            "title": "TSMC Q4 profit jumps 35% to record, beats expectations",
+            "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTFZXT0Vid3oyaTI0Q2h6bW44WC1PbERKTWxtYzZLVmw1NTBVLW9JMVI0dGtwVmZvbmFxNy1GX0dmczJiT29WNTNLMC1rUlRoMEFRT3JlTFZmSGE4YWRFemJBWDc5c1lLeFBwb2RlVU5qQy1VeFN3T2lmN0dnbjVSa0lQY1p3RFJMNXNMVjdMcUllTE8tWGd2bUgxbGhIUQ",
+            "source": "Reuters"
+          },
+          {
+            "title": "ASML Soars Above $500 Billion Value on TSMC’s Upbeat Outlook",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNT0NnNm8xa3hjWHpRZkFaaE9CY1lCYzVRQ3FQQkVsQ3piTWlGN25fQ0J6UnNSM1dCaFBqcUVOWDF0b0NsZXdFRVg2N2dhRWwzTC0ybEtteUtBUFRtS2Z4amJ1ZkROaEZpdXZUb2lvR2JWTXUwSXhOS2lMM0VpNWN6YzJFWlhwNkktcjZRRnljajBaUjItVWdBM2E1SnJWSENjeTZ6Vk9UZUhoX2xOM0RBc0FrZjF",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Stock Market Today: Dow Rises; Chip Stocks Rally After TSMC Earnings",
+            "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxPd1ctZzg2Wk1tRjJFaGlCaFpHaFVudURZMzBFak9lUHVWMThlUkNsQ1RqNldEYU8xSEtFOGZSVTlZZ1dHVUJVTVhLR25wOHlfc0dwZHlqOXNpSTJpR0VrODZTaDhWZmd2MlFpMVNTbTNYVDhKRU1aajdmN25BeFc4U2pjLUFoWHc3X1oyeXdzeVFDM3VVbjRScXQyWmhNdG54ekViTnIxa0hzbFh4d3RhVThpNDdWSXJ4aTRJLXFSZ3lWX3FvS21Fel9qVkp4bDhHaUJzWk80Q09lTzZMalkyV1FZSFMzUksxM0thVE9DUktSWUZtcnJWVVFrc014a2pVWUpBUTJKWHFRbXVxRlJJeS1VdnBleWJEWUs3UVdsdWQwb0tuamdndGhZc1FnTmhlYVVPZ3c1ODk1eml0Ni00UVpVZ1I2YTdSLW1tODRMVXYwaDRPNEg3dWp3cUlRdlR5LVlCWV8xQkhfSXBoS1VpT1psMzZGRU9ZbW5oRk1LR05VTERrOHBwVWptbGs",
+            "source": "WSJ"
+          },
+          {
+            "title": "TSMC 끌고 골드만삭스 밀고...뉴욕증시 랠리 (월가월부)",
+            "url": "https://www.mk.co.kr/news/economy/11934677",
+            "source": "매일경제"
+          },
+          {
+            "title": "美·대만, '반도체 빅딜' 무역협상 타결 - (굿모닝 글로벌 이슈)",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0001238115&office_id=215",
+            "source": "한국경제TV"
+          }
+        ]
+      },
+      {
+        "title": "주요 투자은행 및 자산운용사의 견조한 실적 발표",
+        "text": "골드만삭스와 모건스탠리가 시장 기대치를 뛰어넘는 4분기 실적을 발표했으며, 블랙록은 ETF 부문의 성장에 힘입어 자산총액이 사상 최고치인 14조 달러를 돌파했습니다. 골드만삭스는 기록적인 주식 트레이딩 수익과 견조한 M&A 활동 전망에 힘입었고, 모건스탠리는 채권 발행 부문에서 강세를 보였으며, 블랙록은 ETF에 대한 기관 및 개인 투자자 수요 증가로 자산 규모를 확대했습니다. 주요 금융기관들의 호실적은 금융 시장 전반의 활력과 견고한 자본 시장 환경을 반영하며, 이는 기업 투자 및 자산 관리 산업의 긍정적인 전망을 지지하여 전반적인 시장 심리에 긍정적 영향을 미칠 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "Goldman's profit beats on record stock trading, sees robust M&A activity in 2026",
+            "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQb2NaeXBZc3hkLTJ6RkdhaHptbVRrUlhaNTY0SHdpZnk3OUhDVC0zRUEtZ3ZybVl1VlVmRE1OemRWZ1plZnFmZjM3WksxTS1oV0laZGR0cDFJXzk1YlBLd1Z0aWpiNG02UngyVDVncXcyb19OejFEUG9SeGZqRjN1dFdaYnl0eF9ta1VTNHpESGJ6UEVubmFuUkFVcTVkTG1kYlhzbkJEdEdpbmM",
+            "source": "Reuters"
+          },
+          {
+            "title": "Morgan Stanley Tops Investment-Banking Forecast on Debt Haul",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLXVoM29mV25mWmlPbG9QM1pKZ2ExOHV4dnZmM21PYU83eW9jbHQySE5DdVVRS2plbXNKU0xiM3luS1JrU2wwYjluemF2Rkw3eWZ6YVlwYWdtLVM3MnVQZVczZ2tlYURHSV9tREg5VVFibGhzekRVVVF0bi1hQzJBcmlZRTl6NVRUNm5vd3A1ZjJzbjBOS1ZQWVd4bDlQcUl1NUhpV0w4TU16em1XV0hkc1p2TVNiZw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "BlackRock Total Assets Hit Record $14 Trillion as ETFs Surge",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUFpTZHNGdG1RLVUzVVFJbC0xcy1jLXlXaDZJMnZXNWhQU2JjRnpuUkswTkJOazRVVVJCZDRKTEVQNGJxZUZPTm5hMVhBNmFQTkxrM3BXNjNPdFJpT3dud0JlZURpM2xxbkVYR3NMTzlIZElCdzFYLXV6SFBJeUk2dDNtMUlKVURaSEl5QnBCdV9Rc3B5cDFkUUZaZ2lYSXRGdzVCVS14NE1LaVVmU21R",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "US bank results as it happened: Goldman’s equities traders recapture Wall Street crown, Morgan Stanley’s client assets top $9tn for first time",
+            "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1iSm5qbVk3SkQ0Wlh5Z3ptZ3ZqNnlsaWR0aGN4a2RLV3BUamJWTkliSUpZc3lZMmhVY1Z3MkhMbG5UNWV0MlBDaDRERlNBcHFyUlJ5VEJMOUhnVEFNd016TU9vdGdGUlVqZllicjRvbWs",
+            "source": "FT"
+          },
+          {
+            "title": "BlackRock Caps 2025 With Record $14 Trillion in Assets",
+            "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxOU1NoWEVzdFp0YzNmQ1RNUXNKZTZDU2JsOExQUXBsWDBxbERkWWdjVVlUbEJTU244aUsyTTAybXpQYzAyUFRXdzJOd2JZUDdYcUs0RHM2NE5ZRHd5RFhfejJod0xiUm96WXJwcEVPeFdSeUJyWkcySTdqZTRRMlk2dlA4UXQ1TnRGWk9tREx0ZGpMRHp5QnBlTHpYUlBxRmRZS0t2TGY0VHRhTjJnb0tmSkJ0N29zTTJOcnphX2NtUnJJc09qbkk3b1ktRXV5UC1JSWswS2ZnNjJKTFlpVElMSk43bEwyLVM3UHBDYTV6MXZuT0VuR0pmRC1TbzNKWG15NDU2a0ttcHRfVWVic0FHQThTMmNOUGZ6UmhoWFBzNjdyQ0doZGNrYzQzRmFVR3dGUWdtMk9NZEhmUUw4bERVenFRR2hLOTRpVzJxUjExd3kyeDlhZ1EwRkg4QUhPQU8yX0JHS3M2REFOZ0FucTRIVTFHVk9xaGdYY0Q1UXUyLWFaNmp1WVRlQzRrNDRVYWstRVE",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "글로벌 원자재 시장, 지정학적 긴장 완화 및 공급 증가로 가격 변동성 확대",
+        "text": "최근 중동 지정학적 긴장 완화로 유가가 4% 이상 하락했으며, 아시아 시장에서 LNG 가격은 미국산 수출 급증과 중국 수요 위축으로 30% 급락하는 등 글로벌 원자재 시장에 가격 변동성이 확대되었습니다. 유가 하락은 미국이 이란에 대한 군사 행동을 완화할 것이라는 기대감과 초과 공급 우려 재부각에 기인하며, LNG 가격 급락은 풍부한 미국산 공급과 중국 경제 둔화로 인한 수요 감소가 복합적으로 작용한 결과입니다. 원자재 가격의 하락은 글로벌 인플레이션 압력을 완화하고 에너지 수입국에 긍정적인 영향을 미칠 수 있으나, 지정학적 위험은 여전히 불확실성으로 남아있어 시장 변동성을 유발할 수 있습니다.",
+        "links": [
+          {
+            "title": "Oil prices tumble as fears of US action in Iran ease",
+            "url": "https://www.ft.com/content/9cbf6010-3e10-4806-a889-6ecf216fd136",
+            "source": "FT"
+          },
+          {
+            "title": "아시아 시장서 LNG 가격 30% 급락... ‘미국산 수출 급증’과 ‘중국발 수요 위축’ 영향",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/2026011517195121740c8c1c064d_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "Gold prices dip from record highs; Trump cools Iran concerns",
+            "url": "https://www.investing.com/news/commodities-news/gold-prices-slip-from-record-highs-as-trump-cools-iran-fed-concerns-4448579",
+            "source": "Investing"
+          },
+          {
+            "title": "Soybean Oil Surges With US Biofuel Quotas Expected by March",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNmhmdGNFc0FNTlVlR3hvQVVkMnUtbDVtaWdvX2pKNUhIUE1VTjVZMldGYkVmVEtuMjRPRTJodkpPWURPRU1RVTN3cnZNRF9XX1lWM1p3OU5zMzFOZUh0cFJtM2t0a2RUSWZqM2tudm1ndmJENThPcFYzRVRZMkZHWERLLS1UUjdwTUJFUXNHLVgtTm1KV0tSdjdVVTFpU0M0Y1ZaLUc2LWdVR0JPLVVr",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Amazon Becomes First Buyer of Arizona Copper Made by Rio’s Nuton",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbkFONVAxbEY4Mm1NZDVQeDQ2X01QeVBEMjNLbnZORFpqdjNRSWNTWkNSc0tCWFRnMXRNTUltOXYyOVludC1HZXJNTUpHemxCaHhrTVpCVXNRVzlIWVB3VEFwc2FHdVJrZTBuTzE5bmpzMFRPcXdIbFk1R25wWDBpeFlJNWRYLXNlMXRCdjl2NUhBbndtZHN6SEMtOFppQjFJdlpzckdQWVo5T1N3SnFjUXlMNG1PUQ",
+            "source": "Bloomberg"
+          }
+        ]
+      }
+    ],
+    "Real Estate > Korea": [
+      {
+        "title": "주택담보대출 변동금리 부담 가중",
+        "text": "신규취급액 기준 코픽스(COFIX)가 4개월 연속 상승하여 지난해 12월에는 전월 대비 0.08%p 오른 2.89%를 기록, 주택담보대출 변동금리 기준이 되는 자금조달 비용이 증가했다. 이는 국내외 금리 인상 압력과 은행들의 예금 유치 경쟁 심화가 복합적으로 작용하여 자금 조달 비용이 상승한 결과로 분석된다. 코픽스 상승은 변동형 주택담보대출 이용자들의 이자 부담을 가중시켜 가계 재정에 압박을 줄 것이며, 주택 시장의 거래 위축과 추가적인 가격 조정 가능성을 높일 수 있다.",
+        "links": [
+          {
+            "title": "신규 코픽스 4개월 연속 상승…주담대 변동금리 부담 더 커진다",
+            "url": "https://www.mk.co.kr/news/economy/11934027",
+            "source": "매일경제"
+          },
+          {
+            "title": "주담대 변동금리 4개월 연속 확대…작년 12월 코픽스 0.08%p↑",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393711",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "서울 아파트 '영끌' 매수 주체 분석",
+        "text": "금융 싱크탱크 연구 결과, 서울 아파트 '영끌(영혼까지 끌어모아 투자)' 매수의 주역은 경기 및 인천에 거주하는 30대 고신용자로 파악되었다. 이는 수도권 외곽의 젊은 세대들이 서울 상급지로 이동하려는 열망과 함께, 과거 저금리 기조 속에서 주택가격 상승에 대한 기대감이 복합적으로 작용한 결과로 분석된다. 이러한 매수 주체들의 특성은 향후 금리 인상 및 부동산 시장 조정 국면에서 대출 상환 부담으로 이어져 가계 부채 리스크를 심화시키고 시장에 잠재적 불안 요인으로 작용할 수 있다.",
+        "links": [
+          {
+            "title": "서울 아파트 영끌 주역은 경기·인천 30대 고소득자",
+            "url": "https://www.mk.co.kr/news/economy/11934186",
+            "source": "매일경제"
+          }
+        ]
+      },
+      {
+        "title": "신세계프라퍼티, 이지스운용의 '센터필드' 매각 강행에 반대 표명",
+        "text": "신세계프라퍼티는 이지스자산운용이 운용 중인 펀드 내 자산인 '센터필드'의 매각을 투자자 보호 측면에서 부적절하다고 판단, 이에 대해 강하게 반대 의사를 표명했다. 신세계프라퍼티는 이지스운용의 독단적인 매각 추진을 비판하며 적합한 근거 없는 진행을 문제 삼고 있으며, 이는 펀드 수익성과 자산 처분 방식에 대한 투자자와 운용사 간의 입장 차이에서 비롯된 것으로 보인다. 이러한 주요 투자자와 운용사 간의 자산 매각 관련 갈등은 향후 다른 상업용 부동산 펀드의 자산 운용 및 처분 방식에도 영향을 미칠 수 있으며, 시장 참여자들에게 투자 의사 결정 시 보다 신중한 접근을 유도할 수 있다.",
+        "links": [
+          {
+            "title": "신세계프라퍼티 \"이지스운용, 센터필드 매각 강행…엄중 경고\"",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393673",
+            "source": "Infomax"
+          }
+        ]
+      }
+    ],
+    "Korea > Market": [
+      {
+        "title": "🚀 한국 증시 10일 연속 랠리 및 투자 심리 확산",
+        "text": "코스피 지수가 10거래일 연속 상승하며 4,800선에 근접, 연고점을 경신했으며 '꿈의 5,000선' 돌파를 가시권에 두었습니다. 이 기간 동안 개인 투자자는 매도세를 보였으나, 외국인과 기관이 대규모 순매수에 나서며 지수 상승을 견인했고, 코스피200 지수 추종 ETF를 포함한 국내 ETF 시장에도 자금이 집중되며 투자심리가 확산되었습니다. 초기 반도체 투톱 중심의 강세장이 점차 로봇, 조선, 방산 등 다른 업종으로 순환매 양상을 보였으며, 현대차그룹주의 상승과 포스코DX, 한화 등 개별 종목의 강세가 지수 랠리에 기여했습니다. 이러한 견조한 시장 상승세는 국내 증시 전반에 대한 투자자들의 강한 기대감을 반영하며 관련 ETF 상품으로의 자금 유입을 촉진했습니다. 코스피의 연이은 상승세와 ETF 시장 활성화는 긍정적인 투자 심리를 지속시킬 것으로 예상되지만, 단기 급등에 따른 피로감과 향후 차익 실현 매물 출회 가능성 또한 존재하여 시장의 방향성 탐색과 견조한 상승 지속 여부가 중요할 것으로 보입니다.",
+        "links": [
+          "(증시-마감) 10일 연속 랠리 코스피 4,800 '눈앞'…포스코DX 상한가 - (Infomax)",
+          "반도체 투톱→로봇·조선·방산 '순환매' 랠리…시총 순위도 '요동' - (뉴스1)",
+          "파죽지세 코스피…TIGER 200 ETF 순자산 6년 만에 신기록 경신 - (Infomax)",
+          "현대차그룹이 상승장 견인… ‘5천피’ 카운트다운 - (국민일보)",
+          "\"국장 개인 수급전략 적중\"…RISE 동학개미 ETF, 코스피 상승률 앞질러 - (Infomax)"
+        ]
+      }
+    ],
+    "Global > Macro": [
+      {
+        "title": "미국 연준 독립성 강조 및 경제 성장 낙관론 대두",
+        "text": "국제통화기금(IMF)과 시카고 연은 총재 등 주요 인사들이 연방준비제도(Fed)의 독립성 유지를 강력히 옹호하며, 제롬 파월 의장의 역할을 지지하고 인플레이션 재상승 가능성에 대해 경고했습니다. 이는 최근 일각에서 제기되는 연준의 정치적 개입 시도에 대한 우려와, 물가 안정을 최우선 과제로 삼는 연준의 기존 입장을 재확인하려는 움직임으로 풀이됩니다. 연준의 독립성 유지는 통화정책의 일관성과 신뢰성을 확보하여 시장 변동성을 줄이고, 향후 금리 인하 기대감보다는 물가 안정 목표에 초점을 맞춘 신중한 정책 기조가 유지될 것임을 시사합니다.",
+        "links": [
+          {
+            "title": "Exclusive-IMF’s Georgieva says central bank independence critical, backs Powell",
+            "url": "https://www.investing.com/news/economy-news/exclusiveimfs-georgieva-says-central-bank-independence-critical-backs-powell-4450519",
+            "source": "Investing"
+          },
+          {
+            "title": "Fed's Goolsbee says inflation could come 'roaring back' if central bank independence goes away",
+            "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPRDAzNXlmTC1ScEpPLUFuRnpFYnlFUlZsYXFkbFJXQlZKVThOMmZ6Ry1QVjZncHNOV2tOT3puVTg1c1NyYVQtZlVMMnlra0ZiZnlINU0ySnJmdFh6bzdqMVZXRlg5NUNrZVZrX2JUMEh5blB2S2dIS0lmS21WSElDaXNjcUE2V3NrbjFpcVdaQWowaUUwa2NVc1VOSUNqQTdQYjRvWEd3OGpBRThUR0w4YzZTQkZCMXpiU0dSQ3ZsdFVtWXJJNzM00gHMAUFVX3lxTE9IRm02Uk05VW9jV3V4aGcyNEVIUGhOUXNBNHZfbHVrMTgxWXp5M3UxempEOGVURVhBSVFCT195di0yUWota2dJc1p1QmEzNFdGZ09pSVg4cDRPZDhOaURNeW1sRVoxQ1ZkcUxWeVRxYzk4YmpvWkxMbkNfbjFWZE1OdkV6alg2Q19xOUZFMkFXMUYxZl82YjUwSVlDSFhpZ1ltY2k2UWxwcXlUSHVVS1M4T2lkYVg5Yld2eWY1SndKUHc0RGVQSHRjYThhOA",
+            "source": "CNBC"
+          },
+          {
+            "title": "신용평가사 피치 “연준 독립성 훼손 시 美 신용등급에 '부정적'”",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/2026011605581554603bc914ac71_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "샌프란 연은 총재 \"성장 전망 견조…노동시장 안정되고 있어\"",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393768",
+            "source": "Infomax"
+          },
+          {
+            "title": "Trump’s ‘unpredictable’ policies to fuel shift from US, Pimco says",
+            "url": "https://www.ft.com/content/9b2f8903-4350-45a5-a915-a58b6f9b35fb",
+            "source": "FT"
+          }
+        ]
+      },
+      {
+        "title": "미국 주간 신규 실업보험 청구 건수 예상치 하회, 견조한 노동시장 시사",
+        "text": "지난주 미국 주간 신규 실업보험 청구 건수가 19만 8천 건을 기록하며 시장 예상치(21만 5천 건)를 크게 밑돌아, 월스트리트의 대규모 해고에도 불구하고 전반적인 고용 시장의 견조함을 나타냈습니다. 이는 전반적인 기업들의 고용 유지 경향과 특정 업종의 구인난이 복합적으로 작용한 결과로 보이며, 일부 대기업의 해고가 전체 노동시장에 미치는 영향은 제한적임을 보여줍니다. 견조한 노동시장은 미국 경제의 연착륙 가능성을 높이는 긍정적 신호이지만, 연방준비제도(Fed)의 금리 인하 시점에 대한 신중론을 강화할 수 있어 통화정책 방향에 대한 시장의 관망세가 이어질 전망입니다.",
+        "links": [
+          {
+            "title": "US Jobless Claims Fall to 198,000, Below All Estimates",
+            "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMk5pS21YWHZfSWhWcm1seXlDdkNmVFp3YkcyNTB0QkdNeUk3MFVnTUtrXzE4c3M2ODVIR1FrWUdENWNkNU94bFhsY1lxWjFPMXVDTGM5RE5HQlBHQ3RBN1lKTDBNSnR5OFdWRmpoWWNVM0ktMDlaNXBnQ0w2TkVPUVR1eEhHR0FYdnVGY0hsbnZUbGR3bi13YlZaTnUwaEdQWFkwQ2JCOA",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Weekly US jobless claims fall unexpectedly, but labor market treading water",
+            "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZVZ3NTNBQzhFUlpabG85a3FzZENwYVRCeVhGZi1aWEF6cEdobHNQeGxwT0ppeUYwZHBJT0dDbUM2MWc0dzc2Tnhrd3ZGSDJqYWJxUVh4VEYxWXJnZGlCSjA2cW9TVDBuNjV6NWxXQnkxMWhkeTFMd0h4QmFMVzN6QzZBSXBMOEt2eDItSllHLUdyU0NvUk54UnRodHJsUHVxQ0lGZFRNLWMxa2dvQkp5NXNRczZKeXZqX3JwNWwzRU0",
+            "source": "Reuters"
+          },
+          {
+            "title": "Unemployment Claims Dropped Last Week",
+            "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxNZEJqa29LbW51eDNxRkpTTHVoeWFLSG84VTBZVTEzY050dUpNbmJ6cDQ5Zm5Hekk3QW5zSHpFeDM5YjZ5ajU2aWJEQXRpY3ZiY3RSLWNlZGE0MHZlSDNxb3l2cWtRdUJLZkdJeG9RSy1fbjRXYjJXUzhtNG0tVmZKSXFUdktpblV3MXpUM1pkbC13NUJwRXM3dnpnLWJzeXkteDUtdWNNNDBQbWc4eDRXclg4RU90ZUh0UE01MGpMQUUtRVdKUmNfd0UzRXkyWXVxVVY0Q2NkS00xMmEta0ZETHk3MWhJOTZqY2o3Nk0xcHR2OVpVSjZLMjN3NmRyZ1Mtdy1MZ04zWFUxSGEwOUFibkdNd2FpOXRvZTNFVGdMMWtrX29fVjRTZnVBbHB6ODFWcEN5cTBaNXRaVjZyVDBGTVJtUWppM2ptZTlGeVJiRmNmQ1d3bURTTk0yRXNOSjE4b1VBMU5uRWMwWm04Qks0bTN6Z2JuYTNBd2JnNWZOS05VVGxqZWgwQ0I0VQ",
+            "source": "WSJ"
+          },
+          {
+            "title": "美 주간 신규 실업보험 청구 19.8만명…예상치 21.5만명",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393755",
+            "source": "Infomax"
+          },
+          {
+            "title": "Dollar hits six-week high as US jobless claims unexpectedly fall",
+            "url": "https://www.investing.com/news/economy-news/yen-steadies-as-traders-gird-for-election-intervention-fears-lurk-4448545",
+            "source": "Investing"
+          }
+        ]
+      },
+      {
+        "title": "글로벌 에너지 시장 변동성 확대 및 러시아 수입 급감",
+        "text": "러시아의 석유 및 가스 수입이 5년 만에 최저 수준으로 급감하며 예산에 타격을 입었고, 미국은 2026년 바이오연료 쿼터를 확정하고 수입 벌금을 폐지할 예정입니다. 이는 서방의 제재와 글로벌 에너지 시장의 공급 과잉, 그리고 트럼프 전 대통령의 이란 관련 발언으로 인한 지정학적 긴장 완화 기대감이 복합적으로 작용한 결과입니다. 러시아의 에너지 수입 감소는 글로벌 공급망에 영향을 미치고, 바이오연료 정책 변화는 친환경 에너지 전환 가속화 및 유가 안정화에 기여하여 중동 리스크와 무관하게 전반적인 국제 유가에 하락 압력으로 작용할 가능성이 있습니다.",
+        "links": [
+          {
+            "title": "Exclusive-US to finalize 2026 biofuel quotas by early March, drop import penalties, sources say",
+            "url": "https://www.investing.com/news/commodities-news/exclusiveus-to-finalize-2026-biofuel-quotas-by-early-march-drop-import-penalties-sources-say-4449972",
+            "source": "Investing"
+          },
+          {
+            "title": "Russia Oil and Gas Revenue Dives to Five-Year Low in Budget Hit",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSDA2RS1RSHdpUmVuRHNkTWgyWVZLYU1RUnJLSDc4ZVF2TUpmVFJHQnJGNzRJOVpZSHhBVUdkQjhTdmVQb0Vvc1VLaVFuYUlzRDh3TlN1WDA4dEFVN3hkczlWZG4wTnM2UUlvY2xfLVRzekNMT1diSjJOVjZoSzU3QXBwM1ppdUNTX3pnS0xqWmJDWVNEN2IwZ2liS2hneG5TbGFUdkRnZXZEVEpRUC1MaU5xdjQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Oil prices slump as Trump downplays Iran tensions",
+            "url": "https://www.investing.com/news/commodities-news/oil-prices-plunge-3-after-5day-surge-as-trump-downplays-iran-escalation-4448544",
+            "source": "Investing"
+          },
+          {
+            "title": "산업부, 국내 석유시장 점검…베네수·이란 등 국제정세 대비",
+            "url": "https://www.fnnews.com/news/202601151647368269",
+            "source": "파이낸셜뉴스"
+          },
+          {
+            "title": "EU Carbon Extends Gains as Gas Jumps and Nuclear Output Falters",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUGh0dFotcWp2bFVPcy1FejlIS29IZnByVkxiUE9mbDQtLUEtSXlaWlRFSk1udjU0M01zUFlWaXVHeTJTTGtoV0FKNGVzZFlHT0c4T00wQUgzQ29kcnNNU1prTTBTVmZCZXZaSml1QXhuczhSV3ZzY284WmFiMkc5MnBCakRHRFE1dUZpV2VBMlotT3U5YnptdUNpY0RQTjMxM1A0R2E5V05oTmpKNXhITTJSaGk",
+            "source": "Bloomberg"
+          }
+        ]
+      }
+    ],
+    "Korea > Macro": [
+      {
+        "title": "원/달러 환율 안정화를 위한 정부 개입 및 규제 검토",
+        "text": "미국 재무장관의 이례적인 원화 약세 구두 개입과 함께 한국 정부가 외환시장 안정화를 위해 신규 외환규제 도입을 검토하고 있습니다. 원/달러 환율은 이러한 개입에도 불구하고 1,460원 후반대에서 등락을 거듭했으며, 개인 투자자들은 오히려 달러 매수에 나서기도 했습니다. 이는 한국 경제 펀더멘털에 부합하지 않는 과도한 원화 약세가 지속되고 있다는 인식에 따른 것으로, 정부는 개인과 금융기관의 달러 수요를 억제하기 위한 거시건전성 조치를 고려하고 있습니다. 정부의 강력한 외환시장 개입 의지와 새로운 규제 도입은 단기적으로 원화 가치 안정에 기여할 수 있지만, 시장의 근본적인 불안 심리를 해소하고 지속적인 환율 안정화를 이끌어낼지는 추가적인 정책 효과와 글로벌 경제 상황에 달려있습니다.",
+        "links": [
+          {
+            "title": "美, 초유의 원화 구두개입…정부 \"신규 외환규제 도입\"",
+            "url": "https://www.hankyung.com/article/2026011535531",
+            "source": "한국경제"
+          },
+          {
+            "title": "美베선트 구두개입도 역부족…정부, 외환 규제책 고심",
+            "url": "https://www.mk.co.kr/news/economy/11934289",
+            "source": "매일경제"
+          },
+          {
+            "title": "BofA expects Korean won to strengthen as government tackles outflows",
+            "url": "https://www.investing.com/news/forex-news/bofa-expects-korean-won-to-strengthen-as-government-tackles-outflows-93CH-4448944",
+            "source": "Investing"
+          },
+          {
+            "title": "高환율에 결국 규제 카드 만지작...재경부 “달러 수요 억제할 거시건전성 조치 검토\"",
+            "url": "https://www.fnnews.com/news/202601151547125772",
+            "source": "파이낸셜뉴스"
+          },
+          {
+            "title": "“이때가 매수 신호?”…원화값 ‘깜짝 강세’에 개인들 달러 담았다",
+            "url": "https://www.mk.co.kr/news/economy/11933500",
+            "source": "매일경제"
+          }
+        ]
+      },
+      {
+        "title": "한국은행, 매파적 기조 강화하며 기준금리 5회 연속 동결",
+        "text": "한국은행 금융통화위원회가 연 2.50%인 기준금리를 5회 연속 동결하면서도, 통화정책 의결문에서 '금리 인하 가능성' 문구를 삭제하는 등 매파적 입장을 강화했습니다. 이에 채권 시장에서는 국고채 금리와 금리스와프(IRS) 금리가 급등하며 '금통위 쇼크'로 해석되었습니다. 이러한 결정은 고환율 장기화에 따른 고물가 우려와 원화 약세 압력이 지속되는 상황에서, 물가 안정을 최우선 과제로 삼으려는 한은의 강력한 의지를 반영합니다. 특히 이창용 총재는 환율이 물가에 미치는 영향이 커질 경우 금리 인상을 고려할 수 있다고 언급하며 추가적인 정책 여지를 시사했습니다. 한은의 현재 금리 수준 유지 및 인하 기대 차단 기조는 당분간 지속될 것으로 예상되며, 이는 시장의 통화정책 피벗(전환) 기대를 약화시키고 장기 시장금리에 상승 압력으로 작용할 것입니다. 결과적으로 주택담보대출 금리 등 실질적인 가계 대출 금리 또한 고공행진을 이어갈 가능성이 높습니다.",
+        "links": [
+          {
+            "title": "이창용 \"환율이 물가에 영향 주면 금리인상 고려\"…국채금리 年 3%대로 뛰어",
+            "url": "https://www.hankyung.com/article/2026011535421",
+            "source": "한국경제"
+          },
+          {
+            "title": "원화값 백약이 무효…한은, 의결문서 '금리인하 가능성'도 삭제",
+            "url": "https://www.mk.co.kr/news/economy/11934234",
+            "source": "매일경제"
+          },
+          {
+            "title": "(채권-마감) '금통위 쇼크'에 금리 급등…국고3년 3.1%·10년 3.5% 눈앞",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393747",
+            "source": "Infomax"
+          },
+          {
+            "title": "IRS 금리 급등…통화정책 피벗 프라이싱",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393746",
+            "source": "Infomax"
+          },
+          {
+            "title": "기준금리 동결에도…주담대 금리 '고공행진'",
+            "url": "https://www.hankyung.com/article/2026011533651",
+            "source": "한국경제"
+          }
+        ]
+      },
+      {
+        "title": "반도체 호조 속 수출 양극화와 확대되는 국가 재정 적자",
+        "text": "한국의 수출은 반도체 경기 호조와 자동차 품목의 선방에 힘입어 긍정적인 흐름을 보였지만, 국가 재정은 작년 11월까지 90조 원의 적자를 기록하며 역대 3위에 해당하는 높은 적자 폭을 보였습니다. 이러한 수출 호조는 인공지능(AI) 관련 수요 증가에 따른 글로벌 반도체 업황 개선과 주요 전략 품목의 경쟁력 유지 덕분이며, 반면 국가 재정 적자는 경기 둔화에 따른 세수 감소가 주요 원인입니다. 향후 반도체 중심의 수출 강세는 국내 경제 성장을 견인할 주요 동력이 될 것이나, 국가 재정의 건전성 악화는 정부의 재정 정책 운용에 지속적인 부담을 줄 것입니다. 동시에 산업별 수출 경쟁력 양극화는 장기적인 관점에서 산업 구조 개편과 새로운 성장 동력 발굴의 중요성을 더욱 부각시키고 있습니다.",
+        "links": [
+          {
+            "title": "“반도체 경기 호조 이어지네”…한은이 본 국내외 경제상황은",
+            "url": "https://www.mk.co.kr/news/economy/11934020",
+            "source": "매일경제"
+          },
+          {
+            "title": "한은 \"韓 수출, 반도체·車 선방…철강·화공은 밀렸다\"",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393771",
+            "source": "Infomax"
+          },
+          {
+            "title": "나라살림 적자, 작년 11월까지 90조 '역대 3위'",
+            "url": "https://www.hankyung.com/article/2026011535151",
+            "source": "한국경제"
+          }
+        ]
+      }
+    ],
+    "Korea > Industry": [
+      {
+        "title": "삼성전자 AI 메모리 개발 난항 및 미국 반도체 관세 위협",
+        "text": "삼성전자는 첨단 AI 메모리(HBM) 개발에 어려움을 겪으며 경쟁사에 비해 뒤처지는 모습이며, 한편 미국은 무역확장법 232조를 근거로 한국산 반도체에 대한 25% 관세 부과 가능성을 시사해 국내 업계에 비상이 걸렸다. 삼성전자의 HBM 시장에서의 기술적 리더십 부재는 차세대 AI 산업 성장에 중요한 걸림돌로 작용하고 있으며, 미국의 관세 위협은 트럼프 행정부 시절부터 지속된 보호무역주의 기조와 자국 산업 보호 목적에서 비롯된 것이다. 삼성전자는 기술 격차 해소를 위한 공격적인 투자와 연구 개발이 시급하며, 한국 정부와 반도체 업계는 미국의 관세 부과 현실화 시 국내 산업에 미칠 파급력을 최소화하기 위한 다각적인 외교적, 통상적 대응 전략을 모색해야 할 것이다.",
+        "links": [
+          {
+            "title": "Samsung rides the chip slipstream — but that’s not as good as leading the pack",
+            "url": "https://www.ft.com/content/060395fd-34af-431c-8142-a6c29828b07c",
+            "source": "FT"
+          },
+          {
+            "title": "美 반도체 포고문에 화들짝… 김정관 \"산업 영향 없도록 총력대응\"",
+            "url": "https://www.fnnews.com/news/202601151820327078",
+            "source": "파이낸셜뉴스"
+          }
+        ]
+      },
+      {
+        "title": "한국전력, UAE 바라카 원전 첫 배당금 상반기 수령 예상",
+        "text": "한국전력공사가 한국 최초의 수출 원전인 아랍에미리트(UAE) 바라카 원전으로부터 올 상반기 중 첫 배당금을 받을 것으로 예상된다. 이는 한전이 바라카 프로젝트의 단순 시공사를 넘어 주요 주주로서 지분 투자에 대한 수익을 실현하는 단계에 진입했음을 의미한다. 이번 배당은 한전의 재무구조 개선에 기여하고, 향후 해외 원전 사업 모델의 수익성을 입증하여 추가적인 해외 수주 가능성을 높이는 긍정적인 신호로 작용할 것이다.",
+        "links": [
+          {
+            "title": "(단독) 한전 UAE원전 결실…상반기 첫 배당받는다",
+            "url": "https://www.mk.co.kr/news/economy/11934261",
+            "source": "매일경제"
+          }
+        ]
+      },
+      {
+        "title": "이재용 삼성 회장 주식재산 28조원 돌파, 30조원대 진입 초읽기",
+        "text": "이재용 삼성전자 회장의 주식재산이 사상 처음으로 28조 5천억원을 넘어섰으며, 이달 중 30조원 돌파가 유력하게 점쳐지고 있다. 이는 삼성전자 주가 상승에 힘입은 것으로, 지난해 10월 20조원에 처음 진입한 이후 불과 3개월 만에 급격히 증가했다. 이 회장의 주식재산 증가는 삼성그룹의 시장 가치 상승을 반영하며, 이는 그룹 전반의 투자심리에 긍정적인 영향을 미칠 수 있다.",
+        "links": [
+          {
+            "title": "“국내 30조 주식갑부 곧 나올듯”…이재용 삼성 회장 사상 첫 28.5조 넘어",
+            "url": "https://www.mk.co.kr/news/economy/11933551",
+            "source": "매일경제"
+          }
+        ]
+      },
+      {
+        "title": "LS, ‘모회사 주주 우선 배정’ 통해 쪼개기 상장 논란 돌파 시도",
+        "text": "LS그룹이 사상 처음으로 '모회사 주주 우선 배정' 방식의 유상증자를 추진하며, 자회사 상장 시 모회사 주주가치를 희석시킨다는 이른바 '쪼개기 상장' 논란에 대한 해결책을 제시했다. 이는 최근 국내 증시에서 자회사 상장 시 모회사 주주들의 피해를 우려하는 목소리가 커지자, 지주사 가치를 제고하고 주주 친화 정책을 강화하기 위한 전략적 선택으로 풀이된다. 이러한 시도는 향후 다른 지주회사들의 자회사 상장 방식에도 영향을 미칠 수 있으며, 주주가치 보호에 대한 기업들의 책임감을 높이는 긍정적인 선례가 될 것으로 보인다.",
+        "links": [
+          {
+            "title": "LS, 사상 첫 ‘모회사 주주 우선 배정’ 승부수…‘쪼개기 상장’ 논란 뚫는다 (biz-플러스)",
+            "url": "https://www.sedaily.com/NewsView/2K7BON6IQY",
+            "source": "서울경제"
+          }
+        ]
+      },
+      {
+        "title": "SK증권, 토큰증권 사업 협력으로 중소·벤처기업 유동화 지원",
+        "text": "SK증권이 디지털자산 운용 플랫폼 '피스'를 운영하는 바이셀스탠다드와 업무협약(MOU)을 체결하고 토큰증권 사업을 확대하여 중소·벤처기업의 자산 유동화를 지원한다. 이는 토큰증권 관련 법안이 국회를 통과하면서 사업 확장을 위한 법적 기반이 마련됨에 따라, 제도 시행 이후 즉시 실행 가능한 협력 체계를 구축하고 새로운 금융 서비스 시장을 선점하려는 전략의 일환이다. 토큰증권 시장의 활성화는 기존 금융 시장에 새로운 투자 기회를 제공하고, 자금 조달에 어려움을 겪는 중소·벤처기업에 혁신적인 유동화 방안을 제시할 것으로 기대된다.",
+        "links": [
+          {
+            "title": "SK증권, 바이셀스탠다드와 토큰증권 MOU…벤처기업 유동화 지원",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393719",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "LS전선, 멕시코에 2,300억원 규모 투자로 북미 시장 공략 가속화",
+        "text": "LS전선이 멕시코 케레타로주에 위치한 생산법인 LSCMX에 약 2,300억원(2억 2,770만 달러)을 투자하여 북미 에너지 및 모빌리티 시장 공략을 위한 전략 거점으로 육성한다. 이번 투자는 글로벌 빅테크 기업들의 인프라 확충 수요에 대응하기 위한 버스덕트(Busduct) 설비 증설과 함께, 내연기관차부터 전기차용 전선까지 아우르는 자동차용 전선 공장을 신규 건설하여 모빌리티 사업 영역을 확장하려는 목적이다. 멕시코 생산기지 강화를 통해 LS전선은 미국 인플레이션 감축법(IRA) 등 보호무역주의 장벽을 우회하며 안정적인 공급망을 확보하고, 북미 시장에서의 경쟁 우위를 더욱 공고히 할 것으로 기대된다.",
+        "links": [
+          {
+            "title": "LS전선, 멕시코에 2277억 투자…북미 에너지·모빌리티 전략 거점",
+            "url": "https://www.hankyung.com/article/2026011534301",
+            "source": "한국경제"
+          },
+          {
+            "title": "LS전선, 멕시코 법인에 2천300억 투자…북미 시장 공략",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4393738",
+            "source": "Infomax"
+          }
+        ]
+      }
+    ],
+    "Global > Tech": [
+      {
+        "title": "미국, AI 반도체에 25% 관세 부과 및 대중국 수출 규제 강화",
+        "text": "미국 트럼프 행정부는 무역확장법 232조를 발동하여 미국을 경유해 중국으로 수출되는 엔비디아(NVIDIA)와 AMD의 AI 칩을 포함한 반도체 제품에 25%의 관세를 부과하기 시작했으며, 이는 광범위한 품목으로 확대될 수 있음을 시사했습니다. 이러한 조치는 반도체를 국가 안보 사안으로 규정하고, 중국의 첨단 기술 접근을 제한하여 미국의 기술 패권을 유지하려는 전략의 일환으로 해석됩니다. 이는 글로벌 반도체 공급망에 상당한 불확실성을 가중시키고, 주요 기술 기업들의 대중국 사업 전략에 큰 변화를 요구하며 한국을 포함한 관련국 정부와 업계의 긴밀한 대응이 필요할 전망입니다.",
+        "links": [
+          {
+            "title": "美관세폭풍, 이제 반도체 차례…트럼프 ‘관세 확대’ 포고문",
+            "url": "https://www.mk.co.kr/news/world/11934324",
+            "source": "매일경제"
+          },
+          {
+            "title": "White House sets tariffs to take 25% cut of Nvidia and AMD sales in China",
+            "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5fYS1DbVhzSWEtSF9BVGRxcThLM0R2T2YyNm1yX2lqRGMtV2V2dG5EOU9iR1FhWUVHbGVlUWV5SVFNUHhLOER5QkgyNnV2TTRubEp1WWZ5a1JQQW9Ba3JDSFkyTHo0a1ZpbUlwYlh2V2c",
+            "source": "FT"
+          },
+          {
+            "title": "산업부, 美 반도체 관세 포고령에 긴급회의…업계와도 대책마련",
+            "url": "https://www.fnnews.com/news/202601151215577077",
+            "source": "파이낸셜뉴스"
+          },
+          {
+            "title": "트럼프 \"美 기술 공짜는 없다\"...엔비디아·AMD 최신 칩에 25% '안보 관세'",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/202601151910079783fbbec65dfb_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "Memory Shortage to Hit Nvidia China Approvals, US Lawmaker Says",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSG5CajFYalItZnJjNkRNb3k0SUlNSVBqQXRaNXRXdTFpS0hGRUJSR2ZMZ0xoRndmd2R3SHlLd0FOamV6cmVSNGl6Q05CNC1FbThpV2UzazlHZ05qS09BOGFnSDJqc0x5U2UxOENZOE1uaGpvSHJqUkdtNklvVS1hLUp2RFo5eFVQWmtURVN0bVdBTjg0WXZhTUVscjFIYjRxR3lRT2tEYmxRbThQZ1VQcGpROA",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "TSMC, AI 반도체 수요 폭증에 따른 사상 최대 실적 및 대규모 투자 계획 발표",
+        "text": "세계 최대 파운드리 기업인 TSMC가 AI 반도체 수요 급증에 힘입어 사상 최대 실적을 기록하고 올해 매출이 최대 30% 증가할 것으로 전망했으며, 82조 4천억원 규모의 설비 투자를 계획하고 있다고 밝혔습니다. 이는 인공지능 기술의 발전과 확산이 고성능 컴퓨팅(HPC) 및 데이터센터용 AI 칩 수요를 강력하게 견인하고 있음을 명확히 보여주는 결과입니다. TSMC의 이러한 낙관적인 전망과 대규모 투자는 AI 반도체 시장의 견고한 성장세를 재확인하며, 관련 생태계 전반에 긍정적인 파급 효과를 미칠 것으로 기대됩니다.",
+        "links": [
+          {
+            "title": "AI 반도체 수요 굳건…TSMC \"올 매출 30% 늘 것\"",
+            "url": "https://www.hankyung.com/article/2026011533161",
+            "source": "한국경제"
+          },
+          {
+            "title": "TSMC’s Strong Outlook Fires Up Hopes of Sustained AI Boom",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcjNGeFdSTHBIMHpkX2Q2WWV6Y05vaEdhYm1wZEhHLXA5RFBRN1hnVlZPUDRGODJMRU51a2UzVXpPZHlydm9vQkVkZUNQLTd6RXVZc05RZzBnWW9DUzhIdmJYNVZwT0lwNlltQ1dwUExCWUFYbm1KWUlFV1dHbVpjWl9VZkwyVE5YcmktdURtOTk2Z3hqVUEyU3VoeDk1LWFLTENyWFJaTmFhMHVnZ0I5QWNJaWc",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "TSMC’s Blockbuster Spending Plans, Results Herald Continued AI Boom",
+            "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxOWVhwVGdXSi1ZOVNMVGh3S2JNczg3UHYzZzFNckY1Y1ZveXFFb1E5eWJPNkZod3l5RVFVWTZlLVVzWktDbkRjU2NMUkJuU1NBT25oY0EwQmVhXzNEZnl6dFhzOGllTHowY1Z3QnRoaEhUQmQ1MGdORkVmYlR0Z01BSlRvSGhrMThpc2tpN0ZCOTZINEZSRGtUNnM1d29HVXNBWnkxRHBfQi1ialA4bmZwdnM3bHJwYWY4LTVJWERIMzktNTNTMTItTjR6b0pFS0FINnRkNWx3enRsUHlXZWthV0RBRk1aZWxtS0VENVRYS3lLQ0MzdngxOXYtMmZpNU1xLUNta3htZGRZanhWTWIyNzdMbHVFb2dNckM1SEswMktoY2dmX0tYTWk0elppWEg5cEFsQTl4VzVNYnl1QXdrdHRDTURsWHlzbmQ2NXY1T2c0Z05YajQtaXRGaGNqQXEyNGtDM3Z2MGxZa0pOd2phOTE4ZVpVT1M5V2xLd1pjUnUxSGVNVEduMHUtNHgtV3R5akJmdDRPYm1MTVQ2aWhyUm5lb3M4ZERjeUE",
+            "source": "WSJ"
+          },
+          {
+            "title": "TSMC, AI칩 수요에 작년 ‘사상 최대’…올해 설비투자 82조4000억원",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/202601152137564031740eacf404_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "ASML Exceeds $500 Billion in Market Value on TSMC’s Blockbuster Spending Plans",
+            "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxQMDRGUDNzV3BndVB6WVdOenE3bzVsSlVheUl3UG9udU1XaVA2cjFjNkctQVJBNGRaYmVtRVFpZjlVaWl2RTZJV0kyZHZxNm9hN0psWEx3bWphNFpYWWw5bm1UVGFLOVF6dlF0R0d6Zl9GVlBEMk5LS29rR0FPdmlFQjRWb1drRFpJaEZUcE03Vy1vdi1ZZ2loYmNTdEdMMERoZlpTcmlfbWNYUmM0b3I4YXgyQVYycm85ZWRaUTJ3X09OTFM5YWRYYlBWT0o3U1FuUk1MU3h1aGVJeDg1RkZqWVJ0a3dGcFZKRWdMT1JGZzRrQ0p1bGRpYnp5X3JTbTExTWRpQTkzejhwa2VvOU9oNURnUmVhTThXUU9QcXdzM2hkeTFFeFROT0xPWElRTU1lZF9jSld5OGZFVlNrU0NMOEhYdTRfMl8tb0d4NUVpYUdneWZaS1N2VndXMHJBOXJEZUNDSGtCQzdjcUd0Y1VMV2FDSnJkajJHUml0N0htNF9JYjVOdmplVld3M3dlMUd1V2NtZEp1ckNqeWJPNEVjVG12eEh0bWxaLUlCcm1EQWJGM3NO",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "오픈AI, 로봇공학 및 AI 디바이스 시장 진출 모색 및 경쟁 심화",
+        "text": "오픈AI(OpenAI)는 로봇공학 및 자체 AI 디바이스 개발을 위해 미국 기반 공급업체를 적극적으로 모색하고 있으며, 엔비디아(NVIDIA)의 경쟁사인 세레브라스(Cerebras)와 100억 달러 규모의 컴퓨팅 계약을 체결했습니다. 이는 소프트웨어 중심의 AI 개발을 넘어 하드웨어 통합을 통한 AI 모델의 실제 적용 및 확장을 목표로 하며, 급성장하는 AI 디바이스 시장에서 주도권을 확보하려는 전략적 움직임입니다. 오픈AI의 이러한 행보는 AI 하드웨어 및 디바이스 시장의 경쟁을 한층 더 심화시키고, 엔비디아 중심의 AI 반도체 생태계에 새로운 경쟁 구도를 형성하여 기술 혁신을 가속화할 것입니다.",
+        "links": [
+          {
+            "title": "OpenAI Seeks US-Based Suppliers for Planned Robotics, AI Device Push",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYW9RT0dzeTNQVVhxbWppRjBuZFpJZFhvZzFwa0daZmpCcGN2WjNURVBSS1dDSWtGLUtEdG9uRzNoYzFpVWprbG1vQ09sSTNuXzE0SVJmM1I3Z1paZHlkdUwzRVo1ZVNaeGhiYUZmcGFSUmJmeGZRYk5uR0JfQjZBRnJtNGx4VzdLWEVoRFFmdEYyRFdoa2psVEphTExoR2pVREVuM0RrTFZxSDhyVGRjTmtJY1V1MG45TFE",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "OpenAI signs $10 billion computing deal with Nvidia challenger Cerebras",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR0RNMHRLMmozT2xWUWtqNFB4Vkp2UExIcS1tNDZkdThEbkRVdzZYWU1zN0dId0hUZnhRRFpQWUJjd0J2SnpnbHYyeW5lc2dxSGFXY1E4eWQwcmxJeWxKemgwZkljcGJIRHpleGNKUDRfcFRWTUIyN0VTSzd6NHNDV1UwWUVvYkV4Wm5EcEk5cWF6WVRqRnU4NnZMOElPZEVaMW1pZHlCNkJjalBnZHN6ZmlEcVFpR0plZXdnazh3",
+            "source": "Reuters"
+          },
+          {
+            "title": "AI 패권 경쟁, ‘우주 데이터센터’로 확대...미·중 궤도 점령전 가속",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/2026011517232093170c8c1c064d_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "How AI-powered collaborations are transforming healthcare and life sciences",
+            "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZEgzQkdtNnUtdzVrMU0tbHJpbFNhR3JWSVNzMm15SjdfT1pfU0JBMGZka2txd1hJbVNod1RuckFoVUlJRExQTmlySUhPNTdOcVFMeFNyWU5NcnZNWHpKb3lGNDVNVVF2bzUwWlJYTFh1QXdWZGEzcTFSaTFnTDVOZVhET0ZsaVJXdTFMQjJpeVItN09Dd3JPQlpIeVVPQ3h2ckkyUERDNjlWZGZLRE1sZFBoU2ZRRWh4dGRBR3Azcw",
+            "source": "Microsoft"
+          },
+          {
+            "title": "SAS Viya AI Platform Goes Live on Microsoft Azure Government",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8yT2xZUmh5aWRZbV9jdTlMRWtnMTF5QmpkZ3pUZ2lVb3VOMjlrZkJDbVl5bXVLc2RSTUx3Vm4wZ05UTDFPVko5eVBMVGFrbkhBNWlUWWN1U3JqaVBXMzFoM2VUZGdSVjVxcExzb3hsRWhCQ0x0ajVTdGtwcVlEdw",
+            "source": "ExecutiveBiz"
+          }
+        ]
+      }
+    ]
+  }
+}
