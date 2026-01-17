@@ -11,7 +11,9 @@
         "서울경제": "https://www.sedaily.com/rss/economy",
         "파이낸셜뉴스": "https://www.fnnews.com/rss/r20/fn_realnews_economy.xml",
         "이투데이": "https://rss.etoday.co.kr/eto/political_economic_news.xml",
-        "이데일리": "https://rss.edaily.co.kr/economic_news.xml"
+        "이데일리": "https://rss.edaily.co.kr/economic_news.xml",
+        "조선일보": "https://www.chosun.com/arc/outboundfeeds/rss/category/economy/?outputType=xml",
+        "동아일보": "https://rss.donga.com/economy.xml"
       },
       "options": {
         "use_ssl_context": false,
