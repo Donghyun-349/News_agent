@@ -49,7 +49,12 @@ def setup_logger(
         # Custom formatter with KST timezone
         class KSTFormatter(logging.Formatter):
             def formatTime(self, record, datefmt=None):
-                kst_time = get_kst_now()
+                # Convert record.created (UTC timestamp) to KST
+                from datetime import datetime
+                import pytz
+                utc_time = datetime.fromtimestamp(record.created, tz=pytz.UTC)
+                kst_zone = pytz.timezone('Asia/Seoul')
+                kst_time = utc_time.astimezone(kst_zone)
                 if datefmt:
                     return kst_time.strftime(datefmt)
                 else:
