@@ -34,7 +34,8 @@ def main():
     ]
     
     # Prepare Row Data
-    date_str = stats.get("date", format_kst_date("%Y-%m-%d"))
+    # stats의 날짜 대신 현재 실행 시점의 KST 날짜를 사용 (로그 일관성 유지)
+    date_str = format_kst_date("%Y-%m-%d")
     total_collected = stats.get("total_collected", 0)
     
     row = [date_str, total_collected]

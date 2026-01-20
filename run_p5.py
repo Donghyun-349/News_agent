@@ -35,6 +35,7 @@ from config.settings import (
     DB_TYPE, DB_NAME, LOG_LEVEL, OPENAI_API_KEY, GOOGLE_API_KEY, GEMINI_MODEL, GOOGLE_SHEET_ID, BASE_DIR
 )
 from config.prompts.topic_clustering import get_topic_clustering_prompt
+from src.processors.similarity_deduplicator import SimilarityDeduplicator
 
 # Google Generative AI check
 try:
@@ -141,7 +142,8 @@ def get_keep_articles(db: DatabaseAdapter, hours: int = 24) -> List[Dict[str, An
                 "title": row[1],
                 "category": row[2],
                 "reason": row[3],
-                "publisher": row[4]
+                "publisher": row[4],
+                "source": row[4] # For deduplicator source tier check
             })
         return articles
     except Exception as e:
@@ -438,6 +440,14 @@ def main():
     # 3. KEEP 기사 가져오기
     articles = get_keep_articles(news_db)
     logger.info(f"📥 Found {len(articles)} KEEP articles.")
+    
+    # [NEW] Similarity Deduplication
+    try:
+        deduplicator = SimilarityDeduplicator(similarity_threshold=0.5)
+        dedup_result = deduplicator.run(articles)
+        articles = dedup_result["articles"]
+    except Exception as e:
+        logger.error(f"⚠️ Deduplication failed, proceeding with original list: {e}")
     
     # 4. 카테고리별 그룹화
     grouped = defaultdict(list)

@@ -25,9 +25,9 @@ Classify articles based on their Root Event and Subject matter, regardless of wh
 Assign one of the following 9 tags if the article is relevant. If not, DROP it.
 
 1. **G_macro**: Global/US Economy (Fed, Unemployment rate, Rates, Inflation, GDP), US Treasury, Geopolitics(Oil, War).
-2. **G_market**: Global Stock Indices (S&P500, Nasdaq), Crypto, Forex, Commodities, ETF trends.
+2. **G_market**: Global Stock Indices (S&P500, Nasdaq), Crypto, Forex, Commodities, ETF trends. *NOTE: Focus on MAJOR global indices. DROP simple daily closes for minor regional markets (e.g., Mexico, Brazil, Russia).*
 3. **G_tech**: Global Big Tech (AI, Robotics, Semiconductor, Bio, Space), Tech Trend Shifts, and Major Corp Movers (Nvidia, Tesla, OpenAI & other US Big Tech).
-4. **G_region**: Specific Regional Economy excluding US (e.g., China Stimulus, Japan Yen Policy, Eurozone Crisis, Emerging Markets). *NOTE: Only keep if it impacts Global/US markets. Drop purely local/isolated regional news.*
+4. **G_region**: Specific Regional Economy excluding US (e.g., China Stimulus, Japan Yen Policy, Eurozone Crisis, Emerging Markets). *NOTE: Only keep if it impacts Global/US markets. DROP simple daily market close reports for non-major economies.*
 5. **RealEstate_G**: Global/US Housing market, Mortgage rates, Commercial Real Estate (REITs), Trading Volume, Housing Inventory.
 6. **RealEstate_K**: Korea Housing prices, Jeonse(전세), PF Risks, Gov Real Estate Policy.
 7. **K_macro**: Bank of Korea Rates, Exports/Imports, KRW/USD Exchange Rate, National GDP.
@@ -44,6 +44,8 @@ Assign one of the following 9 tags if the article is relevant. If not, DROP it.
 5. **The "Opinion vs. Authority" Rule (Who is speaking?)**
    - **DROP:** General Op-Eds, Editorial columns, external analyst guesses, academic critics, or politician commentary.
    - **KEEP (CRITICAL):** Direct statements, interviews, or warnings from **Key Decision Makers** (Fed Chair, Central Bank Governors, Finance Ministers) or **Big Tech CEOs** (e.g., Jensen Huang, Sam Altman) regarding **Policy Changes or Industry Shifts**.
+6. **Irrelevant Regional Markets:**
+   - **DROP:** Simple daily stock market closing reports from non-major economies (e.g., "Mexico Stocks Close Higher", "Canada Stocks Close Lower", "Brazil Bovespa Updates", "Russia Stocks Close") unless they mention a major global economic shift or crisis.
 
 
 # Output Format (JSON Array)

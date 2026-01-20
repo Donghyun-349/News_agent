@@ -9,6 +9,7 @@ Lane 할당 로직은 제거되었습니다.
 
 import logging
 import re
+import html
 from typing import List, Dict, Any, Tuple
 from collections import defaultdict
 from datetime import datetime
@@ -96,6 +97,9 @@ class TitleDeduplicator:
         logger.info("\n" + "="*80)
         logger.info("🔄 Phase 1.5: Title-Based Deduplication (Incremental) 시작")
         logger.info("="*80)
+
+        # 0. Clean HTML Entities in DB first
+        self.clean_and_update_db_titles()
         
         cursor = self.db_adapter.connection.cursor()
         
@@ -218,6 +222,46 @@ class TitleDeduplicator:
         logger.info(f"  신규 중 중복 제거: {stats['total_duplicates_removed']}")
         
         return stats
+    
+    def clean_and_update_db_titles(self):
+        """raw_news의 타이틀에서 HTML Entity 문제 해결 및 DB 업데이트"""
+        try:
+            cursor = self.db_adapter.connection.cursor()
+            
+            # Fetch candidates (titles with '&')
+            if hasattr(self.db_adapter, 'db_type') and self.db_adapter.db_type == 'sqlite':
+                cursor.execute("SELECT id, title FROM raw_news WHERE title LIKE '%&%'")
+            else:
+                cursor.execute("SELECT id, title FROM raw_news WHERE title LIKE '%&%'")
+                
+            rows = cursor.fetchall()
+            
+            updates = []
+            for row in rows:
+                original_title = row[1]
+                if not original_title: continue
+                
+                # HTML unescape only (No prefix removal here)
+                cleaned_title = html.unescape(original_title).strip()
+                
+                if original_title != cleaned_title:
+                    updates.append((cleaned_title, row[0]))
+                    
+            if updates:
+                logger.info(f"🧹 Cleaning HTML entities for {len(updates)} articles in raw_news...")
+                
+                if hasattr(self.db_adapter, 'db_type') and self.db_adapter.db_type == 'sqlite':
+                    query = "UPDATE raw_news SET title = ? WHERE id = ?"
+                else:
+                    query = "UPDATE raw_news SET title = %s WHERE id = %s"
+                    
+                cursor.executemany(query, updates)
+                self.db_adapter.connection.commit()
+                logger.info("✅ Title HTML entity cleaning complete.")
+            else:
+                logger.info("✨ No HTML entities found in titles to clean.")
+        except Exception as e:
+            logger.error(f"⚠️ Title cleaning failed: {e}")
     
     def process(self) -> Dict[str, Any]:
         """Phase 1.5 전체 처리"""

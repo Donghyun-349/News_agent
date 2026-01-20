@@ -42,6 +42,12 @@ DROP_KEYWORDS = [
     "문화누리카드", "근로장려금", "자녀장려금", "지원금"
 ]
 
+# 제목 기반 필터링 패턴 (Regex) - 삭제 대상
+# [단독], [종합] 등은 제외 (유지)
+TITLE_DROP_PATTERNS = [
+    r"^\[(포토|속보|개장|마감|1보|2보|3보|상보|부고|인사|동정|행사|알림|모집)\]"
+]
+
 def check_drop_conditions(text: str) -> str:
     """
     텍스트에 DROP 조건이 포함되어 있는지 확인
@@ -49,6 +55,12 @@ def check_drop_conditions(text: str) -> str:
     Returns:
         DROP 사유 (매칭된 키워드 등) 또는 None
     """
+    # 0. Title Prefix Patterns (Regex)
+    for pattern in TITLE_DROP_PATTERNS:
+        # text는 "Title Snippet" 형태이므로 시작 부분 매칭 확인
+        if re.search(pattern, text):
+            return f"Rule: Title Prefix Drop"
+
     # 1. Regex: 인사(?!이트)
     if re.search(r'인사(?!이트)', text):
         return "Rule: Noise Keyword (인사)"
