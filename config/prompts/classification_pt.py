@@ -21,18 +21,26 @@ def get_p4_topic_classification_prompt() -> str:
 **"Ignore the Language, Focus on the Subject."**
 Classify articles based on their Root Event and Subject matter, regardless of whether the text is in Korean or English.
 
+# ⚠️ KOREA-FIRST RULE:
+**Korean subjects (정부/기업/정책) → K_* | Foreign subjects → G_***
+
+**K_* if:** Korean govt/companies/policies/domestic indicators (이대통령, 금감원, 한은, 삼성, 국민성장펀드, 원전정책)
+**G_* if:** Foreign companies/CEOs, Intl orgs (OECD/IMF), US/Global politicians as PRIMARY subject
+
+**Examples:** "국고채 금리 급등"→K_macro | "금감원 PE"→K_market | "원전정책"→K_industry | "글로벌CEO"→G_macro | "OECD전망"→G_macro
+
 # Classification Tags (Select One):
 Assign one of the following 9 tags if the article is relevant. If not, DROP it.
 
-1. **G_macro**: Global/US Economy (Fed, Unemployment rate, Rates, Inflation, GDP), US Treasury, Geopolitics(Oil, War).
-2. **G_market**: Global Stock Indices (S&P500, Nasdaq), Crypto, Forex, Commodities, ETF trends. *NOTE: Focus on MAJOR global indices. DROP simple daily closes for minor regional markets (e.g., Mexico, Brazil, Russia).*
-3. **G_tech**: Global Big Tech (AI, Robotics, Semiconductor, Bio, Space), Tech Trend Shifts, and Major Corp Movers (Nvidia, Tesla, OpenAI & other US Big Tech).
-4. **G_region**: Specific Regional Economy excluding US (e.g., China Stimulus, Japan Yen Policy, Eurozone Crisis, Emerging Markets). *NOTE: Only keep if it impacts Global/US markets. DROP simple daily market close reports for non-major economies.*
-5. **RealEstate_G**: Global/US Housing market, Mortgage rates, Commercial Real Estate (REITs), Trading Volume, Housing Inventory.
+1. **G_macro**: Global/US Economy (Fed, Unemployment rate, Rates, Inflation, GDP), US Treasury, Geopolitics(Oil, War). *Only for NON-Korean subjects.*
+2. **G_market**: Global Stock Indices (S&P500, Nasdaq), Crypto, Forex, Commodities, ETF trends. *NOTE: Focus on MAJOR global indices. DROP simple daily closes for minor regional markets (e.g., Mexico, Brazil, Russia). Only for NON-Korean markets.*
+3. **G_tech**: Global Big Tech (AI, Robotics, Semiconductor, Bio, Space), Tech Trend Shifts, and Major Corp Movers (Nvidia, Tesla, OpenAI & other US Big Tech). *Only for NON-Korean tech companies/policies.*
+4. **G_region**: Specific Regional Economy excluding US and Korea (e.g., China Stimulus, Japan Yen Policy, Eurozone Crisis, Emerging Markets). *NOTE: Only keep if it impacts Global/US markets. DROP simple daily market close reports for non-major economies.*
+5. **RealEstate_G**: Global/US Housing market, Mortgage rates, Commercial Real Estate (REITs), Trading Volume, Housing Inventory. *Only for NON-Korean real estate.*
 6. **RealEstate_K**: Korea Housing prices, Jeonse(전세), PF Risks, Gov Real Estate Policy.
-7. **K_macro**: Bank of Korea Rates, Exports/Imports, KRW/USD Exchange Rate, National GDP.
-8. **K_market**: KOSPI/KOSDAQ, Foreign Investor Flows, Short-selling, Market Sentiment, Leading Stocks.
-9. **K_industry**: Major Korean Corp (Samsung, Hyundai, LG), Large Deals/Orders, Earnings Shocks, M&A, Major Business Updates, Future Business Plan.
+7. **K_macro**: Bank of Korea Rates, Korean Exports/Imports, KRW/USD Exchange Rate, Korean National GDP, Korean Government Bonds (국고채), Korean Fiscal Policy.
+8. **K_market**: KOSPI/KOSDAQ, Korean Domestic Funds, Foreign Investor Flows in Korea, Short-selling in Korea, Korean Market Sentiment, Leading Korean Stocks, Korean Financial Regulations.
+9. **K_industry**: Major Korean Corp (Samsung, Hyundai, LG, etc.), Korean Industrial Policy (원전, 에너지, etc.), Large Deals/Orders, Earnings Shocks, M&A, Major Business Updates, Future Business Plan.
 
 # Drop Rules (Aggressive Filtering) - STRICTLY DISCARD
 1. **Low-Impact/Ceremonial:** New Year Speeches, "Vision declarations" without numbers, CSR activities, simple MOUs.

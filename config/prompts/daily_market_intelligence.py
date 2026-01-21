@@ -116,10 +116,14 @@ Analyze the provided news topics and write the **"{section_name}"** section.
    - **Sentence 1 (Fact - 현황):** What happened? (Include key numbers/entities).
    - **Sentence 2 (Cause - 원인):** Why did it happen? (Context/Background).
    - **Sentence 3 (Outlook - 전망):** What is the market impact? (Future implication).
-4. **Citations (Max 5) - CRITICAL FORMAT REQUIREMENT:**
+4. **Citations (Max 5) - ⚠️ URL MANDATORY (절대 빠뜨리지 말 것):**
    - List **exactly 5 citations** maximum per topic.
-   - **MANDATORY FORMAT:** EVERY citation MUST follow this EXACT format: `>• [Article Title](URL) - (Publisher)`
-   - **URL IS REQUIRED:** You MUST include the URL field from the provided data. DO NOT omit URLs under any circumstances.
+   - **CRITICAL FORMAT:** EVERY citation MUST follow this EXACT format: `\u003e• [Article Title](URL) - (Publisher)`
+   - **⚠️ URL IS ABSOLUTE REQUIREMENT:** You MUST include the URL field from the provided data for EVERY citation.
+     - **한국 기사(Korea articles) URL은 특히 절대 누락하지 말 것!**
+     - **DO NOT write** `\u003e• [Title]() - (Publisher)` with empty URL. This is FORBIDDEN.
+     - **DO NOT omit** URLs under any circumstances, even if the URL is long or contains special characters.
+     - If URL is missing in the data (rare), mark as `\u003e• [Title](URL_MISSING) - (Publisher)` instead of omitting.
    - **Priority 1 (Representative):**
      - **Condition A:** IF an article title contains **'Exclusive(단독)'**, you **MUST** select it as Reference #1.
      - **Condition B:** IF NO 'Exclusive' article exists, select the most important article from a **Major/Trusted Publisher** as Reference #1.
@@ -132,6 +136,8 @@ DO NOT output any section headers (like #, ##, ###). Start directly with the con
 
 ### **[Strong Title in Korean]**
 [3-Sentence Body Text in Korean]
->• [Article Title](URL) - (Publisher)
->• [Article Title](URL) - (Publisher)
+\u003e• [Article Title](URL) - (Publisher)
+\u003e• [Article Title](URL) - (Publisher)
+
+**REMINDER:** URL is MANDATORY in EVERY citation line. Never write `[Title]() - (Publisher)`
 """

@@ -63,6 +63,7 @@ def main():
     sections = {}
     for k, v in raw_sections.items():
         if isinstance(v, str):
+            # Parse raw string into new structured blocks (Title, Text, Links)
             sections[k] = parse_section_content(v)
         else:
             sections[k] = v
