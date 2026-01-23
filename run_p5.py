@@ -396,18 +396,28 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             titles_str = "\n".join(titles_list)
             urls_str = "\n".join(urls_list)
             
-            # Translation disabled to save tokens
-            # if model:
-            #     titles_kr_list = translate_titles(model, titles_list)
-            # else:
-            #     titles_kr_list = ["" for _ in titles_list]
             
-            # Always use empty strings (no translation)
-            titles_kr_list = ["" for _ in titles_list]
+            # Use Google Sheets GOOGLETRANSLATE formula instead of LLM
+            # Formula will auto-translate foreign titles to Korean
+            # Note: We need to track the current row number in the sheet
+            # Since we're appending, we need to calculate the row offset
             
-            titles_kr_str = "\n".join(titles_kr_list)
+            # Get current row count to calculate formula row numbers
+            current_row = len(adapter.worksheet.get_all_values()) + 1  # +1 for next row
             
-            sheet_rows.append([category, title, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_str, urls_str])
+            # Generate GOOGLETRANSLATE formulas for each title line
+            title_lines = titles_str.split('\n')
+            formula_parts = []
+            for i, _ in enumerate(title_lines):
+                # Each line in the multi-line cell needs its own translation
+                # We'll use a single formula that handles the entire multi-line cell
+                pass
+            
+            # Simple approach: Use one formula for the entire cell
+            # GOOGLETRANSLATE will handle multi-line text
+            titles_kr_formula = f'=IF(ISBLANK(F{current_row}), "", GOOGLETRANSLATE(F{current_row}, "auto", "ko"))'
+            
+            sheet_rows.append([category, title, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_formula, urls_str])
 
         if sheet_rows:
             adapter.worksheet.append_rows(sheet_rows)
