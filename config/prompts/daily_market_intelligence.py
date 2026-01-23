@@ -55,14 +55,14 @@ def get_topic_selection_prompt() -> str:
 제공된 "뉴스 토픽 리스트"를 검토하여, 오늘의 Daily Report에 포함될 **가장 중요한 이슈**를 선별하는 임무를 맡았습니다.
 
 # Task
-제공된 토픽 메타데이터(ID, Category, Topic Title, Count)를 보고 다음 두 가지 그룹을 선별하십시오.
+제공된 토픽 메타데이터(i=ID, c=Category, t=Topic Title, n=Count)를 보고 다음 두 가지 그룹을 선별하십시오.
 
 ## 1. Executive Summary (Top Headlines) 선별
-- **기준:** 오늘 시장에 가장 큰 파급력을 미치는 핵심 이슈 3개. 단순 기사 수(Count)가 많은 것뿐만 아니라, 내용의 중요성(Impact)을 고려하여 판단할 것.
+- **기준:** 오늘 시장에 가장 큰 파급력을 미치는 핵심 이슈 3개. 단순 기사 수(n)가 많은 것뿐만 아니라, 내용의 중요성(Impact)을 고려하여 판단할 것.
 - **개수:** 정확히 3개.
 
 ## 2. Section Picks (각 섹션별 대표 이슈) 선별
-- **기준:** 각 섹션(Category)별로 가장 중요한 토픽 상위 3개.
+- **기준:** 각 섹션(c)별로 가장 중요한 토픽 상위 3개.
 - **개수:** 각 섹션 당 최대 3개 (토픽이 3개 미만이면 전체 포함).
 
 # Output Format (JSON Only)
@@ -87,7 +87,8 @@ def get_key_takeaways_prompt() -> str:
     """
     return """
 # Task
-Analyze the provided news topics and write the **Executive Summary (Today's Headlines)**.
+Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **Executive Summary (Today's Headlines)**.
+Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
 
 # Requirements
 1. **Output Language:** **KOREAN (한국어)** only.
@@ -107,27 +108,23 @@ def get_section_body_prompt(section_name: str) -> str:
     """
     return f"""
 # Task
-Analyze the provided news topics and write the **"{section_name}"** section.
+Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **"{section_name}"** section.
+Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
 
 # Requirements
 1. **Output Language:** **KOREAN (한국어)** only.
 2. **Selection:** Pick the top ~3 most impactful topics.
-3. **Format:** Use the **3-Sentence Rule** for each item:
-   - **Sentence 1 (Fact - 현황):** What happened? (Include key numbers/entities).
-   - **Sentence 2 (Cause - 원인):** Why did it happen? (Context/Background).
-   - **Sentence 3 (Outlook - 전망):** What is the market impact? (Future implication).
-4. **Citations (Max 5) - ⚠️ URL MANDATORY (절대 빠뜨리지 말 것):**
-   - List **exactly 5 citations** maximum per topic.
-   - **CRITICAL FORMAT:** EVERY citation MUST follow this EXACT format: `\u003e• [Article Title](URL) - (Publisher)`
-   - **⚠️ URL IS ABSOLUTE REQUIREMENT:** You MUST include the URL field from the provided data for EVERY citation.
-     - **한국 기사(Korea articles) URL은 특히 절대 누락하지 말 것!**
-     - **DO NOT write** `\u003e• [Title]() - (Publisher)` with empty URL. This is FORBIDDEN.
-     - **DO NOT omit** URLs under any circumstances, even if the URL is long or contains special characters.
-     - If URL is missing in the data (rare), mark as `\u003e• [Title](URL_MISSING) - (Publisher)` instead of omitting.
+3. **Format:** Use the **2-Sentence Rule** (Concise & Impactful):
+   - **Sentence 1 (Fact - 현황):** What happened? (Key numbers/entities).
+   - **Sentence 2 (Analysis - 해석):** Why it matters & Future impact (Cause + Outlook).
+4. **Citations (Max 3) - REFERENCE IDs ONLY:**
+   - **FORMAT:** You MUST use `[Ref: ID]` format for citations.
+   - **Limit:** Select **Top 3** most crucial articles only.
+   - **Restriction:** DO NOT try to generate URLs or Titles in citations. ONLY output the ID tag.
    - **Priority 1 (Representative):**
      - **Condition A:** IF an article title contains **'Exclusive(단독)'**, you **MUST** select it as Reference #1.
      - **Condition B:** IF NO 'Exclusive' article exists, select the most important article from a **Major/Trusted Publisher** as Reference #1.
-   - **Priority 2 (Diversity):** Subsequent citations must select articles with **DIFFERENT viewpoints/publisher types** from the first one. (e.g., if #1 is Foreign, #2 should be Domestic or Industry specialized).
+   - **Priority 2 (Diversity):** Subsequent citations must select articles with **DIFFERENT viewpoints/publisher types** from the first one.
 5. **Negative Constraint:** NO generic advice ("Investors should monitor...").
 6. **Merge Duplicates:** If related topics exist (e.g., 'Bond Yields Drop' and 'Fed Pivot Hopes'), **merge them into one single item**.
 
@@ -135,9 +132,9 @@ Analyze the provided news topics and write the **"{section_name}"** section.
 DO NOT output any section headers (like #, ##, ###). Start directly with the content.
 
 ### **[Strong Title in Korean]**
-[3-Sentence Body Text in Korean]
-\u003e• [Article Title](URL) - (Publisher)
-\u003e• [Article Title](URL) - (Publisher)
+[2-Sentence Body Text in Korean]
+[Ref: 101]
+[Ref: 102]
 
-**REMINDER:** URL is MANDATORY in EVERY citation line. Never write `[Title]() - (Publisher)`
+**REMINDER:** Use `[Ref: ID]` only. Do not write titles or URLs.
 """

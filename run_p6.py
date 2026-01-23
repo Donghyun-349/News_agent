@@ -50,10 +50,22 @@ TOPICS_DB_PATH = BASE_DIR / "data" / "topics.db"
 OUTPUT_DIR = BASE_DIR / "outputs" / "daily_reports"
 
 # Map raw categories to report sections
+# Map raw categories to report sections
 CATEGORY_MAP = {
+    # New Short Codes
+    'G_mac': 'Global > Macro',
+    'G_mak': 'Global > Market',
+    'G_tech': 'Global > Tech',
+    'G_re': 'Global > Region',
+    'K_mac': 'Korea > Macro',
+    'K_mak': 'Korea > Market',
+    'K_in': 'Korea > Industry',
+    'Real_G': 'Real Estate > Global',
+    'Real_K': 'Real Estate > Korea',
+    
+    # Legacy Support (Optional, can keep for safety)
     'G_macro': 'Global > Macro',
     'G_market': 'Global > Market',
-    'G_tech': 'Global > Tech',
     'G_region': 'Global > Region',
     'K_macro': 'Korea > Macro',
     'K_market': 'Korea > Market',
@@ -62,12 +74,12 @@ CATEGORY_MAP = {
     'RealEstate_K': 'Real Estate > Korea'
 }
 
-# Trusted Publishers List for Curation Priority
-TRUSTED_PUBLISHERS = [
-    # Global Major
-    "Reuters", "Bloomberg", "Financial Times", "Wall Street Journal", "CNBC", "TechCrunch", "The Verge",
-    # Korean Major
-    "Yonhap News", "Maeil Business", "Korea Economic Daily", "Electronic Times", "Hankyung", "MoneyToday"
+# Trusted Publishers List for Curation Priority (Ordered by Rank)
+TRUSTED_PUBLISHERS_ORDER = [
+    # Global Tier 1 (Foreign Major)
+    "Bloomberg", "Reuters", "Wall Street Journal", "Financial Times",
+    # Korea Tier 1 (Domestic Major)
+    "Chosun Ilbo", "Dong-A Ilbo", "Maeil Business", "Korea Economic Daily", "Yonhap Infomax"
 ]
 
 # Check Google Generative AI availability
@@ -262,14 +274,75 @@ def sanitize_article_data(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]
         raw_title = str(c_art.get('title', ''))
         clean_title = html.unescape(raw_title)
         clean_title = clean_title.replace('[', '(').replace(']', ')')
-        c_art['title'] = clean_title
         
-        # Clean URL: Remove unnecessary parameters
+        # 1. Clean URL
         raw_url = c_art.get('url', '')
-        c_art['url'] = clean_url(raw_url) if raw_url else ""
+        clean_u = clean_url(raw_url) if raw_url and raw_url.strip() else ""
+
+        c_art_clean = {
+            "id": c_art.get('id'), # Keep ID
+            "title": clean_title,
+            "publisher": c_art.get('publisher', 'Unknown'),
+            "snippet": c_art.get('snippet', ''),
+            "url": clean_u
+        }
             
-        cleaned.append(c_art)
+        cleaned.append(c_art_clean)
     return cleaned
+
+def is_title_similar(new_title: str, existing_articles: List[Dict], threshold: float = 0.6) -> bool:
+    """Check if title is similar to any already selected article"""
+    for item in existing_articles:
+        similarity = SequenceMatcher(None, new_title, item['title']).ratio()
+        if similarity >= threshold:
+            return True
+    return False
+
+def curate_articles(articles: List[Dict], trusted_publishers: List[str], max_candidates: int = 8) -> List[Dict]:
+    """
+    Select Priority Articles based on:
+    1. Publisher Rank (High Priority First)
+    2. Diversity (Max 2 per publisher)
+    3. Uniqueness (No similar titles)
+    4. Max Total (8)
+    """
+    if not articles:
+        return []
+
+    # Helper to get rank index (Lower is better)
+    def get_rank(pub_name):
+        for idx, trust_pub in enumerate(trusted_publishers):
+            if trust_pub.lower() in pub_name.lower():
+                return idx
+        return 999 # Not in trusted list
+
+    # Sort: Rank (Asc) -> ID (Desc/Newest)
+    # Note: 'id' is used as tie-breaker (Newest IDs are usually larger)
+    sorted_articles = sorted(articles, key=lambda x: (get_rank(x['publisher']), -x['id']))
+
+    selected = []
+    publisher_counts = {} # Track count per publisher
+
+    for art in sorted_articles:
+        if len(selected) >= max_candidates:
+            break
+            
+        pub = art['publisher']
+        
+        # Condition 1: Max 2 articles per publisher
+        if publisher_counts.get(pub, 0) >= 2:
+            continue
+            
+        # Condition 2: Title Similarity Check (Dedup)
+        # Threshold 0.6 means 60% similarity -> Skip
+        if is_title_similar(art['title'], selected, threshold=0.6):
+            continue
+            
+        # Qualified!
+        selected.append(art)
+        publisher_counts[pub] = publisher_counts.get(pub, 0) + 1
+        
+    return selected
 
 def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str]) -> tuple:
     """Worker function for parallel execution"""
@@ -284,6 +357,7 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         try:
             # Gather full data
             section_context_data = []
+            article_map = {} # Map ID -> {url, title, pub}
             for tid in topic_ids:
                 if tid in topic_map:
                     t_obj = topic_map[tid]
@@ -304,29 +378,50 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
                     urls_after_curate = [bool(a.get('url')) for a in curated_articles]
                     logger.debug(f"[{section_name}] Topic {tid}: URLs after curate: {urls_after_curate}")
 
+                    # Build Article Map for Reference ID Pattern
+                    for ca in curated_articles:
+                        article_map[str(ca['id'])] = {
+                            "t": ca['title'],
+                            "u": ca['url'],
+                            "p": ca['publisher']
+                        }
+
                     section_context_data.append({
-                        "title": t_obj['title'],
-                        "count": t_obj['count'],
-                        "articles": curated_articles
+                        "t": t_obj['title'],
+                        "n": t_obj['count'],
+                        "a": [
+                            # ID(i) included, URL(u) REMOVED for token efficiency
+                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            for ca in curated_articles
+                        ]
                     })
         finally:
             local_db.close()
         
         sec_prompt = get_section_body_prompt(section_name)
-        sec_json = json.dumps(section_context_data, ensure_ascii=False, indent=2)
+        # Minified JSON
+        sec_json = json.dumps(section_context_data, ensure_ascii=False, separators=(',', ':'))
         
-        # VALIDATION: Verify URLs are present in context before sending to LLM
-        total_articles = sum(len(topic.get("articles", [])) for topic in section_context_data)
-        articles_with_urls = sum(
-            sum(1 for art in topic.get("articles", []) if art.get("url")) 
-            for topic in section_context_data
-        )
-        logger.info(f"[{section_name}] Sending to LLM: {total_articles} articles, {articles_with_urls} have URLs")
-        if articles_with_urls < total_articles:
-            logger.warning(f"[{section_name}] ⚠️ {total_articles - articles_with_urls} articles are missing URLs in context!")
+        # Log payload size reduction
+        total_articles = sum(len(topic.get("a", [])) for topic in section_context_data)
+        logger.info(f"[{section_name}] Sending {total_articles} articles to LLM (URLs stripped)")
         
-        content = generate_content(model, system_prompt, sec_prompt, sec_json)
-        return section_name, content
+        raw_content = generate_content(model, system_prompt, sec_prompt, sec_json)
+        
+        # Post-Processing: Restore References
+        # Find [Ref:ID] and replace with > • [Title](URL) - (Publisher)
+        def replace_ref(match):
+            ref_id = match.group(1)
+            if ref_id in article_map:
+                meta = article_map[ref_id]
+                return f"> • [{meta['t']}]({meta['u']}) - ({meta['p']})"
+            else:
+                return f"(Source ID: {ref_id} not found)"
+
+        # Regex to match [Ref:123] or [Ref: 123]
+        final_content = re.sub(r'\[Ref:\s*(\d+)\]', replace_ref, raw_content)
+
+        return section_name, final_content
     except Exception as e:
         logger.error(f"Error processing section '{section_name}': {e}")
         return section_name, "생성 중 오류 발생"
@@ -343,6 +438,7 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
 
         try:
             exec_context_data = []
+            article_map = {} # Map ID -> Meta
             for tid in exec_summary_ids:
                 if tid in topic_map:
                     t_obj = topic_map[tid]
@@ -355,19 +451,49 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
                     # Curation
                     curated_articles = curate_articles(articles, trusted_publishers, max_candidates=12)
 
+                    # Build Article Map
+                    for ca in curated_articles:
+                        article_map[str(ca['id'])] = {
+                            "t": ca['title'],
+                            "u": ca['url'],
+                            "p": ca['publisher']
+                        }
+
                     exec_context_data.append({
-                        "title": t_obj['title'],
-                        "category": t_obj['display_category'],
-                        "count": t_obj['count'],
-                        "articles": curated_articles
+                        "t": t_obj['title'],
+                        "c": t_obj['display_category'],
+                        "n": t_obj['count'],
+                        "a": [
+                            # ID(i) included, URL(u) REMOVED
+                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            for ca in curated_articles
+                        ]
                     })
         finally:
             local_db.close()
         
         exec_prompt = get_key_takeaways_prompt()
-        exec_json = json.dumps(exec_context_data, ensure_ascii=False, indent=2)
-        content = generate_content(model, system_prompt, exec_prompt, exec_json)
-        return "Executive Summary", content
+        # Minified JSON
+        exec_json = json.dumps(exec_context_data, ensure_ascii=False, separators=(',', ':'))
+        
+        # Log payload size reduction
+        total_articles = sum(len(topic.get("a", [])) for topic in exec_context_data)
+        logger.info(f"[Executive Summary] Sending {total_articles} articles to LLM (URLs stripped)")
+
+        raw_content = generate_content(model, system_prompt, exec_prompt, exec_json)
+
+        # Post-Processing: Restore References
+        def replace_ref(match):
+            ref_id = match.group(1)
+            if ref_id in article_map:
+                meta = article_map[ref_id]
+                return f"> • [{meta['t']}]({meta['u']}) - ({meta['p']})"
+            else:
+                return f"(Source ID: {ref_id} not found)"
+
+        final_content = re.sub(r'\[Ref:\s*(\d+)\]', replace_ref, raw_content)
+
+        return "Executive Summary", final_content
     except Exception as e:
         logger.error(f"Error processing Executive Summary: {e}")
         return "Executive Summary", "생성 중 오류 발생"
@@ -631,7 +757,19 @@ def main():
     # 5. [Step 2: SELECT] Chief Editor selects Top Topics
     logger.info("🧠 [Step 2] Chief Editor is selecting key topics...")
     selection_prompt = get_topic_selection_prompt()
-    selection_input_data = json.dumps(topic_metadata_list, ensure_ascii=False, indent=2)
+    
+    # Payload Optimization (Step 1):
+    # Keys: i=id, c=category, t=topic_title, n=count
+    selection_input_list = []
+    for tm in topic_metadata_list:
+        selection_input_list.append({
+            "i": tm['id'],
+            "c": tm['category'],
+            "t": tm['topic_title'],
+            "n": tm['count']
+        })
+    # Minified JSON
+    selection_input_data = json.dumps(selection_input_list, ensure_ascii=False, separators=(',', ':'))
     
     # We use a simple system prompt for selection role
     system_prompt = get_system_prompt() 
@@ -657,14 +795,14 @@ def main():
         # 6-1. Submit Executive Summary Task
         futures.append(executor.submit(
             process_executive_summary_task, 
-            exec_summary_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS
+            exec_summary_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS_ORDER
         ))
         
         # 6-2. Submit Section Tasks
         for section_name, topic_ids in section_picks.items():
             futures.append(executor.submit(
                 process_section_task,
-                section_name, topic_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS
+                section_name, topic_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS_ORDER
             ))
             
         # 6-3. Collect Results
@@ -698,7 +836,8 @@ def main():
         }
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         with open(json_output_file, "w", encoding="utf-8") as f:
-            json.dump(report_data, f, ensure_ascii=False, indent=2)
+            # Optimize: Minify JSON for storage efficiency
+            json.dump(report_data, f, ensure_ascii=False, separators=(',', ':'))
         logger.info(f"✅ [JSON] Report saved to: {json_output_file}")
 
     if "markdown" in args.formats:

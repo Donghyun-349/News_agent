@@ -223,11 +223,17 @@ def cluster_step1(model: Any, category: str, articles: List[Dict[str, Any]]) -> 
     system_prompt = get_topic_clustering_prompt()
     
     input_data = [
-        {"id": a["id"], "reason": a["reason"]}
+        {"i": a["id"], "r": a["reason"]} # id -> i, reason -> r
         for a in articles
     ]
-    user_content = json.dumps(input_data, ensure_ascii=False, indent=2)
-    full_prompt = f"{system_prompt}\n\nCategory: {category}\n\nArticles:\n{user_content}"
+    # Minified JSON
+    user_content = json.dumps(input_data, ensure_ascii=False, separators=(',', ':'))
+    
+    # Update prompt slightly to inform LLM of key change (implicitly) 
+    # Actually, Gemini is smart enough to infer i=id, r=reason from context if we just say "list of articles".
+    # But for safety, we can prepend a tiny legend or let it infer. 
+    # Given the prompt says "Each item has an id and a reason", mapping i/r is trivial for Gemini 1.5/2.0.
+    full_prompt = f"{system_prompt}\n\nCategory: {category}\n\nArticles (i=id, r=reason):\n{user_content}"
 
     try:
         response = model.generate_content(full_prompt)
@@ -257,7 +263,9 @@ def translate_titles(model: Any, titles: List[str]) -> List[str]:
     logger.info(f"🌐 Translating {len(non_empty_titles)} article titles to Korean...")
     
     # Create a prompt for batch translation
-    titles_json = json.dumps([{"id": i, "title": title} for i, title in non_empty_titles], ensure_ascii=False)
+    # Optimization: id -> i, title -> t, Minified JSON
+    titles_data = [{"i": i, "t": title} for i, title in non_empty_titles]
+    titles_json = json.dumps(titles_data, ensure_ascii=False, separators=(',', ':'))
     
     prompt = f"""You are a professional translator. Translate the following article titles to Korean.
 
@@ -267,11 +275,11 @@ Rules:
 3. Keep proper nouns (company names, people names, places) in their original form
 4. Return ONLY a valid JSON array in this exact format:
 [
-  {{"id": 0, "translation": "번역된 제목 또는 빈 문자열"}},
-  {{"id": 1, "translation": "번역된 제목 또는 빈 문자열"}}
+  {{"i": 0, "t": "번역된 제목 또는 빈 문자열"}},
+  {{"i": 1, "t": "번역된 제목 또는 빈 문자열"}}
 ]
 
-Titles to translate:
+Titles to translate (i=id, t=title):
 {titles_json}
 
 Return ONLY the JSON array, no other text."""
@@ -286,13 +294,17 @@ Return ONLY the JSON array, no other text."""
         
         if isinstance(parsed, list):
             for item in parsed:
-                if isinstance(item, dict) and "id" in item and "translation" in item:
-                    idx = item["id"]
-                    # Map back to original indices
-                    for orig_idx, orig_title in non_empty_titles:
-                        if orig_idx == idx:
-                            translations[orig_idx] = item["translation"] or ""
-                            break
+                # Optimized keys: i=id, t=translation
+                if isinstance(item, dict):
+                    idx = item.get("i")
+                    trans_text = item.get("t")
+                    
+                    if idx is not None:
+                        # Map back to original indices
+                        for orig_idx, orig_title in non_empty_titles:
+                            if orig_idx == idx:
+                                translations[orig_idx] = trans_text or ""
+                                break
         
         return translations
     
@@ -384,11 +396,14 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             titles_str = "\n".join(titles_list)
             urls_str = "\n".join(urls_list)
             
-            # Translate titles if model is available
-            if model:
-                titles_kr_list = translate_titles(model, titles_list)
-            else:
-                titles_kr_list = ["" for _ in titles_list]
+            # Translation disabled to save tokens
+            # if model:
+            #     titles_kr_list = translate_titles(model, titles_list)
+            # else:
+            #     titles_kr_list = ["" for _ in titles_list]
+            
+            # Always use empty strings (no translation)
+            titles_kr_list = ["" for _ in titles_list]
             
             titles_kr_str = "\n".join(titles_kr_list)
             

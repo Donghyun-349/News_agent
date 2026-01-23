@@ -56,7 +56,7 @@ def get_articles_to_process(db: DatabaseAdapter, limit: int = None, force_all: b
         
         # SQLite vs Others
         query = f"""
-            SELECT p.id, r.title, r.snippet
+            SELECT p.id, r.title
             FROM processed_news p
             JOIN raw_news r ON p.ref_raw_id = r.id
             {where_clause}
@@ -71,8 +71,7 @@ def get_articles_to_process(db: DatabaseAdapter, limit: int = None, force_all: b
         for row in rows:
             articles.append({
                 "id": row[0],
-                "title": row[1],
-                "snippet": row[2] or ""
+                "title": row[1]
             })
             
         return articles
@@ -88,9 +87,9 @@ def call_llm_batch(client: OpenAI, articles: List[Dict[str, Any]], model: str = 
     # Prompt 구성
     system_prompt = get_p4_topic_classification_prompt()
     
-    # User Content: JSON Array of articles
+    # User Content: JSON Array of articles (Title-only for efficiency)
     user_content_data = [
-        {"id": str(a["id"]), "title": a["title"], "snippet": a["snippet"]} 
+        {"id": str(a["id"]), "title": a["title"]} 
         for a in articles
     ]
     user_content = json.dumps(user_content_data, ensure_ascii=False, indent=2)
@@ -146,14 +145,25 @@ def call_llm_batch(client: OpenAI, articles: List[Dict[str, Any]], model: str = 
         logger.error(f"❌ LLM Call Failed: {e}")
         return []
 
-# 재정의: response_format 없이 호출하는 버전 (Array 반환을 위해)
+# Defined 9 Categories + Validation
+VALID_CATEGORIES = {
+    "G_mac", "G_mak", "G_tech", "G_re", 
+    "Real_G", "Real_K", 
+    "K_mac", "K_mak", "K_in"
+}
+
 def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], model: str = "gpt-4o-mini") -> List[Dict[str, Any]]:
     system_prompt = get_p4_topic_classification_prompt()
+    
+    # Payload Optimization:
+    # 1. Rename keys: id -> i, title -> t
+    # 2. Remove snippet (title only sufficient per user request)
     user_content_data = [
-        {"id": str(a["id"]), "title": a["title"], "snippet": a["snippet"][:200]} # 스니펫 200자로 제한 
+        {"i": str(a["id"]), "t": a["title"]} 
         for a in articles
     ]
-    user_content = json.dumps(user_content_data, ensure_ascii=False)
+    # 3. Minified JSON: separators=(',', ':') removes whitespace
+    user_content = json.dumps(user_content_data, ensure_ascii=False, separators=(',', ':'))
     
     try:
         response = client.chat.completions.create(
@@ -169,8 +179,41 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
         # Markdown backticks 제거 (```json ... ```)
         if "```" in content:
             content = content.replace("```json", "").replace("```", "").strip()
-            
-        return json.loads(content)
+        
+        # Parse Response (Array of Arrays)
+        # Expected: [[id, decision_bool, category, reason], ...]
+        raw_list = json.loads(content)
+        
+        parsed_results = []
+        for item in raw_list:
+            # Robust parsing: handle both old dict style (just in case) and new list style
+            if isinstance(item, list) and len(item) >= 4:
+                # [ID, DECISION_BOOL, CATEGORY, REASON]
+                p_id = item[0]
+                dec_bool = item[1]
+                cat = item[2]
+                reason = item[3]
+                
+                # Validation Logic: Hallucination Check
+                if cat not in VALID_CATEGORIES:
+                    if str(dec_bool) == "1" and cat != "Noise":
+                        logger.warning(f"⚠️ Hallucination detected: Category '{cat}' is invalid. Forcing DROP (ID: {p_id}).")
+                    decision = "DROP"
+                else:
+                    decision = "KEEP" if str(dec_bool) == "1" or str(dec_bool).lower() == "true" else "DROP"
+                
+                parsed_results.append({
+                    "id": p_id,
+                    "decision": decision,
+                    "category": cat,
+                    "reason": reason
+                })
+            elif isinstance(item, dict):
+                # Fallback for dict (should mostly not happen with new prompt)
+                parsed_results.append(item)
+                
+        return parsed_results
+        
     except Exception as e:
         logger.error(f"❌ LLM Call Failed: {e}")
         return []
@@ -241,7 +284,7 @@ def export_to_gsheet(run_stats: Dict[str, int], sheet_id: str, db: DatabaseAdapt
 def main():
     parser = argparse.ArgumentParser(description="Phase 4: LLM Classification")
     parser.add_argument("--limit", type=int, help="처리할 기사 수 제한")
-    parser.add_argument("--batch-size", type=int, default=25, help="LLM 배치 사이즈")
+    parser.add_argument("--batch-size", type=int, default=100, help="LLM 배치 사이즈")
     parser.add_argument("--force-all", action="store_true", help="이미 처리된 기사도 다시 처리")
     parser.add_argument("--no-export", action="store_true", help="Sheet 출력 건너뛰기")
     args = parser.parse_args()

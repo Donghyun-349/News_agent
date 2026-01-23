@@ -55,7 +55,7 @@ def main():
         "run_p4.py",  # LLM Classification
         "run_p5.py",  # Clustering/Topic Generation
         "run_p6.py",   # Report Generation
-        "run_p7.py",   # Evergreen Content Generation (Blog/YouTube)
+        # "run_p7.py",   # Evergreen Content Generation (Blog/YouTube) - DISABLED: Logic improvement needed
         "run_summary.py" # Final Summary Export
     ]
     
