@@ -373,7 +373,7 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
                     logger.debug(f"[{section_name}] Topic {tid}: URLs after sanitize: {urls_after_sanitize}")
 
                     # Curation
-                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=12)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
                     
                     # DEBUG: Check URLs after curation
                     urls_after_curate = [bool(a.get('url')) for a in curated_articles]
@@ -450,7 +450,7 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
                     articles = sanitize_article_data(articles)
                     
                     # Curation
-                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=12)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
 
                     # Build Article Map
                     for ca in curated_articles:
@@ -749,8 +749,8 @@ def main():
         }
         topic_metadata_list.append({
             "id": t_meta['id'],
-            # Use Original (Short) Category for Token Optimization
-            "category": t_meta['original_category'], 
+            # Use Display (Full) Category for LLM Clarity
+            "category": t_meta['display_category'],  # e.g., "Real Estate > Global"
             "topic_title": t_meta['title'],
             "count": t_meta['count']
         })
@@ -805,6 +805,11 @@ def main():
             # Map Short Name back to Long Name (e.g., G_mac -> Global > Macro)
             # Fallback to key itself if not found
             full_section_name = CATEGORY_MAP.get(short_section_name, short_section_name)
+            
+            # ✅ SAFEGUARD: Enforce max 3 topics per section
+            if len(topic_ids) > 3:
+                logger.warning(f"⚠️  [{full_section_name}] LLM selected {len(topic_ids)} topics, limiting to top 3")
+                topic_ids = topic_ids[:3]
             
             futures.append(executor.submit(
                 process_section_task,
@@ -888,32 +893,10 @@ def main():
     topics_db.close()
     news_db.close()
 
-    # 9. Telegram Alert (Send Sections)
-    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-    TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+    topics_db.close()
+    news_db.close()
     
-    if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
-        try:
-            from src.exporters.telegram_exporter import TelegramExporter
-            logger.info("🚀 Sending report to Telegram...")
-            
-            # Support multiple chat IDs separated by comma
-            chat_ids = [cid.strip() for cid in TELEGRAM_CHAT_ID.split(',')]
-            
-            header = f"📊 *Daily Market Intelligence* ({today_str})\n\n주요 시장 동향 브리핑입니다."
-            
-            for chat_id in chat_ids:
-                logger.info(f"  → Sending to: {chat_id}")
-                exporter = TelegramExporter(TELEGRAM_BOT_TOKEN, chat_id)
-                exporter.send_report_sections(structured_sections, header_text=header)
-                logger.info(f"  ✅ Sent to {chat_id}")
-            
-        except Exception as e:
-            logger.error(f"❌ Telegram Export Failed: {e}")
-            import traceback
-            logger.error(traceback.format_exc())
-    else:
-        logger.info("ℹ️ Telegram configuration missing. Skipping Telegram export.")
+    logger.info("ℹ️ Telegram export moved to Phase 6-1 (run_p6_1.py)")
 
 if __name__ == "__main__":
     main()
