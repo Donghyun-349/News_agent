@@ -70,16 +70,19 @@ class TopicsDB:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 category TEXT,
                 topic_title TEXT,
-                news_ids TEXT, -- JSON List of IDs
+                news_ids TEXT, -- JSON List of IDs (Curated)
+                original_count INTEGER, -- Original article count (excluding true duplicates)
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """
         self.cursor.execute(query)
         self.connection.commit()
 
-    def insert_topic(self, category: str, topic_title: str, news_ids: List[int]):
-        query = "INSERT INTO topics (category, topic_title, news_ids) VALUES (?, ?, ?)"
-        self.cursor.execute(query, (category, topic_title, json.dumps(news_ids)))
+    def insert_topic(self, category: str, topic_title: str, news_ids: List[int], original_count: int = None):
+        if original_count is None:
+            original_count = len(news_ids)
+        query = "INSERT INTO topics (category, topic_title, news_ids, original_count) VALUES (?, ?, ?, ?)"
+        self.cursor.execute(query, (category, topic_title, json.dumps(news_ids), original_count))
         self.connection.commit()
     
     def clear_topics(self):
@@ -326,7 +329,7 @@ def init_sheet(sheet_id: str, tab_name: str):
         
         # 헤더
         headers = [
-            ["Category", "Topic Title", "News Count", "Reason", "Publisher", "Title", "Title (Korean)", "URL"]
+            ["Category", "Topic Title", "Original Count", "Curated Count", "Reason", "Publisher", "Title", "Title (Korean)", "URL"]
         ]
         # Retry-safe insert
         adapter.insert_raw_rows(headers, 1)
@@ -354,6 +357,7 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             category = topic.get("category", "")
             title = topic.get("topic", "")
             news_ids = topic.get("news_ids", [])
+            original_count = topic.get("original_count", len(news_ids))  # Fallback
             
             if not news_ids:
                 continue
@@ -405,14 +409,13 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             # Since we're appending, we need to calculate the row offset
             
             row_idx = start_row + i
-            # F col is 'Title' (6th column? A=1, B=2, C=3, D=4, E=5, F=6)
-            # Headers: Category, Topic Title, News Count, Reason, Publisher, Title, Title (Korean), URL
-            # A, B, C, D, E, F, G, H
-            # So Title is F. Correct.
+            # Headers: Category, Topic Title, Original Count, Curated Count, Reason, Publisher, Title, Title (Korean), URL
+            # A, B, C, D, E, F, G, H, I
+            # Title is now G (7th column)
             
-            titles_kr_formula = f'=IF(ISBLANK(F{row_idx}), "", GOOGLETRANSLATE(F{row_idx}, "en", "ko"))'
+            titles_kr_formula = f'=IF(ISBLANK(G{row_idx}), "", GOOGLETRANSLATE(G{row_idx}, "en", "ko"))'
             
-            sheet_rows.append([category, title, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_formula, urls_str])
+            sheet_rows.append([category, title, original_count, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_formula, urls_str])
 
         if sheet_rows:
             # Retry-safe append with USER_ENTERED to parsing formulas
@@ -501,7 +504,178 @@ def main():
     # Header is row 1, so data starts at row 2
     current_sheet_row = 2
 
+
+
+
+def prune_topic_articles(topic_list: List[Dict[str, Any]], news_db: DatabaseAdapter) -> List[Dict[str, Any]]:
+    """
+    Intra-Topic Pruning (Refined with Original Count):
+    - Calculates 'original_count': Total distinct articles (excluding similarity-based duplicates)
+    - Calculates 'curated_count': Articles after publisher quota (max 2 per publisher)
+    - **Publisher Quota**: Max 2 articles per Publisher per topic.
+    - **Intra-Publisher Dedup**: If multiple articles from same publisher, remove title-similar ones (>60%) - these DON'T count towards original_count.
+    - **Selection Criteria**: Prioritize Higher Source Tier, then Recency.
+    """
+    from config.source_hierarchy import get_source_tier
+    from difflib import SequenceMatcher
+
+    def is_similar(t1, t2, threshold=0.6):
+        if not t1 or not t2: return False
+        return SequenceMatcher(None, t1, t2).ratio() >= threshold
+
+    # Fetch metadata for all news_ids
+    all_ids = []
+    for t in topic_list:
+        all_ids.extend(t.get("news_ids", []))
+    
+    if not all_ids:
+        return topic_list
+        
+    # Fetch ID, Publisher, Title
+    placeholders = ",".join(["?"] * len(all_ids)) if DB_TYPE == "sqlite" else ",".join(["%s"] * len(all_ids))
+    cursor = news_db.connection.cursor()
+    
+    query = f"""
+        SELECT p.id, COALESCE(r.publisher, r.source), r.title 
+        FROM processed_news p 
+        JOIN raw_news r ON p.ref_raw_id = r.id 
+        WHERE p.id IN ({placeholders})
+    """
+    cursor.execute(query, tuple(all_ids))
+        
+    rows = cursor.fetchall()
+    id_to_info = {r[0]: {"pub": r[1], "title": r[2]} for r in rows}
+    
+    pruned_topics = []
+    
+    for t in topic_list:
+        news_ids = t.get("news_ids", [])
+        if not news_ids:
+            continue
+            
+        # Group by Publisher
+        by_publisher = defaultdict(list)
+        
+        for nid in news_ids:
+            info = id_to_info.get(nid)
+            if not info:
+                continue
+            pub = info["pub"] or "Unknown"
+            title = info["title"] or ""
+            tier = get_source_tier(pub)
+            
+            by_publisher[pub].append({"id": nid, "title": title, "tier": tier, "pub": pub})
+            
+        # Process per publisher
+        original_count = 0  # Counts distinct articles (excludes similarity duplicates)
+        final_candidates = []
+        
+        for pub, items in by_publisher.items():
+            # Sort by Recency (Newest First -> ID Desc)
+            items.sort(key=lambda x: -x["id"])
+            
+            # Filter Similarity Duplicates
+            distinct_for_pub = []  # Articles that are NOT similarity duplicates
+            for item in items:
+                is_dup = False
+                for kept in distinct_for_pub:
+                    if is_similar(item["title"], kept["title"]):
+                        is_dup = True
+                        break
+                
+                if not is_dup:
+                    distinct_for_pub.append(item)
+                    original_count += 1  # Count this as a distinct article
+            
+            # Apply Publisher Quota (Max 2 from distinct articles)
+            final_candidates.extend(distinct_for_pub[:2])
+            
+        # Global Sorting by Tier
+        final_candidates.sort(key=lambda x: (x["tier"], -x["id"]))
+        
+        # Global Limit (Max 15)
+        selected_ids = [x["id"] for x in final_candidates[:15]]
+        
+        t["news_ids"] = selected_ids
+        t["original_count"] = original_count  # Add original count
+        pruned_topics.append(t)
+        
+    return pruned_topics
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Phase 5: Event Clustering")
+    parser.add_argument("--no-export", action="store_true", help="Sheet 출력 건너뛰기")
+    parser.add_argument("--reset-db", action="store_true", help="DB 초기화 (테이블 삭제 후 재생성)")
+    args = parser.parse_args()
+
+    # 2. DB 연결 (Topics DB)
+    topics_db = TopicsDB(TOPICS_DB_PATH)
+    topics_db.connect()
+
+    if args.reset_db:
+        topics_db.reset_db()
+        topics_db.close()
+        return
+
+    if not GENAI_AVAILABLE:
+        logger.error("❌ google-generativeai package is not installed.")
+        return
+        
+    if not GOOGLE_API_KEY:
+        logger.error("❌ GOOGLE_API_KEY is missing.")
+        return
+
+    logger.info("="*80)
+    logger.info(f"🚀 Phase 5: Event Clustering Start (Model: {GEMINI_MODEL})")
+    logger.info("="*80)
+
+    # 1. DB 연결 (News DB)
+    news_db = DatabaseAdapter(db_type=DB_TYPE, database=DB_NAME)
+    news_db.connect()
+
+    # DB 초기화 (이미 위에서 연결됨, 일반 실행시는 clear_topics 호출)
+    topics_db.clear_topics()
+
+    # 3. KEEP 기사 가져오기
+    articles = get_keep_articles(news_db)
+    logger.info(f"📥 Found {len(articles)} KEEP articles.")
+    
+    # [NEW] Similarity Deduplication
+    try:
+        deduplicator = SimilarityDeduplicator(similarity_threshold=0.5)
+        dedup_result = deduplicator.run(articles)
+        articles = dedup_result["articles"]
+    except Exception as e:
+        logger.error(f"⚠️ Deduplication failed, proceeding with original list: {e}")
+    
+    # 4. 카테고리별 그룹화
+    grouped = defaultdict(list)
+    for a in articles:
+        cat = a["category"] or "Uncategorized"
+        grouped[cat].append(a)
+
+    # Initialize Gemini
+    genai.configure(api_key=GOOGLE_API_KEY)
+    model = genai.GenerativeModel(GEMINI_MODEL)
+    
+    # 결과를 모을 리스트
+    all_results = []
+    
     # 5. 카테고리별 수행
+    # Sort categories to ensure deterministic order (e.g. alphabetical)
+    sorted_categories = sorted(grouped.keys())
+
+    # 4. Sheet Init (Clear & Headers) - BEFORE Loop
+    tab_name = format_kst_date("%y%m%d")
+    # tab_name = "5.Topics"  
+    if not args.no_export:
+        init_sheet(GOOGLE_SHEET_ID, tab_name)
+    
+    # Track current row for formula generation
+    current_sheet_row = 2
+
+    # 5. 카테고리별 수행 -> Collect All
     for category in sorted_categories:
         items = grouped[category]
         if len(items) == 0:
@@ -517,26 +691,39 @@ def main():
             c["category"] = category
             
         all_results.extend(step1_clusters)
+    
+
+
+    # [NEW] Step 3: Intra-Topic Pruning (Limit duplicates/sources per topic)
+    # Applies Publisher Quota (Max 2) and Tier Sorting
+    if all_results:
+        all_results = prune_topic_articles(all_results, news_db)
+
+    # 6. Save & Export (Batch)
+    for topic in all_results:
+        category = topic.get("category", "Uncategorized")
+        topic_title = topic.get("topic")
+        news_ids = topic.get("news_ids", [])
+        original_count = topic.get("original_count", len(news_ids))  # Fallback to curated count
+        if topic_title and news_ids:
+            topics_db.insert_topic(category, topic_title, news_ids, original_count)
+            
+    if not args.no_export:
+        # Batch append or loop-append?
+        # We can append all at once or per original category structure logic
+        # Let's simple append all sorted by Category then Count
         
-        # DB 저장 (바로 저장)
-        for cluster in step1_clusters:
-            topic_title = cluster.get("topic")
-            news_ids = cluster.get("news_ids", [])
-            if topic_title and news_ids:
-                topics_db.insert_topic(category, topic_title, news_ids)
+        all_results.sort(key=lambda x: (x.get("category", ""), -len(x.get("news_ids", []))))
         
-        # Sheet Append (Incremental)
-        if not args.no_export:
-            # Append only this category's clusters
-            added_count = append_topics_to_sheet(
-                GOOGLE_SHEET_ID, 
-                tab_name,
-                step1_clusters, 
-                news_db,
-                start_row=current_sheet_row,
-                model=model  # Pass model for title translation
-            )
-            current_sheet_row += added_count
+        added_count = append_topics_to_sheet(
+            GOOGLE_SHEET_ID, 
+            tab_name,
+            all_results, 
+            news_db,
+            start_row=current_sheet_row,
+            model=model
+        )
+        logger.info(f"✅ Exported {added_count} rows to Sheet.")
 
     logger.info(f"✅ Completed. Generated {len(all_results)} topics.")
 
