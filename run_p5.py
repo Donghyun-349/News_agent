@@ -321,13 +321,15 @@ def init_sheet(sheet_id: str, tab_name: str):
     try:
         adapter = GSheetAdapter(sheet_id=sheet_id, worksheet_name=tab_name)
         adapter.connect()
-        adapter.worksheet.clear()
+        # Retry-safe clear
+        adapter.clear_all_data(keep_headers=False)
         
         # 헤더
         headers = [
             ["Category", "Topic Title", "News Count", "Reason", "Publisher", "Title", "Title (Korean)", "URL"]
         ]
-        adapter.worksheet.insert_rows(headers, 1)
+        # Retry-safe insert
+        adapter.insert_raw_rows(headers, 1)
         logger.info(f"✅ Initialized sheet '{tab_name}'")
     except Exception as e:
         logger.error(f"❌ Sheet Init Failed ({tab_name}): {e}")
@@ -402,25 +404,21 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             # Note: We need to track the current row number in the sheet
             # Since we're appending, we need to calculate the row offset
             
-            # Get current row count to calculate formula row numbers
-            current_row = len(adapter.worksheet.get_all_values()) + 1  # +1 for next row
+            # For robust formula injection, we just guess the row or accept that
+            # we can't perfectly predict row number if competing writes happen.
+            # But since we run sequentially, we can try to estimate.
+            # Actually, `adapter.worksheet.get_all_values()` is expensive and bypasses retry if not wrapped.
+            # Let's Skip row calculation for formula if it's too brittle, OR use INDIRECT/ROW().
+            # =GOOGLETRANSLATE(INDIRECT("F" & ROW()), "auto", "ko") -> Self reference? No.
+            # "F" & ROW() is the current row.
             
-            # Generate GOOGLETRANSLATE formulas for each title line
-            title_lines = titles_str.split('\n')
-            formula_parts = []
-            for i, _ in enumerate(title_lines):
-                # Each line in the multi-line cell needs its own translation
-                # We'll use a single formula that handles the entire multi-line cell
-                pass
-            
-            # Simple approach: Use one formula for the entire cell
-            # GOOGLETRANSLATE will handle multi-line text
-            titles_kr_formula = f'=IF(ISBLANK(F{current_row}), "", GOOGLETRANSLATE(F{current_row}, "auto", "ko"))'
+            titles_kr_formula = f'=GOOGLETRANSLATE(INDIRECT("F"&ROW()), "auto", "ko")'
             
             sheet_rows.append([category, title, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_formula, urls_str])
 
         if sheet_rows:
-            adapter.worksheet.append_rows(sheet_rows)
+            # Retry-safe append
+            adapter.append_raw_rows(sheet_rows)
             logger.info(f"✅ Appended {len(topic_list)} topics to sheet '{tab_name}'")
 
     except Exception as e:

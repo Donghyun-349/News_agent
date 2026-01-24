@@ -19,6 +19,7 @@ import argparse
 import sqlite3
 import time
 import re
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import List, Dict, Any
 from datetime import datetime
@@ -748,7 +749,8 @@ def main():
         }
         topic_metadata_list.append({
             "id": t_meta['id'],
-            "category": t_meta['display_category'],
+            # Use Original (Short) Category for Token Optimization
+            "category": t_meta['original_category'], 
             "topic_title": t_meta['title'],
             "count": t_meta['count']
         })
@@ -799,10 +801,14 @@ def main():
         ))
         
         # 6-2. Submit Section Tasks
-        for section_name, topic_ids in section_picks.items():
+        for short_section_name, topic_ids in section_picks.items():
+            # Map Short Name back to Long Name (e.g., G_mac -> Global > Macro)
+            # Fallback to key itself if not found
+            full_section_name = CATEGORY_MAP.get(short_section_name, short_section_name)
+            
             futures.append(executor.submit(
                 process_section_task,
-                section_name, topic_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS_ORDER
+                full_section_name, topic_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS_ORDER
             ))
             
         # 6-3. Collect Results

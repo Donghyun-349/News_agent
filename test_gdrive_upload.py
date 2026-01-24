@@ -16,23 +16,21 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 def main():
     print("="*60)
-    print("📂 Google Drive Upload Test")
+    print("Google Drive Upload Test")
     print("="*60)
 
     # Debug: Check Env Var
     token_val = os.getenv("GOOGLE_TOKEN_JSON")
     if token_val:
-        print(f"ℹ️ GOOGLE_TOKEN_JSON found. Length: {len(token_val)}")
+        print(f"GOOGLE_TOKEN_JSON found. Length: {len(token_val)}")
         print(f"   First 10 chars: {token_val[:10]}...")
     else:
-        print("⚠️ GOOGLE_TOKEN_JSON is NOT set or empty.")
-
-    # 1. Check Folder ID
+        print("GOOGLE_TOKEN_JSON is NOT set or empty.")
 
     # 1. Check Folder ID
     folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
     if not folder_id:
-        print("❌ Error: GOOGLE_DRIVE_FOLDER_ID env var is missing.")
+        print("Error: GOOGLE_DRIVE_FOLDER_ID env var is missing.")
         print("   Please set it in GitHub Secrets or .env")
         return
 
@@ -41,20 +39,20 @@ def main():
     with open(test_filename, "w", encoding="utf-8") as f:
         f.write(f"Hello Google Drive!\nUpload Test Timestamp: {datetime.now()}")
     
-    print(f"📄 Created dummy file: {test_filename}")
+    print(f"Created dummy file: {test_filename}")
 
     # 3. Initialize Adapter & Upload
     try:
         adapter = GDriveAdapter() # Will load credentials from default path
         
-        print(f"🚀 Uploading to Folder ID: {folder_id}...")
+        print(f"Uploading to Folder ID: {folder_id}...")
         file_id = adapter.upload_file(test_filename, folder_id, mime_type="text/plain")
         
         if file_id:
-            print(f"✅ Upload Successful! File ID: {file_id}")
+            print(f"Upload Successful! File ID: {file_id}")
             print("   Please check your Google Drive folder.")
         else:
-            print("❌ Upload Failed (returned None). Check logs.")
+            print("Upload Failed (returned None). Check logs.")
 
     except Exception as e:
         print(f"❌ Exception during upload: {e}")

@@ -187,7 +187,7 @@ class GSheetAdapter:
             raise
     
     @retry_with_backoff(
-        max_attempts=3,
+        max_attempts=5,
         initial_delay=1.0,
         backoff_factor=2.0,
         exceptions=(gspread.exceptions.APIError,)
@@ -258,6 +258,51 @@ class GSheetAdapter:
             "Ready",
         ]
     
+    @retry_with_backoff(
+        max_attempts=5,
+        initial_delay=1.0,
+        backoff_factor=2.0,
+        exceptions=(gspread.exceptions.APIError,)
+    )
+    def append_raw_rows(self, rows: List[List[Any]]) -> None:
+        """
+        Raw 데이터를 시트에 추가합니다 (Retry 적용).
+        Args:
+            rows: 행 데이터 리스트
+        """
+        if not self.worksheet:
+            raise RuntimeError("Not connected to Google Sheet. Call connect() first.")
+        
+        try:
+            self.worksheet.append_rows(rows)
+            self.logger.info(f"Appended {len(rows)} rows to sheet")
+        except Exception as e:
+            self.logger.error(f"Failed to append raw rows: {e}")
+            raise
+
+    @retry_with_backoff(
+        max_attempts=5,
+        initial_delay=1.0,
+        backoff_factor=2.0,
+        exceptions=(gspread.exceptions.APIError,)
+    )
+    def insert_raw_rows(self, rows: List[List[Any]], index: int = 1) -> None:
+        """
+        Raw 데이터를 시트에 삽입합니다 (Retry 적용).
+        Args:
+            rows: 행 데이터 리스트
+            index: 삽입할 행 인덱스 (1-based)
+        """
+        if not self.worksheet:
+            raise RuntimeError("Not connected to Google Sheet. Call connect() first.")
+        
+        try:
+            self.worksheet.insert_rows(rows, index)
+            self.logger.info(f"Inserted {len(rows)} rows at index {index}")
+        except Exception as e:
+            self.logger.error(f"Failed to insert raw rows: {e}")
+            raise
+
     def _ensure_headers(self) -> None:
         """
         시트에 헤더 행이 없으면 추가합니다.
@@ -266,12 +311,13 @@ class GSheetAdapter:
             return
         
         try:
-            # 첫 번째 행 확인
+            # 첫 번째 행 확인 (Retry logic applied internally by API client usually, but safe to wrap if needed. 
+            # for now, read operations are less critical for data integrity than writes)
             first_row = self.worksheet.row_values(1)
             
             if not first_row or first_row[0] != "Published Date":
                 # 헤더 추가
-                headers = [
+                headers = [[
                     "Published Date",
                     "Collected Date",
                     "Source",
@@ -280,8 +326,9 @@ class GSheetAdapter:
                     "Summary",
                     "URL",
                     "Status"
-                ]
-                self.worksheet.insert_row(headers, 1)
+                ]]
+                # Use robust method
+                self.insert_raw_rows(headers, 1)
                 self.logger.info("Added header row to sheet")
         except Exception as e:
             self.logger.warning(f"Failed to ensure headers: {e}")

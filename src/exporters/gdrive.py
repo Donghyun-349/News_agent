@@ -19,7 +19,14 @@ class GDriveAdapter:
             return
 
         # 1. Try OAuth Token (User Credentials) - For Personal Drive Uploads
+        # Priority: Env Var -> Local File -> Service Account
         token_json = os.getenv("GOOGLE_TOKEN_JSON")
+        local_token_path = "credentials/token.json"
+        
+        if not token_json and os.path.exists(local_token_path):
+             logger.info(f"ℹ️ Found local token file: {local_token_path}")
+             token_json = local_token_path
+
         if token_json:
             try:
                 from google.oauth2.credentials import Credentials
@@ -78,7 +85,8 @@ class GDriveAdapter:
             file = self.service.files().create(
                 body=file_metadata,
                 media_body=media,
-                fields='id'
+                fields='id',
+                supportsAllDrives=True
             ).execute()
             
             file_id = file.get('id')
@@ -86,5 +94,11 @@ class GDriveAdapter:
             return file_id
             
         except Exception as e:
-            logger.error(f"❌ Failed to upload {filename}: {e}")
+            # Check for Storage Quota Error (Common with Service Accounts)
+            error_str = str(e)
+            if "storageQuotaExceeded" in error_str or "403" in error_str:
+                logger.error(f"❌ Storage Quota/Permission Error: {e}")
+                logger.error("💡 TIP: Service Accounts have 0 GB quota. Ensure the target folder is SHARED with the Service Account email and the OWNER has valid quota.")
+            else:
+                logger.error(f"❌ Failed to upload {filename}: {e}")
             return None

@@ -21,8 +21,8 @@ Classify articles based on their Root Event and Subject matter, regardless of wh
 * **K_* tags:** Apply **ONLY** if the **PRIMARY subject** is Korean Govt, Companies, Policies, or Domestic Indicators (e.g., Samsung, BOK, FSC, KRW/USD).
 * **G_* tags:** Apply if the subject is Foreign Companies, Global Orgs (OECD/IMF/Fed), or US/Global Politics.
 * **Comparison Example:**
-    * "Korean Govt Bond Yields" → **K_macro**
-    * "US Treasury Yields" → **G_macro**
+    * "Korean Govt Bond Yields" → **K_mac**
+    * "US Treasury Yields" → **G_mac**
 
 ## Classification Tags (Select One or DROP)
 If the article is relevant, assign **one** of the following tags. If not, **DROP** it.

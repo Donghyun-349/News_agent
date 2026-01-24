@@ -182,7 +182,21 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
         
         # Parse Response (Array of Arrays)
         # Expected: [[id, decision_bool, category, reason], ...]
-        raw_list = json.loads(content)
+        # Robust JSON Extraction: Find first '[' and last ']'
+        try:
+            start_idx = content.find('[')
+            end_idx = content.rfind(']')
+            if start_idx == -1 or end_idx == -1:
+                # No list found
+                logger.warning(f"⚠️ No JSON list found in response. Raw content: {content[:100]}...")
+                return []
+            
+            json_str = content[start_idx : end_idx + 1]
+            raw_list = json.loads(json_str)
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"❌ JSON Decode Error: {e} | Content Snippet: {content[:100]}...")
+            return []
         
         parsed_results = []
         for item in raw_list:
