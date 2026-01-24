@@ -335,10 +335,10 @@ def init_sheet(sheet_id: str, tab_name: str):
         logger.error(f"❌ Sheet Init Failed ({tab_name}): {e}")
 
 
-def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[str, Any]], news_db: DatabaseAdapter, model: Any = None):
+def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[str, Any]], news_db: DatabaseAdapter, start_row: int, model: Any = None) -> int:
     """결과 리스트를 구글 시트에 추가 (Append)"""
     if not sheet_id or not topic_list:
-        return
+        return 0
 
     try:
         adapter = GSheetAdapter(sheet_id=sheet_id, worksheet_name=tab_name)
@@ -350,7 +350,7 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
 
         sheet_rows = []
         
-        for topic in topic_list:
+        for i, topic in enumerate(topic_list):
             category = topic.get("category", "")
             title = topic.get("topic", "")
             news_ids = topic.get("news_ids", [])
@@ -404,25 +404,27 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             # Note: We need to track the current row number in the sheet
             # Since we're appending, we need to calculate the row offset
             
-            # For robust formula injection, we just guess the row or accept that
-            # we can't perfectly predict row number if competing writes happen.
-            # But since we run sequentially, we can try to estimate.
-            # Actually, `adapter.worksheet.get_all_values()` is expensive and bypasses retry if not wrapped.
-            # Let's Skip row calculation for formula if it's too brittle, OR use INDIRECT/ROW().
-            # =GOOGLETRANSLATE(INDIRECT("F" & ROW()), "auto", "ko") -> Self reference? No.
-            # "F" & ROW() is the current row.
+            row_idx = start_row + i
+            # F col is 'Title' (6th column? A=1, B=2, C=3, D=4, E=5, F=6)
+            # Headers: Category, Topic Title, News Count, Reason, Publisher, Title, Title (Korean), URL
+            # A, B, C, D, E, F, G, H
+            # So Title is F. Correct.
             
-            titles_kr_formula = f'=GOOGLETRANSLATE(INDIRECT("F"&ROW()), "auto", "ko")'
+            titles_kr_formula = f'=IF(ISBLANK(F{row_idx}), "", GOOGLETRANSLATE(F{row_idx}, "en", "ko"))'
             
             sheet_rows.append([category, title, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_formula, urls_str])
 
         if sheet_rows:
-            # Retry-safe append
-            adapter.append_raw_rows(sheet_rows)
+            # Retry-safe append with USER_ENTERED to parsing formulas
+            adapter.append_raw_rows(sheet_rows, value_input_option='USER_ENTERED')
             logger.info(f"✅ Appended {len(topic_list)} topics to sheet '{tab_name}'")
+            return len(sheet_rows)
+            
+        return 0
 
     except Exception as e:
         logger.error(f"❌ Sheet Append Failed ({tab_name}): {e}")
+        return 0
 
 
 def main():
@@ -495,6 +497,10 @@ def main():
     if not args.no_export:
         init_sheet(GOOGLE_SHEET_ID, tab_name)
     
+    # Track current row for formula generation
+    # Header is row 1, so data starts at row 2
+    current_sheet_row = 2
+
     # 5. 카테고리별 수행
     for category in sorted_categories:
         items = grouped[category]
@@ -522,13 +528,15 @@ def main():
         # Sheet Append (Incremental)
         if not args.no_export:
             # Append only this category's clusters
-            append_topics_to_sheet(
+            added_count = append_topics_to_sheet(
                 GOOGLE_SHEET_ID, 
                 tab_name,
                 step1_clusters, 
                 news_db,
-                model  # Pass model for title translation
+                start_row=current_sheet_row,
+                model=model  # Pass model for title translation
             )
+            current_sheet_row += added_count
 
     logger.info(f"✅ Completed. Generated {len(all_results)} topics.")
 

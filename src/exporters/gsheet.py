@@ -264,18 +264,19 @@ class GSheetAdapter:
         backoff_factor=2.0,
         exceptions=(gspread.exceptions.APIError,)
     )
-    def append_raw_rows(self, rows: List[List[Any]]) -> None:
+    def append_raw_rows(self, rows: List[List[Any]], value_input_option: str = 'RAW') -> None:
         """
         Raw 데이터를 시트에 추가합니다 (Retry 적용).
         Args:
             rows: 행 데이터 리스트
+            value_input_option: 입력 옵션 ('RAW' or 'USER_ENTERED'). 소문자도 가능.
         """
         if not self.worksheet:
             raise RuntimeError("Not connected to Google Sheet. Call connect() first.")
         
         try:
-            self.worksheet.append_rows(rows)
-            self.logger.info(f"Appended {len(rows)} rows to sheet")
+            self.worksheet.append_rows(rows, value_input_option=value_input_option)
+            self.logger.info(f"Appended {len(rows)} rows to sheet (option: {value_input_option})")
         except Exception as e:
             self.logger.error(f"Failed to append raw rows: {e}")
             raise
