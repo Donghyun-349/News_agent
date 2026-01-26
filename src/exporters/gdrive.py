@@ -67,6 +67,15 @@ class GDriveAdapter:
         """Upload a file to a specific Google Drive folder"""
         if not self.service:
             self.authenticate()
+        
+        # Log which authentication method is active
+        auth_method = "Unknown"
+        if hasattr(self.creds, 'token'):  # OAuth User Token
+            auth_method = "OAuth User Token"
+            logger.info("ℹ️ Using OAuth User Token for upload (Personal Drive)")
+        elif hasattr(self.creds, 'service_account_email'):  # Service Account
+            auth_method = "Service Account"
+            logger.warning("⚠️ Using Service Account - ensure folder is on Shared Drive or properly shared")
 
         filename = os.path.basename(file_path)
         
@@ -98,7 +107,8 @@ class GDriveAdapter:
             error_str = str(e)
             if "storageQuotaExceeded" in error_str or "403" in error_str:
                 logger.error(f"❌ Storage Quota/Permission Error: {e}")
-                logger.error("💡 TIP: Service Accounts have 0 GB quota. Ensure the target folder is SHARED with the Service Account email and the OWNER has valid quota.")
+                logger.error(f"💡 Current Auth Method: {auth_method}")
+                logger.error("💡 TIP: Service Accounts have 0 GB quota. Ensure GOOGLE_TOKEN_JSON is set in GitHub Secrets for OAuth authentication.")
             else:
                 logger.error(f"❌ Failed to upload {filename}: {e}")
             return None

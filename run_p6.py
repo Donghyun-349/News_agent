@@ -886,13 +886,13 @@ def main():
                     logger.info(f"✅ Markdown uploaded successfully (File ID: {result})")
                 
         except Exception as e:
+            # ⚠️ CRITICAL: Don't terminate pipeline on upload failure
             logger.error(f"❌ Google Drive Upload Failed: {e}")
+            logger.warning("⚠️ Continuing pipeline despite upload failure...")
     else:
         logger.info("ℹ️ GOOGLE_DRIVE_FOLDER_ID not set. Skipping Drive upload.")
 
-    topics_db.close()
-    news_db.close()
-
+    # Close DBs (only once)
     topics_db.close()
     news_db.close()
     

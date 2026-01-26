@@ -15,6 +15,7 @@ Usage:
 
 import sys
 import json
+import re
 import logging
 import argparse
 from pathlib import Path
@@ -50,8 +51,8 @@ def get_articles_to_process(db: DatabaseAdapter, limit: int = None, force_all: b
         cursor = db.connection.cursor()
         
         # 1. processed_news에서 ref_raw_id를 통해 title, snippet 조인
-        # 만약 force_all=False이면, llm_decision이 NULL인 것만 조회
-        where_clause = "" if force_all else "WHERE p.llm_decision IS NULL"
+        # 만약 force_all=False이면, llm_decision이 NULL 또는 ERROR인 것만 조회 (Two-Pass)
+        where_clause = "" if force_all else "WHERE (p.llm_decision IS NULL OR p.llm_decision = 'ERROR')"
         limit_clause = f"LIMIT {limit}" if limit else ""
         
         # SQLite vs Others
@@ -153,6 +154,7 @@ VALID_CATEGORIES = {
 }
 
 def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], model: str = "gpt-4o-mini") -> List[Dict[str, Any]]:
+    """LLM 배치 호출 (개선된 에러 처리 및 Regex Fallback 포함)"""
     system_prompt = get_p4_topic_classification_prompt()
     
     # Payload Optimization:
@@ -184,21 +186,35 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
         # Expected: [[id, decision_bool, category, reason], ...]
         # Robust JSON Extraction: Find first '[' and last ']'
         # Robust JSON Extraction: Find first '['
+        raw_list = None
         try:
             start_idx = content.find('[')
             if start_idx == -1:
                 # No list found
-                logger.warning(f"⚠️ No JSON list found in response. Raw content: {content[:100]}...")
-                return []
-            
-            # Use raw_decode to parse starting from the first bracket
-            # This handles cases where there is extra text/data after the valid JSON
-            json_str = content[start_idx:]
-            raw_list, _ = json.JSONDecoder().raw_decode(json_str)
+                logger.warning(f"⚠️ No JSON list found in response. Trying regex fallback...")
+            else:
+                # Use raw_decode to parse starting from the first bracket
+                # This handles cases where there is extra text/data after the valid JSON
+                json_str = content[start_idx:]
+                raw_list, _ = json.JSONDecoder().raw_decode(json_str)
             
         except json.JSONDecodeError as e:
-            logger.error(f"❌ JSON Decode Error: {e} | Content Snippet: {content[:100]}...")
-            return []
+            logger.warning(f"⚠️ JSON Decode Error: {e}. Trying regex fallback...")
+        
+        # Regex Fallback: Extract list items if JSON parsing failed
+        if raw_list is None or not raw_list:
+            # Pattern: ["id", decision_bool, "category", "reason"]
+            # Handles: ["123", 1, "K_mac", "reason text"], ["124", 0, "G_tech", "reason"]
+            pattern = r'\[\s*["\']?(\d+)["\']?\s*,\s*([01]|true|false)\s*,\s*["\']([^"\',]+)["\']\s*,\s*["\']([^"\']*)["\']]'
+            matches = re.findall(pattern, content, re.MULTILINE | re.DOTALL)
+            
+            if matches:
+                logger.info(f"✅ Regex fallback recovered {len(matches)} items")
+                raw_list = [[m[0], m[1], m[2], m[3]] for m in matches]
+            else:
+                logger.error(f"❌ Both JSON and Regex parsing failed. Content: {content[:200]}...")
+                # Return ERROR state for all articles in this batch
+                return [{"id": str(a["id"]), "decision": "ERROR", "category": None, "reason": "Parsing failed"} for a in articles]
         
         parsed_results = []
         for item in raw_list:
@@ -210,11 +226,11 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
                 cat = item[2]
                 reason = item[3]
                 
-                # Validation Logic: Hallucination Check
+                # Validation Logic: Hallucination Check (개선됨)
                 if cat not in VALID_CATEGORIES:
-                    if str(dec_bool) == "1" and cat != "Noise":
-                        logger.warning(f"⚠️ Hallucination detected: Category '{cat}' is invalid. Forcing DROP (ID: {p_id}).")
-                    decision = "DROP"
+                    # 잘못된 카테고리 → ERROR 상태로 마킹 (재처리 기회 부여)
+                    logger.warning(f"⚠️ Hallucination detected: Category '{cat}' is invalid. Marking as ERROR for retry (ID: {p_id}).")
+                    decision = "ERROR"
                 else:
                     decision = "KEEP" if str(dec_bool) == "1" or str(dec_bool).lower() == "true" else "DROP"
                 
@@ -300,7 +316,7 @@ def export_to_gsheet(run_stats: Dict[str, int], sheet_id: str, db: DatabaseAdapt
 def main():
     parser = argparse.ArgumentParser(description="Phase 4: LLM Classification")
     parser.add_argument("--limit", type=int, help="처리할 기사 수 제한")
-    parser.add_argument("--batch-size", type=int, default=100, help="LLM 배치 사이즈")
+    parser.add_argument("--batch-size", type=int, default=50, help="LLM 배치 사이즈 (기본: 50, 안정성 개선)")
     parser.add_argument("--force-all", action="store_true", help="이미 처리된 기사도 다시 처리")
     parser.add_argument("--no-export", action="store_true", help="Sheet 출력 건너뛰기")
     args = parser.parse_args()
@@ -334,13 +350,24 @@ def main():
         logger.error(f"❌ DB Init Failed: {e}")
         return
 
-    # 1. 대상 기사 가져오기
+    # 0. 이전 실행의 DROP 기사 삭제 (Option A: Delayed DELETE)
+    logger.info("\n" + "="*80)
+    logger.info("🧹 Cleanup: Deleting DROP articles from previous run...")
+    logger.info("="*80)
+    delete_dropped_articles(db)
+
+    # 1. 대상 기사 가져오기 (NULL + ERROR)
     articles = get_articles_to_process(db, limit=args.limit, force_all=args.force_all)
     total_articles = len(articles)
     logger.info(f"📥 Processing {total_articles} articles (Batch Size: {args.batch_size})")
     
-    # 2. 배치 처리
-    run_stats = {"processed": 0, "KEEP": 0, "DROP": 0}
+    # 2. Two-Pass 처리
+    run_stats = {"processed": 0, "KEEP": 0, "DROP": 0, "ERROR": 0, "RETRY_SUCCESS": 0, "RETRY_FAILED": 0}
+    
+    # ========== PASS 1: 초기 처리 ==========
+    logger.info("\n" + "="*80)
+    logger.info("🔄 PASS 1: Initial Processing")
+    logger.info("="*80)
     
     for i in range(0, total_articles, args.batch_size):
         batch = articles[i:i + args.batch_size]
@@ -360,11 +387,68 @@ def main():
                     run_stats["KEEP"] += 1
                 elif dec == "DROP":
                     run_stats["DROP"] += 1
-                # else: ignore or count as DROP
+                elif dec == "ERROR":
+                    run_stats["ERROR"] += 1
         else:
             logger.warning("⚠️ Empty results from LLM batch.")
             
-    logger.info(f"✅ Completed. {run_stats['processed']} processed (KEEP: {run_stats['KEEP']}, DROP: {run_stats['DROP']})")
+    logger.info(f"✅ Pass 1 Completed. Processed: {run_stats['processed']}, KEEP: {run_stats['KEEP']}, DROP: {run_stats['DROP']}, ERROR: {run_stats['ERROR']}")
+    
+    # ========== PASS 2: ERROR 재처리 ==========
+    if run_stats["ERROR"] > 0:
+        logger.info("\n" + "="*80)
+        logger.info(f"🔄 PASS 2: Retrying {run_stats['ERROR']} ERROR articles")
+        logger.info("="*80)
+        
+        # ERROR 상태 기사만 다시 조회
+        error_articles = get_articles_to_process(db, limit=None, force_all=False)
+        # 이미 Pass 1에서 처리된 것들이므로, 실제로는 ERROR인 것만 필터링됨 (쿼리 조건 참조)
+        error_articles = [a for a in error_articles if a["id"] not in [art["id"] for art in articles]]
+        
+        # 재조회: 실제로는 DB에서 ERROR 상태인 것만 가져오기
+        cursor = db.connection.cursor()
+        cursor.execute("""
+            SELECT p.id, r.title
+            FROM processed_news p
+            JOIN raw_news r ON p.ref_raw_id = r.id
+            WHERE p.llm_decision = 'ERROR'
+            ORDER BY p.id DESC
+        """)
+        error_rows = cursor.fetchall()
+        error_articles = [{"id": row[0], "title": row[1]} for row in error_rows]
+        
+        logger.info(f"📥 Found {len(error_articles)} ERROR articles to retry")
+        
+        for i in range(0, len(error_articles), args.batch_size):
+            batch = error_articles[i:i + args.batch_size]
+            logger.info(f"🔁 Retry Batch {i//args.batch_size + 1} ({len(batch)} articles)...")
+            
+            llm_results = call_llm_batch_no_json_mode(client, batch)
+            
+            if llm_results:
+                # DB 업데이트
+                db.update_llm_results(llm_results)
+                
+                # Retry Stats
+                for res in llm_results:
+                    dec = res.get("decision", "DROP").upper()
+                    if dec == "KEEP":
+                        run_stats["KEEP"] += 1
+                        run_stats["RETRY_SUCCESS"] += 1
+                        run_stats["ERROR"] -= 1
+                    elif dec == "DROP":
+                        run_stats["DROP"] += 1
+                        run_stats["RETRY_SUCCESS"] += 1
+                        run_stats["ERROR"] -= 1
+                    elif dec == "ERROR":
+                        run_stats["RETRY_FAILED"] += 1
+        
+        logger.info(f"✅ Pass 2 Completed. Retry Success: {run_stats['RETRY_SUCCESS']}, Still ERROR: {run_stats['ERROR']}")
+    
+    # 최종 통계
+    logger.info("\n" + "="*80)
+    logger.info(f"✅ Final Results: Total Processed: {run_stats['processed']}, KEEP: {run_stats['KEEP']}, DROP: {run_stats['DROP']}, ERROR: {run_stats['ERROR']}")
+    logger.info("="*80)
     
     # Stats Collection
     try:
@@ -372,18 +456,13 @@ def main():
         sc = StatsCollector()
         sc.set_stat("llm_keep", run_stats['KEEP'])
         sc.set_stat("llm_drop", run_stats['DROP'])
+        sc.set_stat("llm_error", run_stats['ERROR'])
     except Exception as e:
         logger.error(f"Stats collection failed: {e}")
     
+    # NOTE: 현재 실행의 DROP 기사는 삭제하지 않음 (다음 실행 시 삭제됨)
+    # 이를 통해 사후 검증 가능
     
-    # 3. 결과 출력 (생략)
-    # if not args.no_export:
-    #     export_to_gsheet(run_stats, GOOGLE_SHEET_ID, db)
-    pass
-
-    # 4. DROP 기사 삭제 (Cleanup)
-    delete_dropped_articles(db)
-
     db.close()
 
 def delete_dropped_articles(db: DatabaseAdapter):
