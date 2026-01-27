@@ -11,7 +11,7 @@ class GDriveAdapter:
         self.creds = None
         self.service = None
         self.service_account_path = service_account_path or os.getenv("GOOGLE_SERVICE_ACCOUNT_PATH", "credentials/service_account.json")
-        self.scopes = ['https://www.googleapis.com/auth/drive.file']
+        self.scopes = ['https://www.googleapis.com/auth/drive']  # Full Drive access (matches token.json)
 
     def authenticate(self):
         """Authenticate with Google Drive API (Service Account or OAuth Token)"""

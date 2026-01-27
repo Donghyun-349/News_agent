@@ -228,9 +228,14 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
                 
                 # Validation Logic: Hallucination Check (개선됨)
                 if cat not in VALID_CATEGORIES:
-                    # 잘못된 카테고리 → ERROR 상태로 마킹 (재처리 기회 부여)
-                    logger.warning(f"⚠️ Hallucination detected: Category '{cat}' is invalid. Marking as ERROR for retry (ID: {p_id}).")
-                    decision = "ERROR"
+                    # "Noise" 카테고리는 즉시 DROP (재처리 없음)
+                    if cat == "Noise":
+                        logger.warning(f"⚠️ Noise detected: Category 'Noise' - immediately dropping (ID: {p_id}).")
+                        decision = "DROP"
+                    else:
+                        # 기타 잘못된 카테고리 → ERROR 상태로 마킹 (재처리 기회 부여)
+                        logger.warning(f"⚠️ Hallucination detected: Category '{cat}' is invalid. Marking as ERROR for retry (ID: {p_id}).")
+                        decision = "ERROR"
                 else:
                     decision = "KEEP" if str(dec_bool) == "1" or str(dec_bool).lower() == "true" else "DROP"
                 
