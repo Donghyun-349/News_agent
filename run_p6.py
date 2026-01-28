@@ -410,14 +410,15 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         raw_content = generate_content(model, system_prompt, sec_prompt, sec_json)
         
         # Post-Processing: Restore References
-        # Find [Ref:ID] and replace with > • [Title](URL) - (Publisher)
+        # Find [Ref:ID] and replace with Inline Link: (📰 [Title](URL) - Publisher)
         def replace_ref(match):
             ref_id = match.group(1)
             if ref_id in article_map:
                 meta = article_map[ref_id]
-                return f"> • [{meta['t']}]({meta['u']}) - ({meta['p']})"
+                # Format: (📰 [Title](URL) - Publisher)
+                return f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})"
             else:
-                return f"(Source ID: {ref_id} not found)"
+                return "" # Fail silently for inline flow or keep ID? Empty is safer for flow.
 
         # Regex to match [Ref:123] or [Ref: 123]
         final_content = re.sub(r'\[Ref:\s*(\d+)\]', replace_ref, raw_content)
@@ -488,9 +489,9 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
             ref_id = match.group(1)
             if ref_id in article_map:
                 meta = article_map[ref_id]
-                return f"> • [{meta['t']}]({meta['u']}) - ({meta['p']})"
+                return f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})"
             else:
-                return f"(Source ID: {ref_id} not found)"
+                return ""
 
         final_content = re.sub(r'\[Ref:\s*(\d+)\]', replace_ref, raw_content)
 

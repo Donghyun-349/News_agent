@@ -156,45 +156,31 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
 2. **Topic Processing:** 
    - You will receive MULTIPLE topics (up to 3) for this section.
    - Process **EACH topic individually** (do NOT merge multiple topics into one summary).
-   - For each topic, read ALL ~8 provided articles and synthesize the key trend.
-   - Generate ONE summary per topic (총 최대 3개 요약).
+   - Generate ONE summary per topic.
 
 3. **Format:** Use the **2-3 Sentence Rule** (Concise & Comprehensive):
-   - **Sentence 1 (Fact - 현황):** What happened? (Key numbers, entities, and specific details from multiple sources).
-   - **Sentence 2 (Context - 배경):** Why is this significant? (Background or strategic implications).
-   - **Sentence 3 (Impact - 전망, Optional):** How will this affect the market/sector? (Keep brief if needed).
+   - **Sentence 1 (Fact - 현황):** What happened? (Key numbers, entities).
+   - **Sentence 2 (Context - 배경):** Why is this significant?
+   - **Sentence 3 (Perspective - 전망/반응):** Market impact or expert opinion.
 
-4. **Citations (Exactly 3) - REFERENCE IDs ONLY:**
-   - **FORMAT:** You MUST use `[Ref: ID]` format for citations.
-   - **CRITICAL:** You MUST cite **EXACTLY 3** articles. No more, no less.
-   - **SAME TOPIC ONLY:** You MUST cite articles ONLY from the SAME topic you are summarizing.
-     - For example, if summarizing Topic 1, cite 3 articles from Topic 1's article list (a).
-     - Do NOT cite articles from other topics in the payload.
-   - **Priority Order (STRICTLY ENFORCE):**
-     1. **Foreign Press (외신) First:** Reuters, Bloomberg, WSJ, FT, AP
-     2. **Korean Press (국내) Second (in order):** 한국경제, 매일경제, 서울경제, 파이낸셜뉴스, 이투데이, 이데일리, 조선일보, 동아일보, Infomax
-     3. **Diversity:** Do NOT cite the same publisher twice.
-   - **Selection Logic:**
-     - IF 'Exclusive(단독)' article exists in current topic → Select as Ref #1
-     - ELSE → Select highest-priority foreign press from current topic as Ref #1
-     - Ref #2, #3 → Select next highest-priority sources from current topic with different viewpoints
+4. **Inline Citations (Contextual):**
+   - **Placement:** You MUST place citations **IMMEDIATELY after the sentence** that relies on that source using `[Ref: ID]`.
+   - **No Footer:** Do **NOT** list citations at the bottom.
+   - **Count:** Use **1 to 3** citations per topic naturally where needed. Do NOT force 3 if not enough distinct sources exist.
+   - **Example:** `"엔비디아 주가가 5% 급등했습니다 [Ref: 101]. 이는 AI 칩 수요 증가 때문입니다 [Ref: 102]."`
 
-5. **Negative Constraint:** NO generic advice ("Investors should monitor...").
-
-6. **Line Breaks:** Add a blank line between body text and citations for readability.
+5. **Negative Constraints:**
+   - NO generic advice ("Investors should monitor...").
+   - NO duplicate citations for the same fact if strictly identical.
 
 # Output Format
 DO NOT output any section headers (like #, ##, ###). Start directly with the content.
 
 ### **[Strong Title in Korean]**
-[2-3 Sentence Body Text in Korean]
+[Sentence 1] [Ref: ID] [Sentence 2] [Ref: ID] [Sentence 3 (Optional)] [Ref: ID]
 
-> • [Ref: 101]
-> • [Ref: 102]
-> • [Ref: 103]
-
-**REMINDER:** 
-- Cite EXACTLY 3 articles using `[Ref: ID]` format.
-- Follow priority order strictly: Foreign press → Korean press (in order).
-- Add blank line before citations.
+**REMINDER:**
+- **Contextual Placement:** Citations must be **INLINE**.
+- **No Footer List:** Do not output the list at the bottom.
+- **Flexible Count:** 1-3 citations depending on available sources.
 """
