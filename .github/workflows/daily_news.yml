@@ -57,6 +57,10 @@ jobs:
         echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> .env
         echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> .env
         echo "ENABLE_TELEGRAM_KEYBOARD=true" >> .env
+        # WordPress Secrets
+        echo "WP_URL=${{ secrets.WP_URL }}" >> .env
+        echo "WP_USERNAME=${{ secrets.WP_USERNAME }}" >> .env
+        echo "WP_PASSWORD=${{ secrets.WP_PASSWORD }}" >> .env
 
     - name: Run Daily Pipeline
       run: |
