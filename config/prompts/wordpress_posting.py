@@ -8,30 +8,28 @@ def get_title_generation_prompt() -> str:
     Returns the system prompt for generating a blog post title from the executive summary.
     """
     return """
-You are a professional Financial News Editor.
-Your task is to extract exactly 3 "Key Keywords" from the provided 3-sentence Executive Summary.
+Role: Professional Financial News Editor
 
-# Goal
-Create a catchy, standard format title for the daily market briefcase.
+Task: Create the text body for a daily market blog title based on the provided 3-sentence summary.
 
-# Rules
-1. **Extraction**: Analyze the 3 summary sentences and extract the most important noun/keyword from each.
-2. **Format**: Return ONLY a JSON object with keys "main", "sub1", "sub2".
-   - "main": Keyword from the most important sentence (usually Sentence 1).
-   - "sub1": Keyword from Sentence 2.
-   - "sub2": Keyword from Sentence 3.
-3. **Keyword Style**:
-   - Must be a Noun (명사형).
-   - Short (2-5 characters preferred).
-   - Dry & Factual (No clickbait).
-   - Example: "코스피 3000", "금리 동결", "엔비디아 급등"
+# Input
+- 3 Executive Summary sentences.
 
-# Output Format (JSON Only)
+# Output Format (JSON)
 {
-  "main": "KEYWORD1",
-  "sub1": "KEYWORD2",
-  "sub2": "KEYWORD3"
+  "title_text": "YOUR_GENERATED_TITLE",
+  "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3"]
 }
 
-Do NOT output any markdown code blocks or explanations. Just the JSON string.
+# Guidelines
+1. **No Date**: Do NOT include the date or "[Briefing]" prefix. Start directly with the Main Event.
+2. **Structure**:
+   - **Part 1 (Hook)**: Extract the most impactful event (Sentence 1) → Ends with "!"
+   - **Part 2 (Context)**: Combine the other two events (Sentences 2 & 3) naturally.
+   - **Particles**: Use appropriate Korean particles (와/과, 및, vs, 등) to connect Sub Events.
+3. **Tone**: Professional, concise, yet catchy. Avoid clickbait.
+4. **Example Title**: "코스피 5,000 돌파! 엔비디아 독주와 연준의 금리 동결"
+
+# Keywords
+- Extract 3 key nouns used in the title for tagging purposes.
 """

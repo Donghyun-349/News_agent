@@ -197,18 +197,18 @@ def generate_title_and_keywords(exec_summary_list: list, date_str: str):
         response = model.generate_content(f"{system_prompt}\n\n{user_prompt}")
         
         text = response.text.strip().replace("```json", "").replace("```", "")
-        keywords_json = json.loads(text)
+        data_json = json.loads(text)
         
-        k_main = keywords_json.get('main', 'Issue')
-        k_sub1 = keywords_json.get('sub1', 'Market')
-        k_sub2 = keywords_json.get('sub2', 'Economy')
+        # Get generated title
+        generated_title = data_json.get('title_text', '주요 시장 이슈 요약')
+        keyword_list = data_json.get('keywords', ['Finance', 'Market'])
         
         # Format Date
         dt = datetime.strptime(date_str, "%Y-%m-%d")
         fmt_date = f"{dt.month}/{dt.day}"
         
-        title = f"[{fmt_date} 브리핑] {k_main}! {k_sub1}와 {k_sub2}"
-        keyword_list = [k_main, k_sub1, k_sub2]
+        # Final Format: [1/29 브리핑] + Generated Title
+        title = f"[{fmt_date} 브리핑] {generated_title}"
         
         return title, keyword_list
         
