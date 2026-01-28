@@ -36,6 +36,13 @@ jobs:
         mkdir -p credentials
         echo "$GOOGLE_JSON" > credentials/service_account.json
 
+    - name: Write Google OAuth token file
+      env:
+        GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN_JSON }}
+      run: |
+        mkdir -p credentials
+        echo "$GOOGLE_TOKEN" > credentials/token.json
+        
     - name: Create .env file
       run: |
         echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
@@ -46,7 +53,6 @@ jobs:
         echo "DB_TYPE=sqlite" >> .env
         echo "RESET_MODE=true" >> .env
         echo "GOOGLE_DRIVE_FOLDER_ID=${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}" >> .env
-        echo "GOOGLE_TOKEN_JSON=${{ secrets.GOOGLE_TOKEN_JSON }}" >> .env
         # Telegram Secrets
         echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> .env
         echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> .env
