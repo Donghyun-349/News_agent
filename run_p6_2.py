@@ -235,9 +235,26 @@ def convert_and_style_html(md_text: str) -> str:
     Convert Markdown to HTML and apply strict inline CSS.
     """
     # 1. Pre-process Markdown
-    # Fix Setext headers: Ensure empty line before '---'
+    # Requirement: Remove everything before "1. Executive Summary"
+    # Strategy: Find the first line starting with "## " (H2) and keep from there.
+    
     lines = md_text.split('\n')
+    start_idx = 0
+    for i, line in enumerate(lines):
+        if line.strip().startswith("## ") and ("Executive Summary" in line or "주요 요약" in line):
+            start_idx = i
+            break
+            
+    # Include the found header and everything after
+    if start_idx > 0:
+        lines = lines[start_idx:]
+        
+    md_text = '\n'.join(lines)
+    
+    # Fix Setext headers: Ensure empty line before '---'
+    # (Re-process the trimmed lines)
     processed_lines = []
+    lines = md_text.split('\n')
     for i, line in enumerate(lines):
         if line.strip() in ['---', '***', '___'] and i > 0 and lines[i-1].strip():
              processed_lines.append('')
