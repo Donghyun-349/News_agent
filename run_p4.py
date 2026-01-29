@@ -217,6 +217,9 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
                 return [{"id": str(a["id"]), "decision": "ERROR", "category": None, "reason": "Parsing failed"} for a in articles]
         
         parsed_results = []
+        noise_dropped_ids = []
+        hallucination_ids = []
+
         for item in raw_list:
             # Robust parsing: handle both old dict style (just in case) and new list style
             if isinstance(item, list) and len(item) >= 4:
@@ -230,11 +233,11 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
                 if cat not in VALID_CATEGORIES:
                     # "Noise" 카테고리는 즉시 DROP (재처리 없음)
                     if cat == "Noise":
-                        logger.warning(f"⚠️ Noise detected: Category 'Noise' - immediately dropping (ID: {p_id}).")
+                        noise_dropped_ids.append(p_id)
                         decision = "DROP"
                     else:
                         # 기타 잘못된 카테고리 → ERROR 상태로 마킹 (재처리 기회 부여)
-                        logger.warning(f"⚠️ Hallucination detected: Category '{cat}' is invalid. Marking as ERROR for retry (ID: {p_id}).")
+                        hallucination_ids.append((p_id, cat))
                         decision = "ERROR"
                 else:
                     decision = "KEEP" if str(dec_bool) == "1" or str(dec_bool).lower() == "true" else "DROP"
@@ -248,7 +251,14 @@ def call_llm_batch_no_json_mode(client: OpenAI, articles: List[Dict[str, Any]], 
             elif isinstance(item, dict):
                 # Fallback for dict (should mostly not happen with new prompt)
                 parsed_results.append(item)
-                
+        
+        # Batch Logging
+        if noise_dropped_ids:
+            logger.warning(f"⚠️ Noise detected in {len(noise_dropped_ids)} articles - immediately dropping (IDs: {', '.join(map(str, noise_dropped_ids[:10]))}{'...' if len(noise_dropped_ids)>10 else ''}).")
+        
+        if hallucination_ids:
+            logger.warning(f"⚠️ Hallucination detected in {len(hallucination_ids)} articles (Category invalid) - Marking as ERROR (IDs: {', '.join([str(h[0]) for h in hallucination_ids[:10]])}).")
+
         return parsed_results
         
     except Exception as e:

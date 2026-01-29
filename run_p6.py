@@ -410,18 +410,24 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         raw_content = generate_content(model, system_prompt, sec_prompt, sec_json)
         
         # Post-Processing: Restore References
-        # Find [Ref:ID] and replace with Inline Link: (📰 [Title](URL) - Publisher)
+        # Find [Ref:ID] or [Ref: ID, ID] and replace with Inline Link
         def replace_ref(match):
-            ref_id = match.group(1)
-            if ref_id in article_map:
-                meta = article_map[ref_id]
-                # Format: (📰 [Title](URL) - Publisher)
-                return f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})"
-            else:
-                return "" # Fail silently for inline flow or keep ID? Empty is safer for flow.
+            ref_ids_str = match.group(1)
+            # Split by comma and strip whitespace
+            ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
+            
+            links = []
+            for ref_id in ref_ids:
+                if ref_id in article_map:
+                    meta = article_map[ref_id]
+                    # Format: (📰 [Title](URL) - Publisher)
+                    links.append(f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})")
+            
+            return " ".join(links) if links else ""
 
-        # Regex to match [Ref:123] or [Ref: 123]
-        final_content = re.sub(r'\[Ref:\s*(\d+)\]', replace_ref, raw_content)
+        # Regex to match [Ref: 123] or [Ref: 123, 456]
+        # Captures the inner content "123" or "123, 456"
+        final_content = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref, raw_content)
 
         return section_name, final_content
     except Exception as e:
@@ -486,14 +492,18 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
 
         # Post-Processing: Restore References
         def replace_ref(match):
-            ref_id = match.group(1)
-            if ref_id in article_map:
-                meta = article_map[ref_id]
-                return f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})"
-            else:
-                return ""
+            ref_ids_str = match.group(1)
+            ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
+            
+            links = []
+            for ref_id in ref_ids:
+                if ref_id in article_map:
+                    meta = article_map[ref_id]
+                    links.append(f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})")
+            
+            return " ".join(links) if links else ""
 
-        final_content = re.sub(r'\[Ref:\s*(\d+)\]', replace_ref, raw_content)
+        final_content = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref, raw_content)
 
         return "Executive Summary", final_content
     except Exception as e:

@@ -95,8 +95,22 @@ STYLES = {
 }
 
 
-def get_latest_report():
-    """Find the latest JSON and MD report files."""
+def get_latest_report(target_date: str = None):
+    """
+    Find report files.
+    If target_date is provided (YYYY_MM_DD), look for that specific file.
+    Otherwise, find the latest by filename.
+    """
+    if target_date:
+        json_path = OUTPUT_DIR / f"Daily_Brief_{target_date}.json"
+        md_path = OUTPUT_DIR / f"Daily_Brief_{target_date}.md"
+        
+        if json_path.exists() and md_path.exists():
+            return json_path, md_path
+        else:
+            logger.error(f"❌ Targeted report not found: {target_date}")
+            return None, None
+
     json_files = sorted(OUTPUT_DIR.glob("Daily_Brief_*.json"), reverse=True)
     if not json_files:
         return None, None
@@ -216,7 +230,141 @@ def generate_title_and_keywords(exec_summary_list: list, date_str: str):
         logger.error(f"❌ Title Generation Failed: {e}")
         return f"[{date_str} 브리핑] 오늘의 글로벌 시장/경제 분석", ["News", "Analysis"]
 
-# ... (convert_and_style_html remains same)
+def convert_and_style_html(md_text: str) -> str:
+    """
+    Convert Markdown to HTML and apply strict inline CSS.
+    """
+    # 1. Pre-process Markdown
+    # Fix Setext headers: Ensure empty line before '---'
+    lines = md_text.split('\n')
+    processed_lines = []
+    for i, line in enumerate(lines):
+        if line.strip() in ['---', '***', '___'] and i > 0 and lines[i-1].strip():
+             processed_lines.append('')
+        processed_lines.append(line)
+    md_text = '\n'.join(processed_lines)
+    
+    # 2. Convert to HTML
+    raw_html = markdown.markdown(md_text)
+    soup = BeautifulSoup(raw_html, 'html.parser')
+    
+    # 3. Apply Base Styles
+    # H2
+    for tag in soup.find_all('h2'):
+        tag['style'] = STYLES['h2']
+        
+    # H3
+    for tag in soup.find_all('h3'):
+        tag['style'] = STYLES['h3']
+        
+    # H4
+    for tag in soup.find_all('h4'):
+        tag['style'] = STYLES['h4']
+        
+    # P
+    for tag in soup.find_all('p'):
+        tag['style'] = STYLES['p']
+        
+    # Strong
+    for tag in soup.find_all('strong'):
+        tag['style'] = STYLES['strong']
+        
+    # 4. Special Handling: Executive Summary (Briefing Box)
+    # Find H2 "Executive Summary" (or similar)
+    exec_h2 = None
+    for h2 in soup.find_all('h2'):
+        if "Executive Summary" in h2.get_text() or "주요 요약" in h2.get_text():
+            exec_h2 = h2
+            break
+            
+    if exec_h2:
+        # Find the next <ul>, skipping headers or NavigableStrings (whitespace)
+        # We want the *immediately* following content, but resilient to newlines
+        next_sibling = exec_h2.next_sibling
+        target_ul = None
+        
+        while next_sibling:
+            if hasattr(next_sibling, 'name') and next_sibling.name == 'ul':
+                target_ul = next_sibling
+                break
+            if hasattr(next_sibling, 'name') and next_sibling.name is not None:
+                # Found another tag (e.g. p or div) before ul -> Stop
+                break
+            # If string/text, check if empty
+            if isinstance(next_sibling, str) and not next_sibling.strip():
+                next_sibling = next_sibling.next_sibling
+                continue
+            
+            # If non-empty text (unlikely between header and list in valid MD), stop
+            if isinstance(next_sibling, str) and next_sibling.strip():
+                break
+                
+            next_sibling = next_sibling.next_sibling
+            
+        if target_ul:
+            # Wrap in Div
+            wrapper = soup.new_tag('div', style=STYLES['briefing_box'])
+            target_ul.wrap(wrapper)
+            
+            # Remove default padding of ul
+            target_ul['style'] = "list-style-type: none; padding: 0; margin: 0;"
+            
+            # Style LIs (Green Bullets)
+            for li in target_ul.find_all('li'):
+                # Content Wrapper
+                li_div = soup.new_tag('div', style=STYLES['briefing_item'])
+                
+                # Bullet
+                bullet = soup.new_tag('span', style=STYLES['briefing_bullet'])
+                bullet.string = "•"
+                
+                # Move contents
+                li_div.extend(li.contents)
+                li_div.insert(0, bullet)
+                
+                li.clear()
+                li.append(li_div)
+                li['style'] = "margin-bottom: 8px;" # Reset li style
+
+    # 5. Handle Body Lists (Black Bullets)
+    for ul in soup.find_all('ul'):
+        # Skip if already styled (e.g., inside briefing box)
+        if ul.parent.get('style') and 'border-left' in ul.parent['style']:
+            continue
+            
+        ul['style'] = "list-style-type: none; padding: 0; margin: 0 0 16px 0;"
+        
+        for li in ul.find_all('li'):
+             # Determine context (Plain list)
+             li_div = soup.new_tag('div', style=STYLES['body_list_item'])
+             
+             bullet = soup.new_tag('span', style=STYLES['body_list_bullet'])
+             bullet.string = "•"
+             
+             li_div.extend(li.contents)
+             li_div.insert(0, bullet)
+             
+             li.clear()
+             li.append(li_div)
+    
+    # 6. Links
+    for a in soup.find_all('a'):
+        a['style'] = STYLES['link']
+        a['target'] = "_blank"
+        
+    # 7. Append Disclaimer
+    disclaimer_html = f"""
+    <div style="{STYLES['disclaimer_box']}">
+        <strong>⚠️ 면책 조항 (Disclaimer)</strong><br>
+        본 보고서는 단순한 정보 제공을 목적으로 작성되었으며, 투자 권유나 조언을 의도하지 않습니다. 
+        제공되는 정보는 신뢰할 수 있는 출처를 바탕으로 하나, 그 정확성이나 완전성을 보장하지 않습니다. 
+        모든 투자의 책임은 투자자 본인에게 있습니다.
+    </div>
+    """
+    disclaimer_soup = BeautifulSoup(disclaimer_html, 'html.parser')
+    soup.append(disclaimer_soup)
+    
+    return str(soup)
 
 def post_to_wordpress(title: str, content: str, media_id: int, category_ids: list, tag_ids: list):
     """Publish to WordPress with Categories and Tags."""
@@ -251,12 +399,18 @@ def post_to_wordpress(title: str, content: str, media_id: int, category_ids: lis
         return False
 
 def main():
+    parser = argparse.ArgumentParser(description="Phase 6-2: WordPress Auto-Posting")
+    parser.add_argument("--date", type=str, help="Target Date (YYYY_MM_DD) to post specific report")
+    args = parser.parse_args()
+
     logger.info("="*80)
     logger.info("🚀 Phase 6-2: WordPress Auto-Posting Start")
+    if args.date:
+        logger.info(f"🎯 Target Date: {args.date}")
     logger.info("="*80)
     
     # 1. Load Data
-    json_path, md_path = get_latest_report()
+    json_path, md_path = get_latest_report(args.date)
     if not json_path or not md_path:
         logger.error("❌ No report files found.")
         return
