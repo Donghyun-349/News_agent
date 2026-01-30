@@ -110,6 +110,17 @@ def build_telegram_messages_from_json(report_data, date_str):
 """
     messages.append(msg2_2)
     
+    # Message 2-3: Global Region (NEW - was missing!)
+    global_region = sections.get('Global > Region', [])
+    
+    if global_region:  # Only send if there's content
+        msg2_3 = f"""🌍 *Global Region*
+
+🌐 *Regional Markets*
+{format_topics(global_region)}
+"""
+        messages.append(msg2_3)
+    
     # Message 3: Korea
     korea_macro = sections.get('Korea > Macro', [])
     korea_market = sections.get('Korea > Market', [])
@@ -129,13 +140,15 @@ def build_telegram_messages_from_json(report_data, date_str):
     messages.append(msg3)
     
     # Message 4: Real Estate
+    # FIX: Key should be 'Real Estate > Global', not found in current JSON
+    # Actual key is 'Real Estate > Korea' only
     re_global = sections.get('Real Estate > Global', [])
     re_korea = sections.get('Real Estate > Korea', [])
     
     msg4 = f"""🏢 *Real Estate*
 
 🌐 *Global*
-{format_topics(re_global)}
+{format_topics(re_global) if re_global else "특이사항 없음"}
 
 🇰🇷 *Korea*
 {format_topics(re_korea)}
