@@ -372,10 +372,98 @@ def convert_and_style_html(md_text: str) -> str:
              li.clear()
              li.append(li_div)
     
-    # 6. Links
+    
+    # 6. Links & Citation Color Unification
     for a in soup.find_all('a'):
         a['style'] = STYLES['link']
         a['target'] = "_blank"
+    
+    # 6.1. Unify Citation Colors: (📰 [link](url) - Publisher)
+    # Convert soup to string, apply regex to wrap citations, then re-parse
+    html_str = str(soup)
+    
+    # Pattern: (<a...>📰 Title</a> - Publisher)
+    # The emoji is INSIDE the link tag
+    citation_pattern = r'\((<a[^>]*>📰[^<]*</a>)\s*-\s*([^)]+)\)'
+    
+    def wrap_citation(match):
+        link_html = match.group(1)
+        publisher = match.group(2)
+        # Wrap the entire citation in a span with link color
+        return f'<span style="color: #1976D2;">({link_html} - {publisher})</span>'
+    
+    html_str = re.sub(citation_pattern, wrap_citation, html_str)
+    
+    # Re-parse the modified HTML
+    soup = BeautifulSoup(html_str, 'html.parser')
+    
+    # 6.2. Add Section Dividers
+    # Insert <hr/> after specific H3 subsections
+    divider_style = "border: none; border-top: 1px solid #E0E0E0; margin: 20px 0;"
+    
+    # Keywords to match for inserting dividers
+    divider_keywords = {
+        # Global Market subsections
+        "macro": ["macro", "economy", "rates"],
+        "market": ["market", "stock", "indices"],
+        "tech": ["tech", "ai", "semiconductor"],
+        # Korea Market subsections  
+        "korea_market": ["market", "stock", "indices"],
+        "korea_macro": ["macro", "fx", "rates"],
+        # Real Estate
+        "global_real_estate": ["global real estate"]
+    }
+    
+    # Track parent H2 to know context
+    current_h2 = None
+    
+    for tag in soup.find_all(['h2', 'h3']):
+        if tag.name == 'h2':
+            current_h2 = tag.get_text().lower()
+        elif tag.name == 'h3':
+            h3_text = tag.get_text().lower()
+            
+            # Check if we should insert divider after this H3
+            should_insert = False
+            
+            if current_h2 and "global market" in current_h2:
+                # Check for Macro, Market, Tech
+                if any(kw in h3_text for kw in divider_keywords["macro"]):
+                    should_insert = True
+                elif any(kw in h3_text for kw in divider_keywords["market"]):
+                    should_insert = True
+                elif any(kw in h3_text for kw in divider_keywords["tech"]):
+                    should_insert = True
+            
+            elif current_h2 and "korea market" in current_h2:
+                # Check for Market, Macro
+                if any(kw in h3_text for kw in divider_keywords["korea_market"]):
+                    should_insert = True
+                elif any(kw in h3_text for kw in divider_keywords["korea_macro"]):
+                    should_insert = True
+            
+            elif current_h2 and "real estate" in current_h2:
+                # Check for Global Real Estate
+                if any(kw in h3_text for kw in divider_keywords["global_real_estate"]):
+                    should_insert = True
+            
+            if should_insert:
+                # Find the last content before next H3 or H2
+                next_sibling = tag.next_sibling
+                insert_point = tag
+                
+                # Navigate to find good insertion point (after content, before next heading)
+                while next_sibling:
+                    if hasattr(next_sibling, 'name') and next_sibling.name in ['h2', 'h3', 'h4']:
+                        # Found next heading, insert before it
+                        break
+                    insert_point = next_sibling
+                    next_sibling = next_sibling.next_sibling if hasattr(next_sibling, 'next_sibling') else None
+                
+                # Insert divider after the last content element
+                hr = soup.new_tag('hr', style=divider_style)
+                if insert_point:
+                    insert_point.insert_after(hr)
         
     # 7. Append Disclaimer
     disclaimer_html = f"""
@@ -448,7 +536,7 @@ def main():
     with open(md_path, "r", encoding="utf-8") as f:
         md_content = f.read()
         
-    date_str = data.get('date', datetime.today().strftime("%Y-%m-%d"))
+    date_str = data.get('date', get_kst_now().strftime("%Y-%m-%d"))
     
     # 2. Generate Title & Keywords
     exec_summary = data.get('executive_summary', [])
@@ -474,7 +562,7 @@ def main():
     logger.info(f"🏷️ Resolved {len(tag_ids)} Tags")
 
     # 4. Select Thumbnail
-    weekday = datetime.today().weekday()
+    weekday = get_kst_now().weekday()
     media_id = THUMBNAIL_MAP.get(weekday, 74)
     logger.info(f"🖼️ Selected Thumbnail ID: {media_id}")
     
