@@ -155,7 +155,70 @@ def build_telegram_messages_from_json(report_data, date_str):
 """
     messages.append(msg4)
     
-    return messages
+    # Split messages that exceed Telegram's 4096 character limit
+    return split_long_messages(messages)
+
+
+def split_long_messages(messages, max_length=4096):
+    """
+    Split messages that exceed Telegram's character limit.
+    Splits at topic boundaries (numbered items) to maintain readability.
+    """
+    result = []
+    
+    for msg in messages:
+        if len(msg) <= max_length:
+            result.append(msg)
+            continue
+        
+        # Message is too long, need to split
+        lines = msg.split('\n')
+        
+        # Extract header (first few lines before numbered topics)
+        header_lines = []
+        content_start_idx = 0
+        
+        for i, line in enumerate(lines):
+            # Look for first numbered topic (e.g., "1. *Title*")
+            if line.strip() and line.strip()[0].isdigit() and '. *' in line:
+                content_start_idx = i
+                break
+            header_lines.append(line)
+        
+        header = '\n'.join(header_lines)
+        
+        # Split remaining content by topics
+        current_chunk = header
+        chunk_count = 1
+        
+        for i in range(content_start_idx, len(lines)):
+            line = lines[i]
+            
+            # Check if this is a new topic
+            is_new_topic = (line.strip() and 
+                          len(line.strip()) > 0 and 
+                          line.strip()[0].isdigit() and 
+                          '. *' in line)
+            
+            # If adding this line would exceed limit, save current chunk
+            test_chunk = current_chunk + '\n' + line
+            
+            if len(test_chunk) > max_length and is_new_topic and len(current_chunk) > len(header):
+                # Save current chunk
+                result.append(current_chunk)
+                chunk_count += 1
+                
+                # Start new chunk with header (modified to show part number)
+                header_with_part = header.replace('*', f'* ({chunk_count})', 1)
+                current_chunk = header_with_part + '\n' + line
+            else:
+                current_chunk = test_chunk
+        
+        # Add the last chunk
+        if len(current_chunk) > len(header):
+            result.append(current_chunk)
+    
+    return result
 
 
 def main():
