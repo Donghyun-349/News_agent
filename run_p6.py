@@ -409,8 +409,8 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         
         raw_content = generate_content(model, system_prompt, sec_prompt, sec_json)
         
-        # Post-Processing: Restore References
-        # Find [Ref:ID] or [Ref: ID, ID] and replace with Inline Link
+        # Post-Processing: Convert [Ref:ID] to Citation Links
+        # Pattern: [Ref:123] -> > * [Article Title](URL) - (Publisher)
         def replace_ref(match):
             ref_ids_str = match.group(1)
             # Split by comma and strip whitespace
@@ -420,10 +420,11 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
             for ref_id in ref_ids:
                 if ref_id in article_map:
                     meta = article_map[ref_id]
-                    # Format: (📰 [Title](URL) - Publisher)
-                    links.append(f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})")
+                    # Format: > * [Title](URL) - (Publisher)
+                    # This format matches what parse_section_content() expects
+                    links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
             
-            return " ".join(links) if links else ""
+            return "\n".join(links) if links else ""
 
         # Regex to match [Ref: 123] or [Ref: 123, 456]
         # Captures the inner content "123" or "123, 456"
@@ -490,7 +491,7 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
 
         raw_content = generate_content(model, system_prompt, exec_prompt, exec_json)
 
-        # Post-Processing: Restore References
+        # Post-Processing: Convert [Ref:ID] to Citation Links
         def replace_ref(match):
             ref_ids_str = match.group(1)
             ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
@@ -499,9 +500,10 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
             for ref_id in ref_ids:
                 if ref_id in article_map:
                     meta = article_map[ref_id]
-                    links.append(f"([📰 {meta['t']}]({meta['u']}) - {meta['p']})")
+                    # Format: > * [Title](URL) - (Publisher)
+                    links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
             
-            return " ".join(links) if links else ""
+            return "\n".join(links) if links else ""
 
         final_content = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref, raw_content)
 

@@ -42,14 +42,13 @@ def format_topics(json_topics):
         # Content
         text += f"{topic.get('text', '')}\n"
         
-        # Link (only 1)
+        # Links (top 2)
         links = topic.get('links', [])
-        if links:
-            l = links[0]
+        for link in links[:2]:  # Show maximum 2 links
             # Handle potential missing keys just in case
-            l_title = l.get('title', 'Link')
-            l_url = l.get('url', '#')
-            l_source = l.get('source', 'Source')
+            l_title = link.get('title', 'Link')
+            l_url = link.get('url', '#')
+            l_source = link.get('source', 'Source')
             text += f"📰 [{l_title}]({l_url}) - {l_source}\n"
         
         formatted.append(text)

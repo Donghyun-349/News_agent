@@ -166,8 +166,8 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
 4. **Reference Citations (CRITICAL - READ CAREFULLY):**
    - **In-Text:** Do NOT include ANY reference markers, links, or URLs in the body text. Write ONLY clean, natural sentences.
    - **Citation Placement:** IMMEDIATELY after each topic's text (after the 2-3 sentences), list the source articles.
-   - **Citation Format:** Use ONLY this format: `[CITE:ID]` where ID is the numeric article ID from the data.
-   - **Count:** Use **1 to 3** citations per topic. List all sources used for that specific topic.
+   - **Citation Format:** Use ONLY this format: `[Ref:ID]` where ID is the numeric article ID from the data.
+   - **Count:** Use **1 to 5** citations per topic. List all relevant sources used for that specific topic.
    - **No Heading:** Do NOT add a "출처", "Sources", or any heading before citations.
    
    **EXAMPLES:**
@@ -176,39 +176,39 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
    ```
    ### **미 연준 차기 의장 매파적 성향 케빈 워시 부각**
    케빈 워시 전 연준 이사가 차기 연준 의장으로 유력하게 거론되면서 시장에 매파적 신호를 보냈습니다. 그는 글로벌 금융위기 당시 양적완화에 반대하는 등 초강경 매파적 이력을 지니고 있습니다.
-   [CITE:4396558]
-   [CITE:4396542]
+   [Ref:4396558]
+   [Ref:4396542]
    ```
    
    ❌ WRONG FORMAT (DO NOT DO THIS):
    ```
-   케빈 워시 전 연준 이사가 차기 연준 의장으로 유력하게 거론되면서 시장에 매파적 신호를 보냈습니다 ([📰 차기 연준 의장에 '매파' 케빈 워시 유력](URL) - GEnews).
+   케빈 워시 전 연준 이사가 차기 연준 의장으로 유력하게 거론되면서 시장에 매파적 신호를 보냈습니다 [Ref:4396558]. 그는 글로벌 금융위기 당시 양적완화에 반대했습니다 [Ref:4396542].
    ```
 
 5. **CRITICAL PROHIBITIONS:**
+   - ❌ ABSOLUTELY NO inline reference markers like `[Ref:ID]` inside sentences
    - ❌ ABSOLUTELY NO inline markdown links like `([📰 Title](URL) - Source)` in body text
    - ❌ ABSOLUTELY NO URLs or hyperlinks in body sentences
    - ❌ NO generic advice ("Investors should monitor...")
-   - ❌ NO reference markers like [Ref: ID] or (Ref: ID) in the body text
    - ❌ NO duplicate citations
-   - ✅ ONLY use `[CITE:ID]` format on separate lines after the text
+   - ✅ ONLY use `[Ref:ID]` format on separate lines AFTER the body text
 
 # Output Format
 DO NOT output any section headers (like #, ##, ###). Start directly with the content.
 
 ### **[Strong Title in Korean]**
-[Sentence 1]  [Sentence 2] [Sentence 3 (Optional)]
-[CITE:101]
-[CITE:102]
+[Sentence 1] [Sentence 2] [Sentence 3 (Optional)]
+[Ref:101]
+[Ref:102]
 
 ### **[Next Topic Title]**
 [Sentence 1] [Sentence 2]
-[CITE:104]
-[CITE:105]
+[Ref:104]
+[Ref:105]
 
 **FINAL REMINDER:**
 - **Clean Body Text:** ZERO reference markers, links, or URLs in sentences.
-- **Immediate Citations:** List `[CITE:ID]` on NEW LINES immediately after each topic's text.
+- **Immediate Citations:** List `[Ref:ID]` on NEW LINES immediately after each topic's text.
 - **No Heading:** Don't add "출처" or any heading before citations.
-- **Format:** ONLY `[CITE:123]` format - nothing else!
+- **Format:** ONLY `[Ref:123]` format - nothing else!
 """
