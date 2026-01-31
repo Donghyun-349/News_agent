@@ -163,24 +163,52 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
    - **Sentence 2 (Context - 배경):** Why is this significant?
    - **Sentence 3 (Perspective - 전망/반응):** Market impact or expert opinion.
 
-4. **Inline Citations (Contextual):**
-   - **Placement:** You MUST place citations **IMMEDIATELY after the sentence** that relies on that source using `[Ref: ID]`.
-   - **No Footer:** Do **NOT** list citations at the bottom.
-   - **Count:** Use **1 to 3** citations per topic naturally where needed. Do NOT force 3 if not enough distinct sources exist.
-   - **Example:** `"엔비디아 주가가 5% 급등했습니다 [Ref: 101]. 이는 AI 칩 수요 증가 때문입니다 [Ref: 102]."`
+4. **Reference Citations (CRITICAL - READ CAREFULLY):**
+   - **In-Text:** Do NOT include ANY reference markers, links, or URLs in the body text. Write ONLY clean, natural sentences.
+   - **Citation Placement:** IMMEDIATELY after each topic's text (after the 2-3 sentences), list the source articles.
+   - **Citation Format:** Use ONLY this format: `[CITE:ID]` where ID is the numeric article ID from the data.
+   - **Count:** Use **1 to 3** citations per topic. List all sources used for that specific topic.
+   - **No Heading:** Do NOT add a "출처", "Sources", or any heading before citations.
+   
+   **EXAMPLES:**
+   
+   ✅ CORRECT FORMAT:
+   ```
+   ### **미 연준 차기 의장 매파적 성향 케빈 워시 부각**
+   케빈 워시 전 연준 이사가 차기 연준 의장으로 유력하게 거론되면서 시장에 매파적 신호를 보냈습니다. 그는 글로벌 금융위기 당시 양적완화에 반대하는 등 초강경 매파적 이력을 지니고 있습니다.
+   [CITE:4396558]
+   [CITE:4396542]
+   ```
+   
+   ❌ WRONG FORMAT (DO NOT DO THIS):
+   ```
+   케빈 워시 전 연준 이사가 차기 연준 의장으로 유력하게 거론되면서 시장에 매파적 신호를 보냈습니다 ([📰 차기 연준 의장에 '매파' 케빈 워시 유력](URL) - GEnews).
+   ```
 
-5. **Negative Constraints:**
-   - NO generic advice ("Investors should monitor...").
-   - NO duplicate citations for the same fact if strictly identical.
+5. **CRITICAL PROHIBITIONS:**
+   - ❌ ABSOLUTELY NO inline markdown links like `([📰 Title](URL) - Source)` in body text
+   - ❌ ABSOLUTELY NO URLs or hyperlinks in body sentences
+   - ❌ NO generic advice ("Investors should monitor...")
+   - ❌ NO reference markers like [Ref: ID] or (Ref: ID) in the body text
+   - ❌ NO duplicate citations
+   - ✅ ONLY use `[CITE:ID]` format on separate lines after the text
 
 # Output Format
 DO NOT output any section headers (like #, ##, ###). Start directly with the content.
 
 ### **[Strong Title in Korean]**
-[Sentence 1] [Ref: ID] [Sentence 2] [Ref: ID] [Sentence 3 (Optional)] [Ref: ID]
+[Sentence 1]  [Sentence 2] [Sentence 3 (Optional)]
+[CITE:101]
+[CITE:102]
 
-**REMINDER:**
-- **Contextual Placement:** Citations must be **INLINE**.
-- **No Footer List:** Do not output the list at the bottom.
-- **Flexible Count:** 1-3 citations depending on available sources.
+### **[Next Topic Title]**
+[Sentence 1] [Sentence 2]
+[CITE:104]
+[CITE:105]
+
+**FINAL REMINDER:**
+- **Clean Body Text:** ZERO reference markers, links, or URLs in sentences.
+- **Immediate Citations:** List `[CITE:ID]` on NEW LINES immediately after each topic's text.
+- **No Heading:** Don't add "출처" or any heading before citations.
+- **Format:** ONLY `[CITE:123]` format - nothing else!
 """
