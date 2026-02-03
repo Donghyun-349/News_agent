@@ -536,12 +536,19 @@ def main():
     with open(md_path, "r", encoding="utf-8") as f:
         md_content = f.read()
         
-    date_str = data.get('date', get_kst_now().strftime("%Y-%m-%d"))
+    date_str = data.get('meta', {}).get('date', data.get('date', get_kst_now().strftime("%Y-%m-%d")))
     
     # 2. Generate Title & Keywords
-    exec_summary = data.get('executive_summary', [])
-    if isinstance(exec_summary, str):
-         exec_summary = [exec_summary]
+    # Extract Executive Summary from correct JSON path: sections > Executive Summary > text
+    exec_summary_raw = data.get('sections', {}).get('Executive Summary', [{}])[0].get('text', '')
+    
+    # Split by newlines and filter out empty lines
+    if isinstance(exec_summary_raw, str):
+        exec_summary = [line.strip() for line in exec_summary_raw.split('\n') if line.strip()]
+    elif isinstance(exec_summary_raw, list):
+        exec_summary = exec_summary_raw
+    else:
+        exec_summary = []
          
     title, keywords = generate_title_and_keywords(exec_summary, date_str)
     logger.info(f"📝 Generated Title: {title}")
