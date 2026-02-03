@@ -2,10 +2,10 @@ name: Daily Market Intelligence
 
 on:
   schedule:
-    # Runs at 22:00 UTC Sun-Fri (which is 07:00 KST Mon-Sat)
+    # Runs at 21:40 UTC Sun-Fri (which is 06:40 KST Mon-Sat)
     # 0=Sun, 1=Mon, ..., 6=Sat
-    # Run: Sun-Fri UTC -> Mon-Sat KST (7 AM daily)
-    - cron: '0 22 * * 0-5'
+    # Run: Sun-Fri UTC -> Mon-Sat KST (6:40 AM daily)
+    - cron: '40 21 * * 0-5'
   workflow_dispatch:
     # Allows manual trigger from GitHub UI
 
