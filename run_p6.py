@@ -436,10 +436,10 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         return section_name, "생성 중 오류 발생"
 
 def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str]) -> tuple:
-    """Worker function for Executive Summary"""
+    """Worker function for Executive Summary - Returns (section_name, (posting_title, summary_text))"""
     try:
         if not exec_summary_ids:
-            return "Executive Summary", "N/A (No topics selected)"
+            return "Executive Summary", ("주요 시장 이슈", "N/A (No topics selected)")
             
         # Create independent DB connection for this thread
         local_db = DatabaseAdapter(db_type=DB_TYPE, database=DB_NAME)
@@ -491,26 +491,29 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
 
         raw_content = generate_content(model, system_prompt, exec_prompt, exec_json)
 
-        # Post-Processing: Convert [Ref:ID] to Citation Links
-        def replace_ref(match):
-            ref_ids_str = match.group(1)
-            ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
+        # Parse JSON response
+        try:
+            # Remove code fences if present
+            cleaned = raw_content.strip().replace("```json", "").replace("```", "").strip()
+            response_data = json.loads(cleaned)
             
-            links = []
-            for ref_id in ref_ids:
-                if ref_id in article_map:
-                    meta = article_map[ref_id]
-                    # Format: > * [Title](URL) - (Publisher)
-                    links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
+            posting_title = response_data.get('posting_title', '주요 시장 이슈')
+            executive_summary = response_data.get('executive_summary', '')
             
-            return "\n".join(links) if links else ""
-
-        final_content = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref, raw_content)
-
-        return "Executive Summary", final_content
+            logger.info(f"[Executive Summary] Generated posting title: {posting_title}")
+            
+            # Return tuple with both values
+            return "Executive Summary", (posting_title, executive_summary)
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse Executive Summary JSON: {e}")
+            logger.error(f"Raw response: {raw_content[:500]}")
+            # Fallback: use raw content as summary
+            return "Executive Summary", ("주요 시장 이슈", raw_content)
+            
     except Exception as e:
         logger.error(f"Error processing Executive Summary: {e}")
-        return "Executive Summary", "생성 중 오류 발생"
+        return "Executive Summary", ("주요 시장 이슈", "생성 중 오류 발생")
 
 def parse_selection_json(json_text: str) -> Dict[str, Any]:
     """Robustly parse JSON output from LLM"""
@@ -614,7 +617,7 @@ def parse_section_content(raw_text: str) -> List[Dict[str, Any]]:
     return blocks
 
 
-def format_report(sections: Dict[str, Any], date_str: str) -> str:
+def format_report(sections: Dict[str, Any], date_str: str, posting_title: str = "") -> str:
     """Combine sections into final Markdown"""
     
     def get_sec_text(key):
@@ -652,7 +655,10 @@ def format_report(sections: Dict[str, Any], date_str: str) -> str:
              return val.get('summary', '')
         return val
 
-    md = f"""# 📊 Daily Market Intelligence
+    # Create header with posting title if provided
+    header_title = f"# 📊 Daily Market Intelligence: \"{posting_title}\"" if posting_title else "# 📊 Daily Market Intelligence"
+    
+    md = f"""{header_title}
 **Date:** {date_str}
 
 ---
@@ -830,13 +836,26 @@ def main():
             ))
             
         # 6-3. Collect Results
+        posting_title = "주요 시장 이슈"  # Default fallback
         for future in as_completed(futures):
             sec_name, content = future.result()
-            generated_sections[sec_name] = content
+            
+            # Executive Summary returns (posting_title, summary_text)
+            if sec_name == "Executive Summary":
+                if isinstance(content, tuple) and len(content) == 2:
+                    posting_title, summary_text = content
+                    generated_sections[sec_name] = summary_text
+                else:
+                    # Fallback for old format
+                    generated_sections[sec_name] = content
+            else:
+                generated_sections[sec_name] = content
+                
             logger.info(f"  -> ✅ Completed: {sec_name}")
 
     duration = time.time() - start_time
     logger.info(f"✨ All sections generated in {duration:.2f} seconds.")
+    logger.info(f"📝 Blog Post Title: {posting_title}")
 
     # 7. Format & Save
     today_str = format_kst_date("%Y-%m-%d")
@@ -854,7 +873,8 @@ def main():
             "meta": {
                 "date": today_str,
                 "generated_at": format_kst_datetime(),
-                "version": "2.0" # Version bump for new structure
+                "version": "2.0", # Version bump for new structure
+                "posting_title": posting_title  # NEW: For Phase 6-2 WordPress posting
             },
             "sections": structured_sections
         }
@@ -866,7 +886,7 @@ def main():
 
     if "markdown" in args.formats:
         # Reconstruct markdown from structured sections to keep it readable
-        final_md = format_report(structured_sections, today_str)
+        final_md = format_report(structured_sections, today_str, posting_title)
         md_output_file = OUTPUT_DIR / f"Daily_Brief_{today_str_filename}.md"
         # md_output_file = OUTPUT_DIR / f"Daily_Brief_{today_str}.md" # Original name style in case user prefers
         

@@ -192,43 +192,42 @@ def get_or_create_tag(name: str) -> int:
         
     return 0
 
-def generate_title_and_keywords(exec_summary_list: list, date_str: str):
+def extract_keywords_from_title(title: str, max_keywords: int = 3) -> list:
     """
-    Generate title using LLM and return (title, keyword_list).
-    Template: [M/D Briefing] Main! Sub1 & Sub2
+    Extract keywords from title by simple tokenization.
+    Filters out common particles and short words.
     """
-    if not GENAI_AVAILABLE or not GOOGLE_API_KEY:
-        logger.warning("⚠️ LLM not available. Using fallback.")
-        return f"[{date_str} 브리핑] 오늘의 주요 시장 이슈", ["Finance", "Market", "News"]
+    # Korean particles and common words to filter out
+    stopwords = [
+        '의', '가', '이', '은', '는', '를', '을', '에', '와', '과', '로', '으로',
+        '에서', '도', '만', '부터', '까지', '께서', '한테', '에게', '께', '더',
+        '속', '및', '등', '중', 'vs', '기대감', '우려', '전망'
+    ]
+    
+    # Split by spaces and common Korean delimiters
+    import re
+    tokens = re.split(r'[\s,!·&]+', title)
+    
+    keywords = []
+    for token in tokens:
+        # Remove particles
+        cleaned = token.strip()
+        # Filter out stopwords, short tokens (< 2 chars), and pure punctuation
+        if cleaned and len(cleaned) >= 2 and cleaned not in stopwords and not all(c in '!?,.' for c in cleaned):
+            keywords.append(cleaned)
+    
+    # Return first N keywords
+    return keywords[:max_keywords] if keywords else ['Finance', 'Market']
 
-    try:
-        genai.configure(api_key=GOOGLE_API_KEY)
-        model = genai.GenerativeModel(GEMINI_MODEL)
-        
-        system_prompt = get_title_generation_prompt()
-        user_prompt = f"[Summary Sentences]\n" + "\n".join(exec_summary_list)
-        
-        response = model.generate_content(f"{system_prompt}\n\n{user_prompt}")
-        
-        text = response.text.strip().replace("```json", "").replace("```", "")
-        data_json = json.loads(text)
-        
-        # Get generated title
-        generated_title = data_json.get('title_text', '주요 시장 이슈 요약')
-        keyword_list = data_json.get('keywords', ['Finance', 'Market'])
-        
-        # Format Date
-        dt = datetime.strptime(date_str, "%Y-%m-%d")
-        fmt_date = f"{dt.month}/{dt.day}"
-        
-        # Final Format: [1/29 브리핑] + Generated Title
-        title = f"[{fmt_date} 브리핑] {generated_title}"
-        
-        return title, keyword_list
-        
-    except Exception as e:
-        logger.error(f"❌ Title Generation Failed: {e}")
-        return f"[{date_str} 브리핑] 오늘의 글로벌 시장/경제 분석", ["News", "Analysis"]
+
+def format_title_with_date(posting_title: str, date_str: str) -> str:
+    """
+    Format posting title with date prefix.
+    Template: [M/D 브리핑] Posting Title
+    """
+    dt = datetime.strptime(date_str, "%Y-%m-%d")
+    fmt_date = f"{dt.month}/{dt.day}"
+    return f"[{fmt_date} 브리핑] {posting_title}"
 
 def convert_and_style_html(md_text: str) -> str:
     """
@@ -538,21 +537,19 @@ def main():
         
     date_str = data.get('meta', {}).get('date', data.get('date', get_kst_now().strftime("%Y-%m-%d")))
     
-    # 2. Generate Title & Keywords
-    # Extract Executive Summary from correct JSON path: sections > Executive Summary > text
-    exec_summary_raw = data.get('sections', {}).get('Executive Summary', [{}])[0].get('text', '')
+    # 2. Extract Posting Title & Generate Keywords
+    # NEW: Read posting_title from Phase 6 metadata
+    posting_title = data.get('meta', {}).get('posting_title', '주요 시장 이슈')
     
-    # Split by newlines and filter out empty lines
-    if isinstance(exec_summary_raw, str):
-        exec_summary = [line.strip() for line in exec_summary_raw.split('\n') if line.strip()]
-    elif isinstance(exec_summary_raw, list):
-        exec_summary = exec_summary_raw
-    else:
-        exec_summary = []
-         
-    title, keywords = generate_title_and_keywords(exec_summary, date_str)
-    logger.info(f"📝 Generated Title: {title}")
+    # Format title with date prefix
+    title = format_title_with_date(posting_title, date_str)
+    
+    # Extract keywords from title
+    keywords = extract_keywords_from_title(posting_title)
+    
+    logger.info(f"📝 Blog Post Title: {title}")
     logger.info(f"🔑 Keywords: {keywords}")
+    
     
     # 3. Resolve Category & Tags
     # Category: "Morning Briefing"

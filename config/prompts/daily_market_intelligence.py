@@ -63,8 +63,15 @@ def get_topic_selection_prompt() -> str:
 
 ## 2. Section Picks (각 섹션별 대표 이슈) 선별
 - **기준:** 각 섹션(c)별로 가장 중요한 토픽 상위 3개.
-- **개수:** 각 섹션 당 정확히 3개 (단, 해당 섹션의 토픽이 3개 미만이면 전체 포함).
-- **엄격 준수:** 절대로 3개를 초과하지 말 것. 4개 이상 선택 시 오류로 간주됨.
+- **개수:** 각 섹션 당 **반드시 정확히 3개만 선택**. 
+  ⚠️ **CRITICAL:** 3개 초과 시 시스템 오류 발생. 절대 4개 이상 선택 금지.
+- **선택 방법:**
+  1. 해당 섹션의 모든 토픽을 영향력 순으로 정렬
+  2. 상위 3개만 선택
+  3. 나머지는 과감히 제외
+- **예외:** 해당 섹션의 토픽이 3개 미만이면 전체 포함.
+- **JSON 출력 검증:** 각 섹션의 ID 배열 길이가 3을 초과하지 않도록 반드시 확인할 것.
+
 
 # Selection Criteria (중요도 판단 기준)
 
@@ -122,23 +129,48 @@ def get_topic_selection_prompt() -> str:
 
 def get_key_takeaways_prompt() -> str:
     """
-    Returns the prompt for generating Key Takeaways (Step 1).
+    Returns the prompt for generating Key Takeaways and Blog Post Title.
     """
     return """
 # Task
-Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **Executive Summary (Today's Headlines)**.
+Analyze the provided news topics (t=Title, n=Count, a=Articles) and generate:
+1. A **unified Executive Summary** narrative
+2. A **concise blog post title**
+
 Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
 
 # Requirements
 1. **Output Language:** **KOREAN (한국어)** only.
-2. **Top Headlines:** Select the top 3 most impactful events.
-3. **One-Liners Only:** Write them as **one-line headlines only**. No details here.
-4. **No Redundancy:** Focus on the "what" and "impact".
 
-# Output Format
-  1. [Headline 1 in Korean]
-  2. [Headline 2 in Korean]
-  3. [Headline 3 in Korean]
+2. **Executive Summary:**
+   - Synthesize the top 3 most impactful events into a **unified narrative**
+   - Write 2-3 sentences that flow naturally together
+   - Focus on the common theme or market trend connecting these events
+   - Avoid bullet points - create a cohesive story
+
+3. **Blog Post Title:**
+   - Extract ONE main theme from the executive summary
+   - Keep it **concise**: 30-50 characters (including spaces)
+   - Format: Professional yet engaging
+   - Examples: 
+     * "AI 반도체 붐 속 글로벌 시장 동향"
+     * "연준 긴축 완화 기대감에 증시 반등"
+     * "중동 긴장 고조, 유가 급등"
+
+# Output Format (JSON)
+Return ONLY valid JSON in this exact format:
+
+```json
+{
+  "posting_title": "Concise main theme title here",
+  "executive_summary": "Unified 2-3 sentence narrative here. Connects multiple events into coherent story."
+}
+```
+
+# Important Notes
+- **posting_title**: Single theme, 30-50 characters
+- **executive_summary**: Flowing narrative, NOT bullet points
+- Output ONLY the JSON object, no additional text
 """
 
 def get_section_body_prompt(section_name: str) -> str:
