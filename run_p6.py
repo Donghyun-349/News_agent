@@ -498,7 +498,14 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
             response_data = json.loads(cleaned)
             
             posting_title = response_data.get('posting_title', '주요 시장 이슈')
-            executive_summary = response_data.get('executive_summary', '')
+            executive_summary_data = response_data.get('executive_summary', [])
+            
+            # Convert array to numbered list (Korean format)
+            if isinstance(executive_summary_data, list):
+                executive_summary = "\n".join([f"{i+1}. {item}" for i, item in enumerate(executive_summary_data)])
+            else:
+                # Fallback for old format (string)
+                executive_summary = executive_summary_data
             
             logger.info(f"[Executive Summary] Generated posting title: {posting_title}")
             

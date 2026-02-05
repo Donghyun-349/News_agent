@@ -134,22 +134,16 @@ def get_key_takeaways_prompt() -> str:
     return """
 # Task
 Analyze the provided news topics (t=Title, n=Count, a=Articles) and generate:
-1. A **unified Executive Summary** narrative
-2. A **concise blog post title**
+1. A **concise blog post title**
+2. **Executive Summary with 3-5 numbered key points**
 
 Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
 
 # Requirements
 1. **Output Language:** **KOREAN (한국어)** only.
 
-2. **Executive Summary:**
-   - Synthesize the top 3 most impactful events into a **unified narrative**
-   - Write 2-3 sentences that flow naturally together
-   - Focus on the common theme or market trend connecting these events
-   - Avoid bullet points - create a cohesive story
-
-3. **Blog Post Title:**
-   - Extract ONE main theme from the executive summary
+2. **Blog Post Title:**
+   - Extract ONE main theme from the topics
    - Keep it **concise**: 30-50 characters (including spaces)
    - Format: Professional yet engaging
    - Examples: 
@@ -157,19 +151,33 @@ Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
      * "연준 긴축 완화 기대감에 증시 반등"
      * "중동 긴장 고조, 유가 급등"
 
+3. **Executive Summary:**
+   - Create 3-5 numbered key points in Korean (NOT a flowing narrative)
+   - Each point should be ONE concise sentence (max 15 words / 약 20자)
+   - Focus on the most impactful events/trends
+   - Format as a numbered list
+   - Keep it short and punchy (간결하고 핵심만)
+   - **출처 불필요** - Executive Summary에는 기사 출처 링크를 추가하지 않음
+
 # Output Format (JSON)
 Return ONLY valid JSON in this exact format:
 
 ```json
 {
   "posting_title": "Concise main theme title here",
-  "executive_summary": "Unified 2-3 sentence narrative here. Connects multiple events into coherent story."
+  "executive_summary": [
+    "첫 번째 주요 내용 (한 문장)",
+    "두 번째 주요 내용 (한 문장)",
+    "세 번째 주요 내용 (한 문장)"
+  ]
 }
 ```
 
 # Important Notes
 - **posting_title**: Single theme, 30-50 characters
-- **executive_summary**: Flowing narrative, NOT bullet points
+- **executive_summary**: Array of 3-5 numbered points in Korean, NO citations
+- Each point should be concise and impactful
+- Do NOT add [Ref:ID] or any citations to Executive Summary
 - Output ONLY the JSON object, no additional text
 """
 

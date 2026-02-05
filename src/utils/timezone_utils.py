@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Timezone Utilities for Korean Standard Time (KST)
+Timezone Utilities for Korean Standard Time (KST) and Eastern Time (ET)
 
 This module provides centralized timezone handling to ensure all date/time
-operations across the News Agent use Korean Standard Time (UTC+9).
+operations across the News Agent use appropriate timezones.
 """
 
 from datetime import datetime
@@ -12,6 +12,9 @@ import pytz
 
 # Korean Standard Time (UTC+9)
 KST = pytz.timezone('Asia/Seoul')
+
+# Eastern Time (US - New York)
+ET = pytz.timezone('America/New_York')
 
 
 def get_kst_now() -> datetime:
@@ -22,6 +25,16 @@ def get_kst_now() -> datetime:
         datetime: Current time in KST timezone
     """
     return datetime.now(KST)
+
+
+def get_et_now() -> datetime:
+    """
+    Get current datetime in Eastern Time (ET).
+    
+    Returns:
+        datetime: Current time in ET timezone
+    """
+    return datetime.now(ET)
 
 
 def format_kst_date(format_string: str = "%Y-%m-%d") -> str:
@@ -45,6 +58,19 @@ def format_kst_date(format_string: str = "%Y-%m-%d") -> str:
     return get_kst_now().strftime(format_string)
 
 
+def format_et_date(format_string: str = "%Y-%m-%d") -> str:
+    """
+    Get current date in ET (Eastern Time) formatted as a string.
+    
+    Args:
+        format_string: strftime format string (default: "%Y-%m-%d")
+    
+    Returns:
+        str: Formatted date string in ET
+    """
+    return get_et_now().strftime(format_string)
+
+
 def format_kst_datetime(format_string: str = "%Y-%m-%d %H:%M:%S") -> str:
     """
     Get current datetime in KST formatted as a string.
@@ -56,3 +82,16 @@ def format_kst_datetime(format_string: str = "%Y-%m-%d %H:%M:%S") -> str:
         str: Formatted datetime string in KST
     """
     return get_kst_now().strftime(format_string)
+
+
+def format_et_datetime(format_string: str = "%Y-%m-%d %H:%M:%S") -> str:
+    """
+    Get current datetime in ET (Eastern Time) formatted as a string.
+    
+    Args:
+        format_string: strftime format string (default: "%Y-%m-%d %H:%M:%S")
+    
+    Returns:
+        str: Formatted datetime string in ET
+    """
+    return get_et_now().strftime(format_string)
