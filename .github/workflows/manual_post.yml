@@ -1,11 +1,11 @@
-name: Manual WordPress Post (Phase 6-2)
+name: Manual News Pipeline (Phase 1 to 7-1)
 
 on:
   workflow_dispatch:
     # Allows manual trigger from GitHub UI
 
 jobs:
-  post-to-wordpress:
+  news-pipeline:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -14,7 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        # We need the latest commit which should contain the generated reports (if they were pushed)
         ref: main
 
     - name: Set up Python
@@ -36,6 +35,34 @@ jobs:
         echo "WP_USERNAME=${{ secrets.WP_USERNAME }}" >> .env
         echo "WP_PASSWORD=${{ secrets.WP_PASSWORD }}" >> .env
 
-    - name: Run Phase 6-2 (WordPress Posting)
+    - name: Run Phase 1 (RSS Collection)
       run: |
-        python run_p6_2.py
+        python run_p1.py
+
+    - name: Run Phase 2 (Translation)
+      run: |
+        python run_p2.py
+
+    - name: Run Phase 3 (Categorization)
+      run: |
+        python run_p3.py
+
+    - name: Run Phase 4 (Relevance Filtering)
+      run: |
+        python run_p4.py
+
+    - name: Run Phase 5 (Clustering)
+      run: |
+        python run_p5.py
+
+    - name: Run Phase 6 (Daily Report Generation)
+      run: |
+        python run_p6.py
+
+    - name: Run Phase 6-1 (Telegram Posting)
+      run: |
+        python run_p6_1.py
+
+    - name: Run Phase 7-1 (WordPress Global Posting)
+      run: |
+        python run_p7_1.py

@@ -145,11 +145,43 @@ Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
 2. **Blog Post Title:**
    - Extract ONE main theme from the topics
    - Keep it **concise**: 30-50 characters (including spaces)
-   - Format: Professional yet engaging
-   - Examples: 
-     * "AI 반도체 붐 속 글로벌 시장 동향"
-     * "연준 긴축 완화 기대감에 증시 반등"
-     * "중동 긴장 고조, 유가 급등"
+   - Format: Specific, impactful, and click-worthy
+   
+   **CRITICAL - Specificity Rules:**
+   - ✅ MUST include specific company names when available (예: "엔비디아", "브로드컴", "테슬라")
+   - ✅ MUST include numbers/percentages when available (예: "30% 급등", "$100억", "5,000 돌파")
+   - ✅ Use impactful verbs (급등, 돌파, 붕괴, 반등, 폭락, 급락, 역전)
+   - ❌ AVOID generic themes (예: "AI 시장 동향", "글로벌 증시 현황")
+   
+   **Good Examples (Specific & Impactful):**
+     * "브로드컴 AI 매출 35% 급등! 엔비디아 독주 이어져"
+     * "테슬라 $200 붕괴 vs 리비안 30% 반등, EV 시장 양극화"
+     * "연준 매파 발언에 나스닥 2% 급락, 테크주 타격"
+     * "원달러 1,400원 돌파! 삼성전자 분할 논란 확산"
+     * "유가 배럴당 $90 돌파, 중동 긴장 고조 여파"
+   
+   **Bad Examples (Too Generic - DON'T DO THIS):**
+     ❌ "AI 반도체 붐 속 글로벌 시장 동향"
+     ❌ "증시 변동성 확대 속 투자자 주목"
+     ❌ "글로벌 경제 불확실성 지속"
+   
+   **Title Structure Templates:**
+   
+   Template 1 - Shock + Context:
+   "[회사명] [숫자] [임팩트 동사]! [추가 컨텍스트]"
+   예: "브로드컴 AI 매출 35% 급등! 엔비디아 독주 이어져"
+   
+   Template 2 - Contrast (vs):
+   "[A 이슈] vs [B 이슈], [시장 영향]"
+   예: "테슬라 $200 붕괴 vs 리비안 30% 반등, EV 시장 양극화"
+   
+   Template 3 - Cause & Effect:
+   "[원인 이벤트]에 [결과] [숫자] [동사]"
+   예: "연준 매파 발언에 나스닥 2% 급락, 테크주 타격"
+   
+   Template 4 - Milestone:
+   "[지표/가격] [숫자] 돌파! [영향/배경]"
+   예: "원달러 1,400원 돌파! 삼성전자 분할 논란 확산"
 
 3. **Executive Summary:**
    - Create 3-5 numbered key points in Korean (NOT a flowing narrative)
@@ -174,7 +206,12 @@ Return ONLY valid JSON in this exact format:
 ```
 
 # Important Notes
-- **posting_title**: Single theme, 30-50 characters
+- **posting_title**: 
+  * Priority 1: Include company name + number/percentage (if available)
+  * Priority 2: Use impactful verb (급등/돌파/붕괴/반등)
+  * Priority 3: Keep 30-50 characters (Korean)
+  * Format: Must be specific, NOT generic
+  * Quality check: Would YOU click on this title? If not, make it more specific.
 - **executive_summary**: Array of 3-5 numbered points in Korean, NO citations
 - Each point should be concise and impactful
 - Do NOT add [Ref:ID] or any citations to Executive Summary
