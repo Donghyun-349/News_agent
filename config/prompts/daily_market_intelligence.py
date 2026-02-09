@@ -322,12 +322,18 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
    - **Sentence 2 (The Why):** Context or drivers.
    - **Sentence 3 (The Impact):** Market reaction or outlook.
    
-   **Style Constraints:**
-   - Use active voice.
    - Be concise and direct (Bloomberg/WSJ style).
    - No fluff ("It is interesting to note that...").
 
-4. **Reference Citations (CRITICAL):**
+4. **Target Audience's Interest (Perspective Shift):**
+   - **Global Investors' View:** Frame the news from the perspective of a USD-based investor.
+   - **Differentiation:**
+     - Instead of "KRW weakness", focus on **"DXY Strength & EM Capital Outflows"**.
+     - Instead of "Bank of Korea policy", focus on **"Global Central Bank Divergence"**.
+     - Instead of "Local stock impact", focus on **"Global Supply Chain & Sector Sentiment"**.
+   - **Goal:** Explain why a global investor should care about this topic.
+
+5. **Reference Citations (CRITICAL):**
    - **In-Text:** Do NOT include ANY reference markers or links in the body sentences.
    - **Citation Placement:** IMMEDIATELY after each topic's text (after the 2-3 sentences), list the source articles.
    - **Citation Format:** Use ONLY this format: `[Ref:ID]` (where ID is the numeric article ID).
