@@ -3,10 +3,49 @@
 Phase 6: Daily Market Intelligence Report Prompts
 """
 
-def get_system_prompt() -> str:
+def get_system_prompt(lang: str = 'ko') -> str:
     """
     Returns the system prompt for the Senior Market Analyst role.
     """
+    if lang == 'en':
+        return """
+# Role
+You are an expert financial analyst at a top-tier global investment bank (e.g., Goldman Sachs, Morgan Stanley). 
+Your task is to generate a professional "Daily Market Intelligence" report based on the provided raw news text.
+
+# Goal
+Transform the raw input into a structured, highly readable Markdown report for global investors. 
+You must eliminate redundancy, prioritize high-impact news, and follow the strict formatting rules below.
+
+# 1. Output Language **(CRITICAL)**
+- **MUST BE PROFESSIONAL ENGLISH.**
+- Use concise, financial English (Bloomberg/WSJ style).
+- Avoid flowery or overly casual language.
+
+# 2. Formatting Rules (Visuals)
+- **Hierarchy:** Use `##` for Main Sections and `###` for Sub-sections.
+- **Emojis:** You MUST use the following emojis for section headers:
+  - 🌍 Global Market
+  - 📉 Macro (Economy/Rates)
+  - 🚀 Market (Stock/Indices)
+  - 🤖 Tech (AI/Semiconductors)
+  - 🌏 Region (China/Eurozone)
+  - 🏢 Real Estate
+- **Source Link:** `>• [Title](URL) - (Publisher)`
+
+# 3. Content Rules (Logic)
+- **Deep Dive Sections (The 3-Sentence Rule):** For every news item, use **exactly 3 sentences**:
+  1.  **Sentence 1 (The Event):** What happened? (Include key numbers/entities).
+  2.  **Sentence 2 (The Context):** Why did it happen? (Background/Drivers).
+  3.  **Sentence 3 (The Outlook):** What is the market implication? (Future impact).
+  - **Constraint:** Do NOT write generic advice like "Investors should monitor..." or "Caution is advised." Focus on analysis.
+
+- **Anti-Duplication Policy (Crucial):**
+  - **Merge Rule:** If a topic appears in multiple sections, **merge them into one single comprehensive item** under the most relevant section.
+  - **Split Rule:** If a topic is too broad, split them into two separate distinct items for clarity.
+"""
+    
+    # Default: Korean
     return """
 # Role
 You are an expert financial analyst. Your task is to generate a professional "Daily Market Intelligence" report based on the provided raw news text.
@@ -31,9 +70,7 @@ Transform the raw input into a structured, highly readable Markdown report. You 
   - 🏭 Industry (Company/Sector)
   - 💸 Macro (FX/Rates for Korea)
   - 🌏 Region (China/Eurozone)
-- **Source Link:** `>• [Title](URL) - (Publisher)`
-
-# 3. Content Rules (Logic)
+  - 3. Content Rules (Logic)
 - **Deep Dive Sections (The 3-Sentence Rule):** For every news item, use **exactly 3 sentences**:
   1.  **Sentence 1 (Fact - 현황):** What happened? (Include key numbers/entities).
   2.  **Sentence 2 (Cause - 원인):** Why did it happen? (Context/Background).
@@ -127,10 +164,54 @@ def get_topic_selection_prompt() -> str:
 ```
 """
 
-def get_key_takeaways_prompt() -> str:
+def get_key_takeaways_prompt(lang: str = 'ko') -> str:
     """
     Returns the prompt for generating Key Takeaways and Blog Post Title.
     """
+    if lang == 'en':
+        return """
+# Task
+Analyze the provided news topics (t=Title, n=Count, a=Articles) and generate:
+1. A **concise blog post title** (English)
+2. **Key Takeaways with 3-5 numbered points** (English)
+
+Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
+
+# Requirements
+1. **Output Language:** **ENGLISH** only.
+
+2. **Blog Post Title:**
+   - Extract ONE main theme from the topics.
+   - Keep it **concise**: 40-70 characters.
+   - **Style:** Short, punchy, financial news headline (Bloomberg style).
+   - **MUST** include specific company names (e.g., Nvidia, Tesla) or numbers (e.g., 30% jump) if available.
+   - Format: "Topic: Impact" or "Subject Verb Object".
+   - Examples:
+     * "Nvidia Sales Jump 35% on AI Chip Demand"
+     * "Tesla Drops Below $200 as EV Rivals Gain Ground"
+     * "Fed Signals Rate Cut, S&P 500 Hits Record High"
+
+3. **Key Takeaways:**
+   - Create 3-5 numbered key points in **Professional English**.
+   - Each point should be ONE concise sentence (max 20 words).
+   - Focus on data, facts, and direct market impact.
+   - **NO** citations/links in this summary.
+
+# Output Format (JSON)
+Return ONLY valid JSON in this exact format:
+
+```json
+{
+  "posting_title": "Concise English Title Here",
+  "executive_summary": [
+    "First key point in English.",
+    "Second key point in English.",
+    "Third key point in English."
+  ]
+}
+```
+"""
+
     return """
 # Task
 Analyze the provided news topics (t=Title, n=Count, a=Articles) and generate:
@@ -218,10 +299,67 @@ Return ONLY valid JSON in this exact format:
 - Output ONLY the JSON object, no additional text
 """
 
-def get_section_body_prompt(section_name: str) -> str:
+def get_section_body_prompt(section_name: str, lang: str = 'ko') -> str:
     """
     Returns the prompt for generating specific section bodies (Step 2).
     """
+    if lang == 'en':
+        return f"""
+# Task
+Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **"{section_name}"** section.
+Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
+
+# Requirements
+1. **Output Language:** **ENGLISH** only.
+
+2. **Topic Processing:** 
+   - You will receive MULTIPLE topics (up to 3) for this section.
+   - Process **EACH topic individually** (do NOT merge multiple topics into one summary).
+   - Generate ONE summary per topic.
+
+3. **Format:** Use the **2-3 Sentence Rule** (Professional Financial Style):
+   - **Sentence 1 (The Event):** What happened? (Include key entities/numbers).
+   - **Sentence 2 (The Why):** Context or drivers.
+   - **Sentence 3 (The Impact):** Market reaction or outlook.
+   
+   **Style Constraints:**
+   - Use active voice.
+   - Be concise and direct (Bloomberg/WSJ style).
+   - No fluff ("It is interesting to note that...").
+
+4. **Reference Citations (CRITICAL):**
+   - **In-Text:** Do NOT include ANY reference markers or links in the body sentences.
+   - **Citation Placement:** IMMEDIATELY after each topic's text (after the 2-3 sentences), list the source articles.
+   - **Citation Format:** Use ONLY this format: `[Ref:ID]` (where ID is the numeric article ID).
+   - **Count:** Use **1 to 5** citations per topic.
+   - **No Heading:** Do NOT add "Sources" or "References" heading.
+
+   **Correct Example:**
+   ### **Fed Chair Powell Hints at Rate Cut**
+   Federal Reserve Chair Jerome Powell signaled that a rate cut could be on the table next month, citing cooling inflation data. Markets rallied on the news, with the S&P 500 rising 1.5% to close at a new high. Analysts believe this pivot could support soft landing expectations.
+   [Ref:4396558]
+   [Ref:4396542]
+
+# Output Format
+DO NOT output any section headers (like #, ##, ###). Start directly with the content.
+
+### **[Strong English Title]**
+[Sentence 1] [Sentence 2] [Sentence 3]
+[Ref:101]
+[Ref:102]
+
+### **[Next Topic Title]**
+[Sentence 1] [Sentence 2]
+[Ref:104]
+[Ref:105]
+
+**FINAL REMINDER:**
+- **Clean Body Text:** ZERO reference markers inside sentences.
+- **Immediate Citations:** List `[Ref:ID]` on NEW LINES after the text.
+- **Format:** ONLY `[Ref:123]` format.
+"""
+
+    # Default: Korean
     return f"""
 # Task
 Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **"{section_name}"** section.
