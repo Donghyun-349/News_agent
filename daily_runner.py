@@ -56,7 +56,8 @@ def main():
         "run_p5.py",  # Clustering/Topic Generation
         "run_p6.py",   # Report Generation
         "run_p6_1.py", # Telegram Reporting
-        "run_p6_2.py", # WordPress Auto-Posting
+        "run_p6_2.py", # WordPress Auto-Posting (KR)
+        "run_p6_3.py", # WordPress Auto-Posting (EN)
         # "run_p7.py",   # Evergreen Content Generation (Blog/YouTube) - DISABLED: Logic improvement needed
         "run_summary.py" # Final Summary Export
     ]
