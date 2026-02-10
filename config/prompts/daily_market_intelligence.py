@@ -266,11 +266,24 @@ Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
 
 3. **Executive Summary:**
    - Create 3-5 numbered key points in Korean (NOT a flowing narrative)
-   - Each point should be ONE concise sentence (max 15 words / 약 20자)
+   - **Writing Style:** Use **concise statement format** (NOT full sentences with ~합니다/~했습니다)
+   - **Format:** Noun phrase + action/fact, ending with `.` (period)
+   - Each point should be max 15-20 words (약 20-30자)
    - Focus on the most impactful events/trends
-   - Format as a numbered list
    - Keep it short and punchy (간결하고 핵심만)
    - **출처 불필요** - Executive Summary에는 기사 출처 링크를 추가하지 않음
+   
+   **✅ GOOD Examples (Concise Statement Style):**
+   - "엔비디아 CEO, AI 기업 CAPEX 정당성 강조 후 주가 7% 급등."
+   - "삼성전자, 엔비디아 GPU용 차세대 HBM4 세계 최초 양산 돌입."
+   - "제퍼슨 연준 부의장, 강한 생산성이 인플레이션 둔화에 기여 가능성 제시."
+   - "테슬라 중국 AI 훈련센터 설립, 자율주행 시장 경쟁 심화."
+   - "유럽중앙은행, 인플레이션 둔화에도 현 금리 수준 적절하다고 판단."
+   
+   **❌ BAD Examples (Formal Sentence Style - DO NOT USE):**
+   - "빅테크 기업들이 AI 인프라에 1000조원 규모 투자를 예고하며 경쟁이 격화됩니다."
+   - "뉴욕증시 기술주가 반등하며 오라클은 9%, 마이크로소프트는 3% 상승했습니다."
+   - "테슬라가 중국에 AI 훈련 센터를 설립하며 자율주행 시장 경쟁을 심화시켰습니다."
 
 # Output Format (JSON)
 Return ONLY valid JSON in this exact format:

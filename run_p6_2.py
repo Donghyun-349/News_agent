@@ -220,13 +220,13 @@ def extract_keywords_from_title(title: str, max_keywords: int = 3) -> list:
     return keywords[:max_keywords] if keywords else ['Finance', 'Market']
 
 
-def format_title_with_date(posting_title: str, date_str: str) -> str:
+def format_title_with_date(posting_title: str) -> str:
     """
-    Format posting title with date prefix.
+    Format posting title with KST date prefix.
     Template: [M/D 브리핑] Posting Title
     """
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
-    fmt_date = f"{dt.month}/{dt.day}"
+    kst_now = get_kst_now()
+    fmt_date = f"{kst_now.month}/{kst_now.day}"
     return f"[{fmt_date} 브리핑] {posting_title}"
 
 def convert_and_style_html(md_text: str) -> str:
@@ -541,8 +541,8 @@ def main():
     # NEW: Read posting_title from Phase 6 metadata
     posting_title = data.get('meta', {}).get('posting_title', '주요 시장 이슈')
     
-    # Format title with date prefix
-    title = format_title_with_date(posting_title, date_str)
+    # Format title with date prefix (KST)
+    title = format_title_with_date(posting_title)
     
     # Extract keywords from title
     keywords = extract_keywords_from_title(posting_title)

@@ -28,7 +28,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.utils.logger import setup_logger
-from src.utils.timezone_utils import get_kst_now, format_kst_date
+from src.utils.timezone_utils import get_kst_now, get_et_now
 from config.settings import (
     LOG_LEVEL, GOOGLE_API_KEY, GEMINI_MODEL, BASE_DIR
 )
@@ -68,7 +68,8 @@ STYLES = {
     "body_list_item": "position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;",
     "body_list_bullet": "position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;",
     "disclaimer_box": "background: linear-gradient(to right, #FFF8E1, #FFFFFF); border-left: 4px solid #FF9800; padding: 20px; margin-top: 50px; color: #666666; font-size: 14px; line-height: 1.6;",
-    "link": "color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2;"
+    "link": "color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;",
+    "blockquote": "font-size: 16px; line-height: 1.8; color: #333333; margin: 0; padding: 0; border: none;"
 }
 
 def get_latest_en_report(target_date: str = None):
@@ -139,6 +140,29 @@ def convert_and_style_html(md_text: str) -> str:
     
     lines = lines[start_idx:end_idx] if start_idx > 0 else lines[:end_idx]
     
+    # 1.5. Remove Korea Market and Real Estate sections
+    filtered_lines = []
+    skip_section = False
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        
+        # Check if entering Korea Market or Real Estate section
+        if stripped.startswith("## ") and ("Korea Market" in stripped or "Real Estate" in stripped):
+            skip_section = True
+            continue
+        
+        # Check if entering a new main section (reset skip flag)
+        if stripped.startswith("## ") and skip_section:
+            skip_section = False
+        
+        # Skip lines in Korea/Real Estate sections
+        if skip_section:
+            continue
+            
+        filtered_lines.append(line)
+    
+    lines = filtered_lines
+    
     # Fix Headers
     processed_lines = []
     for i, line in enumerate(lines):
@@ -161,6 +185,10 @@ def convert_and_style_html(md_text: str) -> str:
     for a in soup.find_all('a'):
         a['style'] = STYLES['link']
         a['target'] = "_blank"
+    
+    # Blockquotes (Citations)
+    for blockquote in soup.find_all('blockquote'):
+        blockquote['style'] = STYLES['blockquote']
 
     # 4. Executive Summary Styling
     exec_h2 = None
@@ -293,12 +321,14 @@ def main():
 
     # 2. Title & Tags
     posting_title = data.get('meta', {}).get('posting_title', 'Daily Market Intelligence')
-    date_str = data.get('meta', {}).get('date', get_kst_now().strftime("%Y-%m-%d"))
+    
+    # Use Eastern Time (ET) for English posts
+    et_now = get_et_now()
+    month_name = et_now.strftime("%b")  # Feb
+    day = et_now.day
     
     # Title: [Feb 9] Title
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
-    month_name = dt.strftime("%b") # Feb
-    final_title = f"[{month_name} {dt.day}] {posting_title}"
+    final_title = f"[{month_name} {day}] {posting_title}"
     
     # Tags
     keywords = posting_title.split(' ')

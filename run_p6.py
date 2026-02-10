@@ -424,7 +424,36 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
                     # [EN] Citation Filtering: Exclude Korean publishers from the footer list
                     if lang == 'en':
                         # List of Korean publishers to hide in English report footer
-                        kr_publishers = ["Chosun", "Dong-A", "Maeil", "Korea Economic", "Yonhap", "Hankyung", "JoongAng", "News1", "Newsis"]
+                        # Comprehensive list covering major Korean news outlets
+                        kr_publishers = [
+                            # Major Newspapers (English names)
+                            "Chosun", "Chosunbiz", "Dong-A", "JoongAng", "Korea Herald", "Korea Times",
+                            
+                            # Business & Economic Media (English)
+                            "Maeil", "Korea Economic", "Hankyung", "Seoul Economic", 
+                            "Asia Economic", "Financial News", "Herald Economy",
+                            "BusinessWatch", "The Bell", "Korea Financial Times",
+                            "Seoul Finance", "E-Today", "Newspim", "MoneyToday",
+                            
+                            # News Agencies & Wire Services
+                            "Yonhap", "Infomax", "News1", "Newsis", "GEnews",
+                            
+                            # Online & Tech Media
+                            "Edaily", "Digital Times", "Electronic Times", "ZDNet Korea",
+                            "Bloter", "Byline Network",
+                            
+                            # Broadcast Business
+                            "SBS Biz", "MBN", "MK News", "YTN",
+                            
+                            # Korean language variants (한글 표기)
+                            "조선일보", "조선", "동아일보", "동아", "중앙일보", "중앙",
+                            "한국경제", "매일경제", "매경", "한경", "서울경제", "아경", "아시아경제",
+                            "파이낸셜뉴스", "헤럴드경제", "비즈니스워치", "더벨", "한국금융신문",
+                            "서울파이낸스", "이투데이", "뉴스핌", "머니투데이", "이데일리",
+                            "연합뉴스", "연합", "인포맥스", "뉴스1", "뉴시스",
+                            "전자신문", "디지털타임스", "지디넷코리아", "블로터", "바이라인네트워크",
+                            "SBS비즈", "매경TV", "MBN", "YTN"
+                        ]
                         if any(kp.lower() in meta['p'].lower() for kp in kr_publishers):
                             continue # Skip listing this citation
 
@@ -867,14 +896,14 @@ def main():
         current_section_picks = section_picks.copy()
         
         if lang == 'en':
-            # English: Exclude Korea & Korea Real Estate
+            # English: Exclude Korea & Real Estate (All)
             filtered_picks = {}
             for sec, ids in current_section_picks.items():
-                if sec.startswith("Korea") or "Real Estate > Korea" in sec:
+                if sec.startswith("Korea") or "Real Estate" in sec:
                     continue
                 filtered_picks[sec] = ids
             current_section_picks = filtered_picks
-            logging.info(f"🇺🇸 English Mode: Filtered to {len(current_section_picks)} sections (Global only)")
+            logging.info(f"🇺🇸 English Mode: Filtered to {len(current_section_picks)} sections (Global only, no Real Estate)")
         
         # Get Prompts for current language
         system_prompt = get_system_prompt(lang)
@@ -959,7 +988,7 @@ def main():
         # 2. Save Markdown (Final Report)
         if "markdown" in args.formats:
             md_output_file = OUTPUT_DIR / f"Daily_Brief_{today_file_str}{suffix}.md"
-            md_content = format_report(generated_sections, today_str, posting_title)
+            md_content = format_report(generated_sections, today_str, posting_title, lang=lang)
             
             with open(md_output_file, 'w', encoding='utf-8') as f:
                 f.write(md_content)
