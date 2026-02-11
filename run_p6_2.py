@@ -112,6 +112,9 @@ def get_latest_report(target_date: str = None):
             return None, None
 
     json_files = sorted(OUTPUT_DIR.glob("Daily_Brief_*.json"), reverse=True)
+    # Filter out English reports (_EN.json)
+    json_files = [f for f in json_files if "_EN" not in f.name]
+    
     if not json_files:
         return None, None
     

@@ -446,3 +446,116 @@ DO NOT output any section headers (like #, ##, ###). Start directly with the con
 - **No Heading:** Don't add "출처" or any heading before citations.
 - **Format:** ONLY `[Ref:123]` format - nothing else!
 """
+
+def get_combined_key_takeaways_prompt() -> str:
+    """
+    Returns the prompt for generating Key Takeaways and Blog Post Title in BOTH languages (Korean & English).
+    Output: JSON with 'ko' and 'en' keys.
+    """
+    return """
+# Task
+Analyze the provided news topics and generate Executive Summaries and Titles for **BOTH Korean and English**.
+
+# Requirements
+
+## 1. Korean Output (ko)
+- **Role:** Professional Financial Analyst (Korean Market Focus)
+- **Blog Post Title:**
+   - Specific, impactful, click-worthy (30-50 chars).
+   - Must include specific company names/numbers if available.
+   - Example: "브로드컴 AI 매출 35% 급등! 엔비디아 독주 이어져"
+- **Executive Summary:**
+   - 3-5 numbered key points in **concise statement style** (Example: "엔비디아 주가 7% 급등.").
+   - Max 20-30 chars per point.
+
+## 2. English Output (en)
+- **Role:** Global Investment Banker (Goldman Sachs Style)
+- **Blog Post Title:**
+   - Concise financial headline (Bloomberg style, 40-70 chars).
+   - Subject + Verb + Object.
+   - Example: "Nvidia Sales Jump 35% on AI Chip Demand"
+- **Executive Summary:**
+   - 3-5 numbered key points in **Professional English**.
+   - One concise sentence per point (max 20 words).
+
+# Output Format (JSON Only)
+Return ONLY valid JSON in this exact format.
+**CRITICAL**: Ensure all newlines within text are escaped as \\n. Output ONLY valid JSON.
+
+```json
+{
+  "ko": {
+    "posting_title": "Korean Title Here",
+    "executive_summary": [
+      "Korean Point 1",
+      "Korean Point 2",
+      "Korean Point 3"
+    ]
+  },
+  "en": {
+    "posting_title": "English Title Here",
+    "executive_summary": [
+      "English Point 1",
+      "English Point 2",
+      "English Point 3"
+    ]
+  }
+}
+```
+"""
+
+def get_combined_section_body_prompt(section_name: str) -> str:
+    """
+    Returns the prompt for generating Section Body in BOTH languages (Korean & English).
+    Output: JSON with 'ko' and 'en' keys.
+    """
+    return f"""
+# Task
+Analyze the provided news topics and write the **"{section_name}"** section in **BOTH Korean and English**.
+Each article has: i=ID, t=Title, p=Publisher, s=Snippet.
+
+# Target Audience
+- **Korean (ko):** Local investors interested in global trends & local impact.
+- **English (en):** Global USD-based investors (Bloomberg/WSJ readers).
+
+# Writing Requirements (Apply to BOTH languages)
+1. **Format:** Use the **2-3 Sentence Rule** for each topic.
+   - **Sentence 1 (Fact):** What happened? (Key numbers, entities).
+   - **Sentence 2 (Context/Why):** Drivers or background.
+   - **Sentence 3 (Impact/Outlook):** Market implication.
+2. **Citations:**
+   - **NO** inline reference markers in the body text.
+   - List `[Ref:ID]` on new lines **IMMEDIATELY** after the text.
+   - Use 1-5 citations per topic.
+
+# Language Specifics
+
+## 1. Korean (ko)
+- **Style:** Professional Analyst (Dry, factual, concise).
+- **Structure:**
+  ### **[Strong Korean Title]**
+  [Sentence 1] [Sentence 2] [Sentence 3]
+  [Ref:101]
+  [Ref:102]
+
+## 2. English (en)
+- **Style:** Financial News (Direct, punchy, active voice).
+- **Structure:**
+  ### **[Strong English Title]**
+  [Sentence 1] [Sentence 2] [Sentence 3]
+  [Ref:101]
+  [Ref:102]
+
+# Output Format (JSON Only)
+Return ONLY valid JSON in this exact format. 
+**CRITICAL**: The `ko` and `en` content must cover the SAME topics, but written in their respective languages/styles.
+Double-escape backslashes if necessary for valid JSON strings.
+
+```json
+{{
+  "ko": "### **[KR Title]**\\n[KR Text...]\\n[Ref:101]\\n[Ref:102]\\n\\n### **[Next KR Title]**...",
+  "en": "### **[EN Title]**\\n[EN Text...]\\n[Ref:101]\\n[Ref:102]\\n\\n### **[Next EN Title]**..."
+}}
+```
+"""
+

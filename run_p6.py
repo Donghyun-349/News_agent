@@ -40,7 +40,9 @@ from config.prompts.daily_market_intelligence import (
     get_system_prompt,
     get_topic_selection_prompt,
     get_key_takeaways_prompt,
-    get_section_body_prompt
+    get_section_body_prompt,
+    get_combined_key_takeaways_prompt,
+    get_combined_section_body_prompt
 )
 
 # Initialize Logger
@@ -150,19 +152,44 @@ def fetch_article_details(news_db: DatabaseAdapter, news_ids: List[int]) -> List
         return []
 
 
-def generate_content(model: Any, system_prompt: str, user_prompt: str, context_data: str, retries: int = 3) -> str:
-    """Generate content using Gemini with retry logic"""
+
+def generate_content(model: Any, system_prompt: str, user_prompt: str, context_data: str, retries: int = 3, response_mime_type: str = None) -> str:
+    """Generate content using Gemini with retry logic and optional JSON mode"""
+    # Configure generation config if mime_type is specified
+    generation_config = {}
+    if response_mime_type:
+        generation_config["response_mime_type"] = response_mime_type
+
     for attempt in range(retries):
         try:
             full_prompt = f"{system_prompt}\n\n{user_prompt}\n\n[Data]\n{context_data}"
-            response = model.generate_content(full_prompt)
+            
+            # Pass generation_config if checking for JSON
+            if response_mime_type:
+                response = model.generate_content(full_prompt, generation_config=generation_config)
+            else:
+                response = model.generate_content(full_prompt)
+                
             return response.text
         except Exception as e:
             logger.warning(f"Gemini generation failed (Attempt {attempt+1}/{retries}): {e}")
             time.sleep(2 ** attempt)  # Exponential backoff
     
     logger.error("❌ Gemini generation failed after all retries.")
-    return "생성 실패 (API Error)"
+    return "{}" if response_mime_type == "application/json" else "생성 실패 (API Error)"
+
+def clean_and_load_json(text: str) -> Dict[str, Any]:
+    """Safely parse JSON from LLM response (handles markdown fences)"""
+    import re
+    try:
+        # Remove code fences
+        clean_text = re.sub(r"```json\s*|\s*```", "", text.strip(), flags=re.IGNORECASE).strip()
+        return json.loads(clean_text)
+    except json.JSONDecodeError as e:
+        logger.error(f"Failed to parse JSON: {e}")
+        # Return empty dict to prevent crash
+        return {}
+
 
 def curate_articles(articles: List[Dict[str, Any]], trusted_publishers: List[str], max_candidates: int = 12) -> List[Dict[str, Any]]:
     """
@@ -471,6 +498,119 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         logger.error(f"Error processing section '{section_name}': {e}")
         return section_name, "Error generating content" if lang == 'en' else "생성 중 오류 발생"
 
+def process_combined_section_task(section_name: str, topic_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str]) -> tuple:
+    """Worker function for COMBINED parallel execution (KO + EN)"""
+    try:
+        # Combined tasks generate both languages, so if no topics, return empty for both
+        if not topic_ids:
+            return section_name, {"ko": "특이사항 없음.", "en": "No significant updates."}
+
+        # Create independent DB connection for this thread
+        local_db = DatabaseAdapter(db_type=DB_TYPE, database=DB_NAME)
+        local_db.connect()
+
+        try:
+            # Gather full data
+            section_context_data = []
+            article_map = {} # Map ID -> {url, title, pub}
+            for tid in topic_ids:
+                if tid in topic_map:
+                    t_obj = topic_map[tid]
+                    news_ids = json.loads(t_obj['news_ids_json'])
+                    articles = fetch_article_details(local_db, news_ids)
+                    articles = sanitize_article_data(articles)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
+
+                    # Build Article Map for Reference ID Pattern
+                    for ca in curated_articles:
+                        article_map[str(ca['id'])] = {
+                            "t": ca['title'],
+                            "u": ca['url'],
+                            "p": ca['publisher']
+                        }
+
+                    section_context_data.append({
+                        "t": t_obj['title'],
+                        "n": t_obj['count'],
+                        "a": [
+                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            for ca in curated_articles
+                        ]
+                    })
+        finally:
+            local_db.close()
+        
+        # USE COMBINED PROMPT
+        sec_prompt = get_combined_section_body_prompt(section_name)
+        sec_json = json.dumps(section_context_data, ensure_ascii=False, separators=(',', ':'))
+        
+        total_articles = sum(len(topic.get("a", [])) for topic in section_context_data)
+        logger.info(f"[{section_name}] Sending {total_articles} articles to LLM (United KO/EN Request)")
+        
+        # Call LLM with JSON Mode
+        raw_content = generate_content(model, system_prompt, sec_prompt, sec_json, response_mime_type="application/json")
+        
+        # Parse JSON output: {"ko": "...", "en": "..."}
+        result_data = clean_and_load_json(raw_content)
+        
+        if not result_data:
+            logger.error(f"[{section_name}] Failed to parse Combined JSON. Fallback to raw.")
+            return section_name, {"ko": "생성 오류 (JSON 파싱 실패)", "en": "Generation Error (JSON Parse Failed)"}
+
+        content_ko = result_data.get("ko", "")
+        content_en = result_data.get("en", "")
+
+        # Post-Processing: Convert [Ref:ID] to Citation Links for BOTH
+        def replace_ref_ko(match):
+            ref_ids_str = match.group(1)
+            ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
+            links = []
+            for ref_id in ref_ids:
+                if ref_id in article_map:
+                    meta = article_map[ref_id]
+                    links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
+            return "\n".join(links) if links else ""
+
+        def replace_ref_en(match):
+            ref_ids_str = match.group(1)
+            ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
+            links = []
+            for ref_id in ref_ids:
+                if ref_id in article_map:
+                    meta = article_map[ref_id]
+                    # [EN] Citation Filtering: Exclude Korean publishers
+                    kr_publishers = [
+                        "Chosun", "Chosunbiz", "Dong-A", "JoongAng", "Korea Herald", "Korea Times",
+                        "Maeil", "Korea Economic", "Hankyung", "Seoul Economic", 
+                        "Asia Economic", "Financial News", "Herald Economy",
+                        "BusinessWatch", "The Bell", "Korea Financial Times",
+                        "Seoul Finance", "E-Today", "Newspim", "MoneyToday",
+                        "Yonhap", "Infomax", "News1", "Newsis", "GEnews",
+                        "Edaily", "Digital Times", "Electronic Times", "ZDNet Korea",
+                        "Bloter", "Byline Network",
+                        "SBS Biz", "MBN", "MK News", "YTN",
+                        "조선일보", "조선", "동아일보", "동아", "중앙일보", "중앙",
+                        "한국경제", "매일경제", "매경", "한경", "서울경제", "아경", "아시아경제",
+                        "파이낸셜뉴스", "헤럴드경제", "비즈니스워치", "더벨", "한국금융신문",
+                        "서울파이낸스", "이투데이", "뉴스핌", "머니투데이", "이데일리",
+                        "연합뉴스", "연합", "인포맥스", "뉴스1", "뉴시스",
+                        "전자신문", "디지털타임스", "지디넷코리아", "블로터", "바이라인네트워크",
+                        "SBS비즈", "매경TV", "MBN", "YTN"
+                    ]
+                    if any(kp.lower() in meta['p'].lower() for kp in kr_publishers):
+                        continue 
+                    links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
+            return "\n".join(links) if links else ""
+
+        final_ko = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref_ko, content_ko)
+        final_en = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref_en, content_en)
+
+        return section_name, {"ko": final_ko, "en": final_en}
+
+    except Exception as e:
+        logger.error(f"Error processing combined section '{section_name}': {e}")
+        return section_name, {"ko": "생성 중 오류 발생", "en": "Error generating content"}
+
 def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str], lang: str = 'ko') -> tuple:
     """Worker function for Executive Summary - Returns (section_name, (posting_title, summary_text))"""
     try:
@@ -561,6 +701,77 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
         default_title = "Daily Market Brief" if lang == 'en' else "주요 시장 이슈"
         error_msg = "Error during generation" if lang == 'en' else "생성 중 오류 발생"
         return "Executive Summary", (default_title, error_msg)
+
+def process_combined_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict, model: Any, system_prompt: str, trusted_publishers: List[str]) -> tuple:
+    """Worker function for Combined Executive Summary - Returns (section_name, {'ko': (title, sum), 'en': (title, sum)})"""
+    try:
+        # Default fallback
+        fallback_ko = ("주요 시장 이슈", "N/A (No topics)")
+        fallback_en = ("Daily Market Brief", "N/A (No topics)")
+        
+        if not exec_summary_ids:
+            return "Executive Summary", {"ko": fallback_ko, "en": fallback_en}
+            
+        local_db = DatabaseAdapter(db_type=DB_TYPE, database=DB_NAME)
+        local_db.connect()
+
+        try:
+            exec_context_data = []
+            for tid in exec_summary_ids:
+                if tid in topic_map:
+                    t_obj = topic_map[tid]
+                    news_ids = json.loads(t_obj['news_ids_json'])
+                    articles = fetch_article_details(local_db, news_ids)
+                    articles = sanitize_article_data(articles)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
+
+                    exec_context_data.append({
+                        "t": t_obj['title'],
+                        "c": t_obj['display_category'],
+                        "n": t_obj['count'],
+                        "a": [
+                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            for ca in curated_articles
+                        ]
+                    })
+        finally:
+            local_db.close()
+        
+        exec_prompt = get_combined_key_takeaways_prompt()
+        exec_json = json.dumps(exec_context_data, ensure_ascii=False, separators=(',', ':'))
+        
+        total_articles = sum(len(topic.get("a", [])) for topic in exec_context_data)
+        logger.info(f"[Executive Summary] Sending {total_articles} articles to LLM (United KO/EN Request)")
+
+        # Call LLM with JSON Mode
+        raw_content = generate_content(model, system_prompt, exec_prompt, exec_json, response_mime_type="application/json")
+
+        response_data = clean_and_load_json(raw_content)
+        
+        if response_data:
+            # Extract KO
+            ko_data = response_data.get('ko', {})
+            title_ko = ko_data.get('posting_title', "주요 시장 이슈")
+            sum_data_ko = ko_data.get('executive_summary', [])
+            summary_ko = "\n".join([f"{i+1}. {item}" for i, item in enumerate(sum_data_ko)]) if isinstance(sum_data_ko, list) else str(sum_data_ko)
+            
+            # Extract EN
+            en_data = response_data.get('en', {})
+            title_en = en_data.get('posting_title', "Daily Market Brief")
+            sum_data_en = en_data.get('executive_summary', [])
+            summary_en = "\n".join([f"{i+1}. {item}" for i, item in enumerate(sum_data_en)]) if isinstance(sum_data_en, list) else str(sum_data_en)
+            
+            logger.info(f"[Executive Summary] Generated Titles -> KR: {title_ko} | EN: {title_en}")
+            
+            return "Executive Summary", {"ko": (title_ko, summary_ko), "en": (title_en, summary_en)}
+            
+        else:
+            logger.error(f"Failed to parse Combined Executive Summary JSON")
+            return "Executive Summary", {"ko": ("오류 발생", raw_content), "en": ("Error", raw_content)}
+            
+    except Exception as e:
+        logger.error(f"Error processing Combined Executive Summary: {e}")
+        return "Executive Summary", {"ko": ("오류", "생성 중 오류"), "en": ("Error", "Error generating")}
 
 def parse_selection_json(json_text: str) -> Dict[str, Any]:
     """Robustly parse JSON output from LLM"""
@@ -704,8 +915,9 @@ def format_report(sections: Dict[str, Any], date_str: str, posting_title: str = 
     # Create header with posting title
     header_title = f"# 📊 Daily Market Intelligence: \"{posting_title}\"" if posting_title else "# 📊 Daily Market Intelligence"
     
+
     if lang == 'en':
-        # English Template: Global Output Only
+        # English Template: Global Output Only (No Real Estate)
         md = f"""{header_title}
 **Date:** {date_str}
 
@@ -731,12 +943,7 @@ def format_report(sections: Dict[str, Any], date_str: str, posting_title: str = 
 
 ---
 
-## 3. 🏢 Real Estate
-### 🌐 Global Real Estate
-{get_sec_text('Real Estate > Global')}
-
----
-*Generated by Auto-DMI System at {format_kst_datetime()}*
+*By Lan Analyst at {format_kst_datetime()}*
 """
     else:
         # Korean Template: Full (Global + Korea)
@@ -785,8 +992,10 @@ def format_report(sections: Dict[str, Any], date_str: str, posting_title: str = 
 {get_sec_text('Real Estate > Korea')}
 
 ---
-*Generated by Auto-DMI System at {format_kst_datetime()}*
+
+*By Lan Analyst at {format_kst_datetime()}*
 """
+
     return md
 
 
@@ -886,86 +1095,121 @@ def main():
     logger.info(f"✅ Selected {len(exec_summary_ids)} topics for Executive Summary.")
     logger.info(f"✅ Selected picks for {len(section_picks)} sections.")
     
-    # --- LANGUAGE LOOP START ---
-    target_languages = ['ko', 'en']
+    # --- UNIFIED GENERATION START ---
+    logger.info("\n" + "="*40 + "\n🌍 Starting Unified Generation (KO + EN)\n" + "="*40)
     
-    for lang in target_languages:
-        logging.info(f"\n{'='*40}\n🌍 Starting Generation for Language: {lang.upper()}\n{'='*40}")
+    start_time = time.time()
+    
+    # Initialize Result Containers
+    generated_sections_ko = {}
+    generated_sections_en = {}
+    
+    # Define Section Categories
+    # combined_sections: Global Market, Tech, Region, Real Estate (Global)
+    combined_sections = [
+        'Global > Macro', 'Global > Market', 'Global > Tech', 'Global > Region',
+        'Real Estate > Global'
+    ]
+    
+    # korea_sections: Korea Market, Macro, Industry, Real Estate (Korea)
+    korea_sections = [
+        'Korea > Market', 'Korea > Macro', 'Korea > Industry', 
+        'Real Estate > Korea'
+    ]
+    
+    # Initialize Titles (will be updated by Exec Summary)
+    posting_title_ko = "주요 시장 이슈"
+    posting_title_en = "Daily Market Brief"
+
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = []
         
-        # Filter Sections based on Language
-        current_section_picks = section_picks.copy()
+        # 1. Submit Executive Summary (Combined)
+        futures.append(executor.submit(
+            process_combined_executive_summary_task, 
+            exec_summary_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER
+        ))
         
-        if lang == 'en':
-            # English: Exclude Korea & Real Estate (All)
-            filtered_picks = {}
-            for sec, ids in current_section_picks.items():
-                if sec.startswith("Korea") or "Real Estate" in sec:
-                    continue
-                filtered_picks[sec] = ids
-            current_section_picks = filtered_picks
-            logging.info(f"🇺🇸 English Mode: Filtered to {len(current_section_picks)} sections (Global only, no Real Estate)")
-        
-        # Get Prompts for current language
-        system_prompt = get_system_prompt(lang)
-        
-        # 6. [Step 3 & 4: RETRIEVE & WRITE] Generate Content (Parallel)
-        generated_sections = {}
-        
-        logger.info(f"⚡ [{lang}] Starting Parallel Generation...")
-        start_time = time.time()
-        
-        with ThreadPoolExecutor(max_workers=10) as executor:
-            futures = []
+        # 2. Submit Section Tasks
+        for short_section_name, topic_ids in section_picks.items():
+            full_section_name = CATEGORY_MAP.get(short_section_name, short_section_name)
             
-            # 6-1. Submit Executive Summary Task
-            futures.append(executor.submit(
-                process_executive_summary_task, 
-                exec_summary_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS_ORDER, lang
-            ))
-            
-            # 6-2. Submit Section Tasks
-            for short_section_name, topic_ids in current_section_picks.items():
-                # Map Short Name back to Long Name (e.g., G_mac -> Global > Macro)
-                full_section_name = CATEGORY_MAP.get(short_section_name, short_section_name)
+            # SAFEGUARD: Enforce max 3 topics per section
+            if len(topic_ids) > 3:
+                topic_ids = topic_ids[:3]
                 
-                # ✅ SAFEGUARD: Enforce max 3 topics per section
-                if len(topic_ids) > 3:
-                     topic_ids = topic_ids[:3]
-                
+            if full_section_name in combined_sections:
+                # Unified Task (KO + EN)
+                futures.append(executor.submit(
+                    process_combined_section_task,
+                    full_section_name, topic_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER
+                ))
+            elif full_section_name in korea_sections:
+                # Korea Only Task (KO)
                 futures.append(executor.submit(
                     process_section_task,
-                    full_section_name, topic_ids, topic_map, model, system_prompt, TRUSTED_PUBLISHERS_ORDER, lang
+                    full_section_name, topic_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER, 'ko'
+                ))
+            else:
+                # Fallback: Default to KO only for unknown sections
+                logger.warning(f"⚠️ Unknown section '{full_section_name}' - defaulting to KO only.")
+                futures.append(executor.submit(
+                    process_section_task,
+                    full_section_name, topic_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER, 'ko'
                 ))
                 
-            # 6-3. Collect Results
-            posting_title = "Daily Market Brief" if lang == 'en' else "주요 시장 이슈"
-            
-            for future in as_completed(futures):
-                sec_name, content = future.result()
+        # 3. Collect Results
+        for future in as_completed(futures):
+            try:
+                result = future.result()
+                sec_name = result[0]
+                content = result[1]
                 
-                # Executive Summary returns (posting_title, summary_text)
                 if sec_name == "Executive Summary":
-                    posting_title, summary_text = content
-                    generated_sections["Executive Summary"] = summary_text
-                else:
-                    generated_sections[sec_name] = content
+                    # Content is dict: {'ko': (title, sum), 'en': (title, sum)}
+                    ko_res = content.get('ko', ("주요 시장 이슈", ""))
+                    en_res = content.get('en', ("Daily Market Brief", ""))
                     
-        elapsed = time.time() - start_time
-        logger.info(f"✅ [{lang}] Content generation complete in {elapsed:.2f} seconds.")
+                    posting_title_ko = ko_res[0]
+                    generated_sections_ko["Executive Summary"] = ko_res[1]
+                    
+                    posting_title_en = en_res[0]
+                    generated_sections_en["Executive Summary"] = en_res[1]
+                    
+                else:
+                    # Check if combined or single result
+                    if isinstance(content, dict) and 'ko' in content and 'en' in content:
+                        # Combined Result
+                        generated_sections_ko[sec_name] = content['ko']
+                        generated_sections_en[sec_name] = content['en']
+                    else:
+                        # Single Result (Korea Only)
+                        generated_sections_ko[sec_name] = content
+                        
+            except Exception as e:
+                logger.error(f"❌ Task failed: {e}")
 
-        # 7. [Step 5: EXPORT] Save Report
+    elapsed = time.time() - start_time
+    logger.info(f"✅ Unified generation complete in {elapsed:.2f} seconds.")
+
+    # Save BOTH reports
+    created_files = []
+    
+    # 8. Upload to Google Drive
+    google_drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
+    
+    # --- SAVE REPORTS (Internal Function) ---
+    def save_report(lang, sections, title):
         today_str = format_kst_date("%Y-%m-%d")
         today_file_str = format_kst_date("%Y_%m_%d")
-        
-        # Suffix for filename
         suffix = "_EN" if lang == 'en' else ""
         
-        # STRUCTURING: Parse content into {summary, links}
+        # Parse content
         structured_sections = {}
-        for key, val in generated_sections.items():
+        for key, val in sections.items():
             structured_sections[key] = parse_section_content(val)
             
-        # 1. Save JSON (Data Intermediary)
+        # 1. JSON
         json_output_file = OUTPUT_DIR / f"Daily_Brief_{today_file_str}{suffix}.json"
         
         report_data = {
@@ -973,7 +1217,7 @@ def main():
                 "date": today_str,
                 "generated_at": format_kst_datetime(),
                 "model": GEMINI_MODEL,
-                "posting_title": posting_title,
+                "posting_title": title,
                 "language": lang
             },
             "sections": structured_sections
@@ -982,44 +1226,46 @@ def main():
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         with open(json_output_file, 'w', encoding='utf-8') as f:
             json.dump(report_data, f, ensure_ascii=False, indent=2)
-            
         logger.info(f"💾 [{lang}] JSON Report saved: {json_output_file}")
+        created_files.append(json_output_file)
         
-        # 2. Save Markdown (Final Report)
+        # 2. Markdown
         if "markdown" in args.formats:
             md_output_file = OUTPUT_DIR / f"Daily_Brief_{today_file_str}{suffix}.md"
-            md_content = format_report(generated_sections, today_str, posting_title, lang=lang)
-            
+            md_content = format_report(sections, today_str, title, lang=lang)
             with open(md_output_file, 'w', encoding='utf-8') as f:
                 f.write(md_content)
-                
             logger.info(f"💾 [{lang}] Markdown Report saved: {md_output_file}")
-            
-    # 8. Upload to Google Drive (Optional)
-    google_drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
+            created_files.append(md_output_file)
+
+    # Save BOTH reports
+    save_report('ko', generated_sections_ko, posting_title_ko)
+    save_report('en', generated_sections_en, posting_title_en)
     
-    if google_drive_folder_id:
-        logger.info(f"📤 Uploading reports to Google Drive (Folder ID: {google_drive_folder_id})...")
+    if google_drive_folder_id and created_files:
+        logger.info(f"📤 Uploading {len(created_files)} files to Google Drive (Folder ID: {google_drive_folder_id})...")
         try:
             from src.exporters.gdrive import GDriveAdapter
             drive_adapter = GDriveAdapter()
             
-            # Re-upload last generated files (or loop again if needed, but simple upload logic here)
-            # For now, let's just log that it's done per language above if needed, but simpler to just skip complex drive logic in this loop for now unless requested.
-            # Actually, the original code had drive upload at the end. I should probably keep it simple or allow it to upload all files found.
-            pass 
-                
+            for file_path in created_files:
+                try:
+                    drive_adapter.upload_file(file_path, google_drive_folder_id)
+                    logger.info(f"   - Uploaded: {file_path.name}")
+                except Exception as e:
+                    logger.error(f"   - Failed to upload {file_path.name}: {e}")
+                    
         except Exception as e:
-            logger.error(f"❌ Google Drive Upload Failed: {e}")
+            logger.error(f"❌ Google Drive Adapter Init Failed: {e}")
 
     logger.info("="*80)
-    logger.info("✅ Phase 6 Complete (All Languages)")
+    logger.info("✅ Phase 6 Complete (Unified KO+EN Generation)")
     
     # Close DBs (only once)
     topics_db.close()
     news_db.close()
     
-    logger.info("ℹ️ Telegram export moved to Phase 6-1 (run_p6_1.py)")
+    logger.info("ℹ️ Telegram export via run_p6_1.py | WordPress export via run_p6_3.py")
 
 if __name__ == "__main__":
     main()
