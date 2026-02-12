@@ -1,0 +1,712 @@
+{
+  "meta": {
+    "date": "2026-02-13",
+    "generated_at": "2026-02-13 07:10:25",
+    "model": "models/gemini-2.5-flash",
+    "posting_title": "삼성 HBM4 세계 첫 출하, AI 반격 본격화…美 인플레 주시",
+    "language": "ko"
+  },
+  "sections": {
+    "Global > Region": [
+      {
+        "title": "중국, 북극 항로 개척 가속화",
+        "text": "중국이 '북극 실크로드' 구상을 실현하기 위해 핵추진 쇄빙선을 도입하여 2.5m 두께의 빙벽을 돌파하는 등 북극 항로 개척에 속도를 내고 있습니다.\n이는 기존 수에즈 운하를 통하는 해상 무역로의 지정학적 리스크를 줄이고, 운송 시간과 비용을 절감하여 글로벌 공급망 효율성을 극대화하려는 전략적 움직임입니다.\n향후 북극 항로의 상업적 활용도가 높아질 경우, 아시아와 유럽 간 교역 지형에 큰 변화를 가져오며 해운 및 물류 산업에 새로운 경쟁 구도를 형성할 것으로 전망됩니다.",
+        "links": [
+          {
+            "title": "· 중국, '북극 실크로드' 핵추진 쇄빙선으로 뚫는다… 2.5m 빙벽 돌파",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/02/202602121641067329fbbec65dfb_1",
+            "source": "GEnews"
+          }
+        ]
+      }
+    ],
+    "Executive Summary": [
+      {
+        "title": "",
+        "text": "1. 삼성 HBM4 세계 최초 출하.\n2. AI 메모리 시장 경쟁 심화.\n3. 美 연준, 긴축 금리 유지 강조.\n4. CPI 발표 앞두고 시장 관망세.\n5. 엔비디아, AI 플랫폼 효율 10배↑.",
+        "links": []
+      }
+    ],
+    "Real Estate > Global": [
+      {
+        "title": "미국 주택 시장 판매 감소 및 가격 하락",
+        "text": "1월 미국 기존 주택 판매량이 모기지 금리 완화에도 불구하고 급감했으며, 주택 구매 여력 악화로 인한 전례 없는 가격 인하가 확산되고 있습니다.\n높은 주택 가격과 이전의 고금리가 주택 구매자들의 수요를 위축시켰고, 이는 재고 누적 및 가격 조정 압력으로 이어졌습니다.\n금리 하락과 가격 인하로 인해 주택 구매 여건이 점진적으로 개선될 수 있으나, 단기적으로는 판매량이 낮은 수준에서 안정화될 가능성이 크며, 지속적인 반등에는 시간이 걸릴 것으로 보입니다.",
+        "links": [
+          {
+            "title": "US homes sales fell sharply in January, even as mortgage rates continued to ease",
+            "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPclY4R1FOdlFTS3NBNzhibVR1enJick9OYXVHd1JJci1hWWpQeDJtUG4xcHBXUE0zRHViRGNreUIxcWJ5TzVVem9Ub1VNRWNUYXBIY0JiX0ZCUUpwZVI3UDdqdTRGZmQ5LWdjYmxkUzZGbWxUSGRCcWdicEpTblpWT09vQVdiRmtrczVMdVlJZkVxX2c0ZlpMN2R1a28wb3RITjJhTGJLdFRpaVFjTG9LTXlEQm1rNTR3WDRMOF9sZGEyamNLZERZUzVuZVlCb0RwbkMwN2ZXNlJWdm1hdTh4emxHdkJHM3A0d19maEZVRQ",
+            "source": "The Killeen Daily Herald"
+          },
+          {
+            "title": "Existing home sales slide even as affordability improves",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVTM4YWtMNzFZMGVTUXdfQXBnamVqdnNvSFo4SVBlcWJqX09ienE1M01YbktjaTY4cnpNMUgxcThndE8xeHIzUVVYaWswQVhPb1BfM01QWnBWMjVUVWFwRDFFNDJWS3lkTWVhWjc1aWxud0JMM3JFd3FfNjl3c2RPSmZkYmkyV0V4SjhKYW5leFRCeUlaWXowUUlwRlc5LUU",
+            "source": "RealEstateNews.com"
+          },
+          {
+            "title": "Home Sales Nosedive in January Despite Easing Mortgage Rates",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE12MC10V2VrTW40dlRYNXgyZG41aWt4bmdidXVhX205eC1qMm9HeDRRT0o2ZXN2bFZ4eHhqMFgtd0NPTjZIa0FxcmROb0JEZ09sU1djSWdnMGVRanZBVzNfRVBCaG9kTElzOUNwNXpJVVA3Q19wbU5MUElkNWVFUQ",
+            "source": "Realtor.com"
+          },
+          {
+            "title": "The affordability crisis is driving unprecedented price cuts in the housing market, Realtor.com says",
+            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPLURXTVpiZFVrVnBqYlRHdFJHUFVyQUIyWHFaV1JqZ1F3TS1LRlJacV9FUHBGWUpESXJtT3JfdjFHMjdlZHRwRFVReElVangxb0tlUUQ0ZW5XNjQzdzEzRll5WHNpTTk1LUFSVFM1MVdwOFBIS2pZdUJkRnl3cjJ2OE9Bek4xeWNkeUZFVXFzbE9ENEZXRjE1UERQVkFrQ205",
+            "source": "Fortune"
+          },
+          {
+            "title": "Mortgage rates slip back toward three‑year lows",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOEI1c3c4aFBRRUhVV2lDZ25GZzloeUI0TktCUWtDMlhKRE9Zc082d0NSWDByS2tOT2pZSEV2emhPVWVGUDk4OHVFdGxBdmF3ZlJOS2llN3BMTVFmb0hjU19yaE9LWUV1Z1J1YXNXQVJqcWRhaFhFVU1vck5nSEoxVTg3bnR5MXhQQXhGSnhhelNDcndFNTRuSjFuYnhtb0g1UTZMQURrN2tuRktTdE5ZS2x3",
+            "source": "mpamag.com"
+          },
+          {
+            "title": "Weekly Mortgage Rates Remain Steady Near 6%",
+            "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZXA3SUQ2S2lxMW84bGpVVFNsM3dSX25SNjJKM3hRek5EYXRocVBXZjU5eUQzRlZfUjNMMFBGcmxpQWlsUGVwMkdQYXAyNHdZMEUzV19JRkx5Tkk0QTZjMkNZOUZQTTJCcEc4M1pYczRVRi12bFktSnVEbUczUkZLenFHdFFMV2tNeVItc2RqNmRBeXQwX1YzWHdTS0NKdEM4ZVFyWnM4aW91TXI1M0g0S21VQmR6NlVXUmowR1pEa1VPNnZSYkxzYlVib1NVaDZXMEF3",
+            "source": "The Mountaineer"
+          }
+        ]
+      },
+      {
+        "title": "상업용 부동산, AI 공포로 매각 가속화",
+        "text": "최근 AI 기술 발전 우려가 상업용 부동산 부문의 주식 매도세를 가속화시키며 해당 섹터에 대한 투자 심리가 위축되고 있습니다.\nAI 도입으로 인한 오피스 공간 수요 감소 가능성 및 고금리 환경의 장기화 우려가 상업용 부동산 가치에 대한 재평가 압력으로 작용하고 있습니다.\nAI가 미래 사무 공간 수요를 재편할 수 있다는 전망에 따라 상업용 부동산, 특히 오피스 부문은 추가적인 가치 조정과 자산 소유주들에게 상당한 압력에 직면할 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "Commercial real estate share slide accelerates in latest sell-off driven by AI fears",
+            "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9wQkhfTVBlS0xJSHlLMEgzUWRxVk56RVJHcE54S0tCQVZNMkpSY28ya3IxbnRsemdiVVlONmFPMmlvQnJsN0ZpMWN3OGdmYkVYQnFaLTFzV0NwZ2pvRDZDQ3lZd25Db1dhSXlCcGpaSXI",
+            "source": "FT"
+          }
+        ]
+      }
+    ],
+    "Korea > Macro": [
+      {
+        "title": "국내 수입 물가 7개월 연속 상승, 환율 안정에도 원자재 부담 지속",
+        "text": "1월 국내 수입물가지수가 전월 대비 0.4% 상승하며 7개월 연속 오름세를 기록, 2018년 이후 최장기간 상승세를 이어갔습니다. 원/달러 환율이 다소 하락했음에도 불구하고 광산품 및 1차금속제품을 중심으로 한 원재료와 중간재 가격 상승이 주된 요인으로 작용했습니다. 환율 안정화에도 불구하고 글로벌 원자재 가격 변동성이 지속될 경우 국내 물가 상승 압력으로 작용하여 가계 경제에 부담을 줄 수 있습니다.",
+        "links": [
+          {
+            "title": "환율 다소 진정됐지만 귀금속이 올라…수입 물가 7개월 연속 상승",
+            "url": "https://www.chosun.com/economy/economy_general/2026/02/13/NT2PHO6WKFGDDH5NDOWMMWDJKM/",
+            "source": "조선일보"
+          },
+          {
+            "title": "수입물가 6개월 연속 상승… 2018년 이후 최장기간 오름세",
+            "url": "https://www.chosun.com/economy/economy_general/2026/02/13/MIYGGMRYGY3TSOBWGNTDEZJRG4/",
+            "source": "조선일보"
+          },
+          {
+            "title": "1월 수입물가, 환율 하락에도 0.4% 상승⋯7개월 연속 오름세",
+            "url": "https://www.etoday.co.kr/news/view/2556503",
+            "source": "이투데이"
+          },
+          {
+            "title": "환율·유가 하락에도...수입물가 7개월 연속 상승",
+            "url": "https://www.sedaily.com/article/20008772",
+            "source": "서울경제"
+          }
+        ]
+      },
+      {
+        "title": "한국은행 '구두개입'으로 국내 채권 금리 하락 전환",
+        "text": "한국은행 관계자의 발언 이후 국내 채권시장에서 국고채 금리가 일제히 하락하며, 특히 국고채 3년물 금리는 7거래일 만에 다시 3.1%대로 내려섰습니다. 한국은행 금융시장국장이 최근 국고채 금리 상승세가 \"과도하다\"고 평가하며 시장 변화를 면밀히 점검하겠다고 밝힌 '구두개입'성 발언이 금리 하락의 결정적 원인으로 작용했습니다. 이는 한국은행이 금리 급등에 따른 시장 불안정을 우려하며 적극적으로 시장에 개입할 의지가 있음을 보여주는 신호로, 향후 통화 정책 방향 및 시장금리 안정화에 대한 기대를 높였습니다.",
+        "links": [
+          {
+            "title": "IRS 금리, 한은 금리 발언에 하락…현물 대비 큰 변동성",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398810",
+            "source": "Infomax"
+          },
+          {
+            "title": "(채권-마감) 한은發 '구두개입'…국고3년 다시 3.1%대로 하락",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398817",
+            "source": "Infomax"
+          },
+          {
+            "title": "한은 금융시장국장 “현 국고채 금리 과도하게 높아…시장 변화 면밀히 점검”",
+            "url": "https://www.mk.co.kr/news/economy/11960975",
+            "source": "매일경제"
+          }
+        ]
+      },
+      {
+        "title": "상호금융권 가계대출 규제 강화, 당국 압박에 따른 조치",
+        "text": "새마을금고 등 상호금융권이 대출모집인을 통한 대출 및 집단대출을 중단하는 등 가계대출 규제를 강화하는 조치에 착수했습니다. 이는 금융당국이 시중은행의 대출 감소세에도 불구하고 상호금융권에서 가계대출이 예상 외로 늘어나 전체 가계부채 증가세를 부추기는 것에 대한 경고에 따른 것입니다. 금융당국의 이러한 압박과 상호금융권의 규제 강화는 전체 가계부채 증가세를 억제하고 금융 시스템의 안정성을 확보하는 데 기여할 것으로 보이나, 일부 차주들의 자금 조달에 어려움을 가중시킬 수 있습니다.",
+        "links": [
+          {
+            "title": "시중銀 이어…상호금융도 가계대출 조인다",
+            "url": "https://www.mk.co.kr/news/economy/11961509",
+            "source": "매일경제"
+          },
+          {
+            "title": "“왜 가계대출 늘리나”…당국 경고에 상호금융 다시 ‘대출조이기’",
+            "url": "https://www.mk.co.kr/news/economy/11962125",
+            "source": "매일경제"
+          }
+        ]
+      }
+    ],
+    "Global > Market": [
+      {
+        "title": "미국 증시, AI 공포 확산으로 기술주 매도세 심화",
+        "text": "뉴욕 증시의 주요 지수들이 기술주 매도 재개로 급락했으며, 특히 나스닥은 2% 하락하고 S&P500도 1%대 하락을 기록했습니다. 시스코는 12% 급락했고 아마존 주가는 7일 연속 하락세를 보였습니다. 인공지능(AI)이 산업 전반을 교란할 수 있다는 공포가 확산되며 투자자들이 기술주 전반에 대한 재평가에 나선 것이 매도세의 주된 원인입니다. 이러한 기술주 중심의 매도세는 AI 기술의 미래 불확실성과 파괴적 영향에 대한 시장의 경계심을 반영하며, 당분간 관련 섹터의 변동성이 지속될 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "Wall Street sinks as tech rout deepens on AI angst",
+            "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTnRJRmlReTVqYXNoM1o4ZUVpSHduN2tENXp2R0lWUnhxaFFpM3JKR3VVX0RNWnRVYVM0TXN2Vl9tVGFDdDlacmFSSXYyZXNSLXJKV3RLT1ppb0g3U0N5VGNDV3d6R3BCVjJjNkNiQkpMUy1lVmc0amJUVEtONXZ2Ny1CNDd6cnRseGIzMVBmMm5CeVhzd0tqaHpqbU1UWDNuX2h1eQ",
+            "source": "Reuters"
+          },
+          {
+            "title": "'선두주자서 추격자로' 전락한 아마존, 7일 연속 주가 급락…장기 성장 전망은 여전히 탄탄",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/02/202602130416395700be84d87674_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "\"AI가 공포로 변했다\"… 월가 덮친 매도 폭탄에 나스닥 2% 급락",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/02/202602130643441970fbbec65dfb_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "기술주 매도 재점화에 S&P500 1%대↓…시스코 12% 급락",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0006218733&office_id=018",
+            "source": "이데일리"
+          },
+          {
+            "title": "US stocks fall sharply as tech sell-off resumes",
+            "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBwVEZjYkNUYnBMb0t0V3IteDFFVllhZFJNRnhJb1JfNjB4WC1HYlZXaGQtd2w5ZDdXNF9JaWJjZG1WRFZPQ2RGYzJhSnRMWVIybTRWaDZVazBuNzJFZTN0eWk5OUVYaFQzVkphMmhlcDI",
+            "source": "FT"
+          },
+          {
+            "title": "U.S. stocks lower at close of trade; Dow Jones Industrial Average down 1.34%",
+            "url": "https://www.investing.com/news/stock-market-news/us-stocks-lower-at-close-of-trade-dow-jones-industrial-average-down-134-4504053",
+            "source": "Investing"
+          },
+          {
+            "title": "뉴욕증시, AI가 다 먹어 치운다는 공포…급락 마감",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0015904811&office_id=001",
+            "source": "연합뉴스"
+          },
+          {
+            "title": "AI발 파괴 전방위 확산에 뉴욕증시 급락 (월가월부)",
+            "url": "https://www.mk.co.kr/news/economy/11962142",
+            "source": "매일경제"
+          }
+        ]
+      },
+      {
+        "title": "AI 인프라 및 기술 기업, 성장 모멘텀 지속",
+        "text": "지멘스는 AI 기반 데이터센터 수요 증가에 힘입어 2026년 이익 전망을 상향 조정했고, Trane 주가는 AI 데이터센터 구축 붐 속에서 사상 최고치를 기록했습니다. 프랑스 AI 스타트업 미스트랄은 연간 반복 매출(ARR)이 1년 만에 20배 증가한 4억 달러를 기록했으며, 스웨덴에 12억 유로를 투자하여 AI 데이터센터를 구축할 계획입니다. AI 모델 개발 및 운영에 필수적인 데이터센터와 관련 인프라에 대한 강력한 수요가 기업 실적 개선으로 이어지고 있으며, 혁신적인 AI 기술을 개발하는 스타트업들이 상당한 성장을 보이고 있기 때문입니다. 광범위한 AI 공포 속에서도 AI 인프라 및 핵심 기술 기업들은 견고한 성장세를 유지하며 시장의 주목을 받고 있으며, 이는 AI 산업 내에서도 옥석 가리기가 진행될 가능성을 시사합니다.",
+        "links": [
+          {
+            "title": "Siemens boosts 2026 profit outlook on AI-driven data centre demand, shares jump",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOFNzSXlodDRkbGcxMTZEcnA1cHZkQzhxU2ZkWkJxMUExeGVnQ3ZTQ0pwVDFRVHFqWjRVVkxuTUFCa2g2MGIxQko4UE1ldlFuYVRQM1lDNTJ1ZHEzdURPX0FiS2FUNE9WWm9WWnMtY1dXLU5VRHBfMTBZYkpOUk03akd4aU9HRnFMRzBEUHlkd2d4TnBqY05NRnowdGhqMzFWYldRVXlCM3RSMWFuT09Fdg",
+            "source": "Reuters"
+          },
+          {
+            "title": "Trane stock rises to all-time high amid AI data center buildouts",
+            "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPLVFlQU1QMk1wb3g4QUVYUHpTUlV0eHJERDZNZFhvVWdwbE5WU21SdE1nOXI4Z1JKMk5QSzlMX2hDcUpSMGNZMWZ4VDBYSXJNemJkWkRTUkFmTjI3MGp6UmxkVW5BelhCZVJ0Q3o4ZXl4dTloeXc2R1NPd0UtcndsZlNBV2U5eC1qTUlSTkpUUW9kay10R09mNGZ4eGFvZWhTYktUc1k0SlZ2aF9iV3BNOTk3dDg2X2g5TndSTEpBM1h0anVfM19xS2ZLdkhjSndvQ2Q0aFN6Mk00S1dW",
+            "source": "MSN"
+          },
+          {
+            "title": "SoftBank Swings to Profit on Valuation Boost From OpenAI Bet",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZG92dW0yX0NjMlR2UjVkd3B2U1BVZllnQUV2WFFsNzVJZGFXcjZuanJSZ1JKZE1ySkM1dDBpOWc2R0hEa2dSbVItRWh5U0tnQVN2S09yaFZaa0VqcFZYMkYwQWM4Zkh3MkZjLVpRaTkwMEwzc2hnTmMtbzhkODYwVk96R2R0dXAzQ05HdTh1Ui1mcFh2SjdPNWk1NW9RandJZEI1enpBX1VqdXVvSnQ1RXdncTMwUQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "‘유럽 소버린AI’ 佛미스트랄, 1년새 매출 20배 증가",
+            "url": "https://www.donga.com/news/Economy/article/all/20260212/133357398/2",
+            "source": "동아일보"
+          }
+        ]
+      }
+    ],
+    "Real Estate > Korea": [
+      {
+        "title": "서울 주요 재건축 구역 시공사 경쟁 심화",
+        "text": "서울 압구정, 성수, 여의도 등 주요 재건축·재개발 구역에서 대형 건설사들의 시공사 선정 경쟁이 뜨겁게 달아오르고 있습니다. 이는 서울 도심 내 양질의 주택 공급 기회 부족과 건설사들의 미래 먹거리 확보 경쟁 심화에 따른 현상입니다. 이러한 경쟁은 재건축 사업의 추진 속도를 높일 수 있으나, 동시에 수주 과열 경쟁으로 인한 사업비 증가 가능성도 내포하고 있습니다.",
+        "links": [
+          {
+            "title": "압구정에서 여의도까지…재건축·재개발 쟁탈전 뜨겁다",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398418",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "외국인 서울 주택 거래 절반 이상 감소",
+        "text": "정부가 수도권 일부 지역을 외국인 토지거래허가구역으로 지정한 후 서울의 외국인 주택 거래가 51% 감소했으며, 특히 서초구는 무려 88% 급감했습니다. 이는 외국인 투자자들의 투기적 수요를 억제하고 주택 시장 안정화를 도모하기 위한 정부 정책의 직접적인 결과로 분석됩니다. 외국인 주택 거래 감소세는 당분간 지속될 것으로 보이며, 이는 특정 지역의 고가 주택 시장에 일시적인 영향을 미칠 수 있습니다.",
+        "links": [
+          {
+            "title": "토허제 영향 서울 외국인 주택 거래 51% 줄어…서초구 88% 급감",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398683",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "경기도 주택 가격 담합 행위 적발",
+        "text": "경기도에서 \"10억 밑으로는 팔지 않는다\"는 등 특정 단지의 주택 가격을 올리기 위한 불법 담합 행위가 적발되었습니다. 이는 일부 부동산 소유자들이 시세 조작을 통해 인위적으로 가격을 올리려는 시도로, 공정한 시장 질서를 저해하는 행위입니다. 이러한 담합 행위 적발은 주택 시장의 투명성을 높이고 실수요자 보호를 강화하려는 당국의 의지를 보여주며, 시장 교란 행위에 대한 경각심을 고취할 것입니다.",
+        "links": [
+          {
+            "title": "“10억 밑으로 안 판다”…경기도, 집값 담합 불법 적발",
+            "url": "https://www.chosun.com/economy/economy_general/2026/02/12/E2HOIWQMIVAB5PRES3PGGG4HPM/",
+            "source": "조선일보"
+          }
+        ]
+      },
+      {
+        "title": "서울 아파트 전셋값 30개월 연속 상승, 전고점 임박",
+        "text": "서울 아파트의 평균 전세 가격이 6억 6천948만원을 기록하며 30개월 연속 상승했고, 올해 1분기 내 전고점 돌파가 예상됩니다. 이는 신규 아파트 공급 부족과 다주택자 매물 처분 기류로 인해 전월세 매물 자체가 줄어든 것이 주요 원인입니다. 전세 매물 부족 현상이 심화됨에 따라 전셋값의 추가 상승 압력이 커지고 있으며, 이는 실수요자들의 주거비 부담을 가중시킬 전망입니다.",
+        "links": [
+          {
+            "title": "서울 아파트 전세 평균 7억 눈앞…올해 1분기 내 전고점 깰 듯",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398393",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "서울 아파트 매매가 상승폭 2주 연속 둔화",
+        "text": "서울 아파트 주간 매매가격 상승폭이 2주 연속 둔화했지만, 경기 용인시 수지구는 0.75% 급등하며 수도권 내 높은 상승세를 보였습니다. 이는 전반적인 대출 규제와 금리 부담 등의 요인이 복합적으로 작용하여 매수 심리가 다소 위축된 결과로 풀이됩니다. 서울 아파트 시장은 상승세 둔화 국면에 진입하고 있으나, 특정 지역의 개발 호재나 공급 부족은 국지적인 가격 상승을 유발할 수 있습니다.",
+        "links": [
+          {
+            "title": "서울 아파트 매매가 상승폭 2주째 둔화…용인 수지 0.75% 급등",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398747",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "LH, 민간참여로 주택 2만 6천호 착공 계획",
+        "text": "한국토지주택공사(LH)는 올해 민간 참여 사업을 통해 총 2만 6천호의 주택을 착공할 계획이며, 이 중 신규 공모분 1만 8천호 중 1만 6천호를 상반기 내에 착공합니다. 이는 '9·7 대책' 이후 LH의 직접 시행 역할 강화와 민간의 기술력 및 브랜드를 활용하여 공공주택 공급 속도를 높이기 위한 전략입니다. 민간 협력을 통한 대규모 주택 공급은 정부의 주택 공급 목표 달성에 기여하고 주택 시장 안정화에 긍정적인 영향을 미칠 것으로 기대됩니다.",
+        "links": [
+          {
+            "title": "LH, 올해 민간참여로 2만6천호 착공…상반기 1만8천호 신규 공모",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398759",
+            "source": "Infomax"
+          },
+          {
+            "title": "직접시행 맡은 LH, 민참으로 올해 2만6천호 착공(종합)",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398785",
+            "source": "Infomax"
+          }
+        ]
+      }
+    ],
+    "Global > Macro": [
+      {
+        "title": "미국 인플레이션 및 연준 통화 정책",
+        "text": "연방준비제도(Fed) 일부 관계자는 인플레이션 완화를 위해 제약적인 금리 수준 유지가 필요하다고 강조하는 가운데, 강력한 고용 지표에도 불구하고 금리 인하 가능성을 열어두고 있습니다. 이는 다가오는 1월 소비자물가지수(CPI) 발표를 앞두고 있으며, 월스트리트 브로커리지들이 금리 인하 시점을 2026년 중반으로 늦추는 한편 씨티그룹은 시장의 인플레이션 기대치가 지나치게 낮다고 지적하고 있기 때문입니다. 이러한 상반된 시각은 통화정책 경로에 대한 불확실성을 가중시키며, 시장은 연준의 신중한 접근과 경제 지표에 따라 변동성을 보일 것으로 예상됩니다.",
+        "links": [
+          {
+            "title": "Fed’s Schmid Says Restrictive Rates Needed to Cool Inflation",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaWdXb0lVLU1VWUNlVDNWLXNBYV9Wel9pYnFSNjhxRzk1VjUzWXdaSzlCOFZvU0E3Z21oSjhBSVJoQmZFS3plT2RwTHlseUNla1hXUGtVcVpoUUtlMzN2TEw0QUduRlNfc000WUV5SjRGalNwUWpyVnNtNV9xcGRESlZVLXBYdFhpOXZUZ3FmSk1yaF84QnZGT3pqVy1TY3V2WDZqTXUzVXBEX0MxQkdNYw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "The January CPI inflation report is due out Friday morning. Here's what it's expected to show",
+            "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQdGdjVDluVHJZWmdtektHT2FicldYR1ota2w0N3NhcDJwTWpaX2ZSOHlCODBZbTF6VFZnOVVNY1JORjJIWlVRaGZOT1NXOGMwSkdTU19IaGJxWkUxWm5wam1rUmxnOUV3cEpyV3BRNGdFSTdDM2Y5Z19LOWxsNHd2bFpuMXdTLWRnWV9jLW1LaFk0Y0pTeWg5Zk80T2pUVkdqQ1NuWWlOTVNWd1o0ckRkUEE1MklkVDVnenZ5V2FCZk4tejJlN0HSAcsBQVVfeXFMTm9zU3ZLOE5PWDZUbDVpMDdFTC03RC1IckYtYTNRaUc3R1RDV3JucDdDLTk1Q0VqMEF1Z25pXzc3YkRWNkY3UG9GZVVsalEyQmFOb1E1TWgteDI5X09xbXdacWJ3Z2FsaHNOclhqVXlRWEItOUVQN3QxeGhreE8wcU1mUmxVUDVHSjc0U0c0dXgtZy1fZUNIYXp6Zk1NSDcwOUdCYmJKdEc2UV9JcG9LdU5qRl96V0FrYTU4RGVCQWQ1TVh5anNzbWlGcFk",
+            "source": "CNBC"
+          },
+          {
+            "title": "Fed’s Miran Says Rate Cuts Still Possible Following Strong Jobs Report",
+            "url": "https://news.google.com/rss/articles/CBMixgNBVV95cUxNVzIzOUJXSWo3RlU5ZDF1S215TVlhUjJiNTlRb25EM3dFZGpiejVaRFowTWhZOVJVMmRIZ0VwaDEyTlVUS3YzM0s4cEZjWlBkRUZqbHUyN01HTEhfMWdXSG0wdVdlN0RETkEyWHZjV0JGblQtQXBGd0gwWVhreUUycjJFWVo1UGJIQnNaT3daSmdSMkI1Sk9lNXhacVg1Uzg0TEdmTzBCTXFnOTk2amFYamNnNy1yV2x0VW9ob29hV0JRLU5MWHRaVFBNMVZkcUxYeTV4T3ZMckNVejdhMnhJMnJhUURxaDJ6YjBGUjFETUd6dWIzSHA3dUc2eDRBX3NKYzhuNHNhYmdLV3JGOVF4bmNBWHlnY1A3QzM3dS1QYXIzd0ZwMlJrdllKY3ZBd3RhWjgyUGZKQ1lJcHc4MVpGWkdIcFhVUkdMMmNyYlFkWGh2TDFhSE9nZ3RLaWhoeS1HbjlCaGpodHdrR0p6Q2w0U2ZFZy15VWY3NnZRLTBXSFJiREhUeFNVaEZpYzdyNDFfOUs4Y3QzQTIyYkdkZlI3LUNud1hDMFBTQWUzV1h4amxmRmxaa0VlUktDVlMzTDlLUC15bTVB",
+            "source": "WSJ"
+          },
+          {
+            "title": "Factbox-Wall Street brokerages pencil Fed rate cuts in mid‑2026",
+            "url": "https://www.investing.com/news/economy-news/factboxwall-street-brokerages-pencil-fed-rate-cuts-in-mid2026-4502953",
+            "source": "Investing"
+          },
+          {
+            "title": "US inflation expectations too low, Citigroup says",
+            "url": "https://www.investing.com/news/economy-news/us-inflation-expectations-too-low-citigroup-says-93CH-4503884",
+            "source": "Investing"
+          }
+        ]
+      },
+      {
+        "title": "미국 노동 시장 동향 및 달러 강세",
+        "text": "미국 노동 시장은 예상을 뛰어넘는 13만 개의 일자리 증가와 실업률 하락을 기록하며 견조한 흐름을 이어갔으며, 이는 달러 강세에 기여했습니다. 이러한 강력한 고용 보고서는 전반적인 경제의 안정화 추세를 반영하지만, 주택 부문의 부진은 지속되고 있음을 시사합니다. 고용 시장의 강세는 연방준비제도(Fed)의 금리 인하 기대감을 약화시켜 채권 수익률에 상방 압력을 가하고 증시의 변동성을 키울 수 있습니다.",
+        "links": [
+          {
+            "title": "US Adds 130,000 Jobs and Unemployment Falls After Tepid 2025",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNLVZOOEkwc0lKSFdZY0NlWFo1em5PdDJfQV9UY3F0bUNValQtR2NvZUFvdmRvaGdPNl81M05jb2NsaDk0SE1TOElLak5zc2RRcXN3TjJzM2JOUnNMLVVueFc5aXpFWmJOOGlfeGlERll2TVpmTVFYdHZERDgxbkpqRmFvVnpJZ0liaWpRSTFpTnE5WEk4dUtIMGQ0eVl4c1ZKS05HbHdjcjU5NTdvTFdGM2t3",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "US labor market stabilizing; housing sector still subdued",
+            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQa3FMOWVXN0FnMTlteVBpX3BSSnhpLVlINk9TX29QczVrX3N1dEwwUkxtYnNnaUxIZHZzWjdpanc5RDAxNjdhbGsxN0RCRTNxNm1MeE1ndlEwaWNOYW9iR25HZVI0dnJYYmEyMUt2NmpjM2V4dllEVjJ6M2FzRThGa0tXUmhEUE5tLU5QblRGa1l4M2Q4OTdVTA",
+            "source": "Reuters"
+          },
+          {
+            "title": "CNBC Daily Open: Better-than-expected U.S. jobs report and AI fears spook markets",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYTg5UU4zZm1QS1c0OFVJckt6aTRDenVYc21PamZXWlpEMEN4Rmh2Z2pJcEE2cE41TFVZNzk4Y1ExcVhwSU5iMDg2UnJQVTQ5a2JvcTNjMVgxazRLdmcwRUo5Qk12OW8zb01ZNVhxUEJPSkxiTmQ4X1VZd2k1aW5lazlySVBsaVN4c01OcGR0eUlBY0RMMHVCWlBST1dzMWVUX1BGS2xVVW1ZRzRjUnFyY3J2SHppd9IBuwFBVV95cUxOWVdhSHZUMFN6RDVkc19PcVBoRkJrSUhBcklESzRObU5DM3lFRFlQNXMybkZnNFBPb3ZaMHU4VnBhNDQwaC1ZaXVZTE1NQlN3RUYxQVZNQWgzanZ1VkVkLW9vMUo3dUhxdjZvQndyTkVvNnlrY210SkNKOTlYbF9XdzdxbmZKWlR1czVRR1lfOE1fbTNJS2xqc0VxZUJqQXZ4eDNBMHEyV0VDQzBmbjBDWHNWRFllTk1ZTXo4",
+            "source": "CNBC"
+          },
+          {
+            "title": "Dollar firms slightly after blowout jobs report, heads for weekly loss",
+            "url": "https://www.investing.com/news/forex-news/dollar-slips-lower-and-heads-for-weekly-loss-payrolls-offers-little-support-4501916",
+            "source": "Investing"
+          }
+        ]
+      },
+      {
+        "title": "미중 경제 및 지정학적 긴장",
+        "text": "미국과 중국 간 경제 및 지정학적 긴장이 심화되고 있으며, 뉴욕 연방준비은행 연구에 따르면 미국 소비자들이 관세 비용의 90%를 부담하고 있는 것으로 나타났습니다. 이러한 긴장은 자원 전쟁으로까지 확산되어 미국이 중국의 경제적 영향력을 약화시키려는 전략의 일환이며, 중국 경제학자들은 달러 변동성 속에서 자본 통제 완화를 촉구하고 있습니다. 미중 갈등은 글로벌 공급망에 지속적인 불확실성을 야기하고, 특정 산업 분야에 대한 규제 및 무역 정책 변화를 촉발하여 국제 투자 환경에 복합적인 영향을 미칠 것으로 보입니다.",
+        "links": [
+          {
+            "title": "China Economists Urge Looser Capital Controls as Dollar Wobbles",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWkVtcDJDaG9SencxVERoVnZ1VkFoRmQxaVEwX3hHbUF1Uk9Sak5FVUtXUk1mQkltQUhqd2pBeEUxRUxFR1pBb2RHb3pucVNVd2doUEFRVl9KMHpnMll3UmxidThFTkdtSWpQSEREM3c4WGhoNmhhb255azZOZHVibmRwUWxrbmFBWEgzd1M5SUxiQW53RXFCdUcyOURqbTVVQW5HNlcwR0xRWjdWejN1b1NVSHU",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "US businesses and consumers pay 90% of tariff costs, NY Fed says",
+            "url": "https://www.ft.com/content/c4f886a1-1633-418c-b6b5-16f700f8bb0d",
+            "source": "FT"
+          },
+          {
+            "title": "본격화하는 ‘자원 전쟁’…석유로 압박하고, 중국 ‘무기’ 무력화하려는 미국 (뉴스 쉽게보기)",
+            "url": "https://www.mk.co.kr/news/economy/11960977",
+            "source": "매일경제"
+          }
+        ]
+      }
+    ],
+    "Korea > Market": [
+      {
+        "title": "국내 증시, 외국인·기관 순매수 지속 및 개인 차익 실현",
+        "text": "코스피 지수가 외국인과 기관의 대규모 순매수세에 힘입어 5500 시대를 열었으나, 개인 투자자들은 삼성전자 주가가 17만원을 기록하자 역대 최대 규모인 4조원 이상의 순매도를 기록하며 차익 실현에 나섰다. 외국인 투자자들은 지난 1월 유가증권시장에서 순매수하고 코스닥시장에서 순매도하며 대형주 위주로 매집했으며, 증권가에서는 견조한 펀더멘털과 밸류에이션 부담 완화를 지적하며 코스피가 여전히 저평가 상태라고 평가하고 있다. JP모건은 한국 증시의 추가 상승 가능성을 열어두면서도 높아진 변동성에 대한 부담을 언급했으며, 개인 투자자들 사이에서는 뜨거운 증시 속 'FOMO(Fear Of Missing Out)' 현상으로 인한 빚투 증가도 나타나고 있다.",
+        "links": [
+          {
+            "title": "삼전·SK하닉 질주에 5500피 '활짝'…\"여전히 저평가\" 외인·기관 싹쓸이",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0005318176&office_id=008",
+            "source": "머니투데이"
+          },
+          {
+            "title": "\"코스피만 샀다\"…코스닥은 4590억원 팔아치운 외국인",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0005251006&office_id=015",
+            "source": "한국경제"
+          },
+          {
+            "title": "역대 최대 순매도 나선 개미…‘17만전자’ 찍자 2.5조 ‘팔자’ (이런국장 저런주식)",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0004590077&office_id=011",
+            "source": "서울경제"
+          },
+          {
+            "title": "“韓증시 추가상승 가능성 열려있어… 큰 변동성은 부담”",
+            "url": "https://www.donga.com/news/Economy/article/all/20260212/133357318/2",
+            "source": "동아일보"
+          },
+          {
+            "title": "이제 코스피 6000?... 증권가 한목소리 “코스피 여전히 싸다”",
+            "url": "https://www.chosun.com/economy/stock-finance/2026/02/12/ME3DSMRZGQ4TIMBUHAYGMNLGG4/",
+            "source": "조선일보"
+          }
+        ]
+      },
+      {
+        "title": "주요 기업 실적 희비 교차: HD현대·카카오 호실적, 하이브·LG전자 인도법인 부진",
+        "text": "HD현대는 지난해 4분기 영업이익이 전년 대비 124.5% 급증한 약 2조원에 육박하며 연간 6조원 이상의 영업이익을 달성했고, 카카오는 플랫폼 부문의 성장에 힘입어 지난해 역대 최대인 8조원 매출과 7320억원의 영업이익을 기록했다. HD현대의 실적 개선은 조선·해양 부문의 수익성 확대에 기인하며, 카카오는 톡비즈와 선물하기, 모빌리티, 페이 등 플랫폼 부문의 매출 증가가 주요 원인으로 분석된다. 반면 하이브는 지난해 영업이익이 전년 대비 73% 감소한 499억원을 기록했고, LG전자 인도법인은 순이익이 62% 급감하는 어닝쇼크를 겪는 등 주요 기업들의 실적 동향이 엇갈리고 있다.",
+        "links": [
+          {
+            "title": "HD현대, 지난해 4Q 영업익 2조원 육박…전년비 124.5%↑",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398772",
+            "source": "Infomax"
+          },
+          {
+            "title": "카카오, 작년 매출 8조-영업익 7320억 ‘역대 최대’",
+            "url": "https://www.donga.com/news/Economy/article/all/20260212/133357390/2",
+            "source": "동아일보"
+          },
+          {
+            "title": "하이브, 작년 영업이익 499억원…전년比 73% 감소",
+            "url": "https://www.chosun.com/economy/smb-venture/2026/02/12/MJRWEMDBMMZDAZLCGRRTKYZQGA/",
+            "source": "조선일보"
+          },
+          {
+            "title": "LG전자 인도법인 ‘어닝 쇼크’… 순이익 62% 급감에 주가도 11% 뚝",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/02/202602121003249722fbbec65dfb_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "남양유업, 5년 적자 끝에 작년 흑자 전환했다",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398804",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "코스피, 사상 첫 5,500선 돌파하며 최고치 경신",
+        "text": "코스피 지수가 연일 파죽지세로 상승하며 사상 최초로 5,400선을 돌파한 데 이어 5,500선마저 넘어 5,522.27로 마감하며 사상 최고치를 경신했다. 이러한 급등세는 삼성전자와 SK하이닉스 등 반도체 업종의 강세가 주도했으며, 이는 마이크론발 고대역폭메모리(HBM) 훈풍 등 미국 증시 반도체주 강세 영향과 국내 기업 밸류업 프로그램에 대한 기대감이 복합적으로 작용한 결과로 풀이된다. 시장에서는 반도체 업종의 견조한 실적 기대감이 지수 상승을 지지하는 한편, 단기 급등에 따른 과열 우려와 변동성 확대 가능성도 제기되고 있다.",
+        "links": [
+          {
+            "title": "코스피 5,400도 뚫었다…'마이크론 훈풍'에 1%대 강세",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398638",
+            "source": "Infomax"
+          },
+          {
+            "title": "코스피 파죽지세…5,500도 돌파",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398681",
+            "source": "Infomax"
+          },
+          {
+            "title": "코스피 사상 첫 5500 돌파… ‘18만 전자’ 눈앞",
+            "url": "https://www.donga.com/news/Economy/article/all/20260212/133357315/2",
+            "source": "동아일보"
+          },
+          {
+            "title": "5400 찍고 5500… 거침없는 코스피",
+            "url": "https://www.chosun.com/economy/money/2026/02/13/M73ENWNCGND5XPZAO2FONPEAWA/",
+            "source": "조선일보"
+          },
+          {
+            "title": "‘진격의 코스피’ 1년새 2548→5522…개미 던지자 외국인이 넙죽",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0005636950&office_id=009",
+            "source": "매일경제"
+          }
+        ]
+      }
+    ],
+    "Global > Tech": [
+      {
+        "title": "AI 인프라 및 고성능 컴퓨팅 기술 발전",
+        "text": "삼성은 최신 HBM4 칩 출하를 시작했으며, 스택 인프라의 멜버른 AI 데이터센터에 A$30억 대출이 추진되고 마이크로소프트의 사우디 데이터센터 지역이 2026년 4분기부터 클라우드 워크로드에 사용 가능해지는 등 전 세계적으로 AI 데이터센터에 막대한 투자가 이루어지고 있습니다. NVIDIA의 블랙웰 플랫폼은 토큰 비용을 10배 절감하는 성과를 보였고, Legrand는 액셀시우스의 2단계 액체 냉각 기술에 전략적으로 투자했습니다.",
+        "links": [
+          {
+            "title": "Samsung ships latest HBM4 chips to catch-up in AI race",
+            "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQ1gxUHF6MG5PRkNha0VodHNKZFNwdm1SdzNMcmdHYjdBRlRsWG5YZGdmTjJ2UzQ5dHFYdUxNM0RTdDJmajNMRjF5Xzd2bWVQWG5xR1JtUVpFcGFrYUlzSzkwOWpXUUZldFJ3VXVyaDAzNE4td2xVQlJMM3plLUdZT09CS1JxMjZWcEREUmhoNG9zM1lNLV9pSkFJdGVJcVZHazk2SWR5Q2dSWTg",
+            "source": "Reuters"
+          },
+          {
+            "title": "Legrand Announces Acquisition of Kratos Industries and Strategic Investment in Accelsius Two-Phase Liquid Cooling Technology",
+            "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQcVN1eDJTWkkxc0hubTExbVVTQkl5bnA3ZF9RT3RmY29fS01TSFE3T0FHVFRoNFRULVA2dUdNNFM5Y1ZEY1k4eUtyWUZRX3l2MFpGRGp6WXY3R052VzNTMkpJSVNiQlp4amFjMnpnN3VsSUxXN1kyUGpuaTFjdFVaNW4tTFVKVHNfdDZLdE5UUzBvSENNbWFIaENqOTJVdUgyeUJyZTNON0NfNTZscUVTNk1BWHh2SFhaQWNxSVQ0SzBtcm5HR244RU1rWEZBVFBqZ1dwZUJmRlZ1Vl96UEw2cnlBcFlGRWxabFJRY0dReUJTdXBtbGZna2E3a3JEQUtGNjI0Nl9ZcEtRSkRt",
+            "source": "PR Newswire"
+          },
+          {
+            "title": "Stack Infrastructure Seeks A$3 Billion Loan for Melbourne AI Data Center",
+            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQN0hsUTc2dGNkeTVRYnNsUzBTSEpfSUY5VW5fN1dtbHV5Ny1IX090ZnVkYWJaVFFFcENVeWdBMnB1S1o0c0dQZktWWEMxYUVwdUJjRGZoc3ZSZ2tQUFVNQ1pyeTVkb0VXUG1GZWZ4TTJSYUdpR0pCUkV6TGxOLU9nVTV1WDkwZ2cwS1E",
+            "source": "Yahoo Finance"
+          },
+          {
+            "title": "Microsoft’s Saudi Arabia Datacenter Region to become available for Cloud workloads from Q4 2026",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMVkzMGNibXROWFVYVDRtYzZTTDB6WGhPaUhaU0wtZVBDeFd0YzJ0VHNpWU9TLVJxWGQxTzNoc3FSR1lBdnRldm1JUkUtdFltOVpaQ0MwZ21VVWMtWHhiSTI3Ylo4NFFvTTJxbU5FSmRucUw0TEprZmZMdVM3cGlqSWhTdVNaUlpvdGpKOWZfZ0plVDBmSVEydzk0SmZoY085UjZvNTNvaW9zVHpKNWljaw",
+            "source": "W.Media"
+          },
+          {
+            "title": "NVIDIA Has Managed to Reduce Token Costs by a Whopping 10x With Its Newest Blackwell Platform, Credited to Team Green’s “Extreme Codesign” Approach",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYWxXZEY3VV9PMENtcGtrUGJmUG5mZ2lZWTJsclBpV2Jtb2FPeXlhbF8wY21Va1pkbTRuTURnbHVqNTVZd3p3NXhXVGF0alRDZllIZVBSV3cycVZ5ODdpZVR4ZGk0QlhQTmJWNng4ZS1KQmdtZUwxUXY1bTMyM0xsUUlfVmJyY0hYMExEMNIBkgFBVV95cUxNdkRDRnBubGVFdk1VQklZNkFBSDJFOFpsV1RwdWRRSHdKT2NLZFdncXZpWF84bDUwNnp3TGxiSXdyY3kzcmNiUnc3eTBRS0hpWko3NXptSWhya3k4M1poSUNJVTB3QTJuNkU1WE0zMWtzN0ZIZGsyb1U3ajhPNUhmQ2R5MUZSckU3UEY3STYyWFRUZw",
+            "source": "Wccftech"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "이러한 발전은 첨단 AI 모델에 필요한 고성능 컴퓨팅 역량에 대한 수요 증가에 의해 촉진되고 있으며, 이는 방대한 전력 소비와 열 발생을 관리하기 위한 메모리 기술, 냉각 솔루션, 에너지 효율성 개선의 필요성을 증대시키고 있습니다.",
+        "links": [
+          {
+            "title": "Nvidia DGX Spark update cuts idle power by 32% or more — hot-plug detection on ConnectX NIC makes for a more efficient AI workstation",
+            "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxNQWlTS25zZ05QeFc3cW5BenlEbVpuS2FIMzcycVp6VnlSNGFHSEJQdXFFMkNRcHhNN2VMY0k0Qlp5cWNOcmV3U0FEaXYtWUxucG83cWJ0dnNfQmNudmlkSHpudTFFbEtmWWM4OW9ram9ucVZIeXNGRGpkb3IzUGEzRFB2dXlXemJfZ3ZMQy05UjBuSXJMYXdZaG1NNU5vbHI4bEFqLWVxTWZSbjhjcmFrMkxIWjJObTNYekp6NXhLMU5Hd3NvcFgzcmNaZkZWSHhIeE9VeXZGRnQ2bXRfVHZZelQ4Y3ZxaXkxbm1STXJjODVkZE9faTlpendrU0ZHR3lKeTRDMElQZmdMOGktZklYc1ZyZ1VVS0Zibm5KeU4wSlp4WHpscHZPZHdFalF5dw",
+            "source": "Tom's Hardware"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "이러한 동향은 확장 가능하고 효율적인 AI 인프라를 구축하기 위한 기술 기업들 간의 치열한 경쟁을 시사하며, AI 채택을 가속화하고 데이터센터 기술 및 특수 AI 하드웨어 분야의 추가 혁신을 주도할 것으로 전망됩니다.",
+        "links": [
+          {
+            "title": "How Microsoft's Superconductors Unlock AI Data Centre Power",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNDY1cWZvSV9NQVRNMDhHNE0tZlFiLWVXbnNrUnJEY2c0Y2gyanpEbEljX2ptVmxqOVVaeE1ucEZqeURuMk9FS1pGVW5PQTh0REdVejZzb2tBZ1NFUEpRRmktRVdpVE5MRlBXYlpqVUVUNG5TdzRtSVM1LUJCamhyMmdiTWpzT09oamZEWm5KZDZjaUVvbjdwdXZR",
+            "source": "Technology Magazine"
+          },
+          {
+            "title": "Are Marvell’s (MRVL) ESOP Moves Hinting at How It Sees Its AI Data Center Edge?",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNa3MzNlpNR3BhTGVvc3RjTngtSmMzai1BWWhQZHoyaGZQbFBVQjZfTXVxZkg5d1ZRSTF6ckVEU1Nmc20wQTE3ZXlUQXZiX012UlZYdEdLQ3ZCdXlLeFRKVUhfa2l6RXRkOWNGWXEyYjRoREdrUnhScFFSb2JWN3BYa1VuRlJPT1RodVIxTHRyYUZla3Q1RnVIN29MbjVCbjZHUHppY0NlYXdvTU5XVlE1UFAwWjloeGcySUJ3UElsQ1JrdnZRbXBoWERJc0Z6WEpkZW0xUklHOHVUSXM",
+            "source": "simplywall.st"
+          }
+        ]
+      },
+      {
+        "title": "미중 기술 갈등 심화 및 공급망 재편",
+        "text": "Applied Materials는 중국에 대한 불법 수출로 2억 5,200만 달러의 벌금을 지불하기로 합의했으며, 중국산 커넥티드카가 민감한 데이터를 수집할 수 있다는 전 세계적인 우려가 증폭되어 미국은 다음 달부터 해당 차량 내 중국산 소프트웨어 사용을 금지하기로 했습니다.",
+        "links": [
+          {
+            "title": "Applied Materials to pay $252 million over illegal exports to China",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZGRzZGpHVFZleVpoVEFjUHR5Yms5R3BlRWNrM2FEdlhkUHg2T0tuQnpxVVBmdEJ3ZlE3dGxRQlZWT2dpS1ZiWGFLemRmeHlIOElvZy1jcjAxeWJWSmtMczJLSTN6VHNkX1pwOHBGcDV2SkJEV3FnRzYtN0xuejlfN3J0aTRzeGJPTGVsU0pNVUJ3RUlYbER2aDRLQW4yNm1xdEJDdktON0lPT3kxR0Rxd3ZqT0FndTFKemc",
+            "source": "Reuters"
+          },
+          {
+            "title": "미래차인가, 스파이카인가… 세계 전역으로 번지는 ‘中 커넥티드카’ 경계심",
+            "url": "https://www.chosun.com/economy/industry-company/2026/02/13/GRSTCMBRMJRGGMRZMFRGCYZWME/",
+            "source": "조선일보"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "이는 AI 및 반도체와 같은 첨단 기술이 전략적 자산으로 간주되는 지정학적 경쟁의 지속을 반영하며, 데이터 무결성 및 스파이 활동에 대한 국가 안보 우려와 함께 엄격한 수출 통제로 이어지고 있습니다.\n강화된 규제와 높아진 감시는 기업들이 공급망을 다변화하고 기술 자립 노력을 가속화하도록 강제할 것이며, 이는 잠재적으로 글로벌 기술 생태계의 분열을 초래할 수 있습니다.",
+        "links": [
+          {
+            "title": "· 알리바바 AEF CEO “미·중 긴장, 제품 경쟁력 있는 AI 기업엔 장애물 안 돼”",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/02/2026021217515332160c8c1c064d_1",
+            "source": "GEnews"
+          }
+        ]
+      },
+      {
+        "title": "마이크로소프트의 AI 전략 독립성 강화",
+        "text": "마이크로소프트는 OpenAI로부터의 AI 독립성을 강화하기 위해 노력하고 있으며, 마이크로소프트 AI CEO인 무스타파 술레이만은 'AI 자립'을 위한 전략을 적극적으로 구상하고 있는 것으로 알려졌습니다.",
+        "links": [
+          {
+            "title": "Mustafa Suleyman plots AI \"self-sufficiency\" as Microsoft loosens OpenAI ties- FT",
+            "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNaEd1V25rMGtlUl94Q3ZoRTVmb2J5cG5iX0NoZE5YeUsxY291d196bHp5Z09oWThWY1ZMMUF6TlNudFZsdDZfWWpyTTlPdENYS0pBMl9yTFRwdDc3eGozYzRyV3NPeFlPU3lQUkpPRzVsa1BEY0Z1eS1uMFdic3FvN1pvcjNsVmJlNElqb1hmSmZNZ1FZVldvb0sweHJwYVBnWVBIQ0UyWEFkNTd3bzdNbUJ0ZTl5dWV0ZnhCR1F1cUlWZ1cwZHFBcTY1bHdoTUFqLUpsV0pSLU5VZEhFR2dSUmp3",
+            "source": "TradingView"
+          },
+          {
+            "title": "Microsoft Seeks Greater AI Independence From OpenAI",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNV3pTTldDZjA5SEJFSFBhQnE2azg2S0k4RE16NXJISFMyTWM5RkFMSmhKV0xEb3pPbXZDbnBjdDhtazJEdVd1TVJIVHRMd0FZQzJLVXFLSGdNMWw5by1tNV9JVzBiY21CNk4tNWJOSldpekZiREZIN2o3Q0M1SEt3RkZBODFmTUhFT1VlSU9WOXBmbDdLYnBEZXIzNmJiblZpd1ZCNjNsS01EZ0pBdnBBUQ",
+            "source": "TradingView"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "이러한 움직임은 핵심 AI 서비스에 대한 단일 파트너 의존도를 줄이고, AI 역량을 광범위한 제품 생태계에 더 깊고 독점적으로 통합하려는 마이크로소프트의 야망에서 비롯됩니다.\n독립성 강화는 마이크로소프트의 직접적인 AI 제품 개발 및 시장 출시를 가속화할 수 있으며, 더 넓은 AI 환경 내에서 경쟁적인 혁신을 촉진하면서 OpenAI의 독점적 시장 위치에 도전할 가능성이 있습니다.",
+        "links": []
+      },
+      {
+        "title": "글로벌 AI 모델 경쟁 및 플랫폼 확장",
+        "text": "구글은 Gemini 3 Deep Think의 주요 업그레이드를 단행하고 구글 앱스에 Gemini 통합을 확대하며 2,400억 달러 규모의 클라우드 백로그와 함께 상당한 AI 매출을 확보하는 등 중요한 발전을 이루고 있습니다. 동시에 중국의 지푸 AI는 '에이전트 엔지니어링'에 중점을 둔 차세대 GLM-5 모델을 공개했으며, 바이두는 '바이두위키'로 위키피디아에 도전장을 내밀고 있고, 일론 머스크의 xAI도 공동 창립자들의 이탈 후 사업부를 재편했습니다.",
+        "links": [
+          {
+            "title": "Google CEO On Being ‘Supply Constrained,’ Gemini 3 Wins, AI Sales And Google Cloud’s $240B Backlog",
+            "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOQ2JGWjNSTzI0V2JjNVVBQ041U251N3VtLUc3R0RsLXlTM3FYNE5fRXVzRXV2YUJ4WndvZWZKbTE1N18zVjA3OE8yaTE2azgwVTduc3VmSnFDNFpUS3dFcGlGZnBFZ2R0aEQzZmRzeWJkUTE5bDZ0UGdxakw1aWtldi02Wk8zLTdPM0Q1S2M5RDRHbW83YzA4TW9OVk9SY25GMnpaSzlJRXNLb3RIQm9pdFhZUGQ3MlBWX3g4WmNGMUNjeWRfN3FPRA",
+            "source": "crn.com"
+          },
+          {
+            "title": "Google is adding Gemini integration into Google Apps",
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUnJpeV84bkNoWXBHQnR5TEVNdTRrd3RaVDZZNV83REhxNVRyN1JMZF9TRDNRNHVCeUQ2ZmJQSDVwNF9qcldJWEhsLUZ5Y185Y0pHcWU5ZWpXLUFyc0NjRjVxOWJmY2ZNZ1RteUhCS2lpWGlCUm5jWlQ0cjdpa2ZHaVJxa19NOFpM",
+            "source": "Miami University"
+          },
+          {
+            "title": "Gemini 3 Deep Think gets ‘major upgrade’ aimed at practical applications",
+            "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Mc2xEcm5KNGZSUGkxOXY5dEt5dFR2algybE5tVUZVeFF6ZjZnZnJsMmhWYXhXQTFhd1F1RkZDMXFMakVhbTVrcDg4dnVTNHZyLUZvWV9VUFNUVXZzVWJWbFpnaGNvSU9UX0NsRnotWQ",
+            "source": "9to5Google"
+          },
+          {
+            "title": "· 中 지푸 AI, 차세대 모델 ‘GLM-5’ 공개… ‘에이전트 엔지니어링’ 시대 연다",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/02/2026021217490145750c8c1c064d_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "· 中 바이두, AI 무기로 ‘위키피디아’에 도전장… 국제판 백과사전 ‘바이두위키’ 공개",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/02/2026021217595363330c8c1c064d_1",
+            "source": "GEnews"
+          },
+          {
+            "title": "Elon Musk Restructures xAI’s Divisions After Co-Founders Depart",
+            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNQkZVQk90ei1DdDBHZzhDbW5OYkVsOS15bG9jWDJ6eGhnaFZVcFRZRENlczdWQVZqT25pYXpLOWhUXzRpSm5aVi03TXRNT2NaU0hrSnM5d0s5WlpsMmNka0RFbWxfcDJYN0loRUczVTVVR2ZGY2IyUnAxdUZfR25sMjkzYTExbXRqREFuTVhRblQ1dkdvQ0tRTGFxUkFNOTZONHgyU0ZB",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "AI cloud firm Nebius posts surge in capex on GPU, data center expenses",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSzMxblRmazM4d216UGk5cnpxMW12ZEZLMF9MLVJtUk14T2J6UndNWkdqUVhqSUhRRmREc2t4T2EySk9qYVhpb2t6REVkOWJDUGFmSks5d0N2RGlTM0RadVRVS2NlVEtfR2pFRDRoOGQySDJCVndYamxKVE1BSlo4VTZxWFVPUmRSMUkwY1ZVV0RuNFdSbzJfRDBiRzFRcF81aER2c1prNkdBSkh6cVV3",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "첨단 AI 모델을 개발하고 이를 다양한 애플리케이션에 통합하려는 기술 거대 기업들 간의 치열한 경쟁이 이러한 급속한 발전을 주도하고 있으며, 이는 지능형 솔루션에 대한 수요 증가와 AI 시장 지배력을 위한 전략적 경쟁에 의해 더욱 심화되고 있습니다.\n이러한 글로벌 경쟁 심화는 AI 역량의 빠른 혁신과 일상 플랫폼에 AI 기반 기능의 광범위한 채택으로 이어질 것이며, Nebius와 같은 인프라 제공업체에게는 용량 확장에 대한 지속적인 압력을 가할 것입니다.",
+        "links": []
+      },
+      {
+        "title": "금융 부문의 AI 시스템 도입 확대",
+        "text": "신한라이프는 고객 정보 및 설계 패턴을 분석하여 실시간 가입 설계를 추천하는 생성형 AI 기반의 'LICO(Life Copilot)' 시스템을 새롭게 오픈했습니다.",
+        "links": [
+          {
+            "title": "신한라이프, AI로 실시간 가입설계 추천하는 시스템 오픈",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398762",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "이는 금융 서비스의 개인화 및 효율성 증대를 목표로 AI 기술을 활용하여 고객 경험을 혁신하고 영업 생산성을 향상시키려는 전략의 일환입니다.\n이러한 AI 기반 시스템의 도입은 보험 및 금융 산업 전반에 걸쳐 디지털 전환을 가속화하며, 고객 맞춤형 서비스 제공과 운영 효율성 개선을 위한 AI 활용이 더욱 확산될 것임을 시사합니다.",
+        "links": []
+      }
+    ],
+    "Korea > Industry": [
+      {
+        "title": "삼성전자, HBM4 상업 출하 개시로 AI 메모리 시장 주도권 강화",
+        "text": "삼성전자가 업계 최초로 고대역폭 메모리 HBM4의 상업적 출하를 시작하며 AI 반도체 시장에서의 선두 주자 입지를 강화했습니다. 삼성전자는 차세대 HBM4 제품을 엔비디아와 같은 주요 고객사에 공급하기 시작했으며, 초당 13Gb의 데이터 처리 속도를 자랑하며 업계 최고 성능을 달성했습니다. 이번 HBM4 양산 및 공급은 삼성전자의 HBM 시장 점유율 확대와 수익성 개선에 크게 기여할 것으로 예상되며, AI 메모리 기술 경쟁에서 주도권을 확보하는 중요한 전환점이 될 것입니다.",
+        "links": [
+          {
+            "title": "Samsung Says It Starts Commercial Shipment of HBM4 to Customer",
+            "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVzhvMTlwN3BkX01MQ0c1ZHMwNWQ3cXdwN0xVNHkwaEZZWUFDdnNyZ2tMUF9uS1dGTWJPQ1VaNnV1ellHMkl3UGVvZkNpRzNSNG1uWXdpdWQxdjRMdzI0clJxT0Vfdkd3UHI1VlZraElkbmZhOEhEYjJDX3lkaVhJUndyU25ZSm1HMGxqVXNPTzhUZWhRTTRIZWo0Z2ZrQXFCZUhHZTdldWdtYXhweXhwbWNHVFFxODFjRDUxNzZHcw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "삼성전자, 세계 첫 HBM4 양산... 엔비디아에 가장 먼저 공급",
+            "url": "https://www.chosun.com/economy/tech_it/2026/02/12/O6FJGEZSZ5CZ5J3JR6HUMCL7EQ/",
+            "source": "조선일보"
+          },
+          {
+            "title": "Samsung ships priciest AI memory Nvidia ever ordered as HBM4 exceeds key specifications",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUFdfblQ0b2N3M3hpQlpmMENWWHBXYy1qZkk2ZzY0RkV2UXo3akVkeXdjU3hUbUNjYWEtRUdiZVVYYjExeGpMNFc2MFlqMGoxX25QSlBVVWU1NHpENkdIdDVJa2x4bTliLVVxTjZsQTlYb3prbDhwTzZ6THN6WEpmM2FzeVdmTVVCeFh3Qy1uaWZDaHd1N01VeXVDZ1ljeUJra0JVZzR4X19iWk91cmg0Q1NIamVuUFV2RkNqRzZLLXdOUHB0cXJRUWNJYzA",
+            "source": "Notebookcheck"
+          },
+          {
+            "title": "더 빨라진 삼성 HBM4…'초당 13Gb' 업계 최고",
+            "url": "https://www.hankyung.com/article/2026021230881",
+            "source": "한국경제"
+          },
+          {
+            "title": "삼성 “업계 최고 성능 HBM4로 매출 3배↑” (biz-플러스)",
+            "url": "https://www.sedaily.com/article/20008741",
+            "source": "서울경제"
+          }
+        ]
+      },
+      {
+        "title": "SK온, 국내 ESS 시장 대규모 수주로 에너지 전환 투자 선도",
+        "text": "SK온이 1조 원 규모의 국내 에너지저장장치(ESS) 중앙계약시장에서 전체 물량의 절반 이상인 50.27%를 수주하며 국내 ESS 시장에서 선두 주자로 부상했습니다. 이는 지난해 1차 입찰에서의 부진을 국산화 비중을 높인 LFP 배터리 전략으로 극복한 결과이며, SK그룹이 신재생에너지 사업 효율화를 위해 KKR과의 합작법인을 검토하는 등 전반적인 에너지 전환 투자를 강화하는 추세입니다. 이러한 움직임은 정부의 신재생에너지 및 ESS 보급 확대 정책과 맞물려 국내 에너지 산업의 투자 활성화를 이끌고, 배터리 기업 간 경쟁 구도에도 변화를 가져올 것으로 전망됩니다.",
+        "links": [
+          {
+            "title": "SK온, 1조 규모 국내 ESS 물량 절반 따냈다",
+            "url": "https://www.donga.com/news/Economy/article/all/20260212/133357322/2",
+            "source": "동아일보"
+          },
+          {
+            "title": "SK온, 2차 ESS 입찰서 압승… LFP 국내 생산 전략으로 반격 성공",
+            "url": "https://www.chosun.com/economy/industry-company/2026/02/12/HFSDSNBZGA2DINRZHFSTAYJRMQ/",
+            "source": "조선일보"
+          },
+          {
+            "title": "국내 산업 기여도 업은 SK온…2차 ESS 정부 입찰 50% 수주 대반전",
+            "url": "https://www.sedaily.com/article/20008666",
+            "source": "서울경제"
+          },
+          {
+            "title": "SK, 신재생에너지 사업 모아 KKR과 합작법인 설립 검토",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4398818",
+            "source": "Infomax"
+          }
+        ]
+      },
+      {
+        "title": "삼성바이오에피스, ADC 본계약 및 특허 분쟁 해결로 R&D 및 시장 확대 박차",
+        "text": "삼성바이오에피스가 항체-약물 접합체(ADC) 신약 후보물질 'SBE303'의 임상 1상을 앞두고 인투셀과의 본계약 체결을 가시화하고 있으며, 동시에 아일리아 바이오시밀러의 특허 분쟁을 마무리하며 미국 시장 진출을 본격화했습니다. 이는 차세대 치료제인 ADC 분야의 R&D 역량을 강화하고, 약 9조 원 규모에 달하는 아일리아 바이오시밀러 시장을 조준하는 등 포트폴리오 확장 및 시장 확대를 위한 전략적 움직임입니다. 이러한 활동들은 삼성바이오에피스의 글로벌 경쟁력을 한층 높이고 미래 성장 동력을 확보하는 데 기여하며, 국내 제약바이오 산업 전반의 기술 혁신과 해외 시장 진출을 촉진할 것으로 기대됩니다.",
+        "links": [
+          {
+            "title": "적자 지속 인투셀, 삼성바이오에피스와 본계약 ‘초읽기’…마일스톤 기대감",
+            "url": "https://www.chosun.com/economy/science/2026/02/13/MZRWKOBRGM4DOOJZGU2DOOBYGM/",
+            "source": "조선일보"
+          },
+          {
+            "title": "아일리아 특허 분쟁 마무리…삼성에피스, 9조 美시장 조준",
+            "url": "https://www.sedaily.com/article/20008693",
+            "source": "서울경제"
+          }
+        ]
+      }
+    ]
+  }
+}
