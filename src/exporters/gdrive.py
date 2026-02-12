@@ -4,7 +4,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("news_ingestor")
 
 class GDriveAdapter:
     def __init__(self, service_account_path: str = None):
@@ -19,38 +19,58 @@ class GDriveAdapter:
             return
 
         # 1. Try OAuth Token (User Credentials) - For Personal Drive Uploads
-        # Priority: Env Var -> Local File -> Service Account
-        token_json = os.getenv("GOOGLE_TOKEN_JSON")
+        token_json_env = os.getenv("GOOGLE_TOKEN_JSON")
         local_token_path = "credentials/token.json"
         
-        if not token_json and os.path.exists(local_token_path):
-             logger.info(f"ℹ️ Found local token file: {local_token_path}")
-             token_json = local_token_path
+        logger.info("🔐 [GDrive Debug] Attempting Authentication...")
+        
+        # Check Local File
+        if os.path.exists(local_token_path):
+             logger.info(f"   - Found local token file: {local_token_path}")
+             if not token_json_env:
+                 logger.info("   - Using local token file as primary source")
+                 token_json_env = local_token_path
+        else:
+             logger.info("   - Local token file NOT found")
 
-        if token_json:
+        # Check Env Var
+        if token_json_env:
             try:
+                logger.info(f"   - GOOGLE_TOKEN_JSON provided (Length: {len(token_json_env)} chars)")
                 from google.oauth2.credentials import Credentials
                 import json
                 
                 # Check if it's a file path or direct JSON string
-                if os.path.isfile(token_json):
-                    self.creds = Credentials.from_authorized_user_file(token_json, self.scopes)
+                if os.path.isfile(token_json_env):
+                    logger.info(f"   - Loading credentials from file: {token_json_env}")
+                    self.creds = Credentials.from_authorized_user_file(token_json_env, self.scopes)
                 else:
-                    info = json.loads(token_json)
+                    logger.info("   - Loading credentials from JSON string")
+                    info = json.loads(token_json_env)
                     self.creds = Credentials.from_authorized_user_info(info, self.scopes)
                 
                 self.service = build('drive', 'v3', credentials=self.creds)
                 logger.info("✅ Google Drive Authenticated (User OAuth)")
+                
+                # Test validity
+                if self.creds.expired and self.creds.refresh_token:
+                    logger.info("   - Token expired, attempting refresh...")
+                    from google.auth.transport.requests import Request
+                    self.creds.refresh(Request())
+                    logger.info("   - Token refreshed successfully")
+                
                 return
             except Exception as e:
                 logger.warning(f"⚠️ Failed to auth with GOOGLE_TOKEN_JSON: {e}")
+                import traceback
+                logger.warning(traceback.format_exc())
 
-        # 2. Fallback to Service Account (Only works for Shared Drives or Workspace)
+        # 2. Fallback to Service Account
         if not os.path.exists(self.service_account_path):
-             # Just log warning, maybe user only provided Token
-             logger.warning(f"Service account file not found: {self.service_account_path}")
+             logger.warning(f"   - Service account file not found: {self.service_account_path}")
         else:
             try:
+                logger.info(f"   - Attempting Service Account Auth: {self.service_account_path}")
                 self.creds = service_account.Credentials.from_service_account_file(
                     self.service_account_path, scopes=self.scopes
                 )
@@ -61,6 +81,7 @@ class GDriveAdapter:
                 logger.error(f"❌ Service Account Auth Failed: {e}")
                 
         if not self.service:
+            logger.error("❌ No valid credentials available.")
             raise Exception("No valid Google Drive credentials found (Token or Service Account).")
 
     def upload_file(self, file_path: str, folder_id: str, mime_type: str = None) -> str:
