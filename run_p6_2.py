@@ -111,21 +111,26 @@ def get_latest_report(target_date: str = None):
             logger.error(f"❌ Targeted report not found: {target_date}")
             return None, None
 
-    json_files = sorted(OUTPUT_DIR.glob("Daily_Brief_*.json"), reverse=True)
-    # Filter out English reports (_EN.json)
-    json_files = [f for f in json_files if "_EN" not in f.name]
+
+def get_latest_report(target_date: str = None):
+    """
+    Find report files.
+    If target_date is not provided, defaults to TODAY (YYYY_MM_DD).
+    Strictly looks for the specific file pattern: Daily_Brief_{date}.json
+    """
+    if not target_date:
+        target_date = get_kst_now().strftime("%Y_%m_%d")
     
-    if not json_files:
+    json_path = OUTPUT_DIR / f"Daily_Brief_{target_date}.json"
+    md_path = OUTPUT_DIR / f"Daily_Brief_{target_date}.md"
+    
+    if json_path.exists() and md_path.exists():
+        logger.info(f"✅ Found report for date: {target_date}")
+        return json_path, md_path
+    else:
+        logger.error(f"❌ Report not found for date: {target_date} (Expected: {json_path.name})")
         return None, None
-    
-    latest_json = json_files[0]
-    # Assuming MD has same suffix
-    latest_md = OUTPUT_DIR / latest_json.name.replace(".json", ".md")
-    
-    if not latest_md.exists():
-        return latest_json, None
-        
-    return latest_json, latest_md
+
 
 # ... (Keep existing imports)
 

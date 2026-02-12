@@ -83,18 +83,26 @@ def get_latest_en_report(target_date: str = None):
             logger.error(f"❌ Targeted EN report not found: {target_date}")
             return None, None
 
-    # Search pattern: *_EN.json
-    json_files = sorted(OUTPUT_DIR.glob("Daily_Brief_*_EN.json"), reverse=True)
-    if not json_files:
+
+def get_latest_en_report(target_date: str = None):
+    """
+    Find report files.
+    If target_date is not provided, defaults to TODAY (YYYY_MM_DD).
+    Strictly looks for the specific file pattern: Daily_Brief_{date}_EN.json
+    """
+    if not target_date:
+        target_date = get_kst_now().strftime("%Y_%m_%d")
+
+    json_path = OUTPUT_DIR / f"Daily_Brief_{target_date}_EN.json"
+    md_path = OUTPUT_DIR / f"Daily_Brief_{target_date}_EN.md"
+    
+    if json_path.exists() and md_path.exists():
+        logger.info(f"✅ Found EN report for date: {target_date}")
+        return json_path, md_path
+    else:
+        logger.error(f"❌ EN Report not found for date: {target_date} (Expected: {json_path.name})")
         return None, None
-    
-    latest_json = json_files[0]
-    latest_md = OUTPUT_DIR / latest_json.name.replace(".json", ".md")
-    
-    if not latest_md.exists():
-        return latest_json, None
-        
-    return latest_json, latest_md
+
 
 def get_headers():
     if not WP_USERNAME or not WP_PASSWORD: return {}
