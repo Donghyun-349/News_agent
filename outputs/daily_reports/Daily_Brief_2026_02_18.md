@@ -1,0 +1,191 @@
+# 📊 Daily Market Intelligence: "엔비디아, 메타와 수십억 달러 딜 체결 | 테슬라 로보택시 생산 시작"
+**Date:** 2026-02-18
+
+---
+
+## 1. Executive Summary
+1. 엔비디아, 메타와 AI 칩 대규모 계약.
+2. 테슬라, 로보택시 생산 및 시범 운행 임박.
+3. 미 연준, 금리 인하 신중론 지속.
+4. 호주 중앙은행, 인플레 우려에 금리 인상.
+5. 글로벌 GPU 가격 15% 상승.
+
+---
+
+## 2. 🌍 Global Market
+### 📉 Macro (Economy/Rates)
+### **미국 연준 금리 인하 전망**
+시카고 연은 총재 오스탄 굴스비는 물가상승률이 연준 목표치 2%로 하향 안정화될 경우 올해 여러 차례 금리 인하가 가능하다고 언급했으나, 샌프란시스코 연은 총재 메리 데일리는 AI의 경제적 영향에 대한 심층 분석이 금리 결정에 중요하다고 강조했습니다. 이는 연준 내에서 인플레이션 둔화 신호와 기술 발전이 통화 정책에 미치는 복합적인 영향을 주시하며, 데이터 의존적인 접근 방식을 유지하고 있음을 시사합니다. 시장은 여전히 올해 금리 인하를 기대하고 있으나, 연준 위원들의 신중한 발언은 정책 결정이 향후 경제 지표와 AI 기술 발전의 실제 파급 효과에 따라 유동적일 수 있음을 보여줍니다.
+> * [Fed’s Goolsbee Sees Several Rate Cuts If Inflation Heads Lower](https://news.google.com/rss/articles/CBMiswFBVV95cUxNN2ZWOUx2aTZWcmNLVVVoQmR5ckZORF9tT29VQ201dDdqZGV3WUtHclFPV3hFNXYwUWh2M0wxQjlDQjFyMmE1M0J5M1k4cG16cjJEaTQ0MVk3Y25ITWJha0dBbVpXcFRtd0RpV09KVEZySGtDclozem1ZNDRjNU0tRHJlU2ROay0wRXNWd1FmQmF0dmJKLXVMbVVqMXc5UlRQbGthZDVsUHlfWDgtZGtYN240dw) - (Bloomberg)
+> * [시카고 연은 총재 "2% 인플레로 간다는 증거 더 필요해"](https://news.einfomax.co.kr/news/articleView.html?idxno=4399187) - (Infomax)
+> * [Fed must dig deep on AI impact to make right rate calls ahead, Daly says](https://www.investing.com/news/economy-news/fed-must-dig-deep-on-ai-impact-to-make-right-rate-calls-ahead-daly-says-4509585) - (Investing)
+
+### **영국 금리 인하 기대 및 고용 시장**
+영국의 12월 실업률이 5.2%로 5년래 최고치를 기록했으며, 이에 따라 트레이더들은 2026년까지 영국 중앙은행(BOE)이 두 차례 추가 금리 인하를 단행할 가능성에 베팅하고 있습니다. 이는 영국 경제의 고용 시장 둔화가 뚜렷해지면서, 인플레이션 압력이 완화될 것이라는 기대감이 커지고 있기 때문입니다. 약화된 노동 시장 지표는 BOE가 경기 부양을 위해 통화 완화 기조로 전환할 여지를 넓히지만, 실제 금리 인하 시기는 인플레이션 추이와 여타 경제 지표에 따라 결정될 것입니다.
+> * [Traders Cement Bets on Two BOE Cuts in 2026 After Jobs Data](https://news.google.com/rss/articles/CBMisAFBVV95cUxQbXNxQkJ1Ym9zUkZRLXNiOEZhaGNoNDFGN3ZtdXAwQW1vcURlUzVrZUNJeHh6ZXNpVGRia2w1VUROd3JGa1ZiVmZxVFJYdmMzUEpOY0VFbzZVWTZrTlllazNvU2dCeU1IekItMnJiQ1F4Qkx1NXBQRVo0dzRhRTNfR2FTWEdMV1kwNmVBcjl4aEl4ajR1NjVQOFEwR1gwZHBOWFVEMXh6VFFiU1o2N1lZSA) - (Bloomberg)
+> * [UK Unemployment at 5-Year High Paves Way for More BOE Rate Cuts](https://news.google.com/rss/articles/CBMipwFBVV95cUxQZ1JhamVMVXRSSGxBeVpiV0I5b2hvOFJ4WHgzWmljcHE1V2R1Qkx5aG1pRjNKOTM3QmwyZE1vazM2V1dET3FTVlFTTUVqX1ZMM0dDT3hSODY3bmZZckVCYTlTN1ZUUVRKb0E4WUV2ZFRaNGUweW9RN0ZLN2dLLThfRGRLVFpRamNGWnBlN2VtSEV4eGs0REs3VVc5c1JOUnFCQTFZbGotMA) - (Bloomberg)
+> * [英 12월 실업률 5.2%…5년 새 최고(상보)](https://news.einfomax.co.kr/news/articleView.html?idxno=4399182) - (Infomax)
+
+### **호주중앙은행(RBA) 인플레이션 우려**
+호주중앙은행(RBA)은 2월 통화정책회의 의사록을 통해 인플레이션과 고용 위험이 '상당히 달라져' 기준금리를 인상했다고 밝혔으며, 정책적 대응이 없을 경우 인플레이션이 목표 범위 2~3%를 장기간 상회할 가능성이 높다고 판단했습니다. 이는 RBA가 최근 경제 지표를 통해 인플레이션이 예상보다 더 지속될 수 있으며, 노동 시장의 강세가 임금 인상 압력으로 이어질 수 있다고 판단했기 때문입니다. RBA의 이러한 매파적 입장은 인플레이션 통제에 대한 강력한 의지를 나타내며, 추가적인 금리 인상 가능성을 열어두어 호주 금융 시장의 변동성을 키울 수 있습니다.
+> * [RBA 의사록 "인플레와 고용에 대한 위험 상당히 달라져"(상보)](https://news.einfomax.co.kr/news/articleView.html?idxno=4399163) - (Infomax)
+
+### **미국 달러화 약세 심화**
+미국 달러화에 대한 투자자들의 익스포저가 2012년 이후 사상 최소 수준으로 감소했으며, 펀드 매니저들은 트럼프 행정부의 불확실성과 AI 관련 기술주 집중이 달러의 안전자산 지위를 약화시킬 것으로 전망했습니다. 이는 예측 불가능한 지정학적 행보와 연준에 대한 압력, 그리고 미국 증시의 AI 집중으로 인한 시장 잠식 위험이 달러화의 전통적인 안전자산 매력을 감소시켰기 때문입니다. 이러한 달러화 약세 심리는 글로벌 자금 흐름에 영향을 미치고 신흥국 통화에 상대적인 강세를 제공할 수 있으며, 투자자들은 달러 포지션에 대한 재평가를 지속할 것으로 예상됩니다.
+> * [도이체방크 "AI 투자, 美달러 지위 약화해"](https://news.einfomax.co.kr/news/articleView.html?idxno=4399162) - (Infomax)
+> * [안전자산 매력 감퇴…美달러화 비중 축소 사상 최대](https://news.einfomax.co.kr/news/articleView.html?idxno=4399172) - (Infomax)
+> * [Investors expect ‘Warsh trade’ to weaken dollar, BofA survey shows](https://www.ft.com/content/ad497e09-7200-40c4-ad8f-1ce81e4bf289) - (FT)
+> * ['트럼프 불확실성' 달러 투자심리 14년만에 최악](https://www.fnnews.com/news/202602171539261110) - (파이낸셜뉴스)
+
+### **일본 엔화 안전자산 지위 약화**
+일본 엔화가 최근 '최약 통화'로 평가받으며 더 이상 안전통화로서의 매력이 감소하고 있다는 진단이 나오고 있습니다. 이는 일본의 지속적인 저금리 정책과 글로벌 경제 환경 변화, 그리고 일본 내수 경제의 상대적 부진 등이 복합적으로 작용한 결과로 분석됩니다. 엔화의 안전자산 지위 약화는 국제 금융 시장에서 위험 회피 시 자금의 흐름을 변화시키고, 글로벌 포트폴리오의 통화 배분에 영향을 줄 수 있습니다.
+> * ["日엔화, 더 이상 안전통화 아니다"…'최약 통화' 추락](https://www.hankyung.com/article/202602178482i) - (한국경제)
+
+### **독일 인플레이션 확정치**
+독일의 1월 소비자물가지수(CPI) 확정치가 전년 동기 대비 2.1% 상승하여 예비치에 부합했으며, 근원 물가 상승 폭은 2.5%를 기록했습니다. 이는 에너지 및 식품 가격의 변동성을 제외한 근원 인플레이션이 여전히 높은 수준을 유지하고 있음을 보여주며, 전반적인 물가 상승세가 연초에 강화되었음을 시사합니다. 견고한 인플레이션 수치는 유럽중앙은행(ECB)의 통화 정책 결정에 중요한 요소로 작용하여, 금리 인하 시점에 대한 신중론을 강화할 수 있습니다.
+> * [독일 1월 CPI 확정치 2.1% 상승…예비치 부합](https://news.einfomax.co.kr/news/articleView.html?idxno=4399181) - (Infomax)
+
+### **미국 주택 시장 및 제조업 활동**
+미국의 1월 뉴욕주 공장 활동이 두 달 연속 확장세를 보이며 제조업 회복을 시사했으나, 주택 건설업자 심리는 낮은 주택 구매력 문제로 여전히 부진한 상태입니다. 제조업은 공급망 개선 및 수요 회복에 힘입어 긍정적인 신호를 보이지만, 높은 모기지 금리와 주택 가격은 여전히 주택 시장의 활성화를 저해하고 있습니다. 이러한 혼합된 경제 지표는 미국 경제의 회복 경로가 고르지 않음을 나타내며, 섹터별로 차등적인 접근이 필요함을 시사합니다.
+> * [US homebuilder sentiment remains subdued amid affordability challenges](https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ095UGRCbGVDREdfcjg0UkdST2RTRkFGX3FnLUlfdm15enJRMFB6RldEZVBNZHQ4YmZ2VWpzLXBpRVlRdS04RlVqYTJSVFJtWEFIdEl0MUlwbXotSHoxUzVEUXZTeXdkRlg5Y1U2V0ppTHN5c2FjN3BUVUZyWXlfa2dzTEtqYTlsY3NOU3F3Z09YeTd0Vm4ta2JlNU02NGxXZlM1XzRRd0VweGJjMU5RbXF1RUhNdw) - (Reuters)
+> * [美뉴욕주 공장 활동 2개월 연속 확장…제조업회복 시사](https://www.hankyung.com/article/202602178676i) - (한국경제)
+
+### 🚀 Market (Stock/Indices)
+## 🌍 Global Market
+
+### **AI 시장 변동성 및 엔비디아 실적 기대**
+미국 증시는 AI 기술 발전의 잠재적 위협과 버블 우려 속에 변동성을 보였으며, 엔비디아 실적 발표를 앞두고 옥석 가리기가 심화되고 있습니다.
+AI 기술이 산업 전반에 미칠 파괴적 영향에 대한 우려와 함께 특정 AI 관련 주식의 과대평가 논란이 투자 심리에 불안감을 조성했습니다.
+단기적으로는 엔비디아 실적 발표가 AI 관련 기술주 전반의 방향성을 결정하는 중요한 변수가 될 것이며, 시장은 AI 혁신의 장기적 가치와 단기적 거품 가능성 사이에서 균형점을 찾을 것으로 예상됩니다.
+> * [· AI 공포에 흔들리는 美 증시…엔비디아 실적 발표 앞 '옥석가리기' 본격화](https://www.g-enews.com/article/Global-Biz/2026/02/202602171526591096fbbec65dfb_1) - (GEnews)
+> * [뉴욕증시, AI 불안 이어지며 하락 출발](https://finance.naver.com/news/news_read.naver?article_id=0015909545&office_id=001) - (연합뉴스)
+> * [AI ‘위협 공포’와 ‘버블론’의 공존(주간증시전망)](https://finance.naver.com/news/news_read.naver?article_id=0001142902&office_id=366) - (조선비즈)
+> * [뉴욕증시, AI 파괴론 여진 속 저가 매수…강보합 마감](https://finance.naver.com/news/news_read.naver?article_id=0015909742&office_id=001) - (연합뉴스)
+
+### **글로벌 금융 및 자본 시장 동향**
+모건 스탠리는 씨티그룹을 최선호 은행주로 지목했으며, 조쉬 쿠슈너의 스라이브 캐피탈은 100억 달러의 신규 자금을 유치했고, 거래 플랫폼 이토로는 견고한 시장 활동에 힘입어 수익 추정치를 상회했습니다.
+이는 금융권 내 특정 은행의 사업 재편 기대감과 함께, 벤처 캐피탈 시장의 여전한 자금 조달 능력 및 개인 투자자 활동 증가가 반영된 결과입니다.
+금융 섹터에 대한 긍정적 전망과 함께 기술 중심의 자본 시장 유동성이 유지될 가능성이 시사되며, 이는 전반적인 시장 심리에 긍정적인 영향을 미칠 수 있습니다.
+> * [Citigroup Named Top Bank Stock Pick by Morgan Stanley Analysts](https://news.google.com/rss/articles/CBMiswFBVV95cUxQM25vclZoSnVKdW1uWlhHaXlmOTROM0ZCTE1LdnBBZzBtYXNiQzRPLVg2QlNBSUVHcGRGMXJUc0dhaGktUEdsQXQwaEZNRlQtMWxQSkl1WUh0dkpldFB5UW45cTZFbGtPUHhHSkhkR2xxdFVEUXhHX0lCTlRnTy1QRnNuX1FvSHp4U0ZmRXF2TGs5cU56dHgzWXVYbi1kTnpqcm9xUkd0aWljRnRGVDZocEpwcw) - (Bloomberg)
+> * [Josh Kushner’s Thrive Capital Raises $10 Billion in New Funding](https://news.google.com/rss/articles/CBMiswFBVV95cUxNUzBvNUVqNk1ORnZNaDYwQVlrZHhna1N6Ymlvc3U2b1BaVTJkSWFYQlZyTXNsZldTSGZLNnp3bWJ2TUpjM1FSWEJsNEExOXluR2cySXVZVk03enljUkFCVWpOb2VRZXFJUy1CV2ljS3hmVDhaY3NMelRUSXZyZzFCMy1uN2duWFlQQnQtQ3hDb2YxcDFkVHkxM1g0cDAzX3pqNWNueW1hUkpfam41c1pYNTdlTQ) - (Bloomberg)
+> * [Trading platform eToro beats profit estimates on robust market activity](https://news.google.com/rss/articles/CBMiugFBVV95cUxPalhEeHV4NDBZSGk4VUhEMmg1eGJRMUFsYUltLWJiQ29Hb1BpTEVLMkJ0eHBadWdnWWlmeklpZDlENkVwbldVcGEwOUVpU0p5TlpJR1NlU3drWFVuU1ExQkdWTkN0UEEtVl9NZDFOWnplT1Z3dEp0bEVWcFZ2M1hLY01ZTDc2SGh2NF9LNUhzYTVNb1QySFJld2pZWUVCdHBGcjhkZEthWUswZ3g0SjVTbWdGRTJJa19qVnc) - (Reuters)
+
+### **금속 시장 호황 및 구리 수요 증가**
+패밀리 오피스들이 금속 시장 호황에 힘입어 큰 주식 수익을 올리고 있으며, BHP는 구리 매출이 사상 처음으로 철광석을 넘어 최대 수익원이 되었다고 발표했습니다.
+전 세계적인 전기차 전환, 재생 에너지 인프라 확충 등 탈탄소화 움직임이 구리 등 핵심 금속의 수요를 강력하게 견인하고 있습니다.
+구리를 포함한 산업용 금속 가격은 공급 제약과 지속적인 수요 증가에 따라 상승 압력을 받을 것으로 예상되며, 이는 관련 채굴 및 원자재 기업들의 실적 개선으로 이어질 전망입니다.
+> * [Family Offices Pocket Big Stock Gains From Riding Metals Boom](https://news.google.com/rss/articles/CBMisgFBVV95cUxQS19WbWtnYUF0Mkg1Z255MF85Tm10Y2dHWDRORlFNM2NpVGNrQTVXSXc2Nk1EU1RzMTQ0dFRZcDBWYzBSRFB4UDY4MFhNbXcxUTB6UTVtMHFCMFBGUlg0Z1ozakpBeFRSN29KYzdXV01KT2x1Z0lyN25pOHh3bGsySk1XWGlBX0NiLW5sQTNlTEVSZ1pKY21tWk5yMzJwYVY3TDNWa2RFdXpWZGJOanBpWVN3) - (Bloomberg)
+> * [BHP, ‘철광석 시대’ 가고 ‘구리 시대’ 왔다… 사상 첫 최대 수익원 등극](https://www.g-enews.com/article/Global-Biz/2026/02/2026021716394199520c8c1c064d_1) - (GEnews)
+
+### 🤖 Tech (AI/Semiconductors)
+### **NVIDIA, AI 반도체 시장 주도 및 데이터센터 인프라 확장**
+엔비디아는 메타와의 수십억 달러 규모 AI 칩 공급 계약을 체결하고, 텔레그램의 AI 인프라 구축을 위해 504개의 블랙웰 B200 GPU를 공급하며 시장 지배력을 강화하고 있습니다. 신형 블랙웰 울트라 및 GB300 플랫폼은 AI 에이전트 추론 비용을 획기적으로 절감하며 효율성을 50배 향상시킨다고 발표되었으며, 이는 글로벌 GPU 가격이 3개월간 15% 상승한 추세와 맞물려 강한 수요를 반영합니다. 이러한 공격적인 투자와 기술 발전은 AI 인프라 시장에서 엔비디아의 독보적인 위치를 더욱 공고히 할 것으로 예상됩니다.
+> * [Nvidia secures multibillion-dollar Meta deal as it battles chip rivals](https://www.ft.com/content/d3b50dfc-31fa-45a8-9184-c5f0476f4504) - (FT)
+> * [AlphaTON Capital Deploys 504 NVIDIA Blackwell B200 GPUs to Power Telegram’s AI Infrastructure](https://news.google.com/rss/articles/CBMitgFBVV95cUxOeFJOUi1VZWY3OFR3TURhc2FDeGpPNWFkSTlFRlFUNEVRZm1pNHNsRDVvUlBxQlItX0d6czRpaElBOS1IWWxNLWR1UFVPMEtuQVNxeUVsTmhKQ0JDQTRXYjNGSzQ5aFhpWGgtTUFQeHp5d29wS0RLeXR4Mi11NzFleE5NOHJ2b2Jzand1XzBoOHIxWXEtd0w0ei1oZ0ZEY0tXTjFldzI3bFEwdDgxRUtmYk1idVQtdw) - (HackerNoon)
+> * [NVIDIA Blackwell Ultra Delivers 50x Higher Efficiency For Agentic AI](https://news.google.com/rss/articles/CBMipgFBVV95cUxQMWJ0cGdmclJERVI4OW5NakQ0TEtldkY4N0VJMFdvVlFlVlhxT2xSSGMyY2xNaUxRWTRMNHc4b3djdXM2cWlSMUN0dURkbEQtTkxBRHpzemt1YW9QUTVEZ3JYajQtam0zbUVqSFJXQ2ZSd0dOWWEtMTY4RGY0eV82Q0tEYkllbEVVclZFbFFvOE54VjJVa3UyMFVadW9LMlVNXzBqUFRB) - (Dataconomy)
+
+### **테슬라, 로보택시 및 자율주행 기술 상용화 추진**
+테슬라는 기가 텍사스에서 첫 사이버캡(로보택시) 생산을 시작하며 6월 22일 대중 대상 로보택시 시승을 계획하고, 모델 Y에 FSD 하드웨어 4.0을 도입하는 등 자율주행 기술 상용화에 박차를 가하고 있습니다. 이러한 공격적인 로보택시 전략에도 불구하고, FSD 기술의 완전한 해결 여부에 대한 논란과 호주에서 평생 FSD 구매 옵션이 중단되는 등 시장의 신중한 시각도 존재합니다. 향후 로보택시의 실제 상용화 속도와 FSD 기술의 안정성 확보가 테슬라 주가 및 미래 성장 동력에 결정적인 영향을 미칠 전망입니다.
+> * [Tesla rolls first Cybercab off production line at Giga Texas](https://news.google.com/rss/articles/CBMimgFBVV95cUxQTHdsdUlZaG5jZlRRMkUyY3FTNWlSWFh3dWp6ZHh0UEVPUE9obnFELVJuRzdmUHpoZS1TamstWUZEZ2x6dEtvRk9EakFDblluZVVVR1EzdG9SMXZGZ3YzdDFidmZsTkljWnJFMTlnUWdWQUdhYTdIZUZUNm5kZHB4eUdNVjhqeFVWYXNpS2gyYlZkU21PNDJHUnZn) - (driveteslacanada.ca)
+> * [Tesla’s public robotaxi rides set for tentative June 22 start](https://news.google.com/rss/articles/CBMixAJBVV95cUxNbWU4NHd2cEhidFFJUnJjdFAtb3A3dWd1VHFLS3dVRkxGbFdqVF8xdWw1bjFMTGJKVVI4cXdOamw2ZlZhYVpmaFhha3kweDdWZmw1ZHFfV0RNQlpvRktkT0NyLXh1d09teURzNzdMZDV3UEdlZDBiT2hZWWRRNzZvbmNPdF9HSjhCT2x4bDZaU0E0ODhhc2RsVDZ4cWJ6bmh0Z2IzUXVXQnI2cUtPeG9iX1BEaXFyNUpLb0d2dnJKN0pfREc4OGFiTURsR0o3VklDd0JGTXJLTV9GNFQxdmJ2YnlIMklXY25VVlROZDdiR3YxRWRtMWs3SkZ1WVdHQU1hc1RnVUF3MlktRG1OUGtOOE85am1ZWHBfNWNfUjVQQlE4NFJDZ0o5bm95OXBXOTFzTDFOWUtha2l1Ym9DTjQzYm1KX00) - (MSN)
+> * [No, Full Self-Driving Is Not Solved, No Matter How Hard Tesla Pushes This Narrative](https://news.google.com/rss/articles/CBMixwFBVV95cUxQSG1OS252dDdrVXRlNDNyX1BtcFdpaVZuRTZPSFZaY2dvVGk4QUFmcV9SS1dyNEdJWXpiR1BVZHV0TUJkcXhidWJLSVpHUGJFQ0o3YjRfZFdWeW1qRk1ldnlia1ZOQTdoaXlFTGZkNW9XeG51T2Niak4wZ1JydHVWZGlyUl90QmVWd2FBdGpnR2VZWURhX19VeVlPWFJUZTkyckx6THBoLVZVRExQUTlYeWczSFhCOFRKZk1QYXM2QjlqU2VmemRJ) - (autoevolution)
+
+### **글로벌 AI 시장 투자 확대 및 혁신 동향**
+빅테크 기업들이 올해 AI에 7,000억 달러 이상을 쏟아부을 것으로 예상되며, 바클레이즈는 로봇 시장이 수조 달러 규모로 성장하는 '로봇의 10년'이 도래할 것이라고 전망하는 등 전반적인 AI 시장 투자가 확대되고 있습니다. 이러한 거대 자본 투자는 AI 에이전트 붐 속에서 앤드리슨 호로위츠 주도로 Temporal이 3억 달러를 유치하는 등 스타트업 생태계에도 활력을 불어넣고 있습니다. 향후 AI 기술 발전은 데이터센터 인프라를 넘어 제조 및 분산 컴퓨팅 영역까지 확장되며 산업 전반의 혁신을 가속화할 것으로 보입니다.
+> * [· 빅테크 4사 시총 1조 달러 증발했는데…올해 AI에 7000억 달러 더 쏟아붓는다](https://www.g-enews.com/article/Global-Biz/2026/02/202602171537263152fbbec65dfb_1) - (GEnews)
+> * [‘Decade of the Robot’ Paves Way for Trillion-Dollar Market, Barclays Says](https://news.google.com/rss/articles/CBMivwFBVV95cUxPaXZJS2l6TnRNenpDenFaWlBJVGU4cFVkYWJDYWFlY2VENks1aHozMXA1SzJNNTA0bkJjTXBnUGpCcjBnd0kteGMtbmZ2a0lXd3J0a01UdWRQWVhoV2p1bk9ObTg5cHNlbFFEWFZnRnVuWlFNckkzeDI4OU5vMW85dHBoOWd2bXROOFpQdExQUWZzVUlNZEtPallQZ3VwS1FYUDBJRjAyRzYyUVdJOUp4bHB3MWhRSmd5S1NIaFdCOA) - (Bloomberg)
+> * [Temporal raises $300 million in Andreessen-led round amid AI agent boom](https://news.google.com/rss/articles/CBMixAFBVV95cUxPNlZfa2dIYzJuMWlfal9SM2pCRFZpV0M3bjdMSzA4Wnc2N2o2aXh4eXVPd1ZZZ2pxQ2lRWDBndC1WNk5OYnFWLWpTMWo5VGNabGlub3Y4aE9hWl83SFowT254d2hUb2p2VWRPZWFfSl9zVDJUei1pemRvT01Pck45VGVnMzJycEpuaFhrdlBVNE91aDgtT0tUMVhuRUIzaHk0bnVQMHJFdGRVZEdLRUZPT2psX0JrNllOOGxXM2NMOTZQQW1m) - (Reuters)
+
+### 🌏 Region (China/Eurozone)
+### **중국 소비 회복 조짐**
+중국 소비가 스마트 제품과 건강 관련 상품을 중심으로 회복 조짐을 보이고 있습니다. 이는 팬데믹 이후 소비자 선호도가 혁신과 웰빙으로 변화했으며, 정부 정책 및 시장 트렌드가 이를 지지하고 있음을 시사합니다. 중국 소비의 지속적인 회복은 글로벌 수출 기업과 중국 시장에 의존하는 기업들에게 긍정적인 영향을 미쳐 역내 경제 성장을 촉진할 잠재력이 있습니다.
+> * [中 소비 살아나나…스마트 제품이 끌고, 건강식이 밀고](https://www.hankyung.com/article/202602178633i) - (한국경제)
+
+### **독일 경제 심리 예상 밖 하락**
+독일 경제 심리가 예상치 않게 하락하여 금융 시장 전문가들 사이에서 비관론이 확산되고 있습니다. 이러한 심리 위축은 지속적인 인플레이션 우려, 지정학적 불안정성, 그리고 주요 수출 시장의 둔화에 주로 기인합니다. 유로존 최대 경제국인 독일의 심리 약화는 유럽 전반의 성장 전망과 투자 심리에 부정적인 영향을 미칠 수 있습니다.
+> * [German Economic Sentiment Slips Unexpectedly](https://news.google.com/rss/articles/CBMijgNBVV95cUxQQ3RwcEVoYWE1cF9VcFBKSk4zRFBsYURfMFBtb2JXRUhxelJ4ei0wcU01YjlJM0RhN2kzLWtDcTVaNjdGTEdXbGY5Wmh4UllDbGlka0l1LU1xNGV0aDNHeHN5YWwtU1pacVV6RUFLYnN2MTBMZzRSZ0E5OUlSYUdqc25OUkZoelU2WU10d3NOc3RoOEtPVzRacU51WTRrdThha0JMZE5VdVotRGRLampOeVllMU5PTzVkbk9pSnpWcUJkTzZpTVUxa0lldmpQbDVnUXhKN05pVWc0RVhuN3gwQ0VOXy1sQkdaT0tDZ3RkWUM3U0N6Yk51OTY5QW1CNy1WRzdCUG9mUzkwVkQ2SHUtM2E4STZuZ1NZaVk1Ync1WnhGV2FwcFlaR016QzRaeWl6UFBGeVk2QlV4OV9YcVAtOWswVXkzd055NEVJX0dCQ2JhZmp2SzJUdXZCWE5uamZJNUxJbEVrZ0RoMzJfUWtKeW9ncjVWNXREZzViSHpmYlBfSzhCYktFMk1FZGJvdw) - (WSJ)
+
+### **뉴질랜드 금리 인상 논의 증대**
+뉴질랜드 중앙은행(RBNZ)이 안나 브레만 의장 체제하에 첫 통화정책 회의를 개최했으며, 잠재적 금리 인상에 대한 논의가 활발합니다. 금리 인상 논의는 뉴질랜드의 지속적인 인플레이션 압력과 견조한 고용 시장 상황에 의해 촉발되고 있습니다. RBNZ가 금리 인상에 나선다면 이는 매파적 기조를 강화하는 신호로 해석되어 뉴질랜드 달러 강세와 현지 차입 비용 및 투자 결정에 영향을 줄 것입니다.
+> * [New Zealand’s Anna Breman chairs first central bank meeting as rate hike chatter grows](https://www.investing.com/news/economy-news/new-zealands-anna-breman-chairs-first-central-bank-meeting-as-rate-hike-chatter-grows-4509672) - (Investing)
+
+---
+
+## 3. 🇰🇷 Korea Market
+### 🚀 Market (Stock/Indices)
+### **글로벌 헤지펀드 유입 및 연기금 재편 속 한국 증시 활황 지속**
+지난주 글로벌 헤지펀드들이 한국을 포함한 아시아 주식을 사상 최대 규모로 순매수하며 코스피는 8.21% 급등, 5,500선을 돌파했습니다. 인공지능(AI) 관련 기업의 강세와 미국 빅테크 중심의 투자 확대가 이러한 증시 상승세를 견인했으며, 국내 상장사 66%의 목표주가 또한 상향 조정되었습니다. 글로벌 투자자들의 아시아 증시 선호와 연기금의 코스닥 등 포트폴리오 재편 움직임이 맞물려 한국 증시는 당분간 긍정적인 흐름을 이어갈 것으로 전망됩니다.
+> * [코스피 질주 이유있네…"헤지펀드, 지난주 亞 주식 순매수 사상 최대"](https://news.einfomax.co.kr/news/articleView.html?idxno=4399140) - (Infomax)
+> * ["코스닥 안 담으면 감점"…연기금, 포트폴리오 재편 시동(시대 리포트)](https://finance.naver.com/news/news_read.naver?article_id=0001130238&office_id=417) - (동행미디어 시대)
+> * [국민연금, 美 증시 투자로 ‘잭팟’… 지난해 평가이익 43조 올려](https://www.donga.com/news/Economy/article/all/20260217/133370846/1) - (동아일보)
+> * [증시 호황에 국내 상장사 66% 목표주가 올라… 상향폭 1위는 현대차](https://www.chosun.com/economy/stock-finance/2026/02/17/HA3TSNLDMZRDQMZXMNSTSOJZG4/) - (조선일보)
+> * [글로벌헤지펀드 한국 등 아시아 순매수 10년만에 최대](https://www.hankyung.com/article/202602178575i) - (한국경제)
+
+### **증시 호황 속 은행권 고금리 예금 경쟁 심화**
+증시 초호황으로 예금 수요가 주식시장으로 이탈하자, 국내 은행들이 최대 10%에 달하는 고금리 예금 상품을 출시하며 고객 유치를 위한 금리 경쟁을 심화하고 있습니다. 이는 주식시장으로 자금이 대거 유입되면서 은행들이 유동성 확보와 고객 이탈 방지를 위해 적극적으로 예금 이자율을 인상하는 전략을 취하고 있기 때문입니다. 은행들의 이러한 노력은 단기적으로 예금자들에게 유리한 조건을 제공하겠지만, 시중 자금의 흐름과 향후 금융 시장 전반에 미칠 영향에 대한 관심이 요구됩니다.
+> * [요즘 누가 예금하나…증시 초호황에 은행들 "10% 이자 드려요"](https://www.hankyung.com/article/202602123117i) - (한국경제)
+
+### **동해선 KTX 고속화 사업, 전 구간 질주 시대를 연다**
+동해선 KTX-이음이 운행을 시작한 가운데, 삼척~강릉 철도 고속화 사업이 정부 예비타당성조사를 통과하며 동해선 전 구간의 고속화가 본격 추진됩니다. 총 1조 1507억 원이 투입되는 이 사업은 기존 노후 선로 45.2㎞를 개량 및 고속화하여, 동해선 KTX의 유일한 저속 병목 구간을 해소하는 데 중점을 둡니다. 동해선 전 구간이 고속화되면 부산 부전에서 강릉까지 이동 시간이 3시간 20분대로 단축되어 동해안 지역의 접근성을 획기적으로 개선하고 지역 경제 활성화에 크게 기여할 것으로 기대됩니다.
+> * [“부·울·경 800만 불러 모은다”…‘끊김 없는 질주’ 앞둔 동해선 KTX](https://www.donga.com/news/Economy/article/all/20260217/133370809/1) - (동아일보)
+
+### 💸 Macro (FX/Rates)
+### **가계대출 금리 7%대 진입 임박 및 금융당국 정책**
+한국 주택담보대출 금리가 7%대 진입을 목전에 두면서, '영끌족'이라 불리는 대출 차주들의 이자 부담이 눈덩이처럼 커지고 있습니다. 금융당국은 올해 가계대출 총량 관리를 강화하는 동시에, 중·저신용자 대상 대출은 총량 규제에서 제외하여 포용금융 기조를 유지하려는 방안을 추진하고 있습니다. 이러한 정책은 고금리로 인한 차주의 어려움을 일부 완화하려는 시도이지만, 전반적인 대출 금리 상승 압력은 지속될 전망입니다.
+> * [“앞으로 어떻게 살아가나”…대출금리 7% 돌파 목전에 ‘영끌족’ 비상](https://www.mk.co.kr/news/economy/11964197) - (매일경제)
+> * ['요즘 대출금리 무슨 일이야'…속타는 영끌족 '비상'](https://www.hankyung.com/article/2026021784207) - (한국경제)
+> * [가계빚 더 죄면서도 중·저신용자엔 숨통…금융당국, 은행 실적관리서 민간 중금리 제외 추진](https://www.mk.co.kr/news/economy/11964149) - (매일경제)
+
+### **한국 경제 성장률 부진 및 원/달러 환율 진정세**
+지난해 4분기 한국의 실질 국내총생산(GDP) 성장률이 -0.276%를 기록하며, 주요 24개국 중 22위로 최하위권에 머물렀습니다. 이는 고금리 환경과 소비심리 위축 등이 복합적으로 작용한 결과로 분석되는 가운데, 한때 1500원선을 위협하던 원/달러 환율은 최근 1440원대로 내려오며 상승세가 한풀 꺾였습니다. 단기적으로는 환율의 하방 압력이 우세하다는 전망이 나오지만, 아시아 통화 전반에서 원화의 상대적 약세 흐름은 여전히 이어지고 있어 경제 회복에 대한 우려가 상존합니다.
+> * [작년 4분기 韓 경제 성장률, 세계 주요국 최하위권으로 추락](https://www.chosun.com/economy/2026/02/17/VWBGWXPRHVD2BCIDIXUSXEZKII/) - (조선일보)
+> * [한국 작년 4분기 성장률 24개국 중 22위](https://www.fnnews.com/news/202602171103581996) - (파이낸셜뉴스)
+> * [달러 힘 빠지나…환율 1440원대 안착, 추가 하락 가능성은](https://www.fnnews.com/news/202602162310198420) - (파이낸셜뉴스)
+> * [(혼돈의 亞통화) 출렁이는 원화…구조적 강세 위안화](https://news.einfomax.co.kr/news/articleView.html?idxno=4399151) - (Infomax)
+
+### **국내 생명보험사 수익성 하락 전망**
+국제 신용평가사 S&P 글로벌은 국내 생명보험사의 수익성이 건강보험 상품 경쟁 심화와 저금리 환경으로 인해 하락할 가능성이 크다고 진단했습니다. S&P는 총자산이익률이 작년 약 0.8%에서 향후 2년간 0.7%~0.75% 수준으로 완만하게 낮아질 것으로 예상하며, 고령화에 따른 보장성 보험 수요 증가에도 불구하고 마진 압박을 지적했습니다. 이러한 환경 속에서 생명보험사에게는 금리 위험 관리가 핵심 과제가 될 것이며, 안정적인 사업 성장을 위해서는 새로운 수익원 발굴이 중요할 것으로 보입니다.
+> * [S&P "국내 생명보험, 수익성 하락 전망…금리위험관리 핵심"](https://news.einfomax.co.kr/news/articleView.html?idxno=4399106) - (Infomax)
+
+### 🏭 Industry (Company/Sector)
+### **삼성그룹, 반도체 리더십 회복 및 시장 관심 재부각**
+삼성전자가 글로벌 반도체 시장에서 한때 잃었던 '세계 1위' 타이틀을 되찾으며 반전의 기회를 맞고 있습니다. 이는 고대역폭 메모리(HBM) 등 첨단 반도체 기술 경쟁 심화 속에서 삼성전자의 전략적 투자와 기술 혁신 노력이 결실을 맺었기 때문입니다. 이러한 회복세는 글로벌 반도체 산업에서의 삼성전자 리더십을 강화하고, 투자자들의 관심도 다시 끌어올릴 것으로 전망됩니다.
+> * ['세계 1위' 타이틀 내주더니…"삼성이 돌아왔다" 반전 (황정수의 반도체 이슈 짚어보기)](https://www.hankyung.com/article/202602178111i) - (한국경제)
+> * ["세뱃돈으로 '삼성전자' 사주세요"…세금 한 푼도 안내려면 (고정삼의 절세GPT)](https://www.hankyung.com/article/2026021348436) - (한국경제)
+
+### **SK㈜, 고배당 정책 전환으로 주주환원 강화**
+SK㈜가 2025년 결산 배당금으로 보통주 1주당 6,500원(우선주 6,550원)을 책정, 총 3,581억 원 규모의 배당 계획을 발표했습니다. 이는 최근 국내 기업들의 주주환원 경쟁이 심화되는 가운데, 배당소득 분리과세 제도를 활용해 고배당 기업으로서의 면모를 강화하려는 전략적 움직임으로 해석됩니다. 과거 자사주 매입·소각을 선호했던 SK㈜가 배당 중심으로 주주환원 정책을 전환함에 따라, 향후 주주가치 제고 방식에 대한 시장의 기대와 평가가 주목될 것으로 예상됩니다.
+> * [(SK㈜ 주주환원) 아직 최종 결산 전인데…'고배당 기업' 밝힌 사연](https://news.einfomax.co.kr/news/articleView.html?idxno=4399120) - (Infomax)
+> * [(SK㈜ 주주환원) 이번에도 배당…자취 감춘 자사주 매입·소각](https://news.einfomax.co.kr/news/articleView.html?idxno=4399121) - (Infomax)
+
+### **LG그룹, 제품 경쟁력 및 친환경 파트너십 확대**
+LG그룹 계열사들이 각각 미국 시장에서의 제품 경쟁력 입증과 친환경 사업 확대를 통해 활발한 활동을 전개하고 있습니다. LG전자는 미국 컨슈머리포트에서 건조기 부문 최고의 제품으로 선정되며 뛰어난 신뢰도를 높였고, LG화학은 휴롬과의 협력을 통해 바이오 플라스틱 등 친환경 소재를 활용한 주방가전 시장 진출을 모색하고 있습니다. 이러한 움직임은 LG그룹 전체의 브랜드 가치 및 지속 가능한 경영 역량을 강화하고, 각 사업 분야에서의 시장 지배력을 확대하는 데 기여할 것으로 기대됩니다.
+> * [LG전자, 美 컨슈머리포트 선정 ‘최고의 건조기’](https://www.chosun.com/economy/tech_it/2026/02/17/GIZTENZTMYYWEMLBGAYWCNJXGU/) - (조선일보)
+> * [LG화학, 휴롬과 친환경 주방가전 협력 나선다](https://www.sedaily.com/article/20009671) - (서울경제)
+
+---
+
+## 4. 🏢 Real Estate
+### 🌐 Global Real Estate
+### **미국 주택 시장 위축 지속 및 건설사 심리 악화**
+미국 주택 시장 지표와 주택 건설업자 심리가 지속적인 약세를 보이고 있으며, 홈디포는 주택 시장 침체에 대응하여 보너스 정책을 강화하고 있습니다. 고금리, 높은 건설 비용, 그리고 낮은 재고 수준이 주택 구매 능력과 수요 감소의 원인으로 작용하고 있습니다. 이러한 지속적인 약세는 주택 관련 부문 및 소비자 지출에 영향을 미치며, 당분간 주택 시장 활동이 침체될 것임을 시사합니다.
+> * [Home Depot Gets Stricter on Bonuses Amid Housing Market Freeze](https://news.google.com/rss/articles/CBMitwFBVV95cUxPbzgxOWZpOURkZzBmQkhTZDJkVUlTZExtOTlkdWJURXE5cDA5NWFfUDBMUUxyb2NUdzFEaDY3NmRuVFE4WnJWM1JMai1EMjI1WjZISllpN0s1bnA5c0NNaS1rQjBjQktyeWp6U3c2TF9BQm0tU3VUYVFRZ0RUa2VYNENrQS1Da1ZyOGR0eWJZOUpoSk1Kcnc0a0RGVXdtNXpQWF9hVFhSaU85N3NqYmY3RV96Ty0tN2M) - (Bloomberg)
+> * [The housing market is not getting much better](https://news.google.com/rss/articles/CBMicEFVX3lxTE14anhlWmZlSzU2bFhvZUd6NTRCci0wdWR4c0otTW1JOEFPcVdMYllLQ1UwRWtXSGtMeUY0QldtSWF1VmNNbE9qRXI4cWpfd2JIeC11S0J3ZDhGREN6T1JNV1ZGVmNVdUx0MkVKY1BoX2o) - (FT)
+> * [U.S. Home-Builder Sentiment Edges Lower on Cost Concerns](https://news.google.com/rss/articles/CBMipwNBVV95cUxOMXJHMTEtLU5sUEowb2NSRHVvQ2V0RXBpa0NQb1NOZ3hFNWhneDZON2l0Z2RRbjhNdE56UlcxaXhHVUlyVEQyMzBKMzVfOTdSQ1lRWHRyTXE4bGZ4OHFuUXpLSGZtTlFLblJ3dDRsNEptUVpCa0R4bjBqVHJ5TzRDSnZxamplNjJoTUJTRjE0dndNcFIxN2pBYVFXYWR0WDV4MlNQeXJ5aEk3VFNlZ1kwcUE2Qjh2UFJrMGdfRHVOM3hpSm52Rl94dU9uQUgwSnBSTUg2MWpsWXk0V1lSd29vN2k3amxYMko2NWNpT3RuMzdoZGNQMXVUR19HTHZCMGFIaHczRFVqSU9lSUYyOFF2TmpuenBNb2pFUERQNkphdXllRnhSczdRM0NfOFRDa1l2WTNMSE5IdUw0N1REYzFwbDlkcGVrbl9LaDgxdnpKeHRMY3FIUERub2RyLUZieDE4T28xQWIwZXcxcVJVcTY5d0lXR3JwSEZvYmlGRW83RE52Y29SS183TEJMdUNrTUplZmVPS29pbjJZekk3TTZUbXFaMFpFSVU) - (WSJ)
+
+### **Homes.com, AI 기반 주택 검색 서비스 출시**
+Homes.com이 마이크로소프트 애저 OpenAI 기술을 활용한 새로운 AI 기반 주택 검색 플랫폼을 출시했습니다. 이 이니셔티브는 고급 AI 기능을 통해 더욱 직관적이고 개인화된 부동산 검색 경험을 제공하여 사용자 경험을 향상시키는 것을 목표로 합니다. 이러한 기술 통합은 전통적인 부동산 검색 방식을 변화시키고 온라인 부동산 시장의 효율성과 경쟁을 증가시킬 수 있습니다.
+> * [Homes.com launches AI-powered home search with Microsoft Azure OpenAI](https://news.google.com/rss/articles/CBMibEFVX3lxTFA1UDZHZS1nTW9BREt4VkU5QjJGZ185WG1yS0V2SDF1ajdTUjdTTmdRYzVtZXIxaC11YjdfZV9odXZhaDJwVndBWldhOFZNRXlSaHQ3R0x1WmlUY2cwSVdDc2hxejdWYmVyR3ZkQQ) - (HousingWire)
+
+### 🇰🇷 Korea Real Estate
+### **서울 아파트 매도자 비율 상승 현황**
+서울 아파트 시장에서 매도자 비율이 올해 들어 최고치를 기록하며 매물이 증가하는 추세를 보였습니다. 이는 정부가 다주택자를 대상으로 '세금 폭탄'을 예고하는 등 규제 강화 움직임에 따라, 매물 출회 압박이 커진 영향으로 풀이됩니다. 이러한 현상은 향후 주택 시장의 공급을 확대하고 가격 안정화에 긍정적인 영향을 미칠 수 있으나, 단기적으로는 매물 증가로 인한 변동성 확대 가능성도 존재합니다.
+> * [다주택자 ‘세금 폭탄’ 예고에 서울 아파트 매도자 비율 올 들어 최고](https://www.chosun.com/economy/real_estate/2026/02/17/HKQ4OOAR75CUNDS6IO5HDYEAYI/) - (조선일보)
+
+### **설 연휴 이후 대규모 아파트 분양 예정**
+설 연휴 이후 전국적으로 약 3만 가구에 달하는 대규모 아파트 물량이 분양 시장에 쏟아질 예정입니다. 이는 그동안 지연되었던 분양 계획들이 연초를 맞아 본격화되는 것으로, 실수요자들의 청약 통장 활용에 대한 관심이 집중될 전망입니다. 늘어나는 공급은 청약 경쟁률에 영향을 미치고, 전반적인 주택 시장의 공급 부족 해소에 기여하며 장기적인 가격 안정화에 긍정적인 신호로 작용할 수 있습니다.
+> * [“여보 청약통장 어디 뒀지?”... 설 이후 3만가구 쏟아진다](https://www.chosun.com/economy/real_estate/2026/02/17/SJKT66PFYJEZDL3BABQYIADNSY/) - (조선일보)
+
+---
+
+*By Lan Analyst at 2026-02-18 07:09:04*
