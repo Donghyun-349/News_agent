@@ -1,0 +1,386 @@
+{
+  "meta": {
+    "date": "2026-02-09",
+    "generated_at": "2026-02-09 22:30:48",
+    "model": "gemini-2.5-flash",
+    "posting_title": "Intel Shares Dive on Weak Q1; Nvidia Ends GPU MSRP",
+    "language": "en"
+  },
+  "sections": {
+    "Real Estate > Global": [
+      {
+        "title": "US Housing Market Stabilizes Amid Lower Mortgage Rates",
+        "text": "The U.S. housing market is showing signs of stabilization and potential revival, driven by mortgage rates approaching their lowest levels in three years and maintaining recent flatness. This shift follows a post-boom adjustment, allowing for price stabilization in some metropolitan areas while other regions continue to see price appreciation despite tighter inventory. The outlook suggests that declining rates will progressively boost buyer activity, leading to a more balanced market dynamic, though persistent low inventory will likely continue to exert upward pressure on prices and pose affordability challenges.",
+        "links": [
+          {
+            "title": "Buckle up, agents, because mortgage rates are near their lowest level in 3 years",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMjNvWUJrQ1dHaWJWcVFPVkFaUlNPbTZaU1d1R2JmNGxTRWV5M0wxU0NZRzUtWHpWS3hMRm05ZVFDOG53Y3NubWczakRDelhqYnAtcTFpTzNCM2JMRjJsSGFjNDB4UlhrWW03NE9rbkZIYkN3ZXdWOV9GeG5TNFd2TmRTQkZ4ZXh2MHBkSTZ1dF9XUmVnem15YzhDYjVjU1hXQnM0VzJCRFJ0TmFSMHhwQkl3",
+            "source": "Inman Real Estate News"
+          },
+          {
+            "title": "Chris Kelly, CEO of HomeServices of America, Addresses Housing Market Stability Amid Steady Interest Rates",
+            "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPTGp5ZHBPOEM0RFl3WklnOHlGaTVBb2VKMUdLUjZpWm5JZFNEWjI3bFZ6ZFljZTVibktGSVVxdTJqSVFIcDY5cWZTOEhSbXZvbkRjMFAyOWlxZHNGWTVxSVpXZ1YxLUNEUHhXcDhkYXZheVNiWlVacFV4SW1BR2R2ZjBmSFpwSURsUkhyM2tncmJpRndkRW40WGd6dm1CeGEtcXV0R3FXNzVqbzEtdTlvT2xtTUdUb3Jwbnlld3k3Nm5LdmtKR2s1TVd0SlM1Y1lPdndaZjVGeHZCZk9mOVE4NFNFcVRZYTR2bTlPbFBB",
+            "source": "dispatch.com"
+          },
+          {
+            "title": "Mortgage Rates Close Out Extremely Flat Week",
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE43UGxrdzBkV3AybDBCX292MS14cnVGSXVJVlpmV0xRcjhHa0ZLV21QR2tuUWtvQ3FNbUhnSDA0TUtpV2RSR2JMY3Bna1RZenJRNUJlc1BvU3E4WEhzNUJrVTZnMUdMMjgzYlVsTDd0bzJXTjDSAXRBVV95cUxPZ1N5WHVic1p3Y2d5QzlzWDlyTHd0VllxODRMRmRiRWlOemYyUGlwRkVvZWVyWFYxdUJZVjdJXzhrUHYzNnVhRW9fMnlxcFEwU2ZJQ1JCcEpYVUxETmgyTElFRlg2YTROSV9zTGRoRnZXWW1aNA",
+            "source": "Mortgage News Daily"
+          },
+          {
+            "title": "After the boom: Salt Lake County home prices stabilize",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQeFUwZUNuRXlBZnlUTGZMcUJGT1VlZE5zWWgxbUNZMWxRM3VxLU9GbW1GcV8wUFhGOTNSZmFNcEE3WnQ2TWpPOHA5TFRER3hyT0Z3WHprbkhQRlFrdlIzemZaczFCUU1OTmtNWVY0NWNtblowSkJaV3NMU08wN0NSLXB6SjdHSktDRXZHQmJRNHR2MDlu",
+            "source": "ksl.com"
+          },
+          {
+            "title": "Lower rates revive a cooler but fairer US housing market",
+            "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOWVZEYUZMQVdoNmFxc2x5T0d1bURKSlM2MkIyUHRtUFQ5Vmw4RTlyZjFMbTFZVUtkdFJfZG5MY1pFRWNFQ0cwZkhOcGhhcmdVMlU3dWgwaUppRlozU0RRS01kUEM4ZXNzV3VFLXZXYmt1UHhwSnlFZ00zR0NnNjNKTnZjcnIwRTgyLWhpX1RNdVRzWlQtV0YxMm9ZS1lUTjNMWVF3WGp1bUVyQlVLcXk4MnZ4eng2N1pWX21HUzNlTQ",
+            "source": "mpamag.com"
+          }
+        ]
+      }
+    ],
+    "Executive Summary": [
+      {
+        "title": "",
+        "text": "1. Intel's Q1 outlook missed estimates, causing a significant stock decline.\n2. Nvidia ended its Open Price Program, signaling potential GPU price hikes.\n3. Surveys indicate the Federal Reserve is not expected to cut rates until June.\n4. BlackRock's Rick Rieder emerged as a top candidate for the next Fed Chair.",
+        "links": []
+      }
+    ],
+    "Global > Region": [
+      {
+        "title": "Emerging Battery Market Expansion in Brazil and India",
+        "text": "Brazil and India are set for substantial growth in their battery markets, with India's battery storage sector alone projected to surpass 30 trillion won by 2035. This expansion is driven by increasing demand for energy storage solutions and a push for green transitions, attracting significant foreign investment, including Chinese firms poised to benefit in Brazil and Korean battery companies accelerating their entry into the Indian market. These regional booms signal a strategic shift in global battery manufacturing and deployment, fostering localized supply chains and enhancing energy independence.",
+        "links": [
+          {
+            "title": "Why Batteries Are About to Have a Moment in Brazil",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNFFNdURsQThqRFhVLWlBUUJBRXcxVGhUcngxcjRIMldzTmlGU251SE5VZU82MlQ2bU9mbGZWVFhLc2JhTjloNDR0dVBBVklqR295VjlndzgtM1lVWFY3cWdxUjQwaEo3a0hXakVWTmxBSHRuMUoybm02NF8wSjdfTF9lcHVGZ0tHeE5LRFBRSVhma3RWM3o5dTFodDJaTlpadEVwTHFGVUdVd1N1UG5CUEtB",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Brazil Is Set for a Battery Boom. China Is Poised to Benefit",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTXBpYTBZUjNhVWJ5VEtld2trT1pYeS04WkpMbzZqWGRsWkE2eXNiR0NrZ0ZSSU5SZVNyVXd6REVUMWhyUXd4WlBvb19LdHkxWGYyUFlLZ1dCTVlsV0RNZXBuYnNxZnI3Y2RoRVBUbkVzQi0tRG1adWZ4dEtXaFpiSWc4N3NuVm1MU0E0S2poVWp5V0d0Znk1eUtnYllvM2MzcEJaNU1ibG42eE5vY1o4",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "인도 배터리 저장장치 시장 2035년 30조 원 돌파…한국 배터리 3사 진출 가속",
+            "url": "https://www.g-enews.com/article/Global-Biz/2026/01/202601240929407115fbbec65dfb_1",
+            "source": "GEnews"
+          }
+        ]
+      },
+      {
+        "title": "Divergent Trends in Global Oil & Gas Production",
+        "text": "Kazakhstan's Tengiz oil production has not yet resumed, while SLB is preparing for a rapid expansion of its operations in Venezuela. The stalled production in Kazakhstan indicates ongoing operational hurdles impacting a key global supplier, contrasting with SLB's strategic move to capitalize on Venezuela's vast but underutilized oil reserves. These developments collectively highlight potential short-term supply constraints from an OPEC+ ally and a long-term strategic play to unlock production from a nation previously constrained by sanctions.",
+        "links": [
+          {
+            "title": "Kazakhstan's Tengiz oil production has not yet resumed, Chevron says",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOXzNzU3RYWjY0ZDhTQTBRcTE5VHExVVQwZi01OWwyN1lFcFZoMDJQSUgzTllTYzBVa0Y5cFBjcjZaQWpjTE12Z0ZtczRxSlBpM2ZlU3NEM0RyRWZDeF9sZVJ6NDBJUEU0dDJCTEJIT2RnRm5aTFZfcmRoS0RlbDNGT29NMnd0YXcwZDM1dktyOHNHVzNaQ0Q4aFFiTXpxUkJQN2kxVlpkNzJiWjUyTEFmdExPLUxJS3ZxSEE",
+            "source": "Reuters"
+          },
+          {
+            "title": "SLB Readies Rapid Expansion in Venezuela",
+            "url": "https://news.google.com/rss/articles/CBMivgNBVV95cUxOVzhVMFBlRTYxUmMxc1FWT1EzR3ZNTG9zT1NYTmxiQS04TkxRZVdiLTZmNU9FdHJzYml0dUxISXNDZmloeGI1MGExbkUyZXlNSENNVjZrWFdKZ2ZWdF93ZG85aG5DVERqX3dFbTBDY2dPdlF5WktEWTJKWjdGVkJFRzQ5ZFZVRzNHU3VzWTdCMGItaWF6VG1QVF9qcW5PQUtqeGt0aHUwZ3RxS2pid3NGM215NGNWYk11Y3FUdGotQ2REUm5DUExTXy1mZ2ZQWGtGNGlnTnItMWJ0elhVUDJsVHlKNTJHWllFSVVHZkZRekZ0UkJhQXM1N0gxdXhJSG9BVU1QVEJhcThEcTFWcm03U2dYaGdDQ0VlTFRnb2hNSE9BZmtvTjVXNG9iLWNlWE5ZRlFVU2hkeUFtdHFQMFBJcEZJWmZEakk5UEFIWmJXd1RpaVhTTGhsbHZCS1o0WkZXVWZqZW9tNWdjZlN2TE5XTnpRTkFua0RieWJsOTNkdzF0UnJLeEFicTZtVjkzV3ktWlBoV3UxdHZNVHFndmdPUmZQV1o0TWNmY2l3TFEtWk8yc1ctNTY2M0Z2UDRKdw",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Geopolitical Maneuvers in Critical Resources and Shipping Lanes",
+        "text": "Global efforts are intensifying to counter China's chokehold on rare-earth supplies, alongside ongoing discussions about the Arctic shipping route's strategic viability. The push for rare-earth diversification involves exploring alternative sources and recycling technologies, while the Arctic route's potential to shorten trade routes is weighed against significant costs for icebreaking and volatile navigation conditions. These initiatives underscore a global imperative to secure vital resources and optimize trade logistics, influencing future supply chain resilience and international maritime strategies.",
+        "links": [
+          {
+            "title": "Exclusive | Can Old Lime Bikes and Hard Disks Counter China’s Rare-Earth Chokehold?",
+            "url": "https://news.google.com/rss/articles/CBMisANBVV95cUxNVTZoUUMtRDNFU2tvSTZlUnFrdUtDZTcxcmxkWFIyWmJQT3BRSXNQeVlzbEZubi1YdU9nbm93NXk3R2lwelBfWDZreHJsWXVMZ3VkMGNPTDhZV0FOdVZ4TTdjSEFSTU5QVWFGaFZGLUExM0tCRVYydUtxcHBMVk5zWVFVVmlMTXFpZW9TSTFTN0hqQk5uZ1lwMUdnOUVzcGM1VExFLUVBOTJJcjItRzBEVlNEUzJwak5VTnJKdzBTREk5VEJIX21UWXlfcEpEdEN1dVdPaEU2VENYdjAtTXJRT0xVMEg3Y0dMTzVRd2pLenNBZnpWemRNaTVFOG1adF9iNXRWdDk2ZHZOVVo4TVhQUC1pV0RaYmRJeVdRUGoyTXpjQzRMb2Z5VUN4NWpMRlNDRDFKRmlhUkV4SzVrNndnc0ZseHA5ZjVqYjRvc0dRejFlakJjczB3bmhzUEdMQzdPc0hKSnd5bFh6X2xMZHNYR0VvVzh5dFI0b1J6SmpTUV9OYzdVbkk2Q010X1Ffc0dVUjJYQ1ctZlE1amRuYWtDRmJwREtFRHBmSUN4aUF1QnE",
+            "source": "WSJ"
+          },
+          {
+            "title": "북극항로, 전략항로 가능성 크지만 쇄빙 비용ㆍ불안정한 항행 여건은 '우려'",
+            "url": "https://www.etoday.co.kr/news/view/2548759",
+            "source": "이투데이"
+          }
+        ]
+      }
+    ],
+    "Global > Tech": [
+      {
+        "title": "NVIDIA GPU Strategy Shifts, Ending MSRP and Driving Price Increases",
+        "text": "NVIDIA has reportedly terminated its \"Open Price Program\" (OPP), which previously incentivized partners to sell GPUs at Manufacturer's Suggested Retail Price (MSRP), signaling an end to fixed pricing. This strategic pivot grants AIC partners greater control over pricing, potentially leading to substantial markups, alongside reports of a six-month supply halt for RTX 5060 and projected RTX 5090 prices reaching $5,000 by 2026. The move is anticipated to significantly elevate GPU prices across the market, impacting consumer affordability while potentially boosting NVIDIA's average selling prices and overall profitability.",
+        "links": [
+          {
+            "title": "End of NVIDIA OPP = end of MSRP cards?",
+            "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9hQXIwN3pkdmhOMHB3azBPYlVodUFBNDJBcHhNU21mOUVXcUZMeGhrQlgwOXhfamJzQlRndXlfeWRxcUVRWjlOSHRJOXVrUGM1amZzLUVXVzdhNXZvY2Jib3JJWHpWT0JfQnZrMzRRRzNQQQ",
+            "source": "Overclocking.com"
+          },
+          {
+            "title": "Days Of GPUs At MSRP Over As Nvidia Ends it’s Open Price Program With AIC Partners",
+            "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9jZkdIdXlLYnZ1aHE4Yjd3VmhZajhKYU16TWJFZEFqQmxZcl9DTDVUNnFwcmw0SW5RQlcyTkp2OHJlVmZfb21kUWdDU3JxNElOekttNTY3Um9JVHViOGc",
+            "source": "Tech4Gamers"
+          },
+          {
+            "title": "NVIDIA Ends \"Open Price Program,\" Pushing GPUs Way Past MSRPs",
+            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQT042TlQ4ek12YnFlbC1GYVFnTFh4aVdmdk1IbWZEZHMxQ2ZGMEFZTjZfdFZtaXVyZHYzem1ISWFRYkg4QkVXajlwRHc2eElhNWJPSU5MaTdGaXRoOUcxcmR5YUlzel8zSUxzUlNDUEFZTHFVZW1raW1QN3FtV0NUQWZqLVhFVC0tUmVDU3VIdDNHVjVEcEJhdNIBngFBVV95cUxNSTBUOTBvZ19xY2ptVHZWTUZnM2pKRW1GZUdmdWNOYmJSY3dSdnNFUEdWbXo5S0IwcWVxVHF1MzRGQ3lCRmhtQnVWTW5YVlhLTVR5M3RZMzRDZEZYbko2OUlmbGl2YVFlOFJHT1paNUtiNXYzcF9sbE5HZFBhaklDbVN6cFAzOHRSeE0tdmRWN0tmUGQ3eHlaOWR1Q2lFQQ",
+            "source": "TechPowerUp"
+          },
+          {
+            "title": "Nvidia may have ended its Open Price Program that incentivized MSRP, \"massive\" GPU price increases expected",
+            "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk4waWVEYWpDTzloanRsVXVXUnBQUUpfTWYwTGFDaGpoUzl6b2R0dTczcUNsRzNBQzBSVEJLcER0Z3ZIQnl0c1pHQzJuOFpEUndfYjYzcFB5NkJHX3IzZDJIanlFMlpCdmo3RHpJTks4Z1Zkekt6VTFZak5xNUU2RUpvTW1xdjMwdDlLWGtFeEpyY3RCRUNsRktVbw",
+            "source": "TechSpot"
+          },
+          {
+            "title": "30% price shock incoming as Nvidia reportedly halts RTX 5060 supply for six months",
+            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNFNKbTN3VHRaR2dwclVZMWdmcWlYQXViNkNrUFdLNWtEMFFhdG50d2hNclV1UDQ2MExtZkI1RkhOQndlZXI1VWQteHZEVG1kcDFtZjlQbTFCOXZYSDRFcC1GY1BldC1HUV9GanZNYzgtR0F1V2xRYi15SzBOdk9UY1lFM1F5S3JadGpZVWdkYkY1cFhLMGwzT2htY3laRlpfVUJ4Z2pBaGF4LXZ1SERqbVZYRjhoN0RtZjhaMEVqaENtY2lP",
+            "source": "Notebookcheck"
+          }
+        ]
+      },
+      {
+        "title": "Intel Shares Tumble on Weak Guidance and AI Investment Costs",
+        "text": "Intel's stock experienced a significant decline, reportedly falling between 5% to 17%, after the company issued first-quarter revenue guidance below market consensus, projecting $11.7 billion to $12.7 billion against an average estimate of $12.51 billion. This subdued outlook is attributed to persistent manufacturing challenges, supply chain disruptions, and substantial expenditure on AI initiatives and advanced process technologies like its 18A nodes. The weaker guidance signals ongoing profitability pressures and market share challenges for Intel, raising investor concerns about the efficacy and timeline of its turnaround strategy amid fierce industry competition.",
+        "links": [
+          {
+            "title": "Intel Tumbles After Manufacturing Snags Bedevil Comeback",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPWm5HVEtnQWdRTjJoVlNfQ2VOWGlsX3BVbDdKUjc0RW45VjBrUkpyUDhwN2RxOGFOU2tNY2c4azdLRzdKbVQ0dlFxUk56YTNPZ0M5TGNoLWI4YlpNQ0N6ck9laS0xU3pzenhULUZKN3hmQlNSNzZGZ1ZiOTFab080TGYzdzE1THp3eU5tM003VzVhUHEyOVNlNGlEd19pZnRGWmtpYXFLYjlDTlJOdmhteFdR",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Intel’s Stock Meltdown Risks Eroding Trump-Endorsed Comeback",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOWNTQ2I0bnM2dVIwamNpWEtZempsWE1qYlBzUVhZU3c5Sm90Q2FFMVFKMDhTNDRFdmMtRVVCVzQzWmlwUVRyb2JGS2FNTzJtOXpDWWhJRmhiMkNMYThzOXE3Y3pzTklxcktNTW9WV1lTdWpjam1rUEpLSms3NWdLQ1hOVG1VeGgtVEVvR3c4bmpqWTFiU1JwZmdIaFlTQXRMWFpxTHp6RVRyNThOY01kRg",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Intel shares tumble as supply chain snarls hamper turnaround",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYXZUWlBzQkQzanZDU1N4eGhrNmhJSUl0U010WS1CN0dqSG44R1QteWFHaENjbXdsTE5ZdnA4NllCWllRQnFLemVoQl9HWndqNWdlaFZ5OUhXM29tc1ZzOHJMWVQyaVFBamxzQ1ctYU02MzkwQmZ1ZUExVzhTbjh5ekhLMkx2OHU3cjJmeXdrazFjYVBrNFlIMUY1ZERMSHdwdkhnMlRrZlplTHBzNTM2Sw",
+            "source": "Reuters"
+          },
+          {
+            "title": "인텔, 예상 밑도는 실적 전망에 시간외거래 주가 5%대↓",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4394956",
+            "source": "Infomax"
+          },
+          {
+            "title": "Intel Shares Slide as Costs Pile Up in Bid to Meet AI Demand - WSJ",
+            "url": "https://news.google.com/rss/articles/CBMijgNBVV95cUxNUlpCeW9XbmU2ZlZkbUNobFlqOWM0YVZwRGFtUUlCV0M3dTNsOXVOS0xQU3Q0bFVlakkzVDNxaEl5X19nUDJRWFExbEloN0lEOTJ1a1JpZzFqT05VcGV0NXVaWGdiTHZndTZfSDdPWFptTXF5ZnlCNTdka08tSGdPbGNBYzFSeEdsZzhfUllOWDNhdXpQNnpkQ2RlcGFtRWtseDFySkpzVHA3c2loek1xcXkyTWhNZlg2RXpKaVNJQS1aMUZLdlpDTG1tOS1SblVjWS04NEo1YklZbFdiSGRNLW1JSGpnWDFDWXEzeTJic1FjZDNPcUlKaVU5azh3VXJYZnp5aWxxVVJmVDI4eFl2aHdQM29lc1NlbTFKMTdCTUc5S0syRTNERG9nc3ZFVmZuZ09yOWMzc3ZpZnpjS3dEeGprbmVHeThGNnk2dkRlYUpaRlk3MG1VZzg1WkF3N1hmVUZwMlNxQlJOaTJhV08wbnY2MEF1OUV2QzdHZzdjYWxKaFZfOW5BVDIzUzFudw",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Google Expands AI Integration Across Retail, Search, and Healthcare",
+        "text": "Google is aggressively integrating its Gemini model and \"Personal Intelligence\" features across its key service verticals, notably expanding into retail shopping, enhancing search functionalities, and advancing healthcare applications. This broad deployment aims to leverage AI for more personalized user experiences, streamlining retail processes, improving search result relevance, and tackling complex challenges in disease research. The comprehensive rollout of Google's AI capabilities is expected to strengthen its competitive advantage, stimulate enterprise adoption of its solutions, and reshape consumer and business interaction with digital services.",
+        "links": [
+          {
+            "title": "Google’s Agentic AI Gambit: Unifying Retail Shopping and Service at NRF 2026",
+            "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbVp0TVB6VkVSY2JOWjZhWHdvc1hwcHNKT3RZZWJ2NDdOcnNhSWh2Q0lMMjViQkhwTEJ5Ymk1YXRGeFgyY2dQU1UyMUZ6R3g0ZUxMMVlpcXFRSUY1Sm1hY1FWYnlKVnlxSl9XYlEzbmduQWNtaHp5aXNtNWtlT3J4ek9sVlFNTnFoWXhXaEF3c19Hb25NQ2JtMTFoQkxvNlNreVpHbw",
+            "source": "WebProNews"
+          },
+          {
+            "title": "Video: Google Search Double Heated, Personal Intelligence in AI Mode, ChatGPT Ads & Apple Siri Updates Coming",
+            "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3WWYyNFhDX1djdWw5ZW1fM1NSQU5KbXlMQWdMRTV1eDlhckVPbl9GMVIxLWIwb3VRaVVSNjVLTkp4ZGNhdHc1X3ZYemJsTlRVQjNELURWdm5zOVV1SWozajVTVm5ienc",
+            "source": "Search Engine Roundtable"
+          },
+          {
+            "title": "Google is bringing Personal Intelligence to AI Mode in Google Search",
+            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOWWl2T2xCZXUtOTZwd2hpbDh2MUkyMVFydmtXNDhrRTljY3AyczFtdFBINGFiYzBXSFZJcFhQajB0M3pNVVBkR0VCMTc1Wk9EUENLV3RLcjE2RlhkdC1SSUZvWjdVM3hTbW9rX3BQcV9sUWZMZ0Q4VGdOU3RXVFJqSUJuY2k0aW55RVhzelJMS2tRdw",
+            "source": "Mashable"
+          },
+          {
+            "title": "The pioneer behind Google Gemini is tackling an even bigger challenge—using AI to 'solve' disease",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYUFvRktBczJHUFZqMXA5ZHVCU2RxUkhmM3U1aTd5bW1NWEVNdmlFSlpmNG9jZkJJZzRkUWNHbUpkWmxhWHh0YzVuNmVrSV9KV3JGNE13QkttSG5MREE3R2w2NmhfU1ctWDAzd3kxWVVZWW83aGFhWVJPZlhiM1JTQUhlbVduWF90WGpSWGhsUlg3LUFtXzJPSnl3ZWtEbEtYdHRFdWpGbjRtSmlzX0JMek55Y1hWX0s1QVE",
+            "source": "Fortune"
+          },
+          {
+            "title": "Gemini Enterprise’s Meteoric Rise: Google’s AI Ignites Corporate Overhaul in 2026",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSnc2RG50RmUwbS1BMkFjVVdyS09fYzVpc0tpRHlKdnd0N3owOGQ4TFFrZUlJVUJpVmU3eXlDeVk3ZUZrbENRTm1rTXVOWkJ4TmNYN09wcktwMVVhYWJWdEs2VXNrc09abDliWmZkNEY2RjhqZGVoc1BOSTE0el8za3lrTUlRNy1Ia2FUeHpyS1JiejhfTGFEYVJ4dWhoNkFOZVZSOVdhenBWUQ",
+            "source": "WebProNews"
+          }
+        ]
+      }
+    ],
+    "Global > Market": [
+      {
+        "title": "Global Equities Face Headwinds from Tech Outlook and Geopolitics",
+        "text": "Global equity markets presented a mixed picture, with the Dow Jones Industrial Average closing lower for the week amidst specific regional market surges, such as a Czech ammunition group's 31% debut jump. This divergence stemmed from a disappointing outlook from Intel, which weighed heavily on U.S. market sentiment, contrasted by robust investor demand for defense companies and a boost for hedge funds from soaring swap spreads. The broader market continues to navigate ongoing earnings season and geopolitical tensions, while strategists at Goldman Sachs identify the Kospi as undervalued, anticipating global capital inflows into South Korea.",
+        "links": [
+          {
+            "title": "Dow ends lower after topsy-turvy week, as Intel's outlook weighs on market sentiment",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQOTVOSlc5Zl81c2xJOGVGcE02LVV1ejFzdzc2dEhieEtBRHB5b2hIVDh0a3pxN3M4UkNRQ1p0LVNNOGQ1SUI5bE4zUl90bkI5ZGh0LXRTcFdmeW8yRHBETERMU0lzaXlienh0TFNGOG9RdlR4OTk3VzBrbjVJdGtzSGxsd0dUeVp6eENYYzZBRmNLdllUdmNyamp1dVk3RWJVZVI5NmJiNTJ3dXdB",
+            "source": "Reuters"
+          },
+          {
+            "title": "Shares in Czech ammunition group surge 31% on stock market debut",
+            "url": "https://www.ft.com/content/9796dc0a-6d51-4ce4-b67a-0c63ca3adf8e",
+            "source": "FT"
+          },
+          {
+            "title": "Stock Market News for Jan. 23, 2026: Dow Drops; Intel Stock Slides",
+            "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxOeEs3QWlYazU2b2FaMXBZRUFaSmhnVXlGOWNrSXl0NmxkQ0dXRXpDME54Z1R1MXotSy12TE5US2hUWXlLSnFmZEhvUl9FNldLSE1BZlpONnAtU0NGU3lUX25DTk5IM0dwV0czRFU1cmd4RDRST2ZPbTgzbE1sQncyUG1hMTdkclJPSW9pVDA0Qy1sLUlqd1RwMHZyYnBGcDU4R1NuaEFWVmI2VlhoamE2VTc3YUdvNEI5Q09mSGRHSEhnOHBVM2tydmtscGwyY0t2dVVJUXdKTjVCUmttSkRjaXRqSVh4TEdMVHlhbEQ3b2l4eTl2ODQ1RTdSZHUyLVp4aDdQTkxhdEM2TkpHR1BrVF93RnZTR2xOa1JTREc2UmVvcUhrbnNrOF9kM0ZYRHpVMVhzQmhqM3dkOWVVTUctV3RmSDJLeU9CMVdjUlIzMFRMZHVOMHFOV1BwSnlJNGNsZnl3LXJIS2ItNUxfT0RtUzZNamhQcjV5RzZUUUEwU01vcDJndHI4VjQ2aDE",
+            "source": "WSJ"
+          },
+          {
+            "title": "U.S. Stocks Zigzag on Geopolitical News, Ending Week Where They Started",
+            "url": "https://news.google.com/rss/articles/CBMiygNBVV95cUxQdkd5THlBM1E1N3FsaHRfVjlwNndxY3h3SHdMcXRlZGdGZ0NCYUkxZy1feEJ5ekIxVGlXNEIwcFVIa2l4eU1tMEF0dVNPcU4yYXFDbUpsM0FRdTlsQTJKSXdFVnJ4S3hYX2FYWEFMVGV6YkhubVJ0cE50S0pfT2F3ZWJVNkI5Wjh2U0tXbmlORmdCTDVPalZ1UThjWWtOMHFrQ1IzeU1kZU95THRBMnZTazdpR2Y5Q0xNV3c4ZkQ0NkVnYzFDVnhtbzM4M3FXMi05WlM5VXUwVWUzVDQ2UE5abVpCUEVuVUQ5TWIwZjFCU0d5cUNMWGRqWndhMURqNnEtdDhzZm5rd3BHVTAzSW5xZFNMakNUdGxqSTd5QW5jN0lIYTZkTndmTDJlSmM1TDNYZ2ozamV6NjRtN2lRQWNEeXBOdFFTSXJUSmhkZ1pqOVNJeWxhX25idG5Kenk1U3lGampSTjFxUHZQcFRKWi1qS01kLXk3QmlJREdNS1JaWHJvZmdKeEZ6ZU9hTU5EMk8xb2k3akpNdGZfNWd4WFJSdnhFaTRNSW56N1R3NnJmZUw4NkVtUmVxbWk2MVlLaWw1eUlfMDVEM0k0dw",
+            "source": "WSJ"
+          },
+          {
+            "title": "골드만삭스 “코스피, 아직도 싸다”…글로벌 자금 유입 기대 (금융상품 뉴스)",
+            "url": "https://www.sedaily.com/article/20000067",
+            "source": "서울경제"
+          }
+        ]
+      },
+      {
+        "title": "Major Corporates Implement Strategic Shifts Amid Varied Earnings",
+        "text": "Major corporations are executing diverse strategies to address market conditions, with Ericsson and SLB surpassing quarterly profit estimates, while Apple has initiated substantial price reductions in China to counter decelerating sales. Ericsson's shares gained on positive earnings and plans for cash returns, and SLB announced readiness for expansion in Venezuela, signifying strong performance in their respective sectors, contrasting with Apple's aggressive discounting in the competitive Chinese market. These strategic adjustments, which also include asset divestments like Exxon's Eagle Ford unit and significant private equity investments such as Hillhouse's stake in Modern Dental, reflect a proactive corporate landscape adapting for growth or operational efficiency.",
+        "links": [
+          {
+            "title": "Ericsson Shares Jump on Earnings Beat and Cash Returns",
+            "url": "https://news.google.com/rss/articles/CBMiqwNBVV95cUxNMkhmbXowTlAyUmxUY200NHAxdVB5QzllZTl1OFZJQ2hPY1NFS0pSMlJkYXNXQnJYMFo5U1NvaFlKbFVFSUY1anpUTkY1Yjh1R3gxUXdmQldCTjlHQWxFdFB0dWgyUkxEbExhbFJ3Q1BoT1A4SHhmN09PVzlvVmRJZHl3aFp0WUJsLTh2eWduT0VyUVE0QkRoWUFRdEIwa3RKczZlZThrclNGWWV1d1lxRDhiU1FIeTk0Vm5xWFBDNWZDemVNOGdYdmc1Tjdwd1FKeHowWXJLZDVBcmYwODZfc19qQUthZVhmbGt2WVhmTjFEdVdDcFItVGJnd05oMVptZDBBQkdTWXRMTWYxUlUtTWpaLXFWVC03SF9vRUZ5YTZCNXF6N3RTRUhkVWMyRUVkZFBDVW52NG5Ca0ZpUTdvTDFNclZyenlDd3pfWmoyWjNPMk50MjRiZF92UnJmUFNYRVJLd1FjR3JSM0gwN2gyamVHWHlOcEp6WW9FQ3dLaER4SEgxbHFoWDVlX1R6N24xUUxBYS1Hdnk5OHFzY0FxZU9wWnptSC10UjJz",
+            "source": "WSJ"
+          },
+          {
+            "title": "SLB tops quarterly profit estimates, signals readiness to expand in Venezuela",
+            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOU1BHY0JlTUc3UjQ4UDJHSUJmaWJ4Z2VKZ29WV2pCVWNrSUx3VE11QWlSQWZUS2xndE5wSmI5NnlkaUlCSkdIVndrX0JSdWZmeGo2THdoNTl0bUlVc3R0aXQ1LXA4cEE3NXRMaFhGdHp3SUxqZ1NMZ1RkRnBRWUxYN08wd2l3VFJYeHFtWFFBM2NzSnczUGt6cw",
+            "source": "Reuters"
+          },
+          {
+            "title": "“최대 21만원 할인”…애플, 판매 부진 중국서 할인 공세",
+            "url": "https://www.donga.com/news/Inter/article/all/20260124/133222105/1",
+            "source": "동아일보"
+          },
+          {
+            "title": "Exclusive-Exxon’s XTO unit seeks buyers for select Eagle Ford assets",
+            "url": "https://www.investing.com/news/stock-market-news/exclusiveexxons-xto-unit-seeks-buyers-for-select-eagle-ford-assets-4463967",
+            "source": "Investing"
+          },
+          {
+            "title": "Hillhouse Is Said to Be Near Taking 17% Stake in Hong Kong’s Modern Dental",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTzl1OHBrRGZaOHhBUGdMcUJuMmx2Y0tQclVKcjVtWlZab3NsVEZyS3NDTzlreVgxTkljWnlzYklqVW5FNjh0WHgxcWk1YzZ4UVl4Uy00TWE3WFJTYTZtUUFxQzBMd0wwdmY3VkJoSTZXWXgxNXJzOU44MWUyRlBaM3l6N1MwaFo5ZlIwSVJfSnZUd0lodWFoT0Z1NnZhSjNzWVlkTndHaXBaSm02Vks3clB2N29YQUwwMWNVbV9zdk9uUQ",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "U.S. Equities End Week Mixed, Influenced by Geopolitics and Tech Earnings",
+        "text": "U.S. equity markets experienced considerable volatility throughout the week, with initial declines attributed to escalating Middle East tensions and Intel's weaker-than-expected outlook, before ultimately achieving mixed closes. Heightened geopolitical risks, particularly in the Middle East, along with Intel's 17% stock slide and its broad impact on the semiconductor sector, served as primary catalysts for market downturns, even as consumer bellwether P&G reported mixed results with a revenue miss but an EPS beat. Investor sentiment remains acutely responsive to both persistent geopolitical developments and the performance of key technology companies, as markets anticipate forthcoming Federal Reserve guidance and major earnings reports.",
+        "links": [
+          {
+            "title": "뉴욕증시, 이란 긴장 고조·인텔 실망…하락 출발",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0015864585&office_id=001",
+            "source": "연합뉴스"
+          },
+          {
+            "title": "뉴욕증시, 인텔 실적 실망에 반도체도 '유탄'…혼조 마감",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0015864643&office_id=001",
+            "source": "연합뉴스"
+          },
+          {
+            "title": "중동 불안·인텔 실적 충격에…뉴욕 증시 하락 출발",
+            "url": "https://www.chosun.com/economy/stock-finance/2026/01/24/HE4WMYRRGUZTIOLBGJSTQNRSGI/",
+            "source": "조선일보"
+          },
+          {
+            "title": "'소비 가늠자' P&G, 4분기 매출 예상치 하회…EPS는 웃돌아",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4394936",
+            "source": "Infomax"
+          },
+          {
+            "title": "Wall St Week Ahead Fed, big earnings week loom for markets as global tensions muddy outlook",
+            "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNzZUWnBITlljUUFoYUVKNDVOSnliTlFWQnhwN2phRDhwdkpKZEhCeFhtVHRCWjlkdnc1eGNtM2VXaXdrUURmalQyQ0FHWnBuUDkyRmp0T1hmYUVaVEtKMTdCYkxrNldZb1hJX1U2TDE2dFZPUWJRcEc5XzFldDFNUzB4eTlGSHFiTTIzX2pHcE5rMGxpNWNVdHlwYlRISXl5ald5dEJjQkVEU3RSN1R4OUJNN2d3ZUN5clZxOA",
+            "source": "Reuters"
+          }
+        ]
+      }
+    ],
+    "Global > Macro": [
+      {
+        "title": "Fed Rate Cut Expectations Shift to Mid-Year, Leadership Speculation Rises",
+        "text": "Market surveys now project the Federal Reserve will defer further interest rate cuts until at least June. This cautious stance is influenced by global economic considerations, with some central bank officials, like the BOE's Megan Greene, suggesting U.S. rate reductions could heighten inflation abroad, while speculation mounts regarding the next Fed Chair, with BlackRock's Rick Rieder emerging as a leading candidate. Consequently, investors are closely monitoring upcoming Fed meetings for definitive guidance, which will significantly shape interest rate curves and cross-asset allocations.",
+        "links": [
+          {
+            "title": "Fed Not Seen Cutting Rates Again Until June in Latest Survey",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOelBpS2JnNk9OYUFSaldvc1cyQ1FlamdybDg1blhpRnRmNVdfT3Jtd1BCZC0teEZCRTVxZEs1QXJ2dW5PZG4xd19zbDFwSG01U3hVd0VfZGUtZEpJX3FhQ0tqMWtyenRkbnJTTmcxTm5iVEVVOTN6M2RNMjVNQkFCT3o0cHI0Q3pBQldmbHlQaWhUZ1o1YmdhUk83SUJMSDVCSGkwSTYxZGQtZHZoWm8xXw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "BlackRock’s Rick Rieder surges ahead in race to chair Federal Reserve",
+            "url": "https://www.ft.com/content/a9bad7cb-ff5f-41ca-abcd-be93e7e20cd1",
+            "source": "FT"
+          },
+          {
+            "title": "BOE '매파' 위원 \"美 금리 인하가 英 인플레 높일 수도\"…길트 금리 급등",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4395154",
+            "source": "Infomax"
+          },
+          {
+            "title": "'블랙록' 릭 리더, 차기 연준 의장 지명 가능성 49%…처음으로 선두에",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4395157",
+            "source": "Infomax"
+          },
+          {
+            "title": "세계 경제대통령 누가되나...美연준 의장 ‘반전 하마평’",
+            "url": "https://www.mk.co.kr/news/economy/11942129",
+            "source": "매일경제"
+          }
+        ]
+      },
+      {
+        "title": "US Treasury Market Navigates Geopolitical Tensions and Institutional Rebalancing",
+        "text": "The US Treasury market experienced a dynamic session, with safe-haven demand offering support amidst geopolitical concerns, counterbalanced by notable institutional sales. Reports of a US fleet heading towards Iran spurred some flight to safety, while a BlackRock fund divested Treasuries on inflation caution, and Europe's largest pension fund, ABP, substantially reduced its holdings following perceived US trade policy shifts. This interplay of macro-geopolitical drivers and strategic rebalancing suggests ongoing yield volatility as investors recalibrate portfolios for inflationary pressures and policy uncertainty.",
+        "links": [
+          {
+            "title": "BlackRock Fund Sells Treasuries, Gilts on Inflation Caution",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQXZxY3IxbnlpQzlubUk5RHVvUGxXYzVFRVBZc0xmVHJTUHh4UnBUUzRtU1FFVE92d2I3ZUJvWmpnSkk4M0luQkxVQ0lMQlRnQXI0VE9hNDZfQ0UzaHJmMUo1RWRTdm1lQ1VTR1R5bWljcXg5bnVuZkJpYUZ1RFNoLUJHbTdidFlCYkJ1Y1ktRWVfWWx4UVQ1dmxGOW5BYjlFLUR2VXBGb242OWR3ekE",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "美 국채, 이란 향하는 미군 함대에 안전 선호↑…'불 플랫'",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4395144",
+            "source": "Infomax"
+          },
+          {
+            "title": "유럽 최대 연기금, '트럼프 상호관세' 이후 美 국채 보유액 대폭 축소",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4395156",
+            "source": "Infomax"
+          },
+          {
+            "title": "Treasury yields are little changed as investors weigh the state of the U.S. economy",
+            "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdkVsYTJtVTlpQkl5WGhwcS1BOWNpWVV6ME95LTFaeERaOHBUR3hTenVFelcxeDhjaHE3eFN4a3NPZzY1b1pjUmhIQVRoY2ZjOHpob3ppN3B3V05tWjlYV3RYYXlzZHVlNDVZd3ltOVlqWkVDM0pWOGpkTVpTZXBmZG9la2p5N3NYV1FyNnNQMnZsZXBkMTRoZkE2ZTdTWEYzWlHSAacBQVVfeXFMTzNZYzFLZmJzRkEzWUN5S3ZvOWlVazRxYy1zb2NsQk9wSFdETnZDSnpsamZGc3VkYk15azNYc3YxX2FaQUlfN3E1Y21la29FU2tVTldrUUpfYWlwdTNMNzVBMlhWZjFvczZOc3lpVnBVdEFGMElXemNNZWF2RDZCWGo5d3pPVUp6V0J4c3ZyaVNRRkFGZHJmUkUzNWNOUWtqRFJqb09lX1k",
+            "source": "CNBC"
+          }
+        ]
+      },
+      {
+        "title": "Yen Experiences Sharp Volatility Amidst Intervention Speculation",
+        "text": "The Japanese Yen underwent significant volatility, sharply gaining against the dollar after an earlier drop, amid intensified speculation of foreign exchange market intervention. This reversal, which saw Dollar-Yen retreat from above 159 to below 158, was largely attributed to \"rate checks\" by the New York Fed, a widely perceived precursor to official action, following BOJ Governor Ueda's press conference that initially pressured the yen. Japan's Finance Minister affirmed \"watching with urgency\" but refrained from commenting directly on intervention, indicating a heightened risk of capping further yen depreciation.",
+        "links": [
+          {
+            "title": "Yen Gains Sharply Against Dollar After Earlier Drop on BOJ",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPS29HYTgwZE9tYVZuT3VqYXhQTW5nVVlVWTl0U0FEaXRoSHdZWjhqVGtoT0szU3ZaUnNCTWhrYzA5ZU5jQTRvRFgwcFJsb1dabFZpU0tYTjl4b3ZFN3BIZ1A2dGdPcUx0OVVELWpFcDdBZzMwMlBFNXRvYjRhUW1MLU5DTVo2dGZvbVZRdFNyTmlOV2FMNVJTLWEzVnhKUTdpVWlLdk1iVXNnYmNCZmc",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Yen Jumps Most Since August as Risk of Intervention Ramps Up",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYVl2TVVobFQtMldlZEpXZ0wzdThubDRyY0V2U3lYTkptb0dfam42R2laZTFkMEswTklnZU00MTBTcWFhYUp6a1JHZmtoTGszdHU4OUdiLVNablVhbVk5ZnZpcjRtOTlwd2wzaTl6bmhMRTNYNUR4b3dxbkdOSlExWWFPdEhubERIOGc3QVNfYUdyV1ZsZ3ZQZzNidWV4VUQyWUd3NUpmaDRJc1lieTNRMw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Japan's yen surges briefly, traders alert to intervention risk",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5EU0VlaDgxbjRUY3RkY1dBYW1Cd19mWWJlTHFOS3NFWERTZHlGRzFiVjduT09USjFvSlUzSXhHTU10VTNYSVhfSjhHT2Y0SmptbFRsMWxIVm5DTm5lV2RzcGlmMDh1X1l5OXpXM2hFeUlDUE85VHV3cDVVc2lYZw",
+            "source": "Reuters"
+          },
+          {
+            "title": "달러-엔, BOJ 총재 기자회견 후 한때 157엔대로 급반락(상보)",
+            "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4395136",
+            "source": "Infomax"
+          },
+          {
+            "title": "Yen rallies as ‘rate check’ sparks intervention speculation",
+            "url": "https://www.ft.com/content/0cff24f9-3c5e-4aff-966a-ff34ef448a2d",
+            "source": "FT"
+          }
+        ]
+      }
+    ]
+  }
+}

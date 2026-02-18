@@ -12,7 +12,10 @@ env/
 # Data & Logs
 data/
 logs/
-outputs/
+outputs/*
+!outputs/daily_reports/
+!outputs/README.md
+!outputs/DEVELOPER_STYLE_GUIDE.md
 backup/
 
 # Credentials
