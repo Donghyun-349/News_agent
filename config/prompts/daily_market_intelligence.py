@@ -100,14 +100,14 @@ def get_topic_selection_prompt() -> str:
 
 ## 2. Section Picks (각 섹션별 대표 이슈) 선별
 - **기준:** 각 섹션(c)별로 가장 중요한 토픽 상위 3개.
-- **개수:** 각 섹션 당 **반드시 정확히 3개만 선택**. 
-  ⚠️ **CRITICAL:** 3개 초과 시 시스템 오류 발생. 절대 4개 이상 선택 금지.
+- **개수:** 각 섹션 당 **최대 5개(Max 5)까지 선택 가능**. 
+  ⚠️ **CRITICAL:** 5개를 초과하지 마십시오. 단, 토픽이 충분하다면 4~5개를 선택하여 Analyst에게 다양한 후보를 제공하십시오. Analyst가 이 중 3개를 최종 선별할 것입니다.
 - **선택 방법:**
   1. 해당 섹션의 모든 토픽을 영향력 순으로 정렬
   2. 상위 3개만 선택
   3. 나머지는 과감히 제외
 - **예외:** 해당 섹션의 토픽이 3개 미만이면 전체 포함.
-- **JSON 출력 검증:** 각 섹션의 ID 배열 길이가 3을 초과하지 않도록 반드시 확인할 것.
+- **JSON 출력 검증:** 각 섹션의 ID 배열 길이가 절대로 5를 초과하지 않도록 반드시 확인할 것.
 
 
 # Selection Criteria (중요도 판단 기준)
@@ -388,9 +388,10 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
 1. **Output Language:** **KOREAN (한국어)** only.
 
 2. **Topic Processing:** 
-   - You will receive MULTIPLE topics (up to 3) for this section.
-   - Process **EACH topic individually** (do NOT merge multiple topics into one summary).
-   - Generate ONE summary per topic.
+   - You will receive UP TO 5 candidate topics for this section.
+   - **CRITICAL:** Select and write about ONLY the **TOP 3** most impactful topics.
+   - **Deduplication:** If two topics are similar, choose the more important one and ignore the other.
+   - Generate ONE summary per selected topic (Total Max 3).
 
 3. **Format:** Use the **2-3 Sentence Rule** (Concise & Comprehensive):
    - **Sentence 1 (Fact - 현황):** What happened? (Key numbers, entities).

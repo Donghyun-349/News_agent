@@ -1134,9 +1134,10 @@ def main():
         for short_section_name, topic_ids in section_picks.items():
             full_section_name = CATEGORY_MAP.get(short_section_name, short_section_name)
             
-            # SAFEGUARD: Enforce max 3 topics per section
-            if len(topic_ids) > 3:
-                topic_ids = topic_ids[:3]
+            # SAFEGUARD: Enforce max 5 topics (candidates) per section
+            # The Generation LLM will filter down to Top 3
+            if len(topic_ids) > 5:
+                topic_ids = topic_ids[:5]
                 
             if full_section_name in combined_sections:
                 # Unified Task (KO + EN)

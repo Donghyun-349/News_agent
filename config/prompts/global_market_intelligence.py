@@ -57,14 +57,14 @@ Review topic metadata (i=ID, c=Category, t=Topic Title, n=Count) and select two 
 
 ## 2. Section Picks (Key Issues per Section)
 - **Criteria:** Top 3 most important topics per section (c).
-- **Count:** **EXACTLY 3 topics per section**.
-  ⚠️ **CRITICAL:** System error if >3 topics selected. NEVER select more than 3.
+- **Count:** **UP TO 5 topics per section (Max 5)**.
+  ⚠️ **CRITICAL:** Do NOT exceed 5. However, providing 4-5 topics is encouraged to give the Analyst more choices. The Analyst will select the final Top 3.
 - **Selection Method:**
   1. Rank all topics in the section by impact
   2. Select top 3 only
   3. Exclude the rest
 - **Exception:** If section has <3 topics, include all.
-- **JSON Validation:** Verify each section's ID array length does not exceed 3.
+- **JSON Validation:** Verify each section's ID array length MUST NOT exceed 5.
 
 # Selection Criteria
 
@@ -192,9 +192,10 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
 1. **Output Language:** **ENGLISH** only.
 
 2. **Topic Processing:**
-   - You will receive MULTIPLE topics (up to 3) for this section.
-   - Process **EACH topic individually** (do NOT merge multiple topics into one summary).
-   - Generate ONE summary per topic.
+   - You will receive UP TO 5 candidate topics for this section.
+   - **CRITICAL:** Select and write about ONLY the **TOP 3** most impactful topics.
+   - **Deduplication:** If two topics are similar, choose the more important one and ignore the other.
+   - Generate ONE summary per selected topic (Total Max 3).
 
 3. **Format:** Use the **2-3 Sentence Rule** (Concise & Comprehensive):
    - **Sentence 1 (Fact):** What happened? (Key numbers, entities).
