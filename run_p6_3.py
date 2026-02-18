@@ -278,8 +278,13 @@ def convert_and_style_html(md_text: str) -> str:
                      insert_node = next_node
                      next_node = next_node.next_sibling if hasattr(next_node, 'next_sibling') else None
                  
-                 hr = soup.new_tag('hr', style="border: none; border-top: 1px solid #E0E0E0; margin: 20px 0;")
-                 if insert_node: insert_node.insert_after(hr)
+                 # hr = soup.new_tag('hr', style="border: none; border-top: 1px solid #E0E0E0; margin: 20px 0;")
+                 # if insert_node: insert_node.insert_after(hr)
+                 pass # HR Removal Requested
+                 
+     # NEW: Remove ALL <hr> tags
+    for hr in soup.find_all('hr'):
+        hr.decompose()
 
     # 7. Disclaimer (English)
     disclaimer_html = f"""

@@ -34,6 +34,11 @@ from config.settings import (
     LOG_LEVEL, GOOGLE_API_KEY, GEMINI_MODEL, BASE_DIR
 )
 from config.prompts.wordpress_posting import get_title_generation_prompt
+try:
+    from src.exporters.gdrive import GDriveAdapter
+except ImportError:
+    GDriveAdapter = None
+
 
 # Check Google Generative AI availability
 try:
@@ -91,7 +96,8 @@ STYLES = {
     
     "disclaimer_box": "background: linear-gradient(to right, #FFF8E1, #FFFFFF); border-left: 4px solid #FF9800; padding: 20px; margin-top: 50px; color: #666666; font-size: 14px; line-height: 1.6;",
     
-    "link": "color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2;"
+    # Enforce 16px for links to match body text
+    "link": "color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;"
 }
 
 
@@ -280,6 +286,22 @@ def convert_and_style_html(md_text: str) -> str:
     raw_html = markdown.markdown(md_text)
     soup = BeautifulSoup(raw_html, 'html.parser')
     
+    # NEW: Insert Header Image
+    # Url pattern: https://lan-analyst.com/wp-content/uploads/2026/01/date_{n}.jpg
+    # Mon(0)->1 ... Fri(4)->5
+    weekday = get_kst_now().weekday()
+    # Map 0->1, 1->2, 2->3, 3->4, 4->5. Sat/Sun -> default to 1 or skip? 
+    # User said Mon=_1, Fri=_5. Let's map 0..4 to 1..5. Sat/Sun -> 1 (Mon) or just cap at 5.
+    
+    img_idx = weekday + 1
+    if img_idx > 5: img_idx = 1 # Fallback for weekend to Mon?
+    
+    img_url = f"https://lan-analyst.com/wp-content/uploads/2026/01/date_{img_idx}.jpg"
+    
+    # Create IMG tag
+    img_tag = soup.new_tag('img', src=img_url, style="width: 100%; height: auto; display: block; margin-bottom: 30px;")
+    soup.insert(0, img_tag)
+    
     # 3. Apply Base Styles
     # H2
     for tag in soup.find_all('h2'):
@@ -396,10 +418,18 @@ def convert_and_style_html(md_text: str) -> str:
     def wrap_citation(match):
         link_html = match.group(1)
         publisher = match.group(2)
-        # Wrap the entire citation in a span with link color
-        return f'<span style="color: #1976D2;">({link_html} - {publisher})</span>'
+        # Wrap the entire citation in a span with link color AND 16px font size
+        return f'<span style="color: #1976D2; font-size: 16px;">({link_html} - {publisher})</span>'
     
     html_str = re.sub(citation_pattern, wrap_citation, html_str)
+
+    # Re-parse the modified HTML (AFTER regex substitution)
+    soup = BeautifulSoup(html_str, 'html.parser')
+
+    # Remove the first image if it was duplicated by re-parsing (Regex operations on string might lose soup modifications?)
+    # Wait, `html_str = str(soup)` at line 390 INCLUDES the image added at line ~285.
+    # So `html_str` has the img tag. `soup = BeautifulSoup` re-parses it. 
+    # It should be fine. The image is part of the string.
     
     # Re-parse the modified HTML
     soup = BeautifulSoup(html_str, 'html.parser')
@@ -468,9 +498,14 @@ def convert_and_style_html(md_text: str) -> str:
                     next_sibling = next_sibling.next_sibling if hasattr(next_sibling, 'next_sibling') else None
                 
                 # Insert divider after the last content element
-                hr = soup.new_tag('hr', style=divider_style)
-                if insert_point:
-                    insert_point.insert_after(hr)
+                # hr = soup.new_tag('hr', style=divider_style)
+                # if insert_point:
+                #     insert_point.insert_after(hr)
+                pass # HR Removal Requested
+    
+    # NEW: Remove ALL <hr> tags (including those from Markdown '---')
+    for hr in soup.find_all('hr'):
+        hr.decompose()
         
     # 7. Append Disclaimer
     disclaimer_html = f"""
@@ -486,36 +521,27 @@ def convert_and_style_html(md_text: str) -> str:
     
     return str(soup)
 
-def post_to_wordpress(title: str, content: str, media_id: int, category_ids: list, tag_ids: list):
-    """Publish to WordPress with Categories and Tags."""
-    if not WP_URL or not WP_USERNAME or not WP_PASSWORD:
-        logger.error("❌ WordPress Credentials missing (WP_URL, WP_USERNAME, WP_PASSWORD).")
-        return False
-        
-    api_url = f"{WP_URL.rstrip('/')}/wp-json/wp/v2/posts"
-    headers = get_headers()
+def save_to_txt(title: str, content: str, tags: list, date_str: str):
+    """Save content to a formatted text file for manual posting."""
+    filename = f"Formatting_For_Upload_{date_str}.txt"
+    output_path = OUTPUT_DIR / filename
     
-    payload = {
-        "title": title,
-        "content": content,
-        "status": "publish",
-        "featured_media": media_id,
-        "categories": category_ids,
-        "tags": tag_ids,
-        "comment_status": "closed"
-    }
+    # Format: 
+    # Title
+    # (Blank Line)
+    # Content
+    # (Blank Line)
+    # Tags: tag1, tag2...
+    
+    file_content = f"{title}\n\n{content}\n\nTags: {', '.join(tags)}"
     
     try:
-        response = requests.post(api_url, headers=headers, json=payload, timeout=20)
-        if response.status_code in [200, 201]:
-            post_link = response.json().get('link')
-            logger.info(f"✅ WordPress Post Successful! Link: {post_link}")
-            return True
-        else:
-            logger.error(f"❌ WP Post Failed ({response.status_code}): {response.text}")
-            return False
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(file_content)
+        logger.info(f"✅ Manual Output Saved: {output_path}")
+        return True
     except Exception as e:
-        logger.error(f"❌ WP Connection Error: {e}")
+        logger.error(f"❌ Failed to save manual output: {e}")
         return False
 
 def main():
@@ -581,11 +607,34 @@ def main():
     # 5. Generate HTML with Styles
     html_content = convert_and_style_html(md_content)
     
-    # 6. Post
-    success = post_to_wordpress(title, html_content, media_id, cat_ids, tag_ids)
+    # 6. Save to TXT (Manual Mode)
+    # success = post_to_wordpress(title, html_content, media_id, cat_ids, tag_ids)
+    success = save_to_txt(title, html_content, final_tags, date_str)
     
     if success:
-        logger.info("✅ Phase 6-2 Completed Successfully.")
+        logger.info("✅ Phase 6-2 Completed (Manual output generated).")
+        
+        # 7. Upload to Google Drive
+        google_drive_folder_id = os.getenv("GOOGLE_DRIVE_FOLDER_ID")
+        if google_drive_folder_id and GDriveAdapter:
+            logger.info(f"📤 Uploading to Google Drive (Folder ID: {google_drive_folder_id})...")
+            try:
+                drive_adapter = GDriveAdapter()
+                filename = f"Formatting_For_Upload_{date_str}.txt"
+                output_path = OUTPUT_DIR / filename
+                
+                if output_path.exists():
+                    drive_adapter.upload_file(output_path, google_drive_folder_id)
+                    logger.info(f"   - Uploaded: {filename}")
+                else:
+                    logger.error(f"   - File not found for upload: {output_path}")
+            except Exception as e:
+                logger.error(f"❌ Google Drive Upload Failed: {e}")
+        elif not google_drive_folder_id:
+            logger.warning("⚠️ GOOGLE_DRIVE_FOLDER_ID not set. Skipping upload.")
+        else:
+             logger.warning("⚠️ GDriveAdapter not available. Skipping upload.")
+
     else:
         logger.error("❌ Phase 6-2 Failed.")
         sys.exit(1)
