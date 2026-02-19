@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "date": "2026-02-20",
+    "generated_at": "2026-02-20 07:10:47",
+    "model": "models/gemini-2.5-flash",
+    "posting_title": "Nvidia Divests Arm Stake, Accelerates AI; Fed Signals Inflation Fears",
+    "language": "en"
+  },
+  "sections": {
+    "Real Estate > Global": [
+      {
+        "title": "US Housing Market Sees Sales Dip Amidst Lower Mortgage Rates",
+        "text": "U.S. pending home sales declined by 0.8% month-over-month in January, missing forecasts, even as mortgage rates reached their lowest point in over three years. This contraction in sales activity suggests a persistent stagnation in purchasing, likely influenced by tight housing supply and potential buyer hesitation despite improved borrowing costs. The market is thus anticipated to continue facing headwinds from inventory shortages and cautious buyer sentiment, potentially limiting transaction growth even with further rate reductions.",
+        "links": [
+          {
+            "title": "US Mortgage Rates Fall to Lowest Level in More Than Three Years",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdllqREJQMjhpT09WdUJvb0JuUzVxY1pTZ1VwZlJORzB6SEFfcWt2SVg4Y3AyTXlTUTc2aGxqU2pSYXlCeWFDdEtXS3dyNk45UVEySWRaSW4tQnlnekhEbUNZMXpDcmhNWUhtdFVlTjFhYmttS1NNUkJGdUx2aHFMLUlvbjVoZS1aT1l2M044ZzlieW1YQ005ZWJwSzFuM2lSLWJFMVdXeGc1R1I2ZDR6NWwxQ0Y",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Housing market supply: Are buyers just 'scared' to make a move?",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTlA3ajVyLWcwNHFfd203WGY2aUl3X0swXzZJVVZGYlhxQnp0S0Njd2ZJTUx5cHMxMVhrSEU2LV95YUxaY3ZiRFZjVEZhQ3c3ZkxQbGx4Q1ZRdmRrWDZwWjhIdzRIdTZpTDF5dDdpTzZkVWFyaFVULVFva01oRDNSaVZSV3dqbzQ",
+            "source": "Yahoo Finance"
+          }
+        ]
+      }
+    ],
+    "Global > Region": [
+      {
+        "title": "IMF Urges China to Shift to Consumption-Led Growth",
+        "text": "The International Monetary Fund (IMF) has advised China to transition its economy from an investment and export-driven model to one led by consumption. This recommendation comes as China's traditional growth strategy faces mounting domestic structural challenges and global trade tensions. A successful pivot could foster more sustainable long-term growth for China, whereas a failure might exacerbate internal imbalances and global economic uncertainty.",
+        "links": [
+          {
+            "title": "China Should Shift Economic Gears to Consumption-Led Growth, IMF Says",
+            "url": "https://news.google.com/rss/articles/CBMirgNBVV95cUxPclk2Z0xzVDJpU3FQU05WWFhpSi1MODBIUk9LOGp5c0Qwemh4bm5vZ25NNDJqREFfbmw4aDdKN1ZocDVLMWpYMEpCWVVyeDAxUzJYaEJUbk9DLS1JZDdHYWM1dzJWMzJVdFY0VHhSa215MndKYmdBcWR4LWJhenhmS2R0RWdqX1JSVkNUbUVOWlg4aFRtbS1ZUEoxYnBnWVI5ZS1IV0VyZmFJbkd1RUZhX3R3ZkY0MUdGTlo4TFhGSTRGTVhyVGNjVGlsYURwQVB1RUJhWFMyRG55RDBScF9WSU0zai1CemZPdlNUTXFha0trMlNKLTdJazIyMGJJZjU5Z0lpZXlidHI2ZjZJazM2S0dnN0lJM21xVXMyTE9yeHlLRzMyU1lLYWl4eXJVNGpaVlZXa3JXNUZ0N2pwSHpobXdFUUFydGlOSVhHQUpycGZjM0lkU3hsRUMxOG5LWG9TZ1lDZEpBUi1RdnNXSExRTDhka0JQeVE4alZZWHo2ckNOTUcxMmpXM0ltYW02TndmaFJtOFhLX2pjQUprc0hUaXlPNGZXWTVIRWlfOUxB",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Global Shipping Industry Consolidates with Key Acquisition",
+        "text": "Germany's fifth-largest shipping company has acquired the tenth-largest firm, signaling a potential wave of consolidation within the global shipping industry. This strategic move likely aims to boost operational efficiency, expand market share, and navigate persistent challenges such as overcapacity and volatile freight rates. Increased M&A activity in the sector could lead to higher market concentration, potentially stabilizing freight prices and improving profitability for major players.",
+        "links": []
+      }
+    ],
+    "Executive Summary": [
+      {
+        "title": "",
+        "text": "1. Nvidia fully divested its stake in Arm.\n2. Nvidia aggressively expands AI partnerships and hints at groundbreaking new chips.\n3. US weekly jobless claims fell sharply, signaling labor market strength.\n4. The US trade deficit widened, and Q4 GDP growth was revised lower.\n5. Fed minutes showed renewed inflation worries, with some officials considering rate hikes.",
+        "links": []
+      }
+    ],
+    "Global > Market": [
+      {
+        "title": "U.S. Equities Decline Amid Market Instability",
+        "text": "U.S. major indices broadly declined due to a combination of factors, including a pullback in NVIDIA and private equity stocks, a rise in oil prices (Brent above $70), and geopolitical concerns related to Iran. This downturn was exacerbated by diminished rate-cut expectations following the January FOMC minutes, leading the 'Wall Street Fear Index' (VIX) to again surpass 20, amplifying market anxiety. Investors are showing increased sensitivity to geopolitical risks and monetary policy uncertainties, suggesting elevated market volatility may persist in the near term.",
+        "links": [
+          {
+            "title": "Stocks Retreat as Brent Pushes Further Above $70: Markets Wrap",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRVNrV2g5Qng5NU9Ud0Rlc1hRS2FyMjJLWF9CUkFRWnRaVDZDcG9ucE5qYzE3SnJEem1jUUlhZUtsTm9DQ3JZQ2gzVzZsTC1TcTdudHd2YlpxRTVWV2lvZHM1Y3ZRYmZzdGpISXFKcXVxZ1AySGstVUlKRTFXdVFNcmo0TXNRVXdZSzJrVkxuRUZKaWU0WTNxaEVxZ0V4UGwxQm1qMm5YYnJlZ1o1Y2hmTw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Wall Street ends down as Nvidia slides and private equity stocks sink",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSXAxYmlYaHYwLXMyNGgyeVV2SFp1WGVGR1BFY2pwY1JBQUlGbHBUaDVJaUxfYkRUOGpKanhYNkJTWnZIY0g2VWxhZi1kWEtWZUFPcVE3QzdXTktfazhGcGJuOEJZN3RQTGZ6a0tsNGpXby1STXpxNUw3M2JuTmFWcXVPbWFRdDloWWQ3eEVUSTVMdGtlZTQtSVBpUklWODQ1eFc2ckpPbGhYUQ",
+            "source": "Reuters"
+          },
+          {
+            "title": "U.S. stocks lower at close of trade; Dow Jones Industrial Average down 0.54%",
+            "url": "https://www.investing.com/news/stock-market-news/us-stocks-lower-at-close-of-trade-dow-jones-industrial-average-down-054-4514861",
+            "source": "Investing"
+          }
+        ]
+      },
+      {
+        "title": "Sustained Foreign Investment in U.S. Assets",
+        "text": "Foreign investors continued to acquire U.S. assets, making net purchases of $1.6 trillion, thereby resisting a \"Sell America\" narrative. This influx of foreign capital reflects confidence in the long-term growth potential and attractiveness of the U.S. economy, separate from recent market downturns. The sustained global capital inflow indicates that the U.S. market remains a compelling investment destination, potentially serving as a supportive foundation for U.S. asset markets going forward.",
+        "links": [
+          {
+            "title": "Foreigners Rebuff ‘Sell America’ and Buy a Net $1.6 Trillion in Assets",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU2RTdUtEWVdmQjI0dS1NYnBHLWdEbWJtb19LTkpITi1kdU9PX2hsVXhfTFFaalBqb19KaWdHLTBtLVVOSkN2a0hxT0RNNnFSaEJlM3RuUGs0VHJSakJfR0NwUG5SNlU1XzJ3bnRXaGNKdzAxX0JwZG5JR0l0NTZBbWwtSDhLV3lWZHhNbnhyOGEzVWpwVm1fU0ZCNUdBaUl5Zk5lT2VNYm9pUFdQa29nZERR",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "Bitcoin Price Correction and Extreme Fear Sentiment",
+        "text": "Bitcoin's price dipped back below 100 million Korean Won (approximately $75,000 USD equivalent) after a brief recovery during the Lunar New Year holiday, pushing the Crypto Fear & Greed Index to an \"extreme fear\" level of 8. This price adjustment stemmed from hawkish interpretations of the January Federal Open Market Committee (FOMC) meeting minutes, which reignited concerns about potential interest rate hikes and dampened investor appetite for high-risk assets. Consequently, the Bitcoin market is expected to remain highly sensitive to macroeconomic indicators and shifts in monetary policy, maintaining elevated volatility for the foreseeable future.",
+        "links": []
+      }
+    ],
+    "Global > Tech": [
+      {
+        "title": "NVIDIA's AI Chip Strategy and Partnership Expansion",
+        "text": "NVIDIA has divested all its shares in British chip designer Arm, which it once sought to acquire, while CEO Jensen Huang teased \"chips the world has never seen before\" for GTC. This strategic move appears to reallocate capital towards core AI chip development and direct industry partnerships. NVIDIA is poised to solidify its dominance in the AI hardware market and accelerate integration across various sectors, leveraging resources from the Arm divestment and upcoming next-generation chips.",
+        "links": [
+          {
+            "title": "The ePlane Company partners with NVIDIA to build a digital twin of its electric air taxis",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcjl4eUlPRnJxX2NWa3I3bWdlcnkwdS1CcTZYRVBXMnJqcUhlOWNNcXRXemxyUmNhVU9zdTFXeV9NYnJkaEEwc3N1WHIyeEJHSFZUNi02R19NS1VYRkVXSUhfYTBhY0hwcG54RGhXcl9tTUc2WkNicW9DUmxVVFhJTlV1Mm5RMmFvQ1BweFN4MEw1eVRX",
+            "source": "YourStory.com"
+          },
+          {
+            "title": "Addverb Expands Industrial Robotics Workflow Using NVIDIA AI Platforms",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVS1Yd1NZejJHc0x1d0FtRk5ycV9ta25PTzYwUGg3c1BTV2xROXhoV09qSGxvMkdmZllBQ0V0ZXptQ0VpX3JpeF9lQmZkWTVTTW9YeFM4bm1CS05zUEdLLTRtQkVneXdTR3pjTU9LMmFENXYtSGkyU3J3d3VNb3g2blJUZnhieXYyX3VNWWU3V0lNRDdmc3BVc0ZVaHlIQVp2R0NlRzJmQkpHbThjQ3I0RjBiOHMwQQ",
+            "source": "Entrepreneur"
+          },
+          {
+            "title": "L&T Partners With NVIDIA To Make Gigawatt-Scale AI Factory",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbE0yMU1XY2JxNjdXX0txZVRSYXJqb2tzQ1lMUWNBTnJ3cXJVZ2JMal9GcGlsZlBNMUZrbFczbHBWWWNrcmhEUUFneE5WeFZmV2FnaXdlMW9wY0IxZ3UzbDlCWGVUSHhhTEoyTS1yS2F5RWhMVFoxYkhBOHgxMzZkNzNWTTRGbkFLTUo4SV83WG80VjByc2x5NEVwWnByT0pJeFg2amVJRThtZw",
+            "source": "Electronics For You BUSINESS"
+          },
+          {
+            "title": "NVIDIA CEO teases chips 'world has never seen before' for GTC: possibly Rubin Ultra or Feynman",
+            "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxObnN3b0dhaHQxMGVTb0lQNVFPZnBhN1VHUmZfeF9XVTNVYmZCZU13TUNranlObTNUeTFnQU51ckFid3dZbW5YV0VsdWNBNnR4dTU2RnFQTnVYTVUtaWVwaTlDNHk4N3BxWkNtc2oydGxodkZoX29SQUpwaXNlR1NsVERMMjl1YjQ4aWhqbVIxaFZnQzFRYzBidjQyTGR6ZjBMZEdMYkkteFM2MVZkTURVU2Q0MEU1YjMwZ29BaWZnTDBFWVZFOWhRbjQ3QWotQ2VDc0VGa3liOA",
+            "source": "TweakTown"
+          },
+          {
+            "title": "Nvidia's Jensen Huang says it will ‘surprise the world’ with a new mystery chip — here's what to expect",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMFJXY3J3RkppRTNwdWt3ZS16VVlaUGJ2RGt5ZHNZcTZzMHBnSTZVeVdxUGxEbWd2QU5ZZk1VWXdTOTByemo1Q0VRVnBvQVotbV9xNGMtRUpYN3lad1dIT0owcTBEdUFfVW9PVHpuMUxwZTY4bE01NDJLX3dVd0xjUUtqOExjdmlySHZmaFpmSmRBUkllYWI0UU5vcVhiSzNEN1NRbThRaWktbnNLYnRHVzRDQ29zc3lBZWI0eEhhNVJLOUU",
+            "source": "Tom's Guide"
+          },
+          {
+            "title": "Meta Secures More Nvidia AI Chips, Advances 'Superintelligence' Goal 02/19/2026",
+            "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZk1ETGQ0SVhLdmNRRWdsdURfX2MwaHFFNDlJWkZVQTNUTUZUMml6azNoZWVkNktVQ2ctbDhyNjlsTktPXzhrQXhMeEhubjBNZ1dOQk5CNFZEenI2ZjdEMnhadUpVRVZGTFhlUkJaUnowTGRQWjdFQXpLdmV1TjBWMVhaWmNvYmNvMlBtNFhyZDNCTEhiaU5EVElFcG9zV09MN1gwTXhybXZzNFRqakx6NUNEYi1fNDBvUnA1b0JFcw",
+            "source": "MediaPost"
+          },
+          {
+            "title": "Nutanix and Nvidia launch AI Factory for governments",
+            "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT0U1RnpaV3VIeURmeWFEb0JkS01lUE1WWXFOcWx2bWxNYThjdTZWSXdaVlZiMHd4VnluMklXMmplWTRFbWwzTk1LUVRqX3pjSTAybnFCemhjWkxzM0dzOEE3a21vaWhkbHRYZTFkOGViVHBNUlJGUXhSZE5FMjExOExvOUgwdGxiNTVIY3BzZm9mdXkyOWlrVGFyT1NGOTRHdkJxSk5IVQ",
+            "source": "Techzine Global"
+          }
+        ]
+      },
+      {
+        "title": "AI Industry Investment, Tech Development & Market Trends",
+        "text": "OpenAI's latest funding round is projected to exceed $100 billion, while chip startup Taalas raised $169 million to develop AI chips challenging NVIDIA. Concurrently, Wall Street is accelerating the \"financialization of AI\" by exploring GPU derivatives and collateralized debt based on computing power. This massive capital injection underscores the critical need for AI infrastructure and indicates a rapidly maturing and expanding AI industry. Expect heightened technological innovation and financial product structuring across the AI hardware and software ecosystem going forward.",
+        "links": [
+          {
+            "title": "ServiceNow Warns of Software Sector Shakeup During AI Transition",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOYXBLaFpEQ2dWYmwydUtyaEdUOUlhVndJS05CUl8wbDNlV3VRNVcybGpEa3ZNd1Y0U2ZtX3ZZMlRDU0tJbVRVcHVWTWRNblZsdzVqVzh6ODdYaDdmbkQ2OEh1QWdhUlhlMUt5cWFZeHNNMjVWZGZzWTNmY2Qwdjk1M3RUMnBOS3NDVk0tUkRrUXdTcGpnU04tQXJnaDNiNnR0QkNMZG9RWi10Wk9sYXU4SjN4bXRmUQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "OpenAI Funding on Track to Top $100 Billion in Latest Round",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeHQ5ZklUd3hYRVhoWV91LUlLTzNUNGt6endnM1FRMW9QZkZsYVFqTXVrX25tRzRMRnNkZmVESVYwczU5cUxqd3BORm04MFhnZ1hTRjQ0NllycGdrRDVzWmozV1hvVEtkYW5HU1hvZVVtTHhyMy1zSmxHTFBBNWFSLTltdDE5RFRfX29HTGFtVVRuZ25iMzJmdGwxanlybVYwUG1oc2VMYjdmZl9ySllXZQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Chip startup Taalas raises $169 million to help build AI chips to take on Nvidia",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSzlCcXV5X0IzNThfOEdoWV9OLXJjOVl5ZFdvYldScUFBWDBnQmMtRTZpNEhZRVBvR2JJZW5hNng3UzdSMUJDSmZnbGhabFl3R0JZOGoyMzRSRm1XanZySFdRdUlLOENNNUVaMVZwaFRCUFk4Nm1iMmZGRDVTdlh5SURnZ09jRklwOUVGU0d3djhWVDlGLWtFc2NJbHhEVUhRTk0zU3BMZHJnOEkwb0dveDd6UEhyUGtxbl9CYWxhOXVlR0U",
+            "source": "Reuters"
+          },
+          {
+            "title": "Freeform Lands $67M Series B for AI-Powered Laser Manufacturing",
+            "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMHAtWUoxcV9zYjF2ZFFHTjlTel9XV0QwcGJORHFKX25IZXJtM1ZmTEkwMkFla0h3eENYX0FjOFFvdC1ISzRKUml5bGs1TzRrWk5RaXpDVmlfc0dZQXl0Wmh5WFBQUW5uVTI4WFB0c0xvT1RKcnF2RGF1MFlqMjB1SlY5NlpZX3FBYUdHS1RSVS1pMlRGQk1Bd3ZWWQ",
+            "source": "The Tech Buzz"
+          },
+          {
+            "title": "QumulusAI Deploys 1,144 NVIDIA Blackwell GPUs Through Drawdown Under $500M USD.AI Facility",
+            "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9neHBZQjdUODJyTEdrSU1FWEFtSWZxMVlVY2t4UHV6V2tkdkVJcGJaOE5fcXhTRFRyMzFRTVZUWnNJNk0xYS1xM0NxZzd0NDZOWDRMZW1jWVFMLWRoSmZZWnBlanA5eXppdjdzSE02VQ",
+            "source": "Durham Herald Sun"
+          },
+          {
+            "title": "China’s AI build-out forces a rapid shift to liquid cooling — massive clusters put pressure on domestic suppliers to shift cooling methods",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMnZvSm5oU0FqZ0hSZ2JqT2d5R2dPc2FjdGIwSjA1OXNTMXhldlh6S0gwVktaS3otNGVtNjRpTUJZMHNjWnpucW1pOHN1UkkxV0dGWmVMUktjU1VNcURTamhBMDVoV0tpWWFBNDRuc2tVcjJUZlFsd0lVQzduU2NWWlFnWUZsbGRvQVp5Q3F5SEpCWXU1Q3dzZDd1Z1YtMmc3YndN",
+            "source": "Tom's Hardware"
+          },
+          {
+            "title": "An AI data center boom is fueling Redwood’s energy storage business",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUG9lcXZtbHdaQTctM3UyNHMyR1NtM0xiQlhWeU9OSWh0US1NQUxrc3BMczdycno3QndoWnVLMzNiSG1SNEF4SnhMOVJuU1hTd2NTS2ZTcGxyV01ERmY0LVdnMlpnamZuSnpuSjNBaGNhTkxzZDBOYmpwVHhIX05DQzUwRGQxSWNGRElKNTY2RVBjcVRuV25GMU42blhEVjVPS1Nz",
+            "source": "TechCrunch"
+          }
+        ]
+      },
+      {
+        "title": "Tesla Commences Production of Cybercab Robotaxi",
+        "text": "Tesla has officially rolled out its dedicated self-driving robotaxi, Cybercab, from the Giga Texas production line, a model designed without a steering wheel or pedals for full autonomy. This move signifies Tesla's aggressive shift from its limited Model Y-based robotaxi service towards a fully driverless system. While Cybercab's commercialization holds the potential to disrupt traditional transportation, its success hinges on securing regulatory approvals, rigorous safety validation, and gaining widespread public trust.",
+        "links": [
+          {
+            "title": "Tesla offers Full Self-Driving ride-alongs in Europe as it inches closer to regulatory approval",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5MRU9mbURrWEJJaW9xOTBfOXVfdGNCeEh4RDZpQVhqeUU0Y1BFMUE4bmUwTU0yOW9HTUtSUWgwb0ZKTTdUSkhES2E4Mk1CRG5MQ1FINUFxTmE4RWRjaUV2MEhiNHNNM2NQc1NJS2JrRFRTbnJsRWd5UFV1S1R1ZTQ",
+            "source": "AOL.com"
+          },
+          {
+            "title": "Tesla Updates Safety Report: Widening Safety Gap Between FSD And Humans",
+            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYVNldGN6ZmVvU0FsN3cwQUdQRWdBU19xUkZOaENCanhOWE5qVHVBUmdnSkExUUsxX2F1d0k5TFNWMU1nQ3lCYUFwbjlvTzlmNHZ2Vy1waHAxLXM1aGFpdnVBRzlGYUhoWXNkNzZyaG5LM1pSU1BTMkZzeHJWUFJ6Ni11SjVnaGRXSWdoZ2tpbVhXaGY3clY3ajdGb1FHbWw4SmdhUk1B",
+            "source": "Not a Tesla App"
+          },
+          {
+            "title": "Musk promises a $30K or less Cybercab delivery before 2027, Tesla (TSLA) produces the first unit at Giga Texas",
+            "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVXdUNVMwRXFGdk9xc2xUU1B6Rk84VFUtTHdJbkJGR1ExSEtjRXVpbUtPWTJndi02X1RhSkNjQjVGSFdRQXNqSkIxSXQ0ZERMeW5hNDdpZEJSb2JWelhoejZiX2hMMG80cjdmclpVeDJBZDJ4aVVqbEVvUzhxdVJtNERDQ1lHN2x2Y1VSWnNmTzB0cDI5R05MbC1yenZWaDlJUUlRQ1Zua0hNNXlqaU90aHUtdDVkZnkwVXo3RmF3QmJTTktkUU1nZzhqSjk1ZEpUM0ludUJsYWVmX3NzblI4",
+            "source": "Tesla Oracle"
+          },
+          {
+            "title": "Tesla Starts Cybercab Production Despite Robotaxi Crashes Piling Up",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVEhTMVcxTHhPYklFUHhxeFM5dVNlUUtWNGU1WDBIQWJxUE01MmVJZlZBeVpOT0ZwNjZfWXFyYmlGb2x6Uy1aOURZME9QOVNBZkU3MHhQTVJ0andkRVFPRlFxTnk4X0tva1JEVXc2bVVsUXNJaEFpWHB6U3pxS3Z4QzhCWWU1TnA2YWxBNThISjJnQldreWFhQ0lRZDZZNWI3Z2VXbnNqN3RYY3ZSNF9CU25oWkU0dw",
+            "source": "Le Guide de l'auto"
+          }
+        ]
+      },
+      {
+        "title": "Major Semiconductor Firms and Memory Supply Chain Updates",
+        "text": "TSMC confirmed up to $56 billion in capital expenditure this year, commencing construction of five fabs simultaneously, driven by robust AI demand, while Intel shares slid as Meta reportedly secured more NVIDIA AI chips. Simultaneously, memory supply shortages, particularly for High-Bandwidth Memory (HBM), continue to intensify due to surging AI chip demand, boosting stock prices for major memory manufacturers like Samsung Electronics and SK Hynix. This dynamic indicates that an AI-centric semiconductor market is highly favorable for foundries and memory providers, yet poses competitive challenges for traditional Integrated Device Manufacturers (IDMs).",
+        "links": [
+          {
+            "title": "Intel Shares Slide -- Rising Threat as Nvidia Chips Take Center Stage at Meta",
+            "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOY3ZreVAxYnF1SHQyMmdaOEtFZ2tXcVRSU1oyYlFWQWo2bExxTHdSU2FRVUhfUEtHLWZuS3VhOGJOM1hiWk5kalR5RUJhZ2hnT0Y3MzFObHRJaUd6eE02bHhEcGt3cUNEVVJTSXM1b2FYTXJaSVVpMTV3N3RTQ1NkbkFmM0tvZWZmZHQwal9aOGVvNElzUUlxQmY5c20xV21vZ0ZwMDhYNFpyVVVDeDlZLXY3Yzd6UndRdy0zVWFIVGdhT1hhUGQzVVVpaGUxOHc",
+            "source": "TradingView"
+          }
+        ]
+      }
+    ],
+    "Global > Macro": [
+      {
+        "title": "📉 Macro (Economy/Rates)",
+        "text": "",
+        "links": []
+      },
+      {
+        "title": "Fed's Hawkish Stance and Bond Market Reaction",
+        "text": "The January FOMC minutes revealed renewed inflation concerns among some officials, with a few even pondering a rate hike, leading to a rise in U.S. Treasury yields. This hawkish tilt reflects the Federal Reserve's apprehension about persistent inflationary pressures and robust economic data, dampening market expectations for imminent rate cuts. Markets are pricing in a delayed timeline for rate reductions, suggesting continued volatility in bond markets as investors adjust to a more cautious Fed stance.",
+        "links": [
+          {
+            "title": "Watch Fed Minutes Signal Renewed Worries About Inflation",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeEVmcUVrUTZmMEdrQWd3bWdrWVFPUmVzd0Q4VEY5RVhSQUFYejBraTN4dG54VUFaaGZWVmZIY2w3MEZvc3RzX09IOU9tLXE4QldxeDRGak56MXEtWDBHdGQzQ2E3b2puRHZEdEphdV82YVdCQW1VelJ4N0xpRUIyTWMyaFRUckNHemZNU0lwdjlLM29qWklsZnVyeEF5TG9LSVJOel83cG0",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Fed Reveals Surprise Shift as Several Officials Ponder Hike",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNclBheVJOVFk2b1lqRWgtaG9rRVpSX3A1cld3LWp5NkxwUFFXbDZTT0NfTk1pUk9rc2JvUFROQll5U3RFYlMzdHVMTWw3WUJxVFY5VXRfYkp2RXZYNXNBVVZlMUtMVmpjbFZRQUhzUk5zaTFybk9lMGFrbmpobjREcXNSQ0JlbUxMamVZVWY1dkVETGx0Q2Q1a2EtUHpGSFhXSHlyZUtaM0V3QVFSR0IzOUduUQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "U.S. Treasury Yields Rise as Fed Minutes Reduce Rate-Cut Prospects",
+            "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxOSHh3SWUySV9PeWZlLW5yb0FEUDBwR3N5SkZyclhvMlJrM2JZY1hVY0lKazJPZ19tVUE3YXBJMXlqWFJJT3RUU3pzc2piRFJjdjFSLXowakQzSHhmdmNGck1BRm5naTZKczBBTzdXQXZabFRPU0wydHZsdnVmTVBHRV9Tamg3eTBHMzlxcF9YMV9sem1TejdydVhtQ0xWbGNXb1pzSHZPcUk4VmxjZFFEZEhrTG1ZY1dWY29ST0JQRHZ1OGdlN0JkbW9BeU9CQjJtWHFFbWlMVlVEQmg5WTFHY2VrWlFVeHVFSW1zYlR1c25DMk05U3hSZXFIOVNiX3FTYm1lZ3k0akwwQXJSYnZaVFEyR3RRd09ma3o1Um5SYmNEZGIzWFdGZVEwOEVIaWhqZTE3MWxwNHBqR2hxRHNsb2tBQ0t5Q2tzVW9PdnozMWVTUEFYU1d3VzBwUmdCTkFFZnROMXB1UGlJcWtpNXZzdlQtVm9PY2t4bFctWm1DVllkUkxibXlIMVFNbHZVSmh5QTBsa3pTOURzYlR2emVF",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Continued Strength in US Labor Market",
+        "text": "U.S. weekly jobless claims dropped by 23,000 to 206,000, marking the largest decline since November and falling below market expectations. This indicates a resilient labor market where employers are largely retaining staff amidst stable economic conditions. Strong employment figures could reinforce the Federal Reserve's cautious stance on monetary easing, potentially further delaying anticipated interest rate cuts.",
+        "links": [
+          {
+            "title": "US Jobless Claims Drop by the Most Since November to 206,000",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNb3lKOXc4MUY0VEFCdVRTc1VXbVpOYmQ4Qm5TOE9SX1RGS19JMWJ4c3VvZEdqUkgwYWNPUVV1Vk51ZXpDMktuNjZrOTZTWGpoakdjUFFxeEdpai14aThpNHBTcGtiUEF0bThzQWhybEh6WVVkU090VzllaXNfTXVqNVdDODdUdm5MSkM4LXpXM0w0NWRnZGY4QnJaSWNZOWJsV1doSmFOY2RYenAzT29mUi1SMWk",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "US weekly jobless claims fall more than expected amid labor market stability",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWEk4b19rcFZBbEFsLUdESDY2UV9pdXF6ZkJWV3E3VmhUNW9tNWd6WkJ4cUZzSnFEbW1TWGNqRHp1Qi1yd09wQldkREhSeDBfaXhKMlBJYVNHU1MxZkhSNll3MmNPTVpiWWZQTk9BTk1JTnNHZno4dGRXSVk2Y3Z6WTJsZkdiaG1JUnVoN21FdXZRWTFUZDR2VHpDTTVJWjNEUWdVX0pxOXZ3T3FFcE5kUVNKRl84M1ZuNUc2RS1n",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "Expansion of US Trade Deficit",
+        "text": "The U.S. annual trade deficit swelled to $901.5 billion last year, marking one of its largest gaps since 1960, driven by a surge in imports. This expansion primarily stems from robust domestic demand fueling import growth, while export expansion lagged comparatively. A widening trade deficit might temper some dollar strength, yet the underlying strong domestic consumption could sustain inflationary pressures, complicating the Fed's path toward monetary easing.",
+        "links": [
+          {
+            "title": "US Notches One of Its Biggest Annual Trade Gaps Since 1960",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZEhPQ0tneWt4eDRpZzJwVElIemlERUFCMXp6cXNOLUhWNFBhWkFxbE5qLVJGX09LcjBKUi1mZWFoeDhqbVViYzhGaDJDTmxGTVgzN3NOY2h2WHB5M2luN25mNjkxTHJxOW1Bam1UU2Z6VGF0dzNjZXZlZlJFVFZDR1l2YTliVWNmbUJuQkVOT3Q0dGliVjI1VmVkaG9vaDByOHhNbzBDYkFWUTZwY09tcWdnYw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "US trade deficit swells in December as imports surge; labor market holding steady",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOXJOSG9hNm9IVkJJNGVKWnZKV3U2ZWpsMmlpazRKY3dEMi1vTi1OU0t2TE56UUpQVkFoSmFVcklnTFJkZU4ybXJqd1BXU1VjZnBIbHUtU1FYdEZIeERWRnZELVZoRFpjbVlVM3dDQzAzeHg3MUxfajJBVTd4OWtqZ25vc3l5MFhUb2JmYmFsSHlPUW1wQUpYNElqLUEtOExmNE1vVUJOeVpMcjl1VVMtU2pCbmgxRDRTd2c1akFR",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "Downward Revision of US Q4 GDP Growth",
+        "text": "The Atlanta Fed's 'GDPNow' model significantly lowered its estimate for Q4 U.S. economic growth from 3.6% to 3.0% just one day before the official release. This revision reflects the incorporation of recent economic data, suggesting a potential moderation in growth momentum compared to earlier projections. While the downward revision might slightly ease concerns about an overheating economy, the growth rate remains robust, likely having only a limited impact on immediate rate-cut expectations.",
+        "links": []
+      },
+      {
+        "title": "US-Iran Geopolitical Tensions and Rising Oil Prices",
+        "text": "Geopolitical tensions between the U.S. and Iran have intensified, driving up global oil prices and fueling broader inflation concerns. This reflects market anxieties over potential supply disruptions in the Middle East, leading to increased uncertainty regarding crude oil availability. Sustained geopolitical risks are expected to keep upward pressure on oil prices, potentially influencing central bank decisions on the pace of rate cuts and dampening inflation moderation hopes.",
+        "links": [
+          {
+            "title": "The White House Is Too Sure About Iran and Oil Prices",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQeXlpNmRyaFdrS0RZYlZQeGlaNWZ2d1lsWVlCakVlT251RWhWbGI4bGFwb2NwejdueEowX2NxNHgwb1BqSk1XM0Q1Z3pQak1iYjlBV1lSMEEtRS10WXR0RTVFVkxiemt3WE5BNzZCRG9DNzBId0l6Rkxfbm9rNkxrZWpoa3ZqVFpjbjd6U1ZPbmZFOU81U2JiV1BJNjFOSVVDU1g3U01hUVVoTGVPUmxnY3NnRDYycFdUeG9aQTRn",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Crude Glut at Sea Keeps Traders Guessing as Prices Hold on Geopolitical Risk",
+            "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxNRUUxaW9reXFUdkFrcDI0X3J1aGVHdjdEY2t6Nm0zR0d0SU1raU5tSTkzc3VqbXVZdWkzcUpiTlRTbHpnNU5SX2RjZ3lwVzAzVjdTLWxzWnlyUmQxSms5UXFWT2VsalRmMUZoMUhSNjJPQXIwVG13UlVNdHJHaUFORlBPV0gxUHlHMG1WNzJPWjNqYnVfSEZyaHNPTTFNM2NTZmZ2QzBuS1pyaDd5Q2VoWFdTSWpEU0thUUFpSmdJYWxYZXkyUkh2RmlUdXBGRE5hX3pZZ3lSeDhoWDFwVVNKbzFkS2V5MWh0T0NDVUQ5ZzRLcDFTc21MZ2NNMFc1YnphMTRMZkFTaElfSTZMR0pBdWhkLXNnTlZlTFRLT1hVcXNwTTVZMUJVNzZYRnB0SjZwcnNFall0X0xiVGVIcWF4NnJGRW83R3Y5bl9lYmQtclRucVN5Q0UwbzBBZEllR0VjM2kyR1hnRmJfd0VNbmVZakVOV3hVZE9ISUt2N1daQlpKMmtONzJLSXN4bU5MYXN2aGZzR0hwY3YyYXVpVTBOVjJySm5fMjYyeFBqSWpMWGQyR04wMmlSc3RnYldfeEZ0UzBMc0Y5UWw",
+            "source": "WSJ"
+          },
+          {
+            "title": "Potential U.S. strikes on Iran may slow central bank rate cuts - Capital Economics",
+            "url": "https://www.investing.com/news/commodities-news/potential-us-strikes-on-iran-may-slow-central-bank-rate-cuts--capital-economics-4513768",
+            "source": "Investing"
+          },
+          {
+            "title": "Wall St ends lower on mixed economic data, US-Iran tensions boost crude",
+            "url": "https://www.investing.com/news/stock-market-news/asia-shares-get-tech-lift-as-iran-rate-uncertainty-loom-over-markets-4512497",
+            "source": "Investing"
+          },
+          {
+            "title": "If You Can't Follow Iran, at Least Watch the Oil Price",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT3hNa2dvZVBUMEtrRHFqelFwWk1weHplVF9kaDRnQU93LXowazJUZGlCNFY0R3lKRkFYdTFBdE8zQ1NEVWtWd1NyUzFPQTI5RHhnN01ab3RJRjJkN2g0bWRPelZQMkJ6Ny1DR2h6cjZFRkFqOWVHOENxS2owV2ZwSUlnTUpqaTlqVms1RzUxejNNQ0ROUHozdnBPMlZFY3dOUGl2QjQ0b0ZCWENKeGJR",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Oil Futures Gain on Rising Fears of U.S.-Iran Conflict",
+            "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxPcHhMcWVjUmJNT0NTSGZ2QVQ5Njd4Wjc5TUw2UWNlVnN3eXpQMlpzcDExeHJreUNGaGZTUWFZMFl3THM3RFh0RUg2eVd2NWRfYkVSb284WHpPZE5pSkxLNjh5SUE2TzhvYXBhSHA0eUdyekpuNGNSMS1jbmtJN29EejA3R2prMXduTGFhcXhxdWVvaExJSWk1S0ZYaUdyZHNQNUtWaHpjRlVlcGJ4MWVHbDNScGFPN1FGUG9UNzgycjVaOUFoWGgtWmV6bEdoY0JCU2FValRnYnJEM3NtVExlTHRnaENuSmNfbnBNczFYRFFuenk5X2REZkZmMzRoMGtaNVFwRlgxQTkzYl9vemJHTUhOdTBCSTlrUkZRalUtQ2RWNEFMTlJCVWRhUktuRTFEc19YRHlWb0doZmt3QndzVUhtcjMtOVlibUJRVWwycU5QVG85Y0FweDNGMi1XTW10Y1REUm81Q0RYNEhVdHBOZnVTWFBUcU5NRDlGcGh3RWZtczRpemdDTWJZZzI4VGhJOWNPVndrYjgwRFFQUldsN0JmOG5ITnlvOE9hVDQtWnZGR3oz",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Strong Demand for US 30-Year TIPS",
+        "text": "A $9 billion auction of 30-year U.S. Treasury Inflation-Protected Securities (TIPS) drew robust demand, resulting in a yield significantly below market expectations. This strong investor appetite indicates a persistent demand for long-term inflation hedges, suggesting that inflation expectations remain embedded in the market. Sustained TIPS demand underscores the market's awareness of long-term inflation risks, reinforcing that the inflation trajectory will remain a critical factor in the Federal Reserve's policy decisions.",
+        "links": []
+      },
+      {
+        "title": "Stability in the Gold Market",
+        "text": "Gold prices remained largely stable despite rising geopolitical tensions between the U.S. and Iran, with investors largely focused on upcoming inflation data. Geopolitical risks offered some support to gold, but market participants adopted a wait-and-see approach, keenly awaiting inflation figures that could influence the Fed's monetary policy. Gold is expected to retain its safe-haven appeal amid geopolitical uncertainties, though its short-term price movements will likely be highly sensitive to forthcoming inflation reports.",
+        "links": [
+          {
+            "title": "Gold flat as investors weigh US-Iran tensions, focus on inflation data",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSXVvSzR1SkV6VVotVFdEUWZxcE84Ym1zem1RcGlBWWJaWkEzcFRqWS1DbmtVSnZvWm5rUnc0WW9XQVNpT01VbjBYTk8yYURLc1B2aEtfSTdwM1RMNDMyOG9zMVZhQU9LVEUtWTc0bGk2WHBXX0xXSXNTaE1WOUpFRGtBQU9NQm1RaVFmeTJ2SWJEaUJQZHc",
+            "source": "Reuters"
+          },
+          {
+            "title": "Gold Stable With Geopolitics, Upcoming U.S. Inflation Data in Focus",
+            "url": "https://news.google.com/rss/articles/CBMiugNBVV95cUxQUTB3U0lRallhMU1Ydmk4amZLZ3ZfeWd2bnRfeVF0V3E4WVlRWW03NmtETnFFZHJqRlR6eTQ1WDRrZ2RCVWNtajdHcUZBbmFHXy1FLW1oenJqM3c1OVFjbHpmNWo1N29WdlpxSTBlWHdaSW44eHgzTE43Tjl1cVBnZDRmSjdLYjJhTm8wdGV3WVg5UUY4dW1jZVNxdXkzWWdPaW9PSHcwbWNYUTdtT0E0Ykh1dk5paTdWckV6MGkyUDBIRWMzSExOTklQNklqV2FCR0RDdURMMGJ2MXh0cHprcVlkOFljVWprb0FmdXNlTXYwQUlxVFpEMkhtdEtabG1DOTFvTVRrd19Tb1VOMVUzT2hZRmhFZE9mV2VnOHFNT2RWZFlpaXh5RDFPZ1RsTmk4U0pZWGhZQnNlSDUwVXhWU1pWbXdxYXFsaW5XWE1scURQRkpNRmNkbnFBWHpCOXRPanJkVDV3Sm1ZZHJVWG05TVdlbVdkTWhtaGNKUGtUSE1NSDdVdldVdzdOVi1ZN1hyUDdKU3RCS1FrOVZfWnN6OFhoUUpTS2U4enpCNXVtbDRkRWJOUm9ZTnR3",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Decline in Copper Prices",
+        "text": "Copper prices declined following the release of the Fed's January FOMC minutes, which indicated officials' caution regarding interest rate cuts. The hawkish Federal Reserve stance heightened concerns about potential economic growth slowdowns, consequently implying reduced industrial demand for the metal. A prolonged period of tight monetary policy from the Fed could continue to weigh on industrial metal prices like copper, creating uncertainty for demand-side fundamentals.",
+        "links": [
+          {
+            "title": "Copper Declines as Fed Minutes Show Officials Wary of Rate Cuts",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNQ3B4N09sMkYzOFhMN2VkaGxjTE5icGFSOGluQ2dkV1JRclN3VGFqRUlHdjM2UlNmZm0wcndWMnVLb0NpaERrTnExVEVBRXZPeTUxeko0ZWZEZGVyQm0waFlPcjhUaE4xVmVSUS1SckpNcE5lMUt4T192UUxiRERzOFUzYm9SV2FoX1E5UC1GSVVBeGVadnUzLXhGN1J1MFJ2LXJGWHNqNTNocmZoNmppemNfUEY",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "US Uranium Policy Shift",
+        "text": "The U.S. announced its intent to phase out Russian uranium and is pursuing a $2.25 billion initiative to restore an independent domestic nuclear fuel supply chain, impacting major commodity markets. This strategic move by the Biden administration aims to bolster energy security and reduce reliance on Russia following its invasion of Ukraine. This policy shift is expected to accelerate the restructuring of the global uranium supply chain and could create long-term opportunities for non-Russian uranium producers.",
+        "links": []
+      }
+    ]
+  }
+}
