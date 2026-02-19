@@ -55,12 +55,12 @@
         "fallback": "Nvidia (\"Cosmos platform\" OR Cosmos OR \"physical AI\" OR \"digital twin\" OR Omniverse OR GPU OR Blackwell OR H100 OR \"AI factory\" OR \"data center\") when:1d -stock -chart"
       },
       "Microsoft": {
-        "primary": "Microsoft (\"nuclear energy\" OR \"power grid\" OR \"data center energy\" OR \"Three Mile Island\" OR Copilot OR Azure OR OpenAI OR \"AI infrastructure\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -stock",
-        "fallback": "Microsoft (\"nuclear energy\" OR \"power grid\" OR \"data center energy\" OR \"Three Mile Island\" OR Copilot OR Azure OR OpenAI OR \"AI infrastructure\") when:1d -stock"
+        "primary": "Microsoft (Copilot OR Azure OR \"AI agent\" OR \"autonomous agent\" OR OpenAI OR \"AI infrastructure\" OR \"data center\" OR \"nuclear energy\" OR \"Three Mile Island\") (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -stock -game",
+        "fallback": "Microsoft (Copilot OR Azure OR \"AI agent\" OR \"autonomous agent\" OR OpenAI OR \"AI infrastructure\" OR \"data center\" OR \"nuclear energy\" OR \"Three Mile Island\") when:1d -stock -game"
       },
       "Google": {
-        "primary": "Google (\"clean energy\" OR \"geothermal\" OR \"nuclear power\" OR \"data center power\" OR Gemini OR TPU OR \"AI Overviews\" OR cloud) (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -stock",
-        "fallback": "Google (\"clean energy\" OR \"geothermal\" OR \"nuclear power\" OR \"data center power\" OR Gemini OR TPU OR \"AI Overviews\" OR cloud) when:1d -stock"
+        "primary": "Google (Gemini OR \"AI Overviews\" OR \"Google Cloud\" OR \"Vertex AI\" OR TPU OR \"data center\" OR \"clean energy\" OR \"nuclear power\" OR DeepMind OR Waymo) (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:apnews.com) when:1d -stock",
+        "fallback": "Google (Gemini OR \"AI Overviews\" OR \"Google Cloud\" OR \"Vertex AI\" OR TPU OR \"data center\" OR \"clean energy\" OR \"nuclear power\" OR DeepMind OR Waymo) when:1d -stock"
       },
       "General Humanoid & AI DC": {
         "primary": "(\"humanoid robot\" OR \"AI data center\" OR \"AI power consumption\" OR \"liquid cooling\" OR \"Figure AI\" OR \"Boston Dynamics\" OR 1X) (site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:ft.com OR site:techcrunch.com) when:1d",
