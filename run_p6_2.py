@@ -585,19 +585,18 @@ def main():
     logger.info(f"🔑 Keywords: {keywords}")
     
     
-    # 3. Resolve Category & Tags
-    # Category: "Morning Briefing"
-    cat_id = get_or_create_category("Morning Briefing")
-    cat_ids = [cat_id] if cat_id else []
-    if cat_id: logger.info(f"📂 Category 'Morning Briefing' resolved to ID: {cat_id}")
+    # 3. Resolve Category & Tags (DISABLED for HTML-only mode)
+    # cat_id = get_or_create_category("Morning Briefing")
+    # cat_ids = [cat_id] if cat_id else []
+    # if cat_id: logger.info(f"📂 Category 'Morning Briefing' resolved to ID: {cat_id}")
     
     # Tags: Keywords + "랜선애널리스트"
     final_tags = keywords + ["랜선애널리스트"]
-    tag_ids = []
-    for tag_name in final_tags:
-        tid = get_or_create_tag(tag_name)
-        if tid: tag_ids.append(tid)
-    logger.info(f"🏷️ Resolved {len(tag_ids)} Tags")
+    # tag_ids = []
+    # for tag_name in final_tags:
+    #     tid = get_or_create_tag(tag_name)
+    #     if tid: tag_ids.append(tid)
+    # logger.info(f"🏷️ Resolved {len(tag_ids)} Tags")
 
     # 4. Select Thumbnail
     weekday = get_kst_now().weekday()
