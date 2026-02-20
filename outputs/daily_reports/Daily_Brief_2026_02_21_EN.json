@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "date": "2026-02-21",
+    "generated_at": "2026-02-21 07:05:00",
+    "model": "models/gemini-2.5-flash",
+    "posting_title": "Higher US Inflation Fuels Fed Hawkishness; Nvidia Deepens AI Ties",
+    "language": "en"
+  },
+  "sections": {
+    "Real Estate > Global": [
+      {
+        "title": "US Housing Market Shows Resilience as Mortgage Rates Decline",
+        "text": "U.S. new home sales unexpectedly surpassed forecasts, fueled by mortgage rates falling to their lowest levels since 2022. This decline in borrowing costs, largely attributed to evolving Federal Reserve rate cut expectations and moderating inflation, has significantly enhanced housing affordability and buyer confidence. Consequently, the housing market is poised for potential stabilization or a modest recovery, drawing back purchasers previously deterred by high financing expenses.",
+        "links": [
+          {
+            "title": "New Home Sales Surpass Expectations, Indicating Strength in Housing Market",
+            "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZmU1MTdWVmd5dkFZek5SSEhXcERFRURTbmtKU3lhZnpNUDdLQ3dIa0pIQ2Z1cGpLYlQ1YUk3OTlDRTljbU9lU25ZVHNRc1Z5Uk9ZU0oxNlV3cmZUNGFrN3BQOHV5TWVKOEt0ZjNLaXZUQ01HbEtub2hNcjRsUXU0V1VKazMyY1h2RnRDMHhwMDI0OXlkaVlUOTRHZDI5ZmpQUHJldjkzaUxadWxNc0F3SXp5RjdzdnpoaHRuZWhSMW0zeE50eEIyQl9vaElPdmVCX0c0",
+            "source": "Investing.com"
+          },
+          {
+            "title": "Mortgage rates sink to the lowest level since 2022",
+            "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZURHd1FJd2h1aW1BTWdhWWgzX2VHTWllUFFseEQwUDk5aGlCYTZoYThjRC1qZWwwY1lnZEVvcU5YWXAtT0g3eEZGVlpVcF9rNmNVNXpEb2lrcGJhaXJKZjVOWk0yUjhZalBvOVhEeXBFbkdDNndJaXZTRmplMndtdUFLSm1NVS03LW1uamQ0RWFqVXpMOUZVV2diMUJucXo4V1p5cGRqVTFGMkJPS0tJb1hBd2Y5S1haUlZmS1g2akZuTlFXVEhwUA",
+            "source": "cbs19.tv"
+          }
+        ]
+      }
+    ],
+    "Executive Summary": [
+      {
+        "title": "",
+        "text": "1. U.S. inflation surprised higher in December, intensifying concerns.\n2. Federal Reserve officials expressed continued caution on rate cuts amid strong economy signals.\n3. The Supreme Court invalidated Trump-era tariffs, impacting over $175 billion in revenue.\n4. Nvidia divested its stake in Arm while pursuing a significant OpenAI investment.\n5. Nvidia and Meta expanded their multi-year AI infrastructure partnership.",
+        "links": []
+      }
+    ],
+    "Global > Region": [
+      {
+        "title": "German Manufacturing Rebound Boosts Eurozone Activity",
+        "text": "German manufacturing activity unexpectedly rebounded, driving broader business activity across the Eurozone and signaling a potential turnaround for the region's largest economy. The improved performance is attributed to stabilizing energy prices, easing supply chain constraints, and a gradual recovery in global demand, alongside anticipation of shifting monetary policy. A sustained recovery in German manufacturing could bolster the Eurozone's overall economic momentum, positively impacting European equity markets and potentially alleviating pressure on the ECB regarding immediate interest rate cuts.",
+        "links": [
+          {
+            "title": "Watch Europe Economy: German Manufacturing Revival Boosts Euro-Zone Business Activity",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNV1NhcG9XX0hBcElheHloNXNfMHlOa1JMcnpFVmRabjZGbFBYNzM5VTdMU2FmTGtMQVdST1J5NWVTbnlSb1NOdUoxWmdiRmhWYWdXMVEybkl3Q0pPMkJHZ00tc2IyZFgxUGlrSXRrM3l5WnRfV0FlanBld2RaRUk2RTM0VHoyY2lTS0lDSVc4ODFtMVpyYkxTaWNSRElvRUgwbjhxTml0TmRFUzJWVjFN",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "China Reroutes Drone Exports to Russia via Thailand to Evade Sanctions",
+        "text": "China is reportedly utilizing a new route through Thailand to export drones to Russia, a move interpreted as an attempt to circumvent Western sanctions and highlighting ongoing military cooperation. This redirection of drone exports through a third country became necessary as Western nations intensified sanctions against Russia following the invasion of Ukraine, prompting China to find alternative supply channels. This circumvention strategy is likely to escalate geopolitical tensions and could provoke further sanctions from Western powers against China, introducing increased uncertainty for global trade dynamics and specific technology companies.",
+        "links": [
+          {
+            "title": "China’s Drone Exports to Russia Use a New Route Through Thailand",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOT09oYmpTV1FkYnFKYmtHdnBPSHdEbXFtNkJPQXZ2Yks0SWxpSTNzVFRDajJHMHVrb3pZODBla1lnY0ZMckxOUzloZ2R6NEhOX0FhQUw2TlhUM3pMWkZaOGsycHBvRi1pMVlvekVqaHFhRnBya1d0eThUSzlHNE0xT1pLZ2o2R2VGNzNEeDdieWZuV1lGa3RfVm9XWE9Pd0NTOWlNOHJUVXFqLVRpYTZhdVV1QUY",
+            "source": "Bloomberg"
+          }
+        ]
+      }
+    ],
+    "Global > Macro": [
+      {
+        "title": "US Inflation Heats Up, Fed Rate Cut Bets Fade",
+        "text": "US Personal Consumption Expenditures (PCE) inflation for December exceeded expectations, yet remains above the Federal Reserve's 2% target, prompting Atlanta and Dallas Fed Presidents to voice concerns about the strong economy and persistent inflation. This data and hawkish commentary have significantly diminished expectations for early Fed rate cuts, leading the dollar to its best weekly performance since October. Consequently, these inflationary pressures and the Fed's cautious stance are expected to push back market expectations for interest rate reductions and exert upward pressure on bond yields.",
+        "links": [
+          {
+            "title": "Dollar Set for Best Week Since October as Fed Rate-Cut Bets Fade",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPajk5N3hOTllsYXVWMi00QU9TOXpNVDJ2aFBVNnBBNXJlbEw1dzVzZVFEb0JaeDlycU5GQ3hLODQwMU50d0xVWXdYMlo4OWQ5WTA5eEN2UUtldW5yY18xWDFNV2VfMkxHaDRrblJhVkpoS2FuX25JRzlBQ0JFbFR4YVdWMWFjYW5qLXoyNXAyeGhWcWI2bGdLQnIxcHpsQjQzYTNPejI5NklGa0N3Q1dFcE9NUkQ3Zw",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "US PCE inflation heats up in December",
+            "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaFlFUzMwaVVIYklocld2cnN4b1JKcGJfSGZVcGZJN2czVGdfM29OalkyTERURWZOMXNvNjlDYm00M2YzOE9sY295NlNOOWJWSXpxQnNJUU9Dc2xvY0ZIWjFYNnBEa3IwRlhIeW9Za1JxbkZNVl9OQTRWdUR5ZEt4VHNjb3EyZw",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "Supreme Court Strikes Down Trump-Era Tariffs",
+        "text": "The US Supreme Court ruled against former President Donald Trump's \"reciprocal tariffs\" imposed without Congressional approval, a decision that could trigger $100 billion to $175 billion in refunds. While the Court found that the President exceeded his authority under the International Emergency Economic Powers Act (IEEPA), the Treasury indicated it would utilize other trade authorities, such as Sections 232 and 301. This ruling could fundamentally undermine Trump's trade strategies, leading to immediate declines in Treasury yields and a weaker dollar, though future trade policy uncertainty persists due to the potential for alternative measures.",
+        "links": [
+          {
+            "title": "US Supreme Court Strikes Down Trump Tariffs, Wall Street React",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRzZVUnFoaUVwYldicVdGWlhjQ2VpaWVQWHlmdi0ycDltOEh0cjFPQ1ZXRVNGMml2anJoSEdET3hFYUJKQkppUDh0S2FXdDFTYzZWVXhCRHJzR0psb0paUFpObUx1bnZhb1NSSXhtUS1YN2VvcC1ISzkwRE4tV1VQa1FRaFlERks3RFlUTmZnSGVZb3JWVVVvLXNWNDNxSUZCS0pQSk8wSTJLX0NkaFJQTDRWQQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Exclusive: Supreme Court tariff ruling makes over $175 billion in US revenue subject to refunds, Penn-Wharton estimates",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT2NZaTJYUkpYT1JJcjJUcXhjNFoyTEV6M3QzQk1nellOUHlFNlZFU2FTcTBITlJqYThDSVJUMTA2aFgxeWJoOUliRHktNTRXRFR3YUpPa19LOGs4aDhMNVVnQjNqTHZaVnRMd2c3T2luZUFTdjJzd1FpZXJKcVY5R3hqSFJJeFZMZ2l0Y19xTVlSeU1YZmtvUDhURE1UcUxGYm5DMExZU3lFczdMT3QtS3J2OTk1dw",
+            "source": "Reuters"
+          },
+          {
+            "title": "Treasury Yields, Dollar Fall on Ruling Against Trump Tariffs",
+            "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxNWkVpRDRTX1pIeWJsLVEzbkdOUEhQd01oRkNtQ1RTUEJYNVphWlN5QWJDRFVCZnE4dWNpVEFaMnB4cWtUeU03MHZyX1lTMVQ3RDF2NmQ5V1RZRC03S2x3N0NPNkxhZFRPQ1Q0TDZXek15MFV1THk1d0ZnR003cFl3QnF1TTFUdXVWOWJVS3JlT3EyejdIcDkyNWNaZFVDT3dnMGk1Y3JKZXluM09tVjdsZWd5Z3A5LTg5TEFTRVN3akdlM1ZVOEVyS3VQZGlTSDZZM0xyV25HS0hOcjN2Q0NuMzhWT01ENy1hdWg0TVd1Y1ZNTV94VXhxNlBCZlYxT21zVnBUYW1BNFpwOHl3MzNONTVJUzE4dVdyVjlqN0huTmhNZ0dUdEx0SmUyWEZNc2ZHWWpfeFBYOVdwdGNNTXhpaWw1Z0FPdzZBQUhPdFVoWEJYdWl2SWlzamJielo0SlAxRDZMQ28zRWxYa2duNE5BQXo3VXUwNEtCaUFBcTA4WEtYVmtGdTFJTGk5NTNvNkphMVFRaHRTcTBwZ1hn",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Escalating Geopolitical Tensions Between US and Iran",
+        "text": "The United States has amassed significant military assets, including two aircraft carriers and dozens of fighter jets, near Iran, sharply escalating military tensions in the Middle East. This deployment coincides with reports that former President Trump is considering limited strikes to coerce Iran into a nuclear deal, suggesting a growing risk of military confrontation in the region. Such geopolitical instability is poised to heighten concerns over global energy supply chains and increase volatility across international oil and financial markets.",
+        "links": [
+          {
+            "title": "Trump Weighs Initial Limited Strike to Force Iran Into Nuclear Deal",
+            "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxOcGs2alJhN2ItVm9nLTc5Z1JHMjNOdlRTMlRuSl9velZxdWp3MmpqN0tXXzBrMXQ2cHpuRGpmU2YtNmRzZklDdkMyc0NhcnY2bzBPYU51d01sM2pSMWNWOUkyTHVXR0hrejl3c1JFWDJDdnRIaEh3V0lZOGc1T0k0dnZPbHR0eUdPWXJzRTFrcW9OOWZSWVVyUjl5X2dndHNuVXVtZDYzYlh2YkYtQS1zRjFORkxvVGFub1NpZ1hHbzZrdUlUU2ZNT1VSQTZvSmpEcDBidWVhdUFJMkpTdnhuUFNwVl9KdWRsSXhJQmlYQ2pHV3R2TUJlTDJESm1oVjZxMTI3c3pNWE1Qb2FncXowZnB5X25TcVJEZnhSa1NUVVl4OTJidXVNaGxuQ3RrcFNlTGUzQldieEF0UnQzZFJ3enV0UGNkeHVSVmE5eGxCZThJOWlBN1daQVg3U3hlY1E1clRRRnI5Rm13Wk1pOG1LOXhBTTJ1Smg5bzgtZlNCMUIyRjU3eUZKWjdBdTd3YzFtZ3FOTURBalhPR25hLXdOdGV3",
+            "source": "WSJ"
+          },
+          {
+            "title": "The U.S. Military Hardware Pouring Into the Middle East",
+            "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxQTXVpbmhBNE1PdERLNHR6emRtenR1UVhMNUlZWFkxSTBualBTQTRNS2NsWXBWb2gzN0Rrc3FjSFF1S2E2RFhjUHpmcUdtWnExV2w1VG8teEhwdFBZa0QxZEl6MjJ0RUozMkt6WUNrTmNtcWZYVFVyV1NZQ3g4YnhYMkFfaE5ma2pSdFBOQXBhZ01CbGdVejhycW9ZR3U2NkhsOTJqdU13eEY3LU1lZk54OV9pMWZfUXJUSWxrVnpFYTdRYU9Jb01ObTNoVnczam9mZmF0UUotVjZSZEhzUXNTMVRFRWNKR2pVTFdsN25sa2N6Q2VYSU9waXUxN2VOenFUM1BuNWVJVnlvYmZqaGcyekc3d3pnMG1na0ZwY3NRZ0p6V0c4cTVQdVlEMzQwd0JxZ3MzUVE1UVljR1FpODdxQm9jdElpWmVoS3kzV0NjdGIxY1dCWGpJQVB0dFNsanRFWk5jaGhTMWllX08yOTYtVU1GVHJGRmcyQzRkaEVGUTFMU3dCUlE",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Oil Prices Respond to Mideast Unrest and Supply Shifts",
+        "text": "International oil prices surged to a six-month high, with Brent crude surpassing $71 per barrel, driven by escalating US-Iran geopolitical tensions and mounting concerns over potential Strait of Hormuz closures. Concurrently, global supply dynamics are shifting, with Spain's Repsol planning to triple Venezuelan oil output after securing a US permit, and a $90 billion Russian oil smuggling ring being exposed. While geopolitical premiums and supply uncertainties will maintain oil price volatility, potential increases in supply could partially offset upward price pressures.",
+        "links": [
+          {
+            "title": "If You Can't Follow Iran, at Least Watch the Oil Price",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT3hNa2dvZVBUMEtrRHFqelFwWk1weHplVF9kaDRnQU93LXowazJUZGlCNFY0R3lKRkFYdTFBdE8zQ1NEVWtWd1NyUzFPQTI5RHhnN01ab3RJRjJkN2g0bWRPelZQMkJ6Ny1DR2h6cjZFRkFqOWVHOENxS2owV2ZwSUlnTUpqaTlqVms1RzUxejNNQ0ROUHozdnBPMlZFY3dOUGl2QjQ0b0ZCWENKeGJR",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Surging Oil Tanker Rates Tipped to Go Even Higher on Iran Risk",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSjVjc09Bel9IUERKOUVvQ1ltczBaLTkwUzlfMi1VelZSa05odkwtTlFRNHNBMzFKVS1oQmtEalJjNmQ3TV9KbHhWTHdwbmRmYVFpbjdHdXM4NTVhWHIyY1NQYmh4TG9RX1NjaFRCWUxjOFhKcGlDRS1KNXZUTXV5ejYwS1lFM2dGMG5QQUhMVlZqSk9FMXNLckxMLU8tUEpLLXp0Y2YxelJiMlM4WDhxcFlnVQ",
+            "source": "Bloomberg"
+          },
+          {
+            "title": "Repsol aims to triple Venezuelan oil output after securing US permit",
+            "url": "https://www.ft.com/content/8b2037bf-0950-42e4-999f-e7df5bf8c7dd",
+            "source": "FT"
+          },
+          {
+            "title": "Email blunder exposes $90bn Russian oil smuggling ring",
+            "url": "https://www.ft.com/content/4310f010-2b3c-493e-ba0a-26dc6d156b2e",
+            "source": "FT"
+          },
+          {
+            "title": "Oil slips back from recent highs; U.S.-Iran conflict in focus",
+            "url": "https://www.investing.com/news/commodities-news/oil-near-6mth-high-amid-usiran-conflict-fears-set-for-weekly-surge-4515122",
+            "source": "Investing"
+          }
+        ]
+      },
+      {
+        "title": "US-China Military Standoff Near South Korea",
+        "text": "US and Chinese fighter jets briefly confronted each other in international airspace near South Korea, as reported by Yonhap News Agency. This incident underscores the intensifying military rivalry between the major powers in the Indo-Pacific region and highlights potential flashpoints. Such military encounters can exacerbate regional geopolitical tensions, potentially negatively influencing investor sentiment towards stability in key Asian markets.",
+        "links": [
+          {
+            "title": "US, China Jets Briefly Face Off Near South Korea, Yonhap Says",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdmY3OUw1QWxxR2Z2bW9xWXVfUlFHZ3hFMUVDdjZ0elN3bXFIQjJXcHVnVktLQ0MxNTJuLVFCX29wQVkxQ2ZxVWxNY0p5RXo0TEhfV0dNanlDWmthM054Q3B2Wjc0RFBpTElBQ0U1dlQ3S3R0WF9ZdXNVMnVocC1mMkJsdTdmdE5FNDdPcjQyUVV5TERnQXJnTWxKTmNiWHoyVWVXdXhHdlJKX1pEZUhJ",
+            "source": "Bloomberg"
+          }
+        ]
+      }
+    ],
+    "Global > Market": [
+      {
+        "title": "Etsy Divests Depop, Reshapes Portfolio",
+        "text": "Etsy sold its second-hand clothing platform Depop to eBay for $1.2 billion, realizing a significant loss from its 2021 acquisition price of $1.62 billion. This strategic move reflects Etsy's pivot to focus on core business and portfolio re-evaluation as e-commerce growth slows post-pandemic. The divestiture is expected to enhance Etsy's financial flexibility and strengthen eBay's position in the pre-owned fashion market.",
+        "links": []
+      },
+      {
+        "title": "Walmart Shares Dip on Muted Guidance",
+        "text": "Walmart reported better-than-expected Q4 EPS and revenue, driven by strong U.S. comparable store sales and e-commerce growth, yet its stock fell 3% after hours. The decline was triggered by the company's full-year guidance falling short of analyst estimates, signaling investor concerns about future profitability and growth momentum. This suggests that while Walmart remains a retail powerhouse, its short-term stock performance may be impacted by cautious outlooks.",
+        "links": []
+      },
+      {
+        "title": "Amazon Overtakes Walmart in Annual Revenue",
+        "text": "Amazon has for the first time surpassed Walmart as the world's leading company by annual revenue. This milestone underscores Amazon's relentless expansion across e-commerce, cloud computing (AWS), and digital advertising, enabling it to achieve unprecedented scale. Amazon's revenue leadership solidifies its dominant position in the global economy and marks a significant shift from traditional retail to diversified digital and tech services.",
+        "links": []
+      },
+      {
+        "title": "Bitcoin Futures Hint at Slowing Price Surge",
+        "text": "Bitcoin futures data suggests a potential moderation in the cryptocurrency's recent rapid price appreciation. This indication from the derivatives market often reflects cautious institutional investor sentiment and hedging activities following a substantial rally. The futures market implies that extreme bullish momentum may temper, potentially leading to a more stable or consolidative phase for Bitcoin.",
+        "links": [
+          {
+            "title": "Bitcoin futures suggest breakneck rise in price to slow",
+            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSjljdk1yLW93MzNWM2piUURYZkE0NnFCQk1WZG1HTkt3Mm5TbV9ac2poQ1Iwd3dqd1ctTlg5UVhpRHhiMHpzUGdGNUJCVFpXMkVxT2lYa3UxRU5JeGJBUTZjYjQ2Ti01dWVmc0JheERtaU8wSm1BWEs2T0pNdnJqZExUTlAzM1IyMFVvOU5TQ1QyYlNVV0lFYnFrQTN6eVNYWmlCaEVWdzVqbXRrdlhwOXAwcWFfUUVF",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "Eric Trump Predicts $1M Bitcoin",
+        "text": "Eric Trump reiterated his strong conviction that Bitcoin's price will ultimately reach $1 million, citing its historical average annual growth of approximately 70% over the past decade. This optimistic long-term outlook is fueled by beliefs in Bitcoin's increasing adoption, inherent scarcity, and potential as a store of value. Such high-profile endorsements contribute to a positive long-term sentiment among investors, fostering bullish expectations despite short-term volatility.",
+        "links": []
+      },
+      {
+        "title": "'Bitcoin Death Cross' Fears Resurface",
+        "text": "Speculation about a \"Bitcoin death cross\" has re-emerged, causing a surge in Google searches for \"0 dollar fall\" amidst heightened market fear. A death cross, a technical analysis pattern, often signals potential downward price momentum, triggering panic among less experienced investors. While technical indicators can influence sentiment, Bitcoin's fundamental drivers and long-term investor conviction may mitigate severe downside, though short-term volatility could persist due to fear-driven selling.",
+        "links": []
+      },
+      {
+        "title": "Global Equity Funds Attract Record Inflows on AI Optimism",
+        "text": "Global equity funds recorded their largest inflows in five weeks, with U.S. equity funds leading this significant trend. This surge in investment is largely attributed to an easing of concerns surrounding Artificial Intelligence (AI) and sustained positive market sentiment towards the technology sector. The consistent capital inflow suggests renewed investor confidence in the equity market, particularly in growth-oriented segments, potentially driving further market gains.",
+        "links": [
+          {
+            "title": "Global equity funds attract biggest inflow in five weeks as concerns around AI ease",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMG4yMXllbUEwYWk2dlN4VVItOFFtbFZlUkhpdjIwdmRpeVVwYzlpVnduaV9fMW9mazgtRVowQUoybU9kVXNvd2x0WGw4VmlMS1FTcUZsdk0xUnN6T1JsdDZPOUh1OExfYmh2Y3J1SngxSTlFdmx2bTRXS3dYTTVCYV9kdXkweXM",
+            "source": "Reuters"
+          },
+          {
+            "title": "US equity funds see largest weekly inflow in five weeks",
+            "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOU1RFelhmcDlnYk1kUUEyV0xwcDZjdHo4cXdDZUdzMGZtREdCbTlFUl9kZUVuelk2YS12WWl6dFVUS0ZDSDRnUS12RFRQSkhTZEhsNXZBbGxUd1lsTU5OUTJHbXJHdzd2Uk9Wd045bWU2SGZBMDEzUEcybnc1R3ZZclpCdGNkTGFWaXZidWoxMERjUF81OUtYRVlBck1zUQ",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "European Stocks See Record Inflows as US Tech Alternatives",
+        "text": "Investors are funneling record sums into European stocks, with February poised to mark an all-time high in inflows. Global fund managers are actively seeking alternatives to potentially overvalued U.S. tech shares, finding European markets more attractive in terms of valuation. This diversification trend indicates a shift in capital flows as investors seek better value opportunities abroad, which could bolster European equities and temper the dominance of U.S. tech.",
+        "links": [
+          {
+            "title": "Investors pour record sums into European stocks",
+            "url": "https://www.ft.com/content/80173261-2b72-41f7-9eae-490aabb14623",
+            "source": "FT"
+          }
+        ]
+      },
+      {
+        "title": "Precious Metals Climb Following Tariff Ruling",
+        "text": "Precious metals settled higher after a recent tariff ruling, signaling a positive market reaction. The tariff decision likely introduced elements of economic uncertainty or currency fluctuation, traditionally boosting demand for safe-haven assets such as gold and silver. This upward movement suggests that geopolitical and trade policy developments continue to be significant drivers for precious metal prices, warranting close monitoring.",
+        "links": [
+          {
+            "title": "Precious Metals Settle Higher After Tariff Ruling",
+            "url": "https://news.google.com/rss/articles/CBMirgNBVV95cUxNNUowV3lEenhFMFRROFhaOEFjRnJjcHBLSDJVdFFleTBTNGVtMHNqZWhsUEUwZHBaNWd4alpRc2NfRjFzaWxZQ3F4R29oU1ZWcHhPNVE4MUxmNHctd0kxWmxkZVU0V0p5dWJneDUtNFZTY2F4eGg1OTJqTEZxNnN0RVp0SFdEY3pGNFpqakNvZ3JYdE5uSmhsbkQ5VlljeFY1Tmk2N2ZSdk5kNFIwdkdyaEdUTk5rU3hYZTVOaWZIMWJETlZYZVlCWWZ1UHA4aXRHbWI3cjhQUmV2c1ZTT0RzRlVYa2lKempZX0J1TlhFRGxPMUJsd3hLNFViR0U4RmJBOE9HdVVsbTlNOFhtZUZFbWFZeWhiSElqZDZwZ3JaRjNSSk0yYld1Z2I5eXNwenJia2dreXZ3R21TY2lMNkdmM0dxcFVBbE5zcUpVNTRkMmozMG8zYXFRRG9hWl9iWUs1QmN6aWUzUFlBTG83LXVjbUhfNExtcnptNDlJWVBPWENmQi1UVWEwYjZlRkpmR1daNFNpVE9NSDdMVlgzeFI5VXREZnp0MWJJVUtSZlFR",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Newmont CEO Prioritizes Margins Amidst Record Gold Prices",
+        "text": "Newmont's CEO emphasized prioritizing margins over being \"starry-eyed\" about record gold prices, signaling a strong focus on operational efficiency. This strategic stance reflects a disciplined approach to leveraging high gold prices, aiming to maximize profitability through cost control and prudent capital allocation rather than aggressive expansion. The emphasis on margin protection indicates that major gold producers may not significantly increase supply despite elevated prices, potentially supporting sustained high price levels in the long term.",
+        "links": [
+          {
+            "title": "Newmont CEO Prioritizes Margins, Not ‘Starry-Eyed’ About Record Gold Prices",
+            "url": "https://news.google.com/rss/articles/CBMiuANBVV95cUxQUUloRElES3RvR1N5NE1sNTUzVFE3Z0hPczdGSlJockZtSWJfX1JyTlB5bGh3dGxkNHNPSlZQN0oxaFgwYWdJa2pkcEFiVWtyTEtzVVRSVmlCNzhOVk5uWHY4WFVyM3lIc3dVTTdHSUU4Nk1LR2taaW9HMjZ4TFNVZHc0NW9zNmdJZmlnVGFTVExRVkN5a1NYNXFkUFRpX2djREl6dmNPaXo2TEpxdWhCRG9sRFdodktnTW02R3piTTJlWG9kSFJtM1FIcFFRQ2xvMHd2cjdHcDJQSGZMNXdoVkhsd0FhRDZzWFBfTzhkS1NfbHRLNGdyc0R5YmtYbmZEZFBFWTRZTzI2OTVDNHlFX1J0bXZQUWxDdko5Rml3WEFmdk1HT0JQNkZjNlNVcV9rM2Z6MF91UlBvT01DSTJUTXZhdDJGOG4tX1BCbURpRmx6bzQ2LU1LVFpibk5QOEV0Uk5JV0xTeGlodTc3VmhuMHlnRURkVmZDdDBMa1NZbEpQbXk1UnZVVE1CSmpCMExxc3Jxd2hKS1BGXzc0NEg0Y09JNTd1M2tLN0JQTlFJZHdNTWxISDlWQg",
+            "source": "WSJ"
+          }
+        ]
+      }
+    ],
+    "Global > Tech": [
+      {
+        "title": "NVIDIA's Strategic Portfolio Adjustments",
+        "text": "NVIDIA has divested its entire stake in Arm, a UK-based semiconductor design company it once sought to acquire, while reports suggest its potential investment in OpenAI could be adjusted downwards from an initially speculated $100 billion to $30 billion. The Arm divestiture follows a failed acquisition attempt in 2022 due to regulatory hurdles, signaling a strategic refocus, while the OpenAI investment recalibration reflects ongoing fundraising complexities and market dynamics. These portfolio adjustments underscore NVIDIA's intent to concentrate resources on core AI technology development and strategic partnerships, solidifying its market leadership and standard-setting within the AI ecosystem.",
+        "links": [
+          {
+            "title": "Nvidia Eyes $30B OpenAI Stake in Separate Deal from Infrastructure Pact",
+            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSHZwc2pnVE1LdDd2M2pqbkVCYkwxWWt3TEFDUkROakNQanZNZUM5TWtaS3BMcnBZWDExb3YwdnJmTl91QzY1SDVJZ3ByWXlETUtpWXRseXhSLW1td2FSVVRjUDBhdzNUZkZsSnB1bGRTYW0wRXltRU1SVU9vRkFNZk96UUpLRGZhSDI1WnFTdlN5VGZ3eUFnRzJyNnNVY0RSNF9GVFhR",
+            "source": "The Tech Buzz"
+          },
+          {
+            "title": "NVIDIA’s Revised Investment in OpenAI Expected to Be More Than ‘Three Times Lower’ Than What the Industry Originally Believed",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQlJvSE9FcFZ2bXlCeUQxMGhHYVJ6ZnBfaVhrQlVVQzk0eTlia0ZaQU4xUnFSWTZJYXVlZ0FYSm5jM1FXbDRFV0ZoY2tjSWFPRDhCcDdkUVVnVDl3MlB0WGI5YWVCYjFDc1Nnb0NNNFBXZ0ZLWFRnTVNNNVkyeTFXMUdsOUJta1JmZEZBX3RHanhBMFpsb3ZPejk3R0dzamE2bXlyeHgxWjZFamY1Tnh5QU1GYVlHeGpfME1NRFZmaGlvTktNd3BFZVRreWXSAdIBQVVfeXFMTlBrdHBpc180WHc3VWx5MUpwcDZtX3luaDVURzFkc0NZOTA5VnhRNFdCbE1ESDl5UldNU2dQdFV2LVd0ckM2ZXlMcmVGR21mb29RSzJpcE83MUFHTkNlYVRLTl9aQkhTNUZReEgwcFBRU1NDWDQyTmZwTkJQNU53YUZvMm5WaERISVFDSGR2MnhWRXoyZFdDSmcxc2o3RHNBaTBTUk1iaG1sd3hJcDdoYk9YQl9JTjA0RGdrYndIbk9zWGN1UmlQN0h3eGsyRXBNNVpn",
+            "source": "Wccftech"
+          }
+        ]
+      },
+      {
+        "title": "NVIDIA Expands AI Infrastructure Partnerships",
+        "text": "NVIDIA is actively expanding its AI ecosystem through strategic collaborations, including an extended multi-year AI infrastructure partnership with Meta and a new alliance with Texas Tech University to build next-generation AI infrastructure. These partnerships are driven by Meta's accelerating AI development needs and Texas Tech's demand for advanced research capabilities, enabling NVIDIA to broaden the adoption of its core AI chips and platform. Such collaborations will help NVIDIA secure stable demand for its AI chips, extend its influence across various industries and academic sectors, and reinforce its long-term market dominance.",
+        "links": [
+          {
+            "title": "NVIDIA, Meta expand multiyear AI infrastructure partnership",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQQnJmekQtem1NOC0td001U1hBN2J1VjJjd0ZQS0EzS0RaTGEzSVVsVHpTLUtabHUzSjlPSU51VTRxT0xMZmJuS2tMUDJ5M080akhhb2xWUW9vODlyeU10ZlA5aVJaT0FOSHZYLW9ET0ExUTBTTmdTUzRFeEg0cERYdEx2RTJJcFVaaUFiSUxFelY",
+            "source": "Engineering.com"
+          },
+          {
+            "title": "Texas Tech joins NVIDIA to launch next-generation AI infrastructure",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSno2QUV0aWREaGpFYXFBWXJjUTNkc2FOdXN0NVhhVDhtQUxaS3phTU1rcUp5UVRRVXZwckRtWW1UaWJDNThTZzVTUVpCaUF5NHRIY3BqeE9ONWV3RlpXamZ2WHQ0eWlGSmJvT2NFMW4yVUhSNjg5ejJoUzNlM0hmMVpUZkpodVluRlJRb3NHSGlFT2Y2dXJkbkN5VnBQWnotTjYzT0Q3U1EyYWZHMmc",
+            "source": "Odessa American"
+          },
+          {
+            "title": "Meta scoops up more of Nvidia’s AI chip output",
+            "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVVlwZEhHVFo0UU4wMW5XMjl6ZkRld200Mkk5amtWeWFYSUdfZ296NEI0ZHVmSXN0TG5jWFNvSkxrQkp3ZDRSSjdjLTh0MFpSNWViZ1p0SDJNaVhmWEpJQ1lmREQ0TklHZUg2ZzR5eGY0RzBnMDBQYzExVzJLaHFvdnZncmNlWXc3REFDZFN2Mm4ySXRrcnNSOUQ3RQ",
+            "source": "Network World"
+          },
+          {
+            "title": "Will NVIDIA’s Meta Deal Ignite a CPU Supercycle?",
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWVVDbGdjVmhPVUIwRU1MTEF3UmdyR3lBY2pqNEpZN3NPSEVhMGVRNDM0ZEUwUUF5d2N1d3p3SHBHcTdmTVE4QVdybndDQWdiSU1nOEdnYkFJeHFsMERJSWFydWJtV1BfWXNwTmpBYlVVOXktRnY5clFJQjJZYWsyM2pYcG8xaThI",
+            "source": "The Futurum Group"
+          }
+        ]
+      },
+      {
+        "title": "NVIDIA Broadens Product Portfolio Amid Intensifying Competition",
+        "text": "NVIDIA is expanding its product portfolio, enabling general users to run high-performance AI models with its GB10 Superchip, launching the open-source robot world model DreamDojo, and exploring entry into Intel and AMD's CPU market. This strategic push responds to the increasing everyday use of AI and advancements in robotics, alongside a drive to optimize performance through integrated AI workloads that transcend traditional market boundaries. While these moves position NVIDIA to extend its dominance from AI hardware into software and platforms, securing new growth drivers, the company faces intensifying direct competition from major tech giants like Google.",
+        "links": [
+          {
+            "title": "Nvidia (NVDA) Is Coming for Intel and AMD’s Home Turf",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSXFBczN2R0ZfRnVtTnJOSC1uM0xDaEJTVHI1ZWs1YVNXaFdid1o0TTUzLVlVRUZwajZGSGFPOVpGZUFFX0Z3bXRQbkhLLXlucGVpNURfSVExRmJYeEwzbVdsRkQ3c05nUFI4SWNqSHZMU0RkaGhmcWJvb3MxNmFWT2FoWDJ5SjV4Q2hiSA",
+            "source": "Wall Street Pit"
+          },
+          {
+            "title": "NVIDIA Releases DreamDojo: An Open-Source Robot World Model Trained on 44,711 Hours of Real-World Human Video Data",
+            "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNOXVUMm9XZ1BGTXFucG14dlpCQ2J1Y095UF9JVjE5dUcyNDE2XzZwMTNKa2NhdmRUMnlGOG5ieWlsbjJBNnRvZC1qcDVFTVBQX0k3b3BNcXRZQlZ5dnFHcnBPVTZ5aFRMWk9EOHRkSHdkN1BNWThmSG92a1VzZ3AzcnVFeXJkcXdUTjFOWm5VTHR3VE5BWC01QmZxaUVjMFhjWVRfMnAzMzZOVlI0RlBaTmlhMzRmTHVBdHgzcEthd3FVczF4X1Z5NS1IOTh1NWpxN2lIZm1mTFRZeGZOcTJYa3hlaFQyYWV30gHuAUFVX3lxTFBXZnVEMGV3bl9BR1FCV09MNDNsdUxCQnU1ZU5vbmFMS2RhZC1XMjFlamNDUDEyM0xFRE5hcG5LbTlhN0ZIQmkwTDh0UFNuM2xNcEJHTDE4bjBOc09KMl84MVpjaVpabDdRTmtieTBLdDVLT2hCSHJwOF9ZZC0tY01wZTE0Uk1KV1NoRFFSZWN2WkVEOHcwOU04TUVIQTFSWjh1Y0s5Rnhha21tQXJqQkhpNHE0RFlkTWpnZVNLRXMtMUpiVWYtc012M3VZRVNDTVp6NnZSVnhTOHhnN1dvcFdUc0w3el9iWHBrVWFwTkE",
+            "source": "MarkTechPost"
+          },
+          {
+            "title": "With Nvidia's GB10 Superchip, I’m Running Serious AI Models in My Living Room. You Can, Too",
+            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYmNfV0l2VkxlNGhfV3NMeXpyT1pZcTJhN2t4WmpkQTRFdVlwa1ViQWJmdVRqSXExSmN4THhZdzNWbERDNWRXSlJWNWxtR0J4cnN6WVM4eTlVVGZTSVFSTjZWbm9lVlQ5TXRrQU03SjJpU2tTVmlBMXNJcWtaRHFTb1JpWnlJbmluczBOcHRQU2o1LWxBX2lHZDBTUDJ5QkFPTEhueUV0ajFYMUl4MVZETGtucjkybXNuT0pB",
+            "source": "PCMag Middle East"
+          },
+          {
+            "title": "How NVIDIA is Transforming Indian Manufacturing with AI",
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQzgyVk1VLXpXXzdUQnJHNVk4LWp0LTVoeEZkSjhMWW1oYzRuQldCd2ZVWlFtTVpxTjFtNFhjYlQ4Y1NVVVhGenJCMFpEZGtReWc5MmU2dVlzVUdOQjlkTUlfTC1tUlhLVEZjV1pVY0s1M1ZlVjlSZlBGdGVZRXdHQnNvREp2SGR0",
+            "source": "Manufacturing Digital"
+          },
+          {
+            "title": "Exclusive | Google Is Exploring Ways to Use Its Financial Might to Take On Nvidia",
+            "url": "https://news.google.com/rss/articles/CBMirwNBVV95cUxOWlNQX2FoTy1teU1WY1M1S1lJaUtQS0NFOFNTRW9sRGpaTE1jZ2tRbmE1OFNDeW5sQ1ZSZkxwM1pZZkFELXJWajVIQzNubkgtaFdKaUlSOW9aZXFMd1ppVjlPb09XcXU2cFNjZ0tuNkNvc2RkM3RjbUNmUUxtOG14MmxNdDVMLWNRck1pc1lOY2N4eE9mQlc3Wk9TeFRqMUhhZzA5QUg4am8wcVZTejFabzJfVE5HWXVRNXFybV9sTzZNYTA1U0FtWnNUWlNGVW1mQm90OTBlSHFFQVpHY0tOY2NWZldaeW9PanRnU1lGbkRsWGV6S0dEOTdYN2ZqRlZfQ0hJdTJoWG1jR0xTVVdZYWY3eDZhcUcyaDVWbVJHYWhaMm5OTURKd2R6WmlkaWxsWTROWktwV2l3RXhqNzJoUV95S1djSmVSZ1FSbnNQU1dlWFhWMG5Qd2kxMWRiMVNzWTNDdkdiVnMzSG9kRHVQcmFVOG96N2xicFc4RTJjSTNUYnNnZEl3b0t5Sm9aNl8wQUxHREVZZ0QyZVdXNjdLTkFKMEtpdXNmcjdsZFhfVQ",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "Google Gemini AI Model and Service Expansion",
+        "text": "Google has launched Gemini 3.1 Pro, a next-generation AI model boasting double the reasoning performance, while also integrating AI music generation tools, linking with Google Maps, and expanding data integration for cloud AI agents. These developments are part of Google's strategic effort to continuously enhance AI model capabilities and strengthen multimodal features, addressing diverse user scenarios and enterprise demands. The rollout of Gemini 3.1 Pro is expected to significantly boost Google's AI competitiveness and expand its influence in both AI democratization and the enterprise AI solutions market through extensive service integrations.",
+        "links": [
+          {
+            "title": "Gemini 3.1 Pro: Google’s New AI Model Doubles Reasoning Performance",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQUk1RFBpam1rZEVoVWNfQ3laWUpOTVpLbTV1Y3BZemxSZGdfR1FJaUNfOThOWG0zZEdEemRsSmw5YWlzaWFqTHc2NGM1Wks3T0FsazlBSzNKQ3RLZlBDYmhhTzBwNzRBVDJHV3RUQ2VsTGFRd1BRNmtpLU1YMnh6YjJQZkdxU2dKV0dnVnBINzRGWUdkX25ybU13",
+            "source": "Android Headlines"
+          },
+          {
+            "title": "Google Gemini 3.1 Pro Beats Rivals In AI Benchmarks",
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaUtPTkdzMDNuc1hhMldlRVcxcWwxTEM4UHgxbEhiSGVEd2RtdEd3SUttM3ZMLUtSRHZjenlOeFNrc3lPX2IyS0lGaHY3NHZCQlppaWtVSXZNTTlCQ0xaT2ktWDNBV2U2ZnBJSnR3ZmZ4dXRjTjM0WTVMa1FHNkNWaEZFTXVKZFZI0gGQAUFVX3lxTFBKTVlNcGdVNE9ubjRrLURWRElIS2JSbG56Z2hIRW9ZQm5EUi1GZ1FYYVZET0RFVzZYS1g5T0lFb3pQM0MwSW0wR1RNcl92MnlqbTZHOGk0XzB0d3Zkd0g2dDl4VjQwY2pHU0xnM203STVJajZvYjRLU0lHa3FkN2pnWm4zOTdUSHZJSHI5dmNTRA",
+            "source": "findarticles.com"
+          },
+          {
+            "title": "Google launches AI music generation tool on Gemini",
+            "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE82N296RllCOHdDR2dxaVJ2V29zYW5raE9XdDdPTXhRV0ZyaWZRY2QwVTJqNW5xVFlUcnJVNi1vN3VKVzZPZHdHVTJCdktnZ0xkdUdzWWxoWW52akJxc0hRN25DMzF3RGpVYjZKZGt2clRaRjkzUlgtZFZn",
+            "source": "DJ Mag"
+          },
+          {
+            "title": "Gemini is getting a dedicated Google Maps section — here's everything you'll be able to do",
+            "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNjczbGhpZ0dBY0Z4NDF6YkZXXzFxUjJBZlpiM0VrLTJzZWk4SzBFWTlVUm1ZTGVBNUpUWGtXWE5DWmlvODNJZi00dU1YYnVEWVZ1bGZGTlNHZldZWTE1bDlJVUxFRm1QNGJjU09wYWVUYlVka0ppRDM2QVJIN1FKeG9lcW44OTNFMy1FR2MzZ1R5ZHFFa29paFRNVmxlRmhXOVdyelhMdmJielVObkE3N1RtbVVvREdyaG52a2xyZU9nTVZwd3VwMQ",
+            "source": "Tom's Guide"
+          },
+          {
+            "title": "Google Cloud Integrates Ab Initio Tools to Connect Distributed Data for AI Agents",
+            "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNMGpDUlBIbm5VbmFnVzlja3laZGZkVlptbUZKb01BNW5RS0dFcVUtTFBqSmV6Z3owZ0NzWDZNNEFJWWFtV0YzRDl2aGwzLTlYZEdYRmlPVlpLNDB1RGtZeGpzdUJDZ3hRdTl1MERRMWxISGdCQ0pObmdBYjJuYkhES0ZobWMzRWRzWHhOUG0zRWhYOWgzTjNFcWZNS0UzbGtYWVE4MEFXbU5Fc18xbXRXMDRSRndEWjhockxfVkRUODJxQm8zd1JjSEN6MA",
+            "source": "HPCwire"
+          },
+          {
+            "title": "Google has Unveiled Its New Flagship Model, Gemini 3.1 Pro",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWWNjX1EzNzBkVDhrQU85elZNR1JrRF9mcXBtamZUV01iM1FSazd6NUpoVkFaNFJ5RUQ3Y2FjaVNac21qQXZMdlVLN08waGVOX0RjVkVxLWdfZWtJWF81TWFFNkRmQzFXc2w5blhVNy1kYVdUXy1KdG5XZDZoMDhLMm5SY2hXR3NkcHhv",
+            "source": "incrypted"
+          }
+        ]
+      },
+      {
+        "title": "Advancements in AI Data Center Infrastructure",
+        "text": "Demand for AI data centers is fueling improved performance for infrastructure companies like Comfort Systems USA, while Modine projects long-term growth in AI data center cooling systems. This surge is driven by the escalating power consumption and heat generation from high-performance AI chips, necessitating increasingly efficient cooling and power solutions. This trend presents sustained growth opportunities for companies involved in AI data center construction, operation, and advanced cooling technologies, thereby bolstering the physical foundation for AI technology proliferation.",
+        "links": [
+          {
+            "title": "UALink roadmap plots course to optimized AI data center interconnects — examining the open standard designed to combat vendor lock-in while offering cost and performance optimization",
+            "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQMzRXQm51S0ppem00UWR4N1JEU0JZY2NCSDJqTUNUdWxjdTBqek9uNFBnMGlDTnF4MkJpd1JBWUc0Umhydy16OHdKZmNkbGJOdW1yemhlQ2dyNHYtV0pWQUdjOTFSTHd4TDlEX1FaejI5TTJHRmdsc2FXSzlTWFYyV3ZrNXozbTN5akpiSDNvNlZCS3JtdDFhTkh1am41YmY5ZEZOX1lOVGhsYzBYbE91RkFWcmc3TWFqaVBPWVZoeEZ4OGJ6M0E1eVJvOFQ1Y3p6U1FoenRzSVczc1N5WjMyRFpULTlQNVQ2QlZqMmFFb0pLVlVWTDhXdUh1ZW1hU3lHRjZMYV9kYjBrOVpTUzIyb2dQclVQcmM1Tk1hbXhETVdDRjNIX21Oc1lmZjhtTHpzVnJZSm13X1NFSzJpS2ZrUkpWZjc5VnR1elVRYXZoLTRXQ203cDlneG84c2tpM0tHRXNIOWFB",
+            "source": "Tom's Hardware"
+          },
+          {
+            "title": "Infrastructure Giant Comfort Systems USA Cashes In On AI Data Center Demand",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNGowdlBxNjIzT1dFLTNrbm5lZ2pVdFNqZExLaFN2enhuX192MlZCSWtya3BrUVBrVXpCcEI1a29kNFp3NUFFaW1qYW5zcTR5VmZ6ejFwa1B0ZW1wbGZaSHJmVWVKaVRJcloxem1wcldfakZmdEtjal80S2FDeGo3b0dDWjJQNl9QZ29VUDRiMkl6RGQ1WE9OaDdjXzZNM24yYTZ3UlZBQUVlSGRLYW5HRUg1Y3lKNERpT25FT2NzcDlmMUdDME1BanhVRmk",
+            "source": "Benzinga"
+          },
+          {
+            "title": "Riding the AI Data Center Cooling Wave: Modine's 5-Year Runway",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcGhPNm8xeEZsSmxFRVIwLTBhMnJnRXVxUHZ2NEI3R0gyX09BdnNHc3JCR3d2WG5nVHUzMTZuNXIwQzFEYndPQ2F3NjZYaXpEWDFOREJINmt0d2dmVkFURzU0LTJYaXFGX2RZNzZsR0pLRHBxRXh6cHhHMVhzWU9hYkZPRkl0LXhUNGYzQnZBVF91bURVWkJIdmtlNEljZGdQU0Fr",
+            "source": "Zacks Investment Research"
+          }
+        ]
+      },
+      {
+        "title": "Resurgence of Samsung Exynos and Impact on Korean Semiconductor Ecosystem",
+        "text": "Samsung Foundry's Exynos application processors are slated for integration into the upcoming Galaxy S26 series, sparking optimism for improved earnings among suppliers of related materials and testing solutions. This resurgence is attributed to Samsung Mobile eXperience (MX) division's decision to re-adopt Exynos coupled with advancements in Samsung's foundry technology, enhancing the chip's competitiveness. The revival of Exynos is expected to create significant synergy within Samsung's internal semiconductor business and positively impact the entire domestic semiconductor materials, parts, and equipment (MPE) ecosystem, driving growth for associated companies.",
+        "links": []
+      }
+    ]
+  }
+}
