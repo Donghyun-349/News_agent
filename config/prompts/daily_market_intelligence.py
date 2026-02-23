@@ -99,14 +99,14 @@ def get_topic_selection_prompt() -> str:
 - **개수:** 정확히 3개.
 
 ## 2. Section Picks (각 섹션별 대표 이슈) 선별
-- **기준:** 각 섹션(c)별로 가장 중요한 토픽 상위 3개.
-- **개수:** 각 섹션 당 **최대 5개(Max 5)까지 선택 가능**. 
-  ⚠️ **CRITICAL:** 5개를 초과하지 마십시오. 단, 토픽이 충분하다면 4~5개를 선택하여 Analyst에게 다양한 후보를 제공하십시오. Analyst가 이 중 3개를 최종 선별할 것입니다.
+- **기준:** 각 섹션(c)별로 가장 중요한 토픽 상위 3~5개.
+- **개수:** 각 섹션 당 **최대 5개(Max 5)까지 선택**. 
+- **CRITICAL:** **절대로 섹션당 5개를 초과하지 마십시오.** Analyst는 이 중 임팩트가 큰 최대 5개를 최종 리포트에 담을 것입니다.
 - **선택 방법:**
   1. 해당 섹션의 모든 토픽을 영향력 순으로 정렬
-  2. 상위 3개만 선택
+  2. 상위 5개(또는 중요도가 높은 것들)만 선택
   3. 나머지는 과감히 제외
-- **예외:** 해당 섹션의 토픽이 3개 미만이면 전체 포함.
+- **예외:** 해당 섹션의 토픽이 5개 미만이면 전체 포함 가능.
 - **JSON 출력 검증:** 각 섹션의 ID 배열 길이가 절대로 5를 초과하지 않도록 반드시 확인할 것.
 
 
@@ -420,12 +420,13 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
    케빈 워시 전 연준 이사가 차기 연준 의장으로 유력하게 거론되면서 시장에 매파적 신호를 보냈습니다 [Ref:4396558]. 그는 글로벌 금융위기 당시 양적완화에 반대했습니다 [Ref:4396542].
    ```
 
-5. **CRITICAL PROHIBITIONS:**
+5. **CRITICAL PROHIBITIONS & LIMITS:**
    - ❌ ABSOLUTELY NO inline reference markers like `[Ref:ID]` inside sentences
    - ❌ ABSOLUTELY NO inline markdown links like `([📰 Title](URL) - Source)` in body text
    - ❌ ABSOLUTELY NO URLs or hyperlinks in body sentences
    - ❌ NO generic advice ("Investors should monitor...")
    - ❌ NO duplicate citations
+   - ⚠️ **LINK LIMIT:** Total citations per SECTION should not exceed 5. Select only the most authoritative sources.
    - ✅ ONLY use `[Ref:ID]` format on separate lines AFTER the body text
 
 # Output Format
@@ -527,7 +528,7 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet.
 2. **Citations:**
    - **NO** inline reference markers in the body text.
    - List `[Ref:ID]` on new lines **IMMEDIATELY** after the text.
-   - Use 1-5 citations per topic.
+   - **LIMIT:** Total citations for this section MUST NOT exceed 5. Choose the best 1-2 sources per topic if there are many topics.
 
 # Language Specifics
 

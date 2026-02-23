@@ -438,41 +438,38 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
         
         # Post-Processing: Convert [Ref:ID] to Citation Links
         # Pattern: [Ref:123] -> > * [Article Title](URL) - (Publisher)
+        citation_count = 0
+        MAX_SECTION_LINKS = 5
+
         def replace_ref(match):
+            nonlocal citation_count
+            if citation_count >= MAX_SECTION_LINKS:
+                return ""
+            
             ref_ids_str = match.group(1)
             # Split by comma and strip whitespace
             ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
             
             links = []
             for ref_id in ref_ids:
+                if citation_count >= MAX_SECTION_LINKS:
+                    break
                 if ref_id in article_map:
                     meta = article_map[ref_id]
                     
                     # [EN] Citation Filtering: Exclude Korean publishers from the footer list
                     if lang == 'en':
                         # List of Korean publishers to hide in English report footer
-                        # Comprehensive list covering major Korean news outlets
                         kr_publishers = [
-                            # Major Newspapers (English names)
                             "Chosun", "Chosunbiz", "Dong-A", "JoongAng", "Korea Herald", "Korea Times",
-                            
-                            # Business & Economic Media (English)
                             "Maeil", "Korea Economic", "Hankyung", "Seoul Economic", 
                             "Asia Economic", "Financial News", "Herald Economy",
                             "BusinessWatch", "The Bell", "Korea Financial Times",
                             "Seoul Finance", "E-Today", "Newspim", "MoneyToday",
-                            
-                            # News Agencies & Wire Services
                             "Yonhap", "Infomax", "News1", "Newsis", "GEnews",
-                            
-                            # Online & Tech Media
                             "Edaily", "Digital Times", "Electronic Times", "ZDNet Korea",
                             "Bloter", "Byline Network",
-                            
-                            # Broadcast Business
                             "SBS Biz", "MBN", "MK News", "YTN",
-                            
-                            # Korean language variants (한글 표기)
                             "조선일보", "조선", "동아일보", "동아", "중앙일보", "중앙",
                             "한국경제", "매일경제", "매경", "한경", "서울경제", "아경", "아시아경제",
                             "파이낸셜뉴스", "헤럴드경제", "비즈니스워치", "더벨", "한국금융신문",
@@ -486,11 +483,11 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
 
                     # Format: > * [Title](URL) - (Publisher)
                     links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
+                    citation_count += 1
             
             return "\n".join(links) if links else ""
 
         # Regex to match [Ref: 123] or [Ref: 123, 456]
-        # Captures the inner content "123" or "123, 456"
         final_content = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref, raw_content)
 
         return section_name, final_content
@@ -560,22 +557,39 @@ def process_combined_section_task(section_name: str, topic_ids: List[int], topic
         content_ko = result_data.get("ko", "")
         content_en = result_data.get("en", "")
 
+        citation_count_ko = 0
+        citation_count_en = 0
+        MAX_SECTION_LINKS = 5
+
         # Post-Processing: Convert [Ref:ID] to Citation Links for BOTH
         def replace_ref_ko(match):
+            nonlocal citation_count_ko
+            if citation_count_ko >= MAX_SECTION_LINKS:
+                return ""
+                
             ref_ids_str = match.group(1)
             ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
             links = []
             for ref_id in ref_ids:
+                if citation_count_ko >= MAX_SECTION_LINKS:
+                    break
                 if ref_id in article_map:
                     meta = article_map[ref_id]
                     links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
+                    citation_count_ko += 1
             return "\n".join(links) if links else ""
 
         def replace_ref_en(match):
+            nonlocal citation_count_en
+            if citation_count_en >= MAX_SECTION_LINKS:
+                return ""
+                
             ref_ids_str = match.group(1)
             ref_ids = [rid.strip() for rid in ref_ids_str.split(',') if rid.strip()]
             links = []
             for ref_id in ref_ids:
+                if citation_count_en >= MAX_SECTION_LINKS:
+                    break
                 if ref_id in article_map:
                     meta = article_map[ref_id]
                     # [EN] Citation Filtering: Exclude Korean publishers
@@ -600,6 +614,7 @@ def process_combined_section_task(section_name: str, topic_ids: List[int], topic
                     if any(kp.lower() in meta['p'].lower() for kp in kr_publishers):
                         continue 
                     links.append(f"> * [{meta['t']}]({meta['u']}) - ({meta['p']})")
+                    citation_count_en += 1
             return "\n".join(links) if links else ""
 
         final_ko = re.sub(r'\[Ref:\s*([\d,\s]+)\]', replace_ref_ko, content_ko)
