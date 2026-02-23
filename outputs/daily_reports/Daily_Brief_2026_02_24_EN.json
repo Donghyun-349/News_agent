@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "date": "2026-02-24",
+    "generated_at": "2026-02-24 07:33:51",
+    "model": "models/gemini-2.5-flash",
+    "posting_title": "Big Tech to Invest $650B in AI; Trump Eyes 15% Global Tariffs",
+    "language": "en"
+  },
+  "sections": {
+    "Real Estate > Global": [
+      {
+        "title": "U.S. Housing Market: Mortgage Rates Drop, Boosting Purchasing Power",
+        "text": "The U.S. 30-year fixed mortgage rate has fallen below 6% for the first time since 2022. This decline reflects recent stabilization in the bond market and growing expectations regarding the Federal Reserve's monetary policy trajectory. Lower rates are expected to boost homebuyer purchasing power by up to $30,000, potentially revitalizing the housing market, though the long-term impact on housing stocks warrants cautious observation due to other weighing factors.",
+        "links": [
+          {
+            "title": "U.S. 30-Year mortgage rate dips below 6% for the first time since 2022",
+            "url": "https://www.investing.com/news/economy-news/us-30year-mortgage-rate-dips-below-6-for-the-first-time-since-2022-4519613",
+            "source": "Investing"
+          },
+          {
+            "title": "U.S. homebuyer purchasing power surges by $30,000 as mortgage rates cool",
+            "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPc3VjY3hKU1JQV2FIZ082V0dvaGlPeFc2ajVKeExiRFFiMTRjZnV6NEU1Q0J2UDFaei1GbngxRWVDSGxrNXJpN2JYY3A4b082dVlaUWQ0elhxV1VDRGpjTHVzUU9ZTG5HN1VkNUxxTmp4eWhVUGRFb2RkdFR1NUEtNS1oVkRBci1kTWZIcE9lSzZZcUl5STllQnl3bw",
+            "source": "Scotsman Guide"
+          },
+          {
+            "title": "Mortgage Rates Dip Under 6%. 3 Things Weighing on Housing Stocks.",
+            "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxNSm9vRlhEU2w5UEVOOGhRQUZIWW80Rk40emJJWThpOUxEQUJ6aDFaOW94OWFUR0F5X2lzR0c0VU1vaEk0eXhyN1ZWNkZ4bnpJS1FaU19HMHVuRG9rNjdMV2gyMW0tS0NMaDktYjI3NWlTN1ZWLTRqS25aNXZTSHFnZ19WSXoxNV94UUFjS1gxQ1E3UE5NVHJ6T0hBSFg1bnNIUmNiMGVHbFJqRGVnZkJvUkRIUm5wMXN2ZGRTeDZhdEVwMEhoTVVmdjNsVmMtUkJSNGVnTkNCSF9MeDRhNWpXT1VOTGJpX0EwU3dHOWduaEZtNld4MnlWVS0yNm03YUVqM24xREFRb3FDcGpDcHl2RkdYeWVwTm81UzdIb1BfOGJYOUtnOUlyandodU02dG8yMUZWZVExakRWVFd3Q0xtWFdIajlROHlPTm5KNktsU3RNdmZvanJfVmtXZGRoQURrWG95YWJpTUgtakRvbXNadVFVNjJEWVUxS3pTaGlucXZQR3lqbjNXaUxKNHEyZzdyZFo4SVg1SzZ5T0p4bWc",
+            "source": "Barron's"
+          }
+        ]
+      }
+    ],
+    "Executive Summary": [
+      {
+        "title": "",
+        "text": "1. Major tech firms forecast $650 billion AI infrastructure investment by 2026.\n2. Trump threatens a 15% global tariff, escalating trade war concerns.\n3. SK Hynix pledges to boost production of high-demand AI memory chips.\n4. Samsung Electronics prioritizes HBM4 DRAM yield improvement for competitive supply.",
+        "links": []
+      }
+    ],
+    "Global > Market": [
+      {
+        "title": "U.S. Markets Decline Amid Tariff Fears and AI Volatility",
+        "text": "Major U.S. stock indices, including the S&P 500 and Dow, fell over 1% yesterday due to renewed tariff uncertainties and anxieties surrounding AI's disruptive potential. Former President Trump's remarks on global tariffs sparked investor caution, while concerns about the rapid advancements and implications of AI technology further weighed on sentiment. This confluence of factors is expected to sustain market volatility, potentially leading to further risk-off sentiment in the near term.",
+        "links": []
+      },
+      {
+        "title": "Bitcoin Falls as Hedge Funds Exit Amid Tariff Concerns",
+        "text": "Bitcoin’s price dropped below $65,000, influenced by escalating market uncertainty stemming from former President Trump's tariff statements. Simultaneously, global hedge funds significantly reduced their Bitcoin ETF holdings by 28%, indicating a broad withdrawal from the cryptocurrency market. This trend suggests a potential cooling of investor enthusiasm in the crypto sector and could lead to further price corrections.",
+        "links": [
+          {
+            "title": "Bitcoin Falls Below $65,000 in Latest Bout of Tariff Uncertainty",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQN0lLMks5Q1dhLU9OMldaaXFKYnk0WDc2RmQ2MEFEZm9qa0RMajBjSlVmbFRub3RqNFdsWU42ZkgwbTZheTBoaEpmZkx3VGdGbi1MM2J3OW04a0FLMW1ZSlZvTDEtTFdZdS0zYVlJQVh6dDZDOXhNTERzMmRaRXN2V0pmMjdQcWpKd2RyRTh6SkFGeTZzTkxUZ3ZRazM2UDA1aWxFQXdxTDhYSDVzX0FxWlhRbGhjVE0",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "Global M&A and Pharmaceutical Sector Developments",
+        "text": "Gilead Sciences agreed to acquire cell therapy developer Arcellx for approximately $7.8 billion, marking a significant merger in the pharmaceutical sector. This acquisition is a strategic move by Gilead to bolster its presence in the high-growth oncology and cell therapy markets. The deal is expected to enhance Gilead's long-term growth prospects and diversify its therapeutic portfolio.",
+        "links": [
+          {
+            "title": "Gilead Sciences to Buy Arcellx in Deal Valued at $7.8 Billion",
+            "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxOV21Da1Bhcy1ISkNISno2dm1uNTF6R1c2Y1FDOExkbUtSdi1mMWM1TXEwWFlySnk4TUUzLS1uajlUMHBzMUd0VUV1MmhYd3RiN1paMWRnRVU2eDBxR1ZKc0VFaFE0bXhJSHA5TmhWSS1pU1V6UFhKM09iUDBsREIzc0lJMW1peTdhYU1jZlFTSkJvTnZFTDExdlVlenNnV1NQQkVsOS1jSzlmUXFXSmF1VTFseGZnVkk5S1ltaGJwbHlqU0NZeE9UZklpa3IyejlLN3c2T3F3Wk9aR1JpNi1UZlRtYUNrTWxEZHZwX0JwS2FrTFNjZVR4U1JzMUczUmR3QWpOQk5RRXowaE5ZUWtnNjUzWWU4a1ZmSjVqUkZfbHllQUNVU05QWm5KbkVVeXh6cWZwMV9pdzQwOWw3ejZBN2dMNWVScVVIRDBQdFVZNG9tbUYzbzVTczAtc0k1SF9TdXZMLTVqUGhKeDBYOTBRSUxtbkNQTDFWVDZaTzJMZjA2Q3hvZ0RGYlBXc3E4SFo3Q3loS2pIQmFEWWtlV3c1NlFKZk5XdEdHbWc",
+            "source": "WSJ"
+          }
+        ]
+      },
+      {
+        "title": "",
+        "text": "In other news, Novo Nordisk's experimental obesity drug CagriSema failed to demonstrate superiority over Eli Lilly's Zepbound in a Phase 2 trial. This unexpected clinical outcome intensified competition within the lucrative obesity drug market, causing Novo Nordisk's shares to plunge. The development indicates a tightening race for leadership in the obesity treatment space and may introduce continued volatility for related pharmaceutical companies.",
+        "links": [
+          {
+            "title": "Novo Nordisk Shares Plunge After Obesity Drug Fails to Beat Zepbound",
+            "url": "https://news.google.com/rss/articles/CBMitwNBVV95cUxOek0ybTduODdqSWNmajFsUzdKRVZ0bVRPenhDaGpUQUZ3QzcyOUlYWTBuZ1duZWIwSll5dkRGR1pxbFZPRk9oSFpNRWRHU0RqeWFSalFqQXBfNmVueWszTVpPbW1ncmJ2amhNTzlLeU5LZ2ZWX09yX1ZsZW5qLWpTalhhRmR2cmVhOEw0bHB0ODJzUTZ3bTlZclhaZDc5Y2NNVDhNZWlQM095Vzl6ZFFObl9rVERrMVJsRjBscVNRZWtTNXdTRWZwN0xSNmRUWVZMZG9vQWhjeEhRZ0hoeG1UNnlxVVVzaWtJTDNDTUt0dUNoVF85NV9YYVphdTJoS2JQa01PRGR6YXRBaE4yNzlDWjRpVHpVTG5wZWlMRl9BMWJabmx0OHVWaEFrSzdsYURJcHBrLWp1eDl6dWlaNF9namlQc3dZQjRvU3dqZXdkamx0VERDWEt3MDIta3pEWkd4YXJtMlhhVXBBQUJIXzU3bFJ3Vlg4YmZHMU82dnRoX25uMGN5WEoxMVp6WTNhdmdOLVg2VlI5eU1DalNnNmNZcmkzeE1JeGs2N043cHZSMGN0YUpPaDhN",
+            "source": "WSJ"
+          }
+        ]
+      }
+    ],
+    "Global > Tech": [
+      {
+        "title": "AI Data Center Investment Boom",
+        "text": "Big Tech firms are projected to invest approximately $650 billion in AI by 2026, with Amazon alone committing $12 billion to an AI data center in Louisiana. This surge in investment is driven by the escalating demand for high-performance computing essential for AI model training and inference, with NVIDIA's Blackwell GPUs at the forefront of infrastructure expansion. Such substantial capital deployment will bolster revenue for AI semiconductor and related infrastructure providers, accelerating the broader industrial adoption of AI.",
+        "links": [
+          {
+            "title": "Big Tech to invest about $650 billion in AI in 2026, Bridgewater says",
+            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOYTBiU2Z2N19yek9Qa0M3dTg3QWRvcXowRUZNcGxnU0o4QkRmXzU4N053Vy1HdktTSU16UHhfQWdrcmhrVE51M1RJZER5X3NkQm5XRXh1RXlncXRBbWZ4UktfQUhkMkEwZHhCRWZxMHVOZ1lfSWpYbzJydjl4c3pHMU5CR1A5VHk1OFBrNGJpYWh1X0ppS3BmT2dzOFViTlBFTDltVTNR",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "Microsoft-OpenAI AI Ecosystem Expansion",
+        "text": "OpenAI is deepening its partnerships with major consulting firms to push enterprise AI adoption, while Microsoft's Copilot has become the top productivity app in Windows 11. These initiatives stem from the growing corporate demand for AI integration and Microsoft's strategy to solidify its market leadership through pervasive AI service deployment across its ecosystem. The close collaboration between OpenAI and Microsoft is poised to accelerate the proliferation of AI solutions across industries and stimulate robust growth in the enterprise AI sector.",
+        "links": [
+          {
+            "title": "OpenAI deepens partnerships with consulting giants to push enterprise AI beyond pilot",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQanFFNzJCemxpSk1wNkpwZUMzS1NfNnY5Q0xWdDlJWjZnZ1FkUVoxQnJlZTliU1lsR0hNc3FBdWszZnllUnpEbmtWSVAzWVJqczk1NUNuSDN5ekJtRGJ2QW50a3J3UGYyVmltRVBXd0pRRmZnajhEekFOd05PLW5HUkVYeEpVNG5jT05kZVFoZC1CdkJHbUY3SnRMMkRoYVdWTy1BTnE2WkEyZmFQRVROYjYxWC1kUWNra2ZuZ2pn",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "Google and Apple Advance AI Strategies",
+        "text": "Google Cloud is collaborating with Unilever to power AI-driven consumer discovery and marketing, signaling new strategic fronts for the AI economy. This move reflects intensifying competition in cloud services and the expanding application of AI in enterprises, as Google aims to demonstrate the practical value of its AI solutions by supporting key client digital transformations. Google's AI strategy is expected to reinforce its competitive edge in the cloud market and facilitate the broader diffusion of AI technologies across various industrial sectors.",
+        "links": [
+          {
+            "title": "Google Cloud, Unilever Create AI-Powered Marketing for AI Economy",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSFRrRGRiN2lVR1ZVQVhYZDNRaEZJbFNrNVVXcHVNZUJTLVMtY2F6TTYtR1N5cXNHeDRVY0E5THBrdnhzaVpmUXRLem9SZjY3QTlRZjNZUTMxYjRMaU1TVmFkbzU1V3RzaGliYnNpdmR0dF9pY0pDWjNRTXZ1cWkxTE1WTEs4MlIwTjh4eVFLM255OU11VW1SY1Fpd3FndGIweHhFTFFXeFE",
+            "source": "Cloud Wars"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Semiconductor Manufacturing Innovations",
+        "text": "ASML has identified an EUV light source advancement capable of increasing chip production by 50% per hour by 2030, while ADTechnology signed a deal with Germany's Fraunhofer Institute for 4-nanometer custom chip development. These developments are driven by surging demand for advanced semiconductors, alongside growing market requirements for maximized production efficiency and bespoke chip solutions. Such technological innovations are set to enhance semiconductor industry productivity and fuel the growth of the high-performance custom chip market, positively impacting relevant foundries and design houses.",
+        "links": [
+          {
+            "title": "Exclusive: ASML unveils EUV light source advance that could yield 50% more chips by 2030",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVjc2UkF0RE40UHVvVGdoWVRVQmhYS255dTl5cFdkVjdGWERYNW5xdTNjR0tFUVpSODZqQlhydzBYQWJJWVgxR1oxMFpobGxUZ25TLTlKRmtuaUpyZktFNVdMQzFpajlEUUJfYWxxTVVOZ3hZd0lXSUFyMTJOWEg4MEcwS1hYb21FZnJMSmFhVGhhRjFjcHRSNW9KYXRDM0tnejdvTTFQZ2tQQ2RGeDFWdVB2eVV1SklMTlpwb09CNVFYdw",
+            "source": "Reuters"
+          }
+        ]
+      },
+      {
+        "title": "Robotics Market and AI-Powered Development",
+        "text": "Tesla aims for a $20,000 price target for its Optimus humanoid robot and plans a rapid production ramp, while NVIDIA launched DreamDojo, an open-source platform for robot training via human videos. This trend is fueled by increasing labor shortages in industrial and service sectors, alongside AI advancements significantly enhancing robot autonomy and learning capabilities. The evolution of robotics technology and reduced production costs will accelerate robot adoption across various industries, with AI-driven training platforms particularly boosting robot adaptability to real-world environments and driving market expansion.",
+        "links": [
+          {
+            "title": "Tesla Eyes $20K Price Target For Optimus, Extremely Fast Production Ramp",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTkdZVnZhYTd3N3c0bnBRcl85VU5QdmlyTDhEeHM4Zlpra05COGxDWmNsRGVXVXhLbmZPWFIwRXJlRVlGYmJlQU1qdTNLcWtRcnRHODM4SnJxZm1aOW1wYnh3UUM5LTFJN2Fkb0kxN2JlVERPYlRERzBhZEZlNFpKLWZFMkJvaXhVenZFb1RWaDNuMGxoTENOVzY3dEg4TnA3SC1TeklBZnpNN1V1cmc",
+            "source": "Not a Tesla App"
+          }
+        ]
+      }
+    ],
+    "Global > Macro": [
+      {
+        "title": "Trump's Tariff Policy Fuels Trade Uncertainty",
+        "text": "Despite a Supreme Court ruling curbing mutual tariffs, former President Trump vowed to impose a 15% global tariff on all imports, signaling potential use of Section 301 and 232. This move underscores his \"America First\" agenda to reduce trade deficits and protect domestic industries, directly challenging the existing trade framework. The resulting policy uncertainty is destabilizing global markets, leading to a weaker dollar, increased safe-haven demand for gold, and volatility in Treasury markets.",
+        "links": [
+          {
+            "title": "Dollar Falls as Traders Sell US Assets on Trade Policy Risks",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZzdEODhKQ2hPYjN5V2tmcVotZnY5X3JncEM0NjVRLUxuWjdGbTlyM2xlbkhQTmRXN3Y5OVJpR1NjVks5TXFuME1pU0MydUNUbGdTaUhlQjJWTUE1YWRrRkNhVk5xM0NxODBwRWFOR3Z6QzV2NXY5a3hyQnp2eEt2NTlBeW9hbC1qbXE4enV1b2c1WDg2SHh0TDVzTDJ0LTB6aWRPT3BnMFBkdmFMREpfbA",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "Middle East Tensions Drive Oil Price Surge",
+        "text": "Geopolitical tensions between the US and Iran are escalating, with the US ordering some staff to leave its Beirut embassy and deploying F-16s to the Middle East. This heightened military posture raises the risk of conflict in the region, particularly concerning the Strait of Hormuz, a critical chokepoint for global oil supply. Consequently, international oil prices have surged, with Goldman Sachs raising its Q4 oil price outlook on expectations of lower OECD stocks.",
+        "links": [
+          {
+            "title": "美-이란 전쟁 불안감에 국제유가 급등…정유株 날개 다나",
+            "url": "https://finance.naver.com/news/news_read.naver?article_id=0000474898&office_id=629",
+            "source": "더팩트"
+          }
+        ]
+      },
+      {
+        "title": "Fed's Data-Dependent Stance Creates Bond Market Uncertainty",
+        "text": "Federal Reserve Governor Christopher Waller stated that his support for a March rate cut hinges on forthcoming labor market data, reaffirming the Fed's commitment to a data-dependent monetary policy. This cautious approach reflects the Fed's balancing act between managing inflation and ensuring employment stability before making significant interest rate adjustments. Persistent uncertainty surrounding the Fed's next move is contributing to falling Treasury yields and broader market volatility as investors await clearer policy signals.",
+        "links": [
+          {
+            "title": "Fed’s Waller Says March Rate Call Depends on Labor Market",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOW9sdy1iUnVldXpDZTNuenFfUzJ3U0NyZUswbE42SUFQQ3NtVWNMQ19rM09aaUxBZldMcFJWbk1Ea1ZhZmhvSkhxN0JrRmFPb2c3UmVrb003RmRnUHFLbE9VaTdsX1dFc0JCUm04M1dZbWg0UU9tM0tHcm1ESXZJT2RwN1k1OWhVa3RZQzJGSWpwblVaY0hMT0phQkFSRzRDN041ZTFxOGRPNG01dWM1QjVB",
+            "source": "Bloomberg"
+          }
+        ]
+      },
+      {
+        "title": "Persistent Global Inflationary Pressures",
+        "text": "The New York Fed's inflation measure showed an uptick in December, indicating ongoing inflationary pressures within the US economy. This rise is attributed to robust demand, persistent supply chain issues, and potentially higher commodity prices, contributing to elevated producer costs. Sustained upward pressure on producer prices and core inflation could influence the Federal Reserve's monetary policy decisions, potentially delaying rate cuts and impacting global consumer purchasing power.",
+        "links": [
+          {
+            "title": "New York Fed inflation measure heats up in December",
+            "url": "https://www.investing.com/news/economy-news/new-york-fed-inflation-measure-heats-up-in-december-4519592",
+            "source": "Investing"
+          }
+        ]
+      }
+    ]
+  }
+}
