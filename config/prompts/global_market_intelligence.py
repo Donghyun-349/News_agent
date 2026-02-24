@@ -137,14 +137,17 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet.
 # Requirements
 1. **Output Language:** **ENGLISH** only.
 
-2. **Report Title:**
+2. **Report Title (The Edge):**
    - Extract ONE main theme from the topics
-   - Keep it **concise**: 40-60 characters (including spaces)
-   - Format: Professional yet engaging
+   - Keep it **concise**: 40-70 characters (including spaces)
+   - **Bloomberg Style:** Use strong active financial verbs (Surge, Plunge, Pivot, Defy, Rally).
+   - **Format:** [Subject] [Verb] [Impact/Object] - Keep it punchy.
+   - **Specificity:** MUST include specific company names or numbers if available.
    - Examples:
-     * "Fed Hold Rates Amid Inflation Concerns"
-     * "Tech Rally on Strong Earnings Season"
-     * "Oil Surges as Middle East Tensions Rise"
+     * "Fed Pivot Hopes Dim as Sticky Inflation Defies Forecasts"
+     * "Nvidia Sales Jump 35% as AI Infrastructure Boom Accelerates"
+     * "S&P 500 Roars to New Record High on Tech Earnings Rally"
+     * "Oil Surges 5% as Middle East Tensions Ignite Supply Fears"
 
 3. **Executive Summary:**
    - Create 3-5 numbered key points (NOT a flowing narrative)
@@ -197,10 +200,16 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
    - **Deduplication:** If two topics are similar, choose the more important one and ignore the other.
    - Generate ONE summary per selected topic (Total Max 3).
 
-3. **Format:** Use the **2-3 Sentence Rule** (Concise & Comprehensive):
+3. **Format:** Use the **2-3 Sentence Rule** (Fact - Context - Perspective):
    - **Sentence 1 (Fact):** What happened? (Key numbers, entities).
    - **Sentence 2 (Context):** Why is this significant?
    - **Sentence 3 (Perspective - Optional):** Market impact or expert opinion.
+
+# Section Header Writing Rules (CRITICAL for Edge)
+- **Active Voice:** Use strong financial verbs (Surge, Plunge, Pivot, Defy, Rally, Roar, Ignites).
+- **Format:** [Subject] [Verb] [Impact/Object] - Keep it punchy.
+- **Example:** "Fed Pivot Hopes Dim as Sticky Inflation Defies Forecasts"
+- **Specificity:** Core figures (%, $) or company names MUST be in the header.
 
 4. **Reference Citations (CRITICAL - READ CAREFULLY):**
    - **In-Text:** Do NOT include ANY reference markers, links, or URLs in the body text. Write ONLY clean, natural sentences.
