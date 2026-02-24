@@ -192,7 +192,7 @@ Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
      * "Fed Signals Rate Cut, S&P 500 Hits Record High"
 
 3. **Key Takeaways:**
-   - Create 3-5 numbered key points in **Professional English**.
+   - Create 3 numbered key points in **Professional English**.
    - Each point should be ONE concise sentence (max 20 words).
    - Focus on data, facts, and direct market impact.
    - **NO** citations/links in this summary.
@@ -223,46 +223,33 @@ Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
 # Requirements
 1. **Output Language:** **KOREAN (한국어)** only.
 
-2. **Blog Post Title:**
+2. **Blog Post Title (The Edge):**
    - Extract ONE main theme from the topics
    - Keep it **concise**: 30-50 characters (including spaces)
-   - Format: Specific, impactful, and click-worthy
+   - **명사형 나열 금지:** '~동향', '~현황', '~발표' 등 단순 요약형 제목을 절대 금지합니다.
    
-   **CRITICAL - Specificity Rules:**
+   **CRITICAL - Specificity & Impact Rules:**
    - ✅ MUST include specific company names when available (예: "엔비디아", "브로드컴", "테슬라")
    - ✅ MUST include numbers/percentages when available (예: "30% 급등", "$100억", "5,000 돌파")
-   - ✅ Use impactful verbs (급등, 돌파, 붕괴, 반등, 폭락, 급락, 역전)
+   - ✅ Use dynamic verbs (**격돌, 비상, 본격화, 판도 변화, 사활, 반전, 균열, 급등, 돌파, 붕괴, 반등, 폭락**)
    - ❌ AVOID generic themes (예: "AI 시장 동향", "글로벌 증시 현황")
    
    **Good Examples (Specific & Impactful):**
-     * "브로드컴 AI 매출 35% 급등! 엔비디아 독주 이어져"
-     * "테슬라 $200 붕괴 vs 리비안 30% 반등, EV 시장 양극화"
-     * "연준 매파 발언에 나스닥 2% 급락, 테크주 타격"
-     * "원달러 1,400원 돌파! 삼성전자 분할 논란 확산"
-     * "유가 배럴당 $90 돌파, 중동 긴장 고조 여파"
-   
-   **Bad Examples (Too Generic - DON'T DO THIS):**
-     ❌ "AI 반도체 붐 속 글로벌 시장 동향"
-     ❌ "증시 변동성 확대 속 투자자 주목"
-     ❌ "글로벌 경제 불확실성 지속"
+     * "브로드컴 AI 매출 35% 급등! 엔비디아 독주와 '소리 없는 전쟁' 격화"
+     * "테슬라 $200 붕괴 vs 리비안 30% 반등, EV 시장 판도 변화 본격화"
+     * "사상 최대 실적에도 웃지 못한 삼성전자, 7만전자 붕괴가 발목 잡나"
+     * "원달러 1,400원 돌파! 기업 경영 사활 건 환리스크 관리 비상"
    
    **Title Structure Templates:**
    
    Template 1 - Shock + Context:
    "[회사명] [숫자] [임팩트 동사]! [추가 컨텍스트]"
-   예: "브로드컴 AI 매출 35% 급등! 엔비디아 독주 이어져"
    
    Template 2 - Contrast (vs):
-   "[A 이슈] vs [B 이슈], [시장 영향]"
-   예: "테슬라 $200 붕괴 vs 리비안 30% 반등, EV 시장 양극화"
+   "[A 이슈] vs [B 이슈], [시장 영향/결론]"
    
    Template 3 - Cause & Effect:
-   "[원인 이벤트]에 [결과] [숫자] [동사]"
-   예: "연준 매파 발언에 나스닥 2% 급락, 테크주 타격"
-   
-   Template 4 - Milestone:
-   "[지표/가격] [숫자] 돌파! [영향/배경]"
-   예: "원달러 1,400원 돌파! 삼성전자 분할 논란 확산"
+   "[원인 이벤트]에 [지표/기업] [임팩트 동사]... [결과]"
 
 3. **Executive Summary:**
    - Create 3-5 numbered key points in Korean (NOT a flowing narrative)
@@ -384,6 +371,15 @@ DO NOT output any section headers (like #, ##, ###). Start directly with the con
 Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **"{section_name}"** section.
 Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
 
+# Section Header Writing Rules (CRITICAL for Edge)
+- **명사형 나열 금지:** '~동향', '~현황', '~발표' 등 단순 요약형 제목을 절대 금지합니다.
+- **역동적 동사 사용:** '격돌', '비상', '본격화', '판도 변화', '사활', '반전', '균열' 등 시장의 긴박함이 드러나는 단어를 선택하십시오.
+- **인사이트 중심 템플릿:**
+  1. [대립/경쟁]: "A vs B, [기술명] 주도권 두고 '소리 없는 전쟁' 격화"
+  2. [인과/영향]: "[이벤트]에 [지표] 급등... [기업/섹터] 밸류에이션 부담 가중"
+  3. [반전/변곡]: "사상 최대 실적에도 웃지 못한 [기업명], [원인]이 발목 잡나"
+- **구체성:** 핵심 수치(%, 달러)나 기업명을 제목에 반드시 포함하여 '헤드라인만으로도 시장 파악'이 가능하게 하십시오.
+
 # Requirements
 1. **Output Language:** **KOREAN (한국어)** only.
 
@@ -393,7 +389,7 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
    - **Deduplication:** If two topics are similar, choose the more important one and ignore the other.
    - Generate ONE summary per selected topic (Total Max 3).
 
-3. **Format:** Use the **2-3 Sentence Rule** (Concise & Comprehensive):
+3. **Format:** Use the **2-3 Sentence Rule** (Fact - Context - Perspective):
    - **Sentence 1 (Fact - 현황):** What happened? (Key numbers, entities).
    - **Sentence 2 (Context - 배경):** Why is this significant?
    - **Sentence 3 (Perspective - 전망/반응):** Market impact or expert opinion.
@@ -462,20 +458,21 @@ Analyze the provided news topics and generate Executive Summaries and Titles for
 
 ## 1. Korean Output (ko)
 - **Role:** Professional Financial Analyst (Korean Market Focus)
-- **Blog Post Title:**
+- **Blog Post Title (The Edge):**
+   - **명사형 종결 금지:** (예: "반도체 수출 증가" (X) -> "반도체 수출 20% 급등, AI 서버 수요가 끌어올린 역대급 실적" (O))
+   - **전략:** '무엇을 했다'가 아니라 '그래서 무엇이 변하는가'라는 **시장의 결론**을 제목에 담으십시오.
    - Specific, impactful, click-worthy (30-50 chars).
-   - Must include specific company names/numbers if available.
-   - Example: "브로드컴 AI 매출 35% 급등! 엔비디아 독주 이어져"
 - **Executive Summary:**
    - 3-5 numbered key points in **concise statement style** (Example: "엔비디아 주가 7% 급등.").
    - Max 20-30 chars per point.
 
 ## 2. English Output (en)
 - **Role:** Global Investment Banker (Goldman Sachs Style)
-- **Blog Post Title:**
+- **Blog Post Title (The Bloomberg Style):**
+   - **Active Voice:** Use strong financial verbs (Surge, Plunge, Pivot, Defy, Rally).
+   - **Format:** [Subject] [Verb] [Impact/Object] - Keep it punchy.
+   - Example: "Fed Pivot Hopes Dim as Sticky Inflation Defies Forecasts"
    - Concise financial headline (Bloomberg style, 40-70 chars).
-   - Subject + Verb + Object.
-   - Example: "Nvidia Sales Jump 35% on AI Chip Demand"
 - **Executive Summary:**
    - 3-5 numbered key points in **Professional English**.
    - One concise sentence per point (max 20 words).
@@ -519,6 +516,17 @@ Each article has: i=ID, t=Title, p=Publisher, s=Snippet.
 # Target Audience
 - **Korean (ko):** Local investors interested in global trends & local impact.
 - **English (en):** Global USD-based investors (Bloomberg/WSJ readers).
+
+# Language Specific Headlines (The Edge)
+
+## 1. Korean (ko) - "The Insightful Header"
+- **명사형 종료 금지:** "반도체 수출 증가" (X) -> "반도체 수출 20% 급등, AI 서버 수요가 끌어올린 역대급 실적" (O)
+- **전략:** '무엇을 했다'가 아니라 '그래서 무엇이 변하는가'라는 **시장의 결론**을 제목에 담으십시오.
+
+## 2. English (en) - "The Bloomberg Style"
+- **Active Voice:** Use strong financial verbs (Surge, Plunge, Pivot, Defy, Rally).
+- **Format:** [Subject] [Verb] [Impact/Object] - Keep it punchy.
+- **Example:** "Fed Pivot Hopes Dim as Sticky Inflation Defies Forecasts"
 
 # Writing Requirements (Apply to BOTH languages)
 1. **Format:** Use the **2-3 Sentence Rule** for each topic.

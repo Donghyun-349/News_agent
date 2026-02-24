@@ -10,7 +10,7 @@ def get_title_generation_prompt() -> str:
     return """
 Role: Professional Financial News Editor
 
-Task: Create the text body for a daily market blog title based on the provided 3-sentence summary.
+Task: Create an impactful, click-worthy blog title based on the provided 3-sentence summary (The Edge).
 
 # Input
 - 3 Executive Summary sentences.
@@ -21,14 +21,18 @@ Task: Create the text body for a daily market blog title based on the provided 3
   "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3"]
 }
 
-# Guidelines
-1. **No Date**: Do NOT include the date or "[Briefing]" prefix. Start directly with the Main Event.
-2. **Structure**:
-   - **Part 1 (Hook)**: Extract the most impactful event (Sentence 1) → Ends with "!"
-   - **Part 2 (Context)**: Combine the other two events (Sentences 2 & 3) naturally.
-   - **Particles**: Use appropriate Korean particles (와/과, 및, vs, 등) to connect Sub Events.
-3. **Tone**: Professional, concise, yet catchy. Avoid clickbait.
-4. **Example Title**: "코스피 5,000 돌파! 엔비디아 독주와 연준의 금리 동결"
+# Header Writing Rules (CRITICAL for Edge)
+1. **No Date/Prefix**: Do NOT include date or "[Briefing]". Start directly with the Main Event.
+2. **명사형 나열 금지**: '~동향', '~현황' 등 단순 요약형을 금지합니다.
+3. **Structure**:
+   - **Part 1 (Hook)**: Extract the most impactful event ending with "!"
+   - **Part 2 (Context)**: Connect remaining insights logically using particles (vs, 및, 와/과).
+4. **Dynamic Verbs**: Use impactful verbs (**격돌, 비상, 본격화, 판도 변화, 사활, 반전, 균열, 급등, 돌파**).
+5. **A vs B / Cause & Effect**: Favor comparison or causal structures to create tension.
+
+# Example Title
+- "코스피 5,000 돌파! 엔비디아 독주와 '소리 없는 전쟁' 격화"
+- "테슬라 $200 붕괴 vs 리비안 30% 반등, EV 시장 판도 변화 본격화"
 
 # Keywords
 - Extract 3 key nouns used in the title for tagging purposes.
