@@ -1,0 +1,128 @@
+# 📊 Daily Market Intelligence: "중동 불안 고조, 유가 급등에 美 금리 인하 기대 '빨간불'"
+**Date:** 2026-03-02
+
+---
+
+## 1. Executive Summary
+1. 중동 지정학적 긴장 격화.
+2. 국제 유가 10% 급등.
+3. 호르무즈 해협 봉쇄 우려 증폭.
+4. 美 연준 금리 인하 전망 약화.
+
+---
+
+## 2. 🌍 Global Market
+### 📉 Macro (Economy/Rates)
+### **중동 지정학적 위기 고조, 안전자산 선호심리 강화로 국제 금값 상승**
+이란-미국/이스라엘 간 군사 충돌이 격화되며 중동 정세가 악화되자 국제 금 시세가 한 달 만에 5,200달러 선을 회복했습니다. 이는 이란의 보복 위협과 함께 미국 및 이스라엘의 선제 공격으로 확전 우려가 커지면서 안전자산 수요가 증가한 결과입니다. 지정학적 리스크 프리미엄이 시장 전반에 확산되며 당분간 금을 비롯한 안전자산에 대한 투자심리가 지속될 것으로 전망됩니다.
+> * [미국-이란 지정학적 갈등 고조…금값 한 달만 5200불선 회복](https://www.mk.co.kr/news/economy/11975581) - (매일경제)
+
+### **이란發 유가 급등 및 호르무즈 해협 봉쇄로 글로벌 에너지 시장 불안정성 증대**
+중동 분쟁 심화로 국제 유가가 10% 급등했으며, 세계 최대 해운사인 머스크는 호르무즈 해협 운항을 무기한 중단했습니다. 이란이 세계 원유 해상 수송량의 20% 이상이 오가는 호르무즈 해협 봉쇄를 선언하며 공급 차질 우려가 고조되었기 때문입니다. 원유 공급 불확실성 증대로 유가가 배럴당 100달러를 넘어설 수 있으며, 이는 전 세계적인 인플레이션 압력으로 작용할 것입니다.
+> * [Oil jumps 10% on Iran conflict and could spike to $100 a barrel, analysts say](https://news.google.com/rss/articles/CBMitAFBVV95cUxOaWRoTExlZEx0SUkwSUdOZm9sVlFvUllkUW51b1NUNTJwUlZaNlZpRzRhU0xUZll2Y1U0LXpwLWNCWHhXUzMtbkxLYS15V1ZiMnd5TnA4SDVDOExkWGY4cXJYLUgzcUVDaUVrd0lPa1IxMXY2U1JVdWdYVkVNZzRfaE9DNndSMElJNFlRT2c0UF9LWDUtbkJPSFNJT0Z1VHhkbVpvWmNPYXZ0d1FvN2w3UV96X20) - (Reuters)
+> * [세계 최대 해운사 머스크, 호르무즈 해협 운항 무기한 중단](https://news.einfomax.co.kr/news/articleView.html?idxno=4401121) - (Infomax)
+
+### **미 연준 금리 인하 기대감 축소, 중동發 물가 상승 압력 심화**
+중동 사태로 인한 유가 급등 가능성이 커지면서 미국 연방준비제도(Fed)의 올해 금리 인하 가능성이 더욱 작아졌다는 분석이 제기되었습니다. 이는 에너지 가격 상승이 서비스 물가 등 기존의 고착화된 물가 압력에 더해져 연준이 긴축적인 통화 정책을 더 오랜 기간 유지해야 할 명분이 되기 때문입니다. 연준의 '고금리 장기화' 기조는 글로벌 경제 성장 둔화 및 시장 변동성 확대로 이어질 수 있습니다.
+> * [(이란 타격) 美매체 "연준 올해 금리 인하 가능성 더 작아져"](https://news.einfomax.co.kr/news/articleView.html?idxno=4401097) - (Infomax)
+
+### **글로벌 안전자산 선호 심리 확산, 달러화 강세 압력 가중**
+중동 지정학적 긴장 고조로 안전자산 선호 심리가 강화되면서 달러화와 엔화가 강세를 나타냈습니다. 국제 유가 급등과 함께 중동 정유시설 타격 등 최악의 시나리오 발생 시 달러-원 환율이 1,500원 이상으로 치솟을 수 있다는 전망도 나왔습니다. 이러한 달러 강세는 국내 외환 시장의 변동성을 확대하고 수출입 기업의 비용 부담을 가중시킬 수 있습니다.
+> * [(이란 타격) 국민銀 "중동 정유시설 타격시 달러-원 1,540원"](https://news.einfomax.co.kr/news/articleView.html?idxno=4401102) - (Infomax)
+
+### 🚀 Market (Stock/Indices)
+### **지정학적 긴장 고조에 암호화폐 시장 급락, 비트코인 $64,000 선 붕괴**
+비트코인은 중동 지역의 긴장 고조 여파로 한때 6만 4천 달러 아래로 급락했으며, 도지코인, 시바이누 등 주요 밈 코인 또한 동반 폭락세를 보였습니다. 이스라엘-이란 간의 충돌 가능성 등 지정학적 불확실성이 위험자산 회피 심리를 자극하며 대규모 매도세를 유발한 것이 주요 원인입니다. 비트코인의 펀딩비가 3개월 내 최저 수준을 기록하고 있어, 단기적인 추가 하락 압력과 함께 향후 숏 스퀴즈 발생 가능성도 상존합니다.
+> * [Bitcoin Slides Below $64,000 After Explosions Reported in Tehran](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOYlY3QWYwMEk1M1JnSVk5bFptU2JnRWt1ZDBiU2dMZnRZLWx5NzJBY0JKbnRhRF9FX3h3dEVJQ2FUS1d0cmJucGNUa014NUtSSUZHdnM5YlhNeVk4NjBZMjlFbzZ6NzlyaDAyOVJVNkFmYTlvLTZVZVVLVWFlRWtMNGdXTjNqSERuNzVybFJqbTVGMWg3aG9oZ1h3NVFOcU9XMW1XSzNPZFJld0wxUmNuMDhPM09MQklXRW82cFlocVc) - (Bloomberg)
+> * [‘美이란 공습’에 도지·시바·페페 등 밈코인 동반 붕괴...어디까지 바닥치나](https://www.g-enews.com/article/Securities/2026/03/202603011048254471e7e8286d56_1) - (GEnews)
+> * [비트코인 펀딩비 3개월 만에 ‘최악’… 역대급 ‘숏 스퀴즈’ 터지나](https://www.g-enews.com/article/Securities/2026/03/202603010939085043e250e8e188_1) - (GEnews)
+
+### **중동 불안정성 확산에 금·은 가격 폭등, 안전자산 선호 심리 강화**
+중동 정세 불안 심화로 국제 금 가격은 한때 4% 이상 급등하며 트로이온스당 5,464.3달러까지 치솟았고, 은 가격 또한 97.5달러 선에 도달하는 강세를 보였습니다. 이스라엘과 이란 간의 군사적 대치 국면이 격화되면서 투자자들이 위험 자산을 회피하고 전통적인 안전자산으로 자금을 이동시킨 결과입니다. 이러한 안전자산 선호 현상은 지정학적 긴장이 완화되기 전까지 지속될 것으로 예상되며, 추가적인 가격 상승 가능성도 존재합니다.
+> * [안전자산 금값 4% 뛰고, 위험자산 비트코인 6% 급락](https://www.donga.com/news/Economy/article/all/20260301/133444748/2) - (동아일보)
+> * [비트코인 출렁… 금·은값은 강세](https://www.chosun.com/economy/economy_general/2026/03/02/QALQK2G7Q5DMPMMX7IO2EGOQ4Q/) - (조선일보)
+
+### 🤖 Tech (AI/Semiconductors)
+### **구글 제미나이, 멀티태스킹 기능 및 이미지 생성 혁신으로 AI 경쟁력 강화**
+구글은 제미나이 라이브에 안드로이드 멀티태스킹용 플로팅 '필' 기능을 추가하고, 이미지 생성 AI인 '나노 바나나 2'를 업데이트하며 AI 서비스 기능을 대폭 강화했습니다. 이러한 업데이트는 사용자 접근성을 높이고 이미지 생성 품질을 개선하여 AI 시장에서의 구글 입지를 공고히 하려는 전략적 움직임으로 풀이됩니다. 그러나 동시에 수천 개의 AI 프롬프트를 통한 제미나이 복제 시도 등 해킹 위협이 지속적으로 발생하고 있어, AI 기술 발전과 함께 보안 강화의 필요성이 더욱 부각될 전망입니다.
+> * [Google's Gemini Live gets floating 'pill' for multitasking on Android](https://news.google.com/rss/articles/CBMimAFBVV95cUxQMHprU1c4bDhwZ3dpZm00REZjVjNTVjZibm1JSF9GTHpCSVBJTUR2c2VnMGpQcXhPbjFoWlpVV1hIMTl0VTFNTUYtVGtRYllLc1c5bDVncVVhUUVPRGdaUDZfQWpvVndGdVhqelpPcEhoeG5uZnRUMDhtUnZCYU14eEQ2RnJVcVpOWkpNME9ZUFVIU3ZNRlZVcg) - (NewsBytes)
+> * [Nano Banana 2 Is Here: What Changed in Google's Popular AI Image Tool](https://news.google.com/rss/articles/CBMifkFVX3lxTE9hN2dNbUlHN1loZHpWcEN0U3oxR2pUdko1SG4zRU9MRUpNbWk3RnJOR25qRFE0OFgwZUcyR3FvWTlaRlE3TWd5RG90OWd1UnlOUVZ2QWVteHBTZGpVZ3UwNlVMZThGTHdOY0tUUWFXd1hxMVlMazdMNVFmMDhpUQ) - (AOL.com)
+
+### **엔비디아, 차세대 AI 칩 개발 박차... 삼성전자와 AI-RAN 상용화 협력으로 시장 선도**
+엔비디아는 OpenAI를 위한 새로운 칩을 개발하고 전례 없는 컴퓨팅 밀도를 갖춘 최신 AI 칩을 선보이며 AI 하드웨어 혁신을 주도하고 있습니다. 이는 증가하는 고성능 AI 모델 수요에 대응하고 AI 인프라 시장에서 경쟁 우위를 확보하기 위한 공격적인 투자 전략의 일환입니다. 특히, 삼성전자와의 AI-RAN 상용화 협력은 AI 모델 가속화를 넘어 네트워크 인프라까지 AI 역량을 확장하며, 전체 AI 생태계의 성능 향상과 상용화 시기를 앞당길 것으로 기대됩니다.
+> * [After investing $30 billion, Nvidia is reportedly planning new chip for OpenAI: How it will be different than its GPUs](https://news.google.com/rss/articles/CBMipAJBVV95cUxPQVRaN2pwNXBOZElaRUZMN0I4WUMtZENnSUdXNWJWZXEzYkdKNERweUtlRUttdHRJOUZTS3hYOHBMc1N5dml3aFVNWVVjTy01elZaRG5HbFVSOGNVQVFjMlEybW1BQnRrWThMQVhlem1CelgzVXdfamxHTzBhaU90YWVrbUNKc2lPd0hSajJxeWFkVk9yZDNXV0p5ajhTbXNQOGs5aGFNbFN1RGJiamlzRFVsU01YcmpvQ1VhZFY2azNYS2E4aW94VjVUeVhBQXdBaTd5cTF5M1VQZWN0XzBpVzVXanZBeWgwdTQ5enBhcjZUdUxGelZFTHlLSV9XUU5Wczd2bVJjU3RfbWtLdXJTM21PLS00Sk42cGJoWW1LTTZhQ0Et) - (The Times of India)
+> * [Samsung Takes Next Stride Toward AI-Native Software-Driven Networks With NVIDIA](https://news.google.com/rss/articles/CBMisAFBVV95cUxPRVhUcVJfMnJVQ1U0bTNZcnJTSGZLQlI0ME9Gb3N1QzE5QkVfTGp4elRSajQ2NGhrMXRMRG9EdEZkY1lpQTdoUTY4YTVGTTduRFhSUXRYQkx0U3FJNVFUcHE4QTZkTTFwd21oUUVzbnJhejc3RDBITkJmZG5maU44WWFYUnJzR28zSG9hM0ktakJSRmlEbGZqYTYxWE1fTjJpOHZYU2VCMmpoR1BPTy1uNw) - (Samsung Global Newsroom)
+
+### **IT 하드웨어, 애플 자체 칩 개발로 기술 독립성 강화... 6G 통신 인프라 혁신 가속**
+애플은 자체 칩 개발을 가속화하며 기술 독립성을 강화하고 있으며, 이는 핵심 기술 내재화를 통해 경쟁력을 확보하고 프리미엄 시장에서의 차별화를 목표로 하는 전략입니다. 이러한 움직임은 특정 공급업체에 대한 의존도를 줄이고 제품 성능 및 효율성을 최적화하려는 광범위한 업계 트렌드를 반영합니다. 나아가 6G 이동통신 인프라로서 우주·위성 통신의 중요성이 부각되며 차세대 통신 기술 혁신이 가속화되어, 미래 연결성 시장의 판도를 변화시킬 것으로 기대됩니다.
+> * [Apple’s Chip Homecoming](https://news.google.com/rss/articles/CBMi7AJBVV95cUxNZ1dkdkgxLW1zZFJDWDdHR1p3NzctMThyT05ZZzlLbi1jUmU5SVlsRHY1TURLNGZTeWsybF9SN2hSdXBCMmwzSUZWLVd1aXhfemJEWmVDRVBhZTNrTXljTmF3RE12UW1OZGt1RXE5d2kzV1lpYWNkMkFqT3hMZWFQSllXdmFZM1Z2QVJBdVlpeGJJYnRXQjl4OHc2dFpGYy1YNjRnOFNRWFItVFptUTdzcDZsVXdKR3dBSGM3U0Zobl84RzVmV2ZwdVhNMUZqWm12S1p2dTRqVWV1Z0lSVzZoSGo1UEV6djlYNXE4ZHI0WGRoOTBxVkEwckticzJ4cW1RVXNCZldmNnREWjNIbDRmTnBOQ0VfbmJJUTVzYmx3VFlyOGE2YmxJM3lLWHktMWNtRUIySG1yMUpZLTBzaWloTm1MRTFmbFlkTTVHM2VGRzRFLTBrdER1TndqNDJtNGhidXFYR2FFaVB2bE9K) - (WSJ)
+
+### 🌏 Region (China/Eurozone)
+### **중국 주택 가격 3년 만에 최대폭 하락, 부동산 시장 침체 장기화 우려 고조**
+2월 중국 신규 주택 가격이 3년여 만에 가장 빠른 속도로 하락하며 부동산 시장의 심각한 침체를 반영했습니다. 이는 개발업체의 재정난과 미분양 주택 증가, 소비자 심리 위축이 복합적으로 작용한 결과입니다. 주택 가격 하락세가 지속되면서 중국 경제 전반에 대한 부담이 가중될 것으로 보이며, 정부의 추가 부양책이 시급하다는 목소리가 커지고 있습니다.
+> * [China's new home prices fall at fastest pace in over 3 years in February, survey shows](https://news.google.com/rss/articles/CBMiygFBVV95cUxOMFl0ZmRnczBkVzdDOUtGcG03T2cwWmI4YUgwVHBBUTZPZFY3NEtRdVdlVzR6eE9HYlJCczlsN0ozVlhpQjJxX191cjM4S2NienAycHVlcm0yVUJsOHF4Z0VpWTZOWGM4WDJwSFczWGdlbnM0VkdnVXFOOTdMUVVDMmM3UWFldFh6Z0VTcTN4UVh0RGFzMVA2bXFHMTdoaW1JV2U0TkRLWVNqUUE5dnV6RHh6UWVmYlFDb2h1cEY5c1lXOXRsVkhrd1Bn) - (Reuters)
+
+---
+
+## 3. 🇰🇷 Korea Market
+### 🚀 Market (Stock/Indices)
+### **중동 지정학 리스크 격화, 코스피 '육천피' 랠리 제동 걸리나?**
+코스피 지수가 2월 한 달간 역사적인 랠리를 기록하며 '육천피'를 돌파했으나, 중동 지정학적 리스크 고조와 월가의 '닷컴버블급 광기' 경고음이 확산되고 있습니다. 미국과 이란의 군사 충돌 가능성으로 국제 유가 및 환율 상승 압력이 커지고 있으며, 일부 전문가들은 코스피 과매수 우려를 제기하며 조정 가능성을 경고하고 있기 때문입니다. 안전자산 선호 심리가 강해지면서 금 가격이 급등하고 비트코인 등 위험자산이 하락하는 양상을 보여, 향후 중동 사태 전개와 주요 경제 지표 발표가 국내 증시의 향방을 가를 분수령이 될 전망입니다.
+> * [중동 위기, 지난해엔 코스피 상승…호르무즈 봉쇄·유가 100달러가 분수령](https://finance.naver.com/news/news_read.naver?article_id=0008800501&office_id=421) - (뉴스1)
+> * [전쟁 악재 덮친 코스피에…월가는 “닷컴버블급 광기” 경고까지](https://finance.naver.com/news/news_read.naver?article_id=0005643831&office_id=009) - (매일경제)
+> * [금은값 오르고 비트코인 하락…코스피 조정 가능성](https://www.donga.com/news/Economy/article/all/20260301/133443026/1) - (동아일보)
+
+### **'빚투' 폭증, 신용거래융자 잔액 32조원 돌파하며 증시 과열 경고등 '점멸'**
+국내 증시 활황세에 힘입어 신용거래융자 잔액이 사상 처음으로 32조 원을 넘어섰으며, 특히 코스피 신용융자 잔액은 연초 대비 25% 이상 급증했습니다. 이는 개인 투자자들이 주식 매수를 위해 증권사로부터 빌리는 자금(빚투)이 빠르게 늘어난 결과로, 과도한 유동성 공급과 시장 과열에 대한 경고음이 커지고 있습니다. 과거 경험상 신용융자 잔액 급증은 시장 조정의 선행 지표로 작용하는 경우가 많아, 현재의 '빚투' 확대는 향후 증시 변동성 확대 및 건전성 악화로 이어질 수 있다는 우려가 제기됩니다.
+> * [증시 활황에 빚투도 최대…신용거래융자 잔액 32조원 넘어](https://www.donga.com/news/Economy/article/all/20260301/133443155/1) - (동아일보)
+
+### **KT&G, 1.9조원 자사주 '전량 소각' 결정…3차 상법개정 주주환원 '본격화'**
+KT&G가 발행주식총수의 9.5%에 해당하는 약 1조 9천억 원 규모의 보유 자사주를 전량 소각하겠다고 발표하며, 3차 상법 개정안의 첫 주요 반영 사례가 되었습니다. 이는 기업이 새로 취득한 자사주를 의무적으로 소각하도록 하는 3차 상법 개정안이 국회 본회의를 통과한 직후 이루어진 결정으로, 잠재적 오버행 우려를 영구적으로 제거하려는 의도입니다. KT&G의 선제적 자사주 소각 결정은 주주가치 제고에 대한 강력한 의지를 보여주는 동시에, 향후 다른 국내 기업들에게도 주주환원 정책 강화의 모범 사례로 작용할 가능성이 높습니다.
+> * [1.9兆 자사주 모두 태우는 KT&G… 3차 상법개정 첫 반영 사례](https://www.donga.com/news/Economy/article/all/20260227/133438843/1) - (동아일보)
+
+### 💸 Macro (FX/Rates)
+### **중동 사태 격화, 원유-환율 요동에 정부 '총력 대응' 비상 체제 돌입**
+중동 지역의 군사적 긴장이 고조됨에 따라 정부 및 금융 당국은 합동 비상대응반을 가동하고, 우리금융 등 주요 금융그룹도 비상대응체계를 즉시 가동했습니다. 이란 사태로 인한 국제 유가 급등과 호르무즈 해협 봉쇄 가능성은 국내 에너지 수급과 외환 시장에 직접적인 변동성 확대를 야기하며, 물류비 폭등과 중동 진출 기업의 사업 불확실성을 키우고 있습니다. 정부는 비축유 방출과 중소기업 긴급 자금 지원을 검토하며 국제 유가 및 외환 시장의 변동성에 기민하게 대응해 경제 안정을 최우선으로 확보하겠다는 방침입니다.
+> * [정부, 중동사태에 '합동 비상대응반' 가동…금융·실물 24시간 모니터링](https://news.einfomax.co.kr/news/articleView.html?idxno=4401095) - (Infomax)
+> * [이란이 막은 호르무즈, 韓수입 중동유 95% 거쳐…타격 우려](https://www.donga.com/news/Economy/article/all/20260301/133442863/1) - (동아일보)
+
+### **2월 수출 29% '역대 최대' 급증, 반도체 160% 폭발적 성장에도 '품목별 온도차' 심화**
+2월 한국 수출은 전년 대비 29.0% 증가한 674억5000만 달러를 기록하며 역대 2월 중 최대 실적을 경신했으며, 특히 반도체 수출은 160.8% 급증한 251억6000만 달러로 11개월 연속 월간 최대 기록을 갈아치웠습니다. 이는 인공지능(AI) 투자 확대로 인한 메모리 반도체 수요 및 가격 상승에 기인한 것으로, 조업일수 감소에도 불구하고 일평균 수출액이 사상 처음으로 30억 달러를 돌파하는 데 결정적인 역할을 했습니다. 반도체 중심의 수출 호조세에도 불구하고 다른 주력 품목들의 부진과 중동 정세 불안으로 인한 대외 불확실성 증가는 향후 무역수지 개선에 부담으로 작용할 수 있습니다.
+> * [2월 수출 역대 최대…반도체 외 주력 품목은 부진](https://www.donga.com/news/Economy/article/all/20260301/133443041/1) - (동아일보)
+
+### **중동 사태 파장에 원-달러 환율 '변동성 확대' 예고, 금융위 비주거용 대출 규제 '투기 차단' 시동**
+3월 원-달러 환율은 중동 사태 파장으로 변동성 확대가 예상되는 가운데, 금융위원회는 비주거용 및 투기성 1주택자에 대한 대출 규제 확대 방침을 시사했습니다. 미국과 이란 간 군사적 긴장 고조는 안전자산 선호 심리를 자극하여 달러 강세를 유발할 수 있으며, 금융 당국은 특정 부동산 대출에 대한 규제를 강화하여 시장의 투기적 움직임을 억제하려는 의도입니다. 중동 정세의 불확실성이 지속되는 한 원-달러 환율의 상방 압력은 유지될 것으로 보이며, 강화된 대출 규제는 부동산 시장 전반의 유동성 및 투자 심리에 영향을 미칠 것으로 분석됩니다.
+> * [3월 달러-원 환율, 주목할 변수는…'이란 사태 파장에 변동성 확대'](https://news.einfomax.co.kr/news/articleView.html?idxno=4401096) - (Infomax)
+> * [금융위, 대출 규제 확대 방침…비주거용·투기성 1주택도 겨냥](https://www.chosun.com/economy/economy_general/2026/03/01/ZLB6AFVPXNFJDPHEMQC6OVATV4/) - (조선일보)
+
+### 🏭 Industry (Company/Sector)
+### **삼성전자, 'AI 자율공장' 2030년 목표... 생산 효율 '초격차' 도전 본격화**
+삼성전자가 2030년까지 모든 사업장에 인공지능(AI) 기반의 자율공장을 도입하여 생산성 극대화를 추진하겠다는 계획을 발표했습니다. 이는 인건비 절감 및 생산 효율성 증대는 물론, 글로벌 경쟁 심화 속에서 첨단 기술 기반의 제조 역량을 강화해 시장 리더십을 공고히 하려는 전략적 움직임으로 풀이됩니다. 이러한 대규모 투자는 국내 제조 산업 전반의 디지털 전환을 가속화하며, AI 및 자동화 솔루션 관련 산업 생태계에 새로운 성장 기회를 제공할 것으로 전망됩니다.
+> * [삼성전자 "2030년까지 AI 자율공장으로 전환"](https://www.hankyung.com/article/2026030125111) - (한국경제)
+
+### **롯데케미칼, 말레이시아 법인 1조 손실 '충격'... 화학 업황 부진 장기화 우려**
+롯데케미칼의 말레이시아 자회사인 롯데케미칼 타이탄(LC Titan)이 지난해 약 1조 원에 달하는 대규모 손실을 기록하며 심각한 실적 부진을 겪었습니다. 이는 글로벌 경기 둔화와 중국 경기 침체로 인한 석유화학 제품 수요 감소, 그리고 고유가 및 원자재 가격 상승이라는 이중고가 겹친 복합적인 원인으로 분석됩니다. 주력 해외 법인의 실적 악화는 롯데케미칼의 전반적인 수익성에 부정적 영향을 미치며, 향후 고부가가치 제품 전환 및 사업 구조 재편 압박을 가중시킬 것으로 예상됩니다.
+> * [롯데케미칼, 말레이서 1조 손실](https://www.hankyung.com/article/2026030125101) - (한국경제)
+
+### **SK이노베이션, '송유관공사 지분 매각설' 재점화... 재무구조 개선 '고삐'**
+SK이노베이션이 자회사 SK송유관공사의 지분 매각을 추진 중이라는 설이 다시금 제기되면서 시장의 이목이 집중되고 있습니다. 이는 고유가 장기화 및 에너지 전환 가속화라는 사업 환경 변화 속에서 SK이노베이션이 재무 구조를 개선하고 미래 신사업 투자 재원을 마련하려는 전략적 움직임으로 해석됩니다. 실제 매각이 이루어질 경우 SK이노베이션의 재무 건전성 개선에 크게 기여하고, 잠재적 인수 대상 기업에게는 안정적인 에너지 인프라 확보 기회가 될 수 있어 귀추가 주목됩니다.
+> * [SK이노, 송유관공사 지분 매각설…뭐길래(biz-플러스)](https://www.sedaily.com/article/20013979) - (서울경제)
+
+---
+
+## 4. 🏢 Real Estate
+### 🌐 Global Real Estate
+특이사항 없음.
+
+### 🇰🇷 Korea Real Estate
+### **국내 상장 리츠 시가총액 10조원 '비상', 안정형 투자 매력 부각**
+국내 상장 리츠의 시가총액이 제도 도입 25년 만에 처음으로 10조 원을 돌파했으며, 특히 SK리츠, 롯데리츠, ESR켄달스퀘어리츠 등 3곳이 시총 1조 원을 넘어섰습니다. 이는 법적으로 이익의 90% 이상을 주주에게 의무 배당해야 하는 리츠의 안정적인 수익 구조와 최근 국내 증시 상승세가 맞물려 안정형 투자 자금이 유입된 결과로 분석됩니다. 리츠 시장의 성장은 투자자들에게 인플레이션 헤지 및 정기적 배당 수익 기회를 제공하며, 향후 국내 부동산 간접투자 시장의 확대를 가속화할 전망입니다.
+> * [리츠도입 25년 만에 시총 10조원 첫 돌파](https://www.donga.com/news/Economy/article/all/20260301/133444570/2) - (동아일보)
+
+### **서울 동남권 아파트, 1년 만에 '매도-매수 균형' 반전**
+서울 동남권 아파트 매매수급지수가 1년여 만에 100을 기록하며 매도세와 매수세가 균형을 이뤘습니다. 이는 정부의 다주택자 양도소득세 중과 방침으로 인해 다주택자들이 급매물을 내놓으며 공급이 늘어난 반면, 매수자들은 가격 하락을 기대하며 관망세를 유지한 데 따른 것입니다. 매수-매도세 균형은 강남권의 주택 가격 상승세 둔화 신호로 해석될 수 있으며, 향후 양도세 정책 변화와 금리 추이에 따라 시장의 추가적인 변동성이 확대될 것으로 보입니다.
+> * [서울 동남권 아파트, 매도-매수세 1년만에 균형](https://www.donga.com/news/Economy/article/all/20260301/133444568/2) - (동아일보)
+
+---
+
+*By Lan Analyst at 2026-03-02 07:02:34*
