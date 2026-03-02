@@ -1,0 +1,226 @@
+[3/3 브리핑] 美-이란 충돌 격화, 유가 200달러 공포 확산…글로벌 증시 스테그플레이션 위협
+
+<img src="https://lan-analyst.com/wp-content/uploads/2026/01/date_2.jpg" style="width: 100%; height: auto; display: block; margin-bottom: 30px;"/><h2 style="font-size: 20px; font-weight: 700; color: #2E7D32; border-bottom: 2px solid #4CAF50; margin-top: 30px; margin-bottom: 15px; padding-bottom: 8px;">1. Executive Summary</h2>
+<ol>
+<li>미-이란 군사충돌 격화, 중동 긴장 고조.</li>
+<li>국제 유가 폭등, 호르무즈 해협 위험 증대.</li>
+<li>글로벌 증시 인플레·스테그 우려 확산.</li>
+<li>방산주 강세, 안전자산 선호 심화 추세.</li>
+</ol>
+
+<h2 style="font-size: 20px; font-weight: 700; color: #2E7D32; border-bottom: 2px solid #4CAF50; margin-top: 30px; margin-bottom: 15px; padding-bottom: 8px;">2. 🌍 Global Market</h2>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">📉 Macro (Economy/Rates)</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">중동 지정학적 긴장 격화, 미-이란 군사 충돌로 글로벌 안보 위기 고조</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">미국과 이스라엘의 연합 공습으로 이란 지하 미사일 기지 등 주요 시설이 타격을 입으며 중동 지역의 군사적 긴장이 최고조에 달했습니다. 이는 과거부터 이어져 온 이란의 핵 프로그램 및 지역 내 영향력 확대 시도와 미국 및 이스라엘의 안보 우려가 복합적으로 작용한 결과입니다. 이 같은 군사적 대립은 국제 안보 불안을 가중하고 세계 경제에 예측 불가능한 지정학적 리스크 프리미엄을 부과할 것으로 전망됩니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNRUN5ZFJqdGdpcHNUcjFkM3h4eWprNndZOFljbXc1MEdidXNCV19lMXFNSlVHY3pDTVVENGdiRlVkb3lnejQ1SkV0UV9lSlNFc1pzcUg2YTdzNzZEaGs3NE1XVlNXWVFTQTZyMEtpM016bU1HdzUzd1ZZS1JCaXdnMFI5SmhZQldVNzBIMHFKTmMwSjhfdm45T25qbEt2NzJQbGdXUk8zSzdwUTNHVTM5WmplY2xjdw" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Stocks Sell Off as US Attack on Iran Drives Oil Prices Higher</a> - (Bloomberg)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWTZvMW8zclBSTlBkWnpYODBTOXdtcVRWM0pGQXZhNmVVY2VHVVpnZXNSaE5fRUhGY05JQmVhNHVTOWRHRXItZklxSlpodzhIMnhVeUU1WENfbkFNSlo1Z3MxeHpFNUJlbGNnMzVjUmp1Ui1KNVQ3Y3BidHZlUXdrdk1WTFkxNXBLN2xDSFVRaTFWeGlaMzBJMnpiMVVTRENsSy1rSnY1SWY" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Iran war poses new risk to US economic resilience</a> - (Reuters)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">호르무즈 해협 마비 및 카타르 LNG 생산 중단, 국제 유가 및 천연가스 가격 폭등</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">중동 분쟁 격화로 호르무즈 해협의 선박 운항이 사실상 중단되고, 카타르 세계 최대 LNG 수출 플랜트가 이란의 드론 공격으로 생산을 멈추면서 국제 유가가 6% 이상, 유럽 천연가스 가격은 25~50% 급등했습니다. 이란의 보복 공격 위협과 주요 에너지 공급 시설 마비는 글로벌 에너지 공급망에 직접적인 타격을 입히며 즉각적인 가격 상승 요인으로 작용했습니다. 에너지 시장의 불안정성 심화는 인플레이션 압력을 가중시키고 전 세계 경제 성장을 저해하는 스태그플레이션 우려를 고조시킬 것입니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPcWVrSWV1UkwtZmttRGFYdUxiNFY4SjRGekdCMVViMjRQVVF4MV9ORnZwWEhXSFVteXM0TGdpSm9mdFdVekFNTUcyOWowTUVHMzk4VTR5RnVQb3VMLUMxYkpZX2dKTWRwRG9jVmRPV2Y1a0FpbHVHN0ktaWc4QTFkU1QwZWIwLVJSckVMM0d1VFhkaC1wTFhidE5XYlRjTW8" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Oil Spikes as Middle East War All But Halts Hormuz Ship Strait</a> - (Bloomberg)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOS09XcVVTaHRYWG1zd3RaZFFyZlA3RjJZdDdwZHpfcXcwRmpZZmVZdTBhRUVSdW0wWnA5Q3ZqemFVc052bW1qSUJCdTRiNkF6a2ZOSjNCbVFDck83YkNaek1PRERkbk5QSmoyWHBCUEJYZzVIYWdLaERhWUczUWYwM2xJQWtSOE5jazNzZE5JWk14bjU1b1p2aHROQkNreWY2dFhnZlJzOWY2YmI1M0N3RF9Velk" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Gas Prices Surge as Qatar Shuts World’s Largest LNG Export Plant</a> - (Bloomberg)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">중동 사태발 글로벌 금융시장 혼란 가중, 스태그플레이션 우려로 안전자산 선호 심화</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">중동 사태의 여파로 글로벌 금융시장의 변동성이 확대되며 방산 및 에너지 관련주는 강세를 보인 반면, 인플레이션 압력과 스태그플레이션 우려가 고조되어 안전자산으로 자금 유입이 가속화되고 있습니다. 지정학적 긴장의 격화는 투자 심리를 위축시키고 유가 급등을 통한 비용 인플레이션 전이를 촉발하여 중앙은행의 통화정책 운용에 새로운 난관을 제시하고 있습니다. 이러한 시장 불안정성은 각국 중앙은행이 인플레이션 억제와 경제 성장 지지 사이에서 어려운 선택에 직면하게 할 것이며, 특히 아시아 중앙은행의 금리 인상 압력을 높일 수 있습니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcHYzQnl4MzZiTHBJNHBKZDhQN2RGQTk0N0FrY3RkY1ZMSHAxbzRKVjRkclZDZjBtZ0Ffa0RXMzZuLWREUlVwR3ZVVnpsRkdadjUyYWhoQWthY1ZfUzRWd1c2SE0zR0pZaXdZTVp3VVk2Z21TVHR1MnBVTWFTVjdGUjhmdHJjM0N2RzdkX2tzUnhYUWxyVEE4UjhwNHFucm93bnlUREVFb0phZw" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Iran war traps Treasuries investors in stagflationary oil dilemma</a> - (Reuters)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">핵심 해상 운송로 봉쇄 위협, 글로벌 물류 병목 현상 및 운송 비용 상승 불가피</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">중동 분쟁으로 호르무즈 해협을 비롯한 주요 해상 운송로가 마비되면서 유조선들이 발이 묶이고 Hapag-Lloyd 등 주요 선사들이 수에즈 운하 재개를 연기하는 등 글로벌 해상 운송에 차질이 발생하고 있습니다. 역내 안보 위험이 급증함에 따라 선사들은 운항을 중단하거나 우회 항로를 선택할 수밖에 없으며, 이는 물류 지연과 보험료 상승으로 이어지고 있습니다. 해상 운송의 장기적인 불안정은 글로벌 공급망에 병목 현상을 심화시키고, 최종적으로 수입 상품의 비용 상승을 통해 전 세계적인 인플레이션 압력에 기여할 것입니다.</p>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">🚀 Market (Stock/Indices)</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">중동 지정학적 위기 고조, 글로벌 증시 일제히 하락</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">이스라엘의 이란 공습 소식에 S&amp;P500 선물은 0.9% 하락 출발했고, 홍콩 항셍지수는 2.51%, 유로스톡스50 지수는 2.55%, 일본 닛케이 지수는 1.35% 급락하는 등 전 세계 주요 증시가 동반 약세를 보였습니다.
+미국과 이스라엘의 이란 공습 이후 이란의 호르무즈 해협 차단 가능성 등 중동 정세 불안이 격화되며 세계 경제에 악영향을 미칠 것이라는 우려가 확산되었습니다.
+지정학적 리스크가 장기화될 위험이 있어 투자 심리가 위축되고 있으며, 당분간 글로벌 증시의 변동성 확대 및 추가 하락 압력이 지속될 것으로 전망됩니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.donga.com/news/Inter/article/all/20260303/133450091/2" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">美 주가선물 일제히 하락… 亞증시 동반 약세</a> - (동아일보)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.hankyung.com/article/202603024035i" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">유가·금값·달러화 오르고 글로벌 증시 일제 하락</a> - (한국경제)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">중동 위기 속 비트코인, 디지털 안전자산 부상하며 5% 급등</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">중동발 지정학적 리스크가 고조되는 가운데 비트코인 가격이 5% 폭등하며 7만 달러에 육박하는 강세를 보였습니다.
+기존 안전자산인 금과 달러화가 강세를 보인 것과 유사하게, 투자자들이 지정학적 불확실성에 대한 헤지 수단으로 비트코인 등 가상자산을 선택했기 때문입니다.
+이는 비트코인이 단순한 투기 자산을 넘어 위기 상황에서 '디지털 안전자산'으로서의 가치를 증명하는 계기가 될 수 있으며, 향후 글로벌 불확실성 증대 시 추가적인 투자 수요를 견인할 가능성이 있습니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.g-enews.com/article/Securities/2026/03/202603030601082891e250e8e188_1" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">이란 전쟁 공포 뚫은 비트코인 5% 폭등...'디지털 안전자산' 본색 드러나나</a> - (GEnews)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">중동 분쟁 심화에 항공주 급락, 해운 및 방산주 강세 대비</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">중동 분쟁 심화로 아시아 주요 항공사 주가는 5% 안팎 급락한 반면, 해운주는 중동 긴장 고조에 급등세를 보였고, 미국 방산주 또한 일제히 상승했습니다.
+항공사들은 유가 급등과 운항 차질 우려로 실적 악화가 예상되었으며, 해운주는 운임 상승 기대감, 방산주는 안보 수요 증가로 투자 심리가 강화된 결과입니다.
+지정학적 리스크가 지속되는 한, 항공 및 여행 관련주는 하방 압력을 받을 수 있으며, 해운 및 방산 관련주는 당분간 시장의 관심을 받으며 강세를 유지할 것으로 전망됩니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4401167" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">亞 항공사 주가, 중동 분쟁 속 줄줄이 5% 안팎 급락</a> - (Infomax)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMiygNBVV95cUxQM3BWRzA4a3YyMkNhUkpKOGFqMjh6bkpCWGIyRUlZaEtXR2xWUDJtSWJDYUtiVS1qOEhZNnJCMVA2NFBkSzhCMTZlaUxoWFdrcmhBd3Iwcm1GdWNmcmdRMGo1LW82SEZXOE9WQWpzcEZVQUYxTnhwemRhTl9sSWdOWS1fR2xMbGs3VVpEX0RMczFUWkpXTG5wcFM4THBBeWZUZGZCRXcwSXpobl9GRnplRkNBUERsb29jNzRyLTFUbkFrYTUyR2VMUmxhQ3BQeFY3WDllMXhScGExOHRlQ21tczh2V3VHcV9tZlB6TXlOYXhYZWktUTRJZlgwT1ZEN1B3TFVvanp1QjZ6WmxJcGVQc3NvaFhpM2wyOGRBLXpVQnZGbXlqcHNybDczQ29vVTZZSW5laTlHUFdBVkJVVUY3eVNMaDRfcFJtZ1hSWFotbGlPSmp4WXRKTjNGbXczR2tiSHdIOUFnaG1RLVZ3MGMzczd4TUlVU1dQcmg0NTJ6RFNJdGYzWVA2Q25tTEo4N2U5cjZnckhHTGtXb2V1SGNTbHU3TVVPR1d3S29uZDB0STZrWU8zdUV5NDc4UTlTQzZ5QU9pSXVLOFR5Zw" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Container Shipping Stocks Jump on Fresh Middle East Tensions</a> - (WSJ)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">🤖 Tech (AI/Semiconductors)</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">엔비디아, AI 생태계 주도권 강화를 위한 광폭 투자 단행</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">엔비디아는 AI 칩 및 하드웨어 개발을 선도하며, 데이터 센터 광학 분야에 40억 달러를 투자하고 6G 연합체를 구축하는 등 인프라 확장에 집중하고 있습니다. 이는 AI 모델의 급격한 성장에 따른 데이터 처리량 및 연결성 요구 증대에 대응하여 AI 생태계 전반의 주도권을 강화하려는 전략적 움직임입니다. 이러한 투자는 장기적으로 AI 인프라 시장에서의 지배력을 더욱 공고히 하며 관련 하드웨어 및 소프트웨어 기업들의 동반 성장을 견인할 것으로 전망됩니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOX3BmMW1uT0hDVWRDTXFqcFR1cHlyTFV6OWMxaVVtM1QtWm9PZkVPempvRmpfUXZsdTg2M1RTUDllOHdyZnU0bDB1SFdJbkg4T2ZUb3lxR1c4cUdEWkRSVWdoQnpsQjhBbUVkNzRfc25TSHZBQkdBX2JtYWxLRGk5U2t1Y055Z1NxU1NkS3J3VlBfX2ZpODlEOV9TQk1QbDV3NnMtRk50Zy1YWmtQblE" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Nvidia to Invest $4 Billion in Data Center Optics Companies</a> - (Bloomberg)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">구글, AI 인프라 투자로 클라우드 및 로봇 AI 패권 경쟁 심화</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">구글은 로봇 OS 및 피지컬 AI 분야에서 '안드로이드 본능'을 통해 시장 지배력을 확대하며, 통신사와의 협력을 통해 AI 에이전트를 5G 네트워크 운영에 통합하고 있습니다. 이는 클라우드 기반 AI 솔루션의 산업별 적용을 가속화하고, AI 인프라 구축에 최대 1조 달러 규모의 대규모 투자를 단행하여 미래 AI 시장의 주도권을 확보하려는 전략의 일환입니다. 구글의 공격적인 인프라 확장과 AI 솔루션 통합은 클라우드 및 AI 서비스 시장에서의 경쟁을 심화시키고, 특히 통신 및 로봇 산업의 디지털 전환을 가속화할 것입니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOcHRna0xpLUNEU1Z6TGdwNWFvbUdpa244NE5rMkhfRVJTNEZBeENSY1JQOFJBamVKallnZFViUmE4V0dXQ1lXNi1XRG9TN0dRMEVaZ0FCZWtmOFNrWmFuazBGTGhFMTIzWXAxRVlFUTV6Rnp5TFpsN29OY2t5S2ZVUEZyUVZrTmQ4RUZOejRJVE91WEQwbmRfeFFuSXlaQXg0Z0NWR0dB" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Google’s Data Center Buildout Could Top $1 Trillion</a> - (Forbes)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">OpenAI, 1,100억 달러 자금 조달 및 클라우드 파트너십으로 AI 경쟁 우위 확보</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">OpenAI는 아마존, 엔비디아, 소프트뱅크 등으로부터 1,100억 달러의 대규모 자금 조달을 발표하며, AWS 및 마이크로소프트와의 파트너십을 확장하고 있습니다. 이러한 움직임은 AI 개발 및 인프라 구축에 필요한 막대한 자원을 확보하고, 클라우드 제공업체와의 긴밀한 협력을 통해 모델 배포 및 서비스 확장을 가속화하기 위함입니다. 대규모 투자를 통한 자본력 강화와 주요 클라우드 기업들과의 전략적 제휴는 OpenAI가 AI 산업 내에서 선도적 위치를 더욱 공고히 하고 기술 개발 경쟁에서 우위를 점하는 데 기여할 것입니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPQUpIN2kwQjR2WjAwZGlrUWE0T01JaEo3X2I4OEYwTEd3Q1VxR2d2ZS14QzZxTk1RR1ByZnlGd2FNVzlYSWFEYVcySWxpOEFtVmd4STVTSTNlT3VrSVdwOWQzd04zUlA4WjBGdEw3alVNUUsxLWc1dnBTSmFkNVFKZ3AxbjgtVExYZDBOSHM3VTJrZEtqeW02OUpIcnk0NkE" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">OpenAI Unveils $110B in Funding, Expands AWS Partnership</a> - (AI Business)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">마이크로소프트, Azure Local 출시 및 Copilot 통합으로 AI 생산성 도구 경쟁력 강화</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">마이크로소프트는 유럽 사용자를 위한 완전한 오프라인 Azure Local 서비스를 출시하며 클라우드 서비스 접근성을 확장하는 한편, 엣지 브라우저에서 아웃룩 링크 클릭 시 코파일럿을 자동 실행하는 기능을 도입했습니다. 이는 기업 및 정부 기관의 데이터 보안 및 규제 준수 요구를 충족시키고, 개인 사용자 경험에 AI 기능을 더욱 깊이 통합하여 생산성 도구의 활용성을 높이려는 전략입니다. Azure Local의 도입은 특정 보안 요구사항을 가진 시장에서 클라우드 채택을 가속화하며, 코파일럿의 오피스 제품군 통합은 AI 기반 생산성 도구의 대중화와 경쟁 우위 확보에 기여할 것입니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQOGd6RmtyamU0RTN0bUdtRGNuVVpnclRXcXlFUUMtdlRkODROMWpMcndQc3J0dHlFSlJZd19HM3NUUXZTaER2Q0JZRTNILVpvcmZkQUVxVW1sS0tFdGNrT2xjdEpVTXRpZVZ4Uk9ma2phakVBNHQ0TEZiNEs4VURKMG5zc0FIMG5KZGhkOENTWlRHY3p6aTBrZWo2bHljaUNjaFFrcVk1VFBCSW1GalN0Zlg4U3NIUzBNMlZSVg" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">European users can now run a fully disconnected Azure Local service with no cloud connectivity</a> - (inkl)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">🌏 Region (China/Eurozone)</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">유럽연합, '유럽판 IRA' 발표 임박하며 한국 기업 수출 타격 우려 커져</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">유럽연합(EU)은 3월 4일 '산업가속화법(IAA)' 발표를 통해 역내 생산 부품 사용을 의무화하는 정책을 추진할 예정이다.
+이는 저가 중국산 제품으로부터 유럽 산업을 보호하고, 역내 첨단 기술 기업을 육성하려는 미국의 인플레이션감축법(IRA)과 유사한 목적을 가진다.
+한국 무역협회는 차별적인 불이익을 우려하고 있으며, 자동차 및 방산업계는 유럽 수출에 상당한 영향을 받을 것으로 전망된다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.donga.com/news/Inter/article/all/20260303/133450003/2" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">EU도 “전기차에 유럽산 부품 써야 보조금”… 유럽판 IRA 내일 발표</a> - (동아일보)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">아시아 제조업, 수요 증가에 힘입어 회복력 과시, 중국 경제정책 방향성 주목</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">최근 아시아 제조업은 수요 증가세에 힘입어 견조한 회복력을 보이고 있으며, 이는 역내 경제 활성화의 긍정적 신호로 해석된다.
+이러한 제조업 반등은 글로벌 공급망 재편과 함께 역내 소비심리 개선 및 수출 회복 기대감이 반영된 결과이다.
+특히 중국의 '양회'에서 발표될 경제 정책 방향은 아시아 전반의 성장 경로에 중대한 영향을 미칠 것이며, 제조업 활력 유지의 주요 변수가 될 전망이다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMiqANBVV95cUxOUEpCUkpsdlRKWkZvY3hjS0VSLU9heUVtQnl5MVVNeGloY3RaRkl0b3pQRXVIa1p3RnAwYkk3Y3JfUlZNQWhMeFFqTTYxOUcxZ1Zzb0hPSG5qQXBqQm5vQzcxdzBseXhZaUVVd0UxQkYyOHdNaldMYW5BQUxzenZaNnRvRV94UFE2Z011UWxsZmdmUlV4dXZDcnMzWE44Vmc4Y08wbTBTNk1UeEZWbHJaUUROU20za3pQdHZWUzJ0NVRWNy1fOVFoUFlBcnJwVnI3bUsxazhGYVJURnBiVkpQck1QbmthX2poai1Lbm9pZ1BRZ2FiNy1zSFNsVzRoVXFqdGtEN2tINGZnaVpXU0lUZVFNYVNGRGFUYTFRRzJZYjZ3TDNZd1lXRnpwMDZ3aF9Kbl8tc2N3NUM4T0JmcFRKNHR5VE5WemdGa0tSaGQweThjbU1uZ3d0SDIwQUQ1MHBod3p5LUJCa1kyaHpLYUItTkNYdDI1Zzd0UGpLaE14eVlMTEVqblJhSUs0WWpOTXRaYWFYOVBpdGZjYWNDd0MxZGstenh1VHNr" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">China’s ‘Two Sessions’ to Shed Light on What Lies Ahead for Economy</a> - (WSJ)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMilwNBVV95cUxQeDRrNmNSbWJ4MEt5WG5mcHVNNmJwNmJpVnluRXpicFA4Vm4tbzlmS2FQdllBdE9WdzFqNVNYU1F2VHJTbVlNZ1RiLXptMWVyQ3lobTFidEhvZG41VTFfUGwzQ21ZSThGUDI1U3dCaWZ2YzlVeHhVRTMxcERNTXJqSE4zN2lsTFh5X0ppelh3VzczYkdRVXVsLTNXMHBPVnotOHJMcXBkbVZocTF4cy00dFdyNTlwZUJ6MFBkVVc0V0dKV3NnZm9feXowZ1h3NjF2cEV0blhxMkpWNllTZ0VEdkRib0x4emdyeW5RYlZZQ3B6SHI2bUR0TjF5NDgyZ0x4QnQ0SVJXTncyVHlBVEtld2FRcXFTZ2haRUtDQXBOVElvdXNWS0JvQTdQN2lUaEZLVm1Ha0NwU3I1TnVjenI4UVRWNGoyTk9TcmxUMDZGcHRqaE8waHl6QkF4MHFEYXlCUXFqSTh4QjY2ZkVSVmU0ODdqU3gwcFVKaEozMVc2VXVfTGlTUDJZdlF4RE9iWUV1MHA2aVhWcw" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Asian Manufacturers Show Resilience as Demand Rises</a> - (WSJ)</div></li>
+</ul>
+</blockquote>
+
+<h2 style="font-size: 20px; font-weight: 700; color: #2E7D32; border-bottom: 2px solid #4CAF50; margin-top: 30px; margin-bottom: 15px; padding-bottom: 8px;">3. 🇰🇷 Korea Market</h2>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">🚀 Market (Stock/Indices)</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">이란 확전 공포, 코스피 외국인 매도세 '경고등' 점화</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">미국과 이스라엘의 이란 공습 여파로 뉴욕 증시가 하락 출발하고 국제 유가가 7% 급등하는 등 글로벌 금융시장에 긴장감이 고조되었습니다. 중동 지역의 지정학적 리스크 확전 우려가 커지면서, 글로벌 위험회피 심리가 확산되어 우리 증시에도 긴장감이 감돌고 있습니다. 이란 변수가 장기화될 경우 외국인 투자자의 대규모 매도세로 인해 코스피 시장의 상승세 유지가 불확실해질 수 있다는 우려가 제기됩니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://finance.naver.com/news/news_read.naver?article_id=0000917168&amp;office_id=469" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">잘나가던 코스피 '이란 변수'에 휘청일까… 상승세 유지 관건은</a> - (한국일보)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">코스피 '반도체發 6,300 돌파' 역대급 거래, 7,000 시대 기대감 고조</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">2월 코스피 일평균 거래대금이 사상 처음으로 32조 원을 돌파하며 역대 최대치를 기록했고, 코스피 지수는 6,300선을 넘어섰습니다. 삼성전자와 SK하이닉스 등 반도체주가 시장 랠리를 주도하며 투자심리를 자극했고, 주식 회전율도 3년 10개월 만에 최고 수준을 나타냈습니다. 증권가에서는 이러한 강한 거래대금과 기업들의 실적 개선 기대를 바탕으로 코스피 7,000 시대가 비현실적이지 않다는 낙관적인 전망이 나오고 있습니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.donga.com/news/Economy/article/all/20260302/133448455/2" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">코스피 거래대금 32조 원 넘어 역대 최대</a> - (동아일보)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.chosun.com/economy/money/2026/03/03/365D2TDIXJHUXLXBNTGDXBX5BA/" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">“코스피 7000시대, 비현실적 숫자 아니야… 韓 증시 아직 저평가”</a> - (조선일보)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">외국인 '셀 코리아' 속 개인 순매수 역대급, K-ETF엔 '뭉칫돈' 유입</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">2월 개인 투자자들이 하루 평균 8,000억 원을 순매수하며 국내 증시의 핵심 수급 주체로 부상한 반면, 외국인 투자자들은 반도체·자동차주를 중심으로 대규모 매도세를 보였습니다. 외국인 자본은 국내 주식 시장에서는 차익 실현 후 일부 종목에 선별적 매수를 보였으나, 동시에 미국 상장 한국 관련 ETF 시장에서는 역대급 매수세를 보이며 '셀 코리아'와는 다른 복합적인 행보를 나타냈습니다. 개인 투자자의 폭발적인 자금 유입이 증시를 지탱하는 주요 요인으로 작용하고 있으며, 외국인 자본의 한국 시장에 대한 투심은 직접 주식 매도와 해외 상장 ETF 매수를 통해 복합적인 양상을 보일 전망입니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://finance.naver.com/news/news_read.naver?article_id=0004594933&amp;office_id=011" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">‘개미’가 증시 주도한다… 2월 하루 8000억 순매수 (마켓시그널)</a> - (서울경제)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://finance.naver.com/news/news_read.naver?article_id=0005644120&amp;office_id=009" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">“외국인 셀 코리아, 버티면 되겠네”…ETF 시장선 역대급 매수세 유입</a> - (매일경제)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">💸 Macro (FX/Rates)</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">가계 적자 비율 6년 만에 최고치 '적신호', 내수 경기 회복 발목 잡나</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">지난해 4분기 기준 국내 적자 가구 비율이 25.0%로 6년 만에 최고치를 기록했으며, 고소득층의 평균소비성향도 4년 만에 최저 수준으로 떨어졌다. 이는 고물가 장기화로 식료품, 의료비 등 생활 물가 부담이 커진 가운데, 세금과 이자 등 비소비 지출도 증가하면서 실질 가처분소득 대비 지출이 늘어났기 때문이다. 가계의 재정 건전성 악화는 소비 심리를 더욱 위축시켜 내수 경기 회복에 부정적인 영향을 미치고, 이는 금리 인하 기대감에도 불구하고 경기 둔화 우려를 가중시킬 전망이다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.donga.com/news/Economy/article/all/20260302/133447867/1" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">네집 중 한집은 ‘마이너스 가계부’…월 이자비용도 11% 늘어</a> - (동아일보)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.fnnews.com/news/202603021228289108" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">지난해 4분기 적자가구 비율 25%...6년만에 최고</a> - (파이낸셜뉴스)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.fnnews.com/news/202603021238551660" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">“오히려 부자가 돈 아낀다” 고소득층 평균소비성향 4년 만에 최저</a> - (파이낸셜뉴스)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">상호금융 부동산 PF 대출 한도 20% 제한 '칼날', 연체율 상승에 건전성 비상</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">금융위원회가 농·수·신협 등 상호금융권의 부동산 프로젝트파이낸싱(PF) 대출 한도를 총 대출의 20%까지로 제한하고, 위험 관리 기준을 강화하는 내용의 감독 규정 개정안을 입법 예고했다. 이는 지방 부동산 경기 둔화가 지속되고 상호금융권의 부동산·건설업 대출 연체율이 10.44%로 급등하면서, 잠재적인 부실 확대를 차단하고 금융 시스템 건전성을 확보하려는 조치이다. 이번 규제 강화는 상호금융권의 PF 대출 쏠림 현상을 완화하고 건전성을 제고하는 데 기여할 것이나, 단기적으로 부동산 개발 사업 위축 및 관련 자금 조달에 제약을 가져올 수 있다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.donga.com/news/Economy/article/all/20260302/133447798/1" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">농·수·신협 대출 쏠림 막는다…상호금융 부동산 PF 대출 한도 20%로 제한</a> - (동아일보)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.mk.co.kr/news/economy/11976210" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">신협 등 부동산PF 대출한도 … 총 대출의 20%까지로 제한</a> - (매일경제)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">중동 사태發 국제유가 급등, 원화 가치 '추락' 달러당 1500원 돌파 위기</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">중동 정세 불안으로 국제유가가 급등하고 안전자산 선호 심리가 확산되면서, 아시아 주요 통화 중 한국 원화가 가장 큰 폭으로 하락하며 달러 대비 원화 환율이 1400원을 넘어 1500원 돌파 가능성까지 언급되고 있다. 이란과 이스라엘 간의 군사적 충돌 고조가 유가 상승 압력을 높이고 글로벌 금융시장의 불확실성을 키워, 위험 회피 심리가 달러 강세를 부추기고 원화 약세를 심화시키는 핵심 요인으로 작용하고 있다. 원화 약세가 장기화될 경우 수입 물가 상승을 통한 인플레이션 압력을 가중시키고, 국내 기업들의 외화 부채 부담을 늘려 전반적인 경제 불안감을 고조시킬 수 있다.</p>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">🏭 Industry (Company/Sector)</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">AI 시대 선점 경쟁 '점화', 주요 기업들 신사업 확대로 판도 변화 모색</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">LG CNS는 올해 상반기 인공지능(AI)과 로보틱스 등 미래 핵심 사업 분야의 세 자릿수 경력직 채용을 통해 핵심 역량을 강화하고 있으며, 삼성전자는 AI 주름 제거 기능을 탑재한 '비스포크 AI 에어드레서'를 출시하며 가전 분야에 AI를 접목했습니다. SK텔레콤 역시 MWC 2026에서 통신업 전 영역을 AI 기반으로 재편하겠다는 경영 계획을 발표하는 등 주요 국내 기업들이 AI 중심의 사업 전환 및 신제품 출시에 박차를 가하고 있습니다. 이는 글로벌 AI 경쟁 심화 속에서 기업들이 미래 성장 동력을 확보하고 고객 경험을 혁신하기 위한 필수적인 투자이자 전략적 움직임으로 해석됩니다. 기업들의 AI 중심 경영 전환은 산업 전반의 효율성 향상과 함께 AI 기술이 접목된 새로운 제품 및 서비스 출시를 가속화하며 시장 판도에 중대한 변화를 가져올 전망입니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4401169" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">LG CNS, 상반기 세 자릿수 경력직 채용…AI 역량 강화</a> - (Infomax)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4401170" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">삼성전자, 주름 제거 강화한 '비스포크 AI 에어드레서' 출시</a> - (Infomax)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.donga.com/news/Economy/article/all/20260302/133445957/1" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">SKT  정재헌  “초심 찾고 AI로 대전환”…MWC 첫 공식 석상에서 AI 혁신 골든타임 강조</a> - (동아일보)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">삼성디스플레이, AI OLED로 MWC 사로잡다... '사생활 보호' 기술로 차세대 시장 선점</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">삼성디스플레이는 '모바일 월드 콩그레스(MWC) 2026'에 참가하여 인공지능(AI) 시대에 최적화된 유기발광다이오드(OLED) 기술을 대거 선보였으며, 특히 '갤럭시 S26 울트라'에 탑재된 디스플레이 일체형 사생활 보호 기술 '플렉스 매직 픽셀(FMP)'이 주목받았습니다. 이 기술은 픽셀 단위로 빛의 확산 방향을 정밀하게 제어하여 정면 화질은 유지하면서 측면 시야를 제한하는 혁신 기술로, AI와 결합해 보안 및 개인 정보 보호 수요에 선제적으로 대응하기 위함입니다. 삼성디스플레이의 차별화된 AI 기반 OLED 기술은 스마트폰, 모빌리티 등 다양한 분야에서 새로운 사용자 경험을 제공하며 프리미엄 디스플레이 시장에서의 리더십을 더욱 강화할 것으로 기대됩니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4401171" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">삼성D, MWC서 사생활 보호 디스플레이 등 OLED 기술 대거 소개</a> - (Infomax)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.chosun.com/economy/tech_it/2026/03/02/X63X5EPCZJFL5ED4Y7YKXNBXM4/" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">삼성디스플레이, 사생활 보호 OLED와 미니 펫봇 공개</a> - (조선일보)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">K-배터리 3사, AI 인프라·로봇으로 '새 영토 확장' 박차... 전기차 넘어 미래 먹거리 선점 격돌</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">LG에너지솔루션, 삼성SDI, SK온 등 국내 배터리 3사는 '인터배터리 2026'에 일제히 참가하여 전기차와 에너지저장장치(ESS)를 넘어 로봇, 드론, 그리고 인공지능(AI) 인프라까지 포괄하는 차세대 배터리 포트폴리오를 선보였습니다. 이는 전기차 시장의 성장 둔화 가능성에 대비하고, AI 데이터센터 및 미래 모빌리티 등 신규 산업 분야에서 고성능·고출력 배터리 수요가 급증함에 따라 새로운 성장 동력을 확보하기 위한 전략적 다각화입니다. 배터리 기업들의 사업 영역 확장은 기존 전기차 중심의 경쟁 구도를 넘어 AI와 로봇 산업 생태계 전반에 걸친 핵심 플레이어로 자리매김하게 하며, 미래 배터리 시장의 판도를 변화시킬 중요한 변곡점이 될 것입니다.</p>
+
+<h2 style="font-size: 20px; font-weight: 700; color: #2E7D32; border-bottom: 2px solid #4CAF50; margin-top: 30px; margin-bottom: 15px; padding-bottom: 8px;">4. 🏢 Real Estate</h2>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">🌐 Global Real Estate</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">영국 주택 가격, 예상치 웃돌며 상승세 지속…고금리 장기화 우려 고조</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">영국 주택 가격이 전국 주택금융기관 데이터에 따라 예상보다 높은 상승률을 기록하며 시장의 회복력을 보여주었습니다. 이는 매도자의 협상력 강화와 일부 지역의 제한적인 매물 공급 때문으로 분석되지만, 최근 이란 사태 여파로 모기지 금리가 다시 급등한 것이 주택 구매자들에게 부담으로 작용하고 있습니다. 주택 구매 심리가 위축될 가능성이 커지면서 단기적으로는 시장 활력이 약화될 수 있으며, 고금리 장기화는 향후 시장 안정성에 도전이 될 전망입니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQcGFDV29yZ2M0MmxIQ01MUDdualNtVHFvQTFfTXBNN0pLU0Q0cE4wUkNJOUJOX2JjU3ZaRS1qY2tSYy11eVE5c0cxVlEzaU5mUXJYSjZQa2puZ2VWbkpsbFU0bk9YZGtuSkJXdkV0Uy1LVHozOEZ5WHd3azZaYVhHaWphRjhwOEhCSUs4cWRlSm9wdjNlajhORg" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">UK house prices rise more than expected, Nationwide data shows</a> - (Reuters)</div></li>
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVGFOa1pUbVNkbDFKNDFNYi1faDZEUnRoUlh6VkVyczViZXFtb3pMY0w3NnduZF9VbDNqb0gwdllFNURJRFFLVEdIdXlTdlkwSl9JeUI2alBKMU1IR1lKSGlub204N29jWlR5VFNWMUFlTWh6Nm5EQkgtMksxd3FJSDFaUHVUYlBYSFBrUjdhSVlxN20zc3BheFY0NkV0VGFvOHBRcWNfdzNHTWtGSVhCcWkwTVRvcEFRakZJ0gHAAUFVX3lxTE5GMXU5ZEhXVERYdlF4bG1LWFF4WFJINVoycVEzeExoY3VvM04xNkV6aExjczZhUWxSYVpWX1owb0d3TVpLVVR2SGdWTFRjbHZFS3ZNa3UzNi1WY3l0cmRjYi1qREV2WlJnV3VZcVdmeTRKVFlBemlpR3hrYmpES3hOSG9wUHpXbU94VUo2c1lua3BrbXBpeUtfbzk4T3phTHI5SHl2VlRBZEw3OEwxSjVLaWJqOW1ta0IwUlp1bFdwdw" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">Mortgage rates jump sharply higher after Iran strikes, reversing last week's decline</a> - (CNBC)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;">🇰🇷 Korea Real Estate</h3>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">강남 아파트값 2년 만에 ‘하락 반전’, 매수심리 ‘빙하기’ 진입하나</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">한국부동산원 조사 결과, 2월 넷째 주 강남 지역 아파트 매매가격이 2년 만에 하락세로 전환되었으며, 매수심리 지수 또한 뚜렷한 하락세를 보였습니다. 대치동과 청담동 등 주요 단지를 중심으로 매도 물량이 쌓이며 매수세가 위축된 것이 강남 아파트 시장의 하락을 이끌었습니다. 주택 매수 심리 위축이 강남권 집값 하락을 넘어 서울 전반의 부동산 시장에 부정적인 신호로 작용하며 시장 냉각기가 본격화될 수 있습니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4401159" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">강남 '2년 만에 하락' 이유 있다…꽁꽁 언 주택 매수심리</a> - (Infomax)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">송파 전셋값 ‘5주 연속 하락’, 4500여채 입주 쓰나미에 서울 전세시장 ‘균열’</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">2월 넷째 주 서울 송파구 아파트 전셋값이 5주 연속 하락하며 0.11% 내린 반면, 노원구 등 강북 지역 전셋값은 상승세를 이어갔습니다. 올해 초부터 잠실래미안아이파크와 잠실르엘 등 약 4500여 채에 달하는 대단지 신축 입주 물량이 한꺼번에 쏟아지면서 송파구 내 전월세 물량이 급증했기 때문입니다. 대규모 신축 입주가 예정된 지역에서는 전셋값 하락 압력이 지속될 것이며, 이는 서울 전세 시장의 지역별 양극화를 더욱 심화시킬 것으로 예상됩니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.donga.com/news/Economy/article/all/20260302/133449236/2" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">‘대량 입주’ 송파 전셋값 5주째 하락… 강북은 강세</a> - (동아일보)</div></li>
+</ul>
+</blockquote>
+<h3 style="font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;"><strong style="color: #666666; font-weight: 700;">서울 아파트 경매 낙찰가율 ‘급락 전환’, 투자심리 위축에 경매시장 ‘고점 경신’ 제동</strong></h3>
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;">2월 서울 아파트 법원 경매 낙찰가율이 101.7%를 기록하며 전월 대비 6.1%포인트 하락, 2개월 연속 상승세에 제동이 걸렸습니다. 지난해 말부터 이어진 경매 시장의 과열 양상에 대한 부담감과 전반적인 부동산 시장의 매수 심리 위축이 영향을 미친 것으로 분석됩니다. 경매 낙찰가율 하락은 고점을 찍었던 투자 심리가 냉각되고 있음을 시사하며, 향후 경매 시장의 조정 가능성을 높일 수 있습니다.</p>
+<blockquote>
+<ul style="list-style-type: none; padding: 0; margin: 0 0 16px 0;">
+<li><div style="position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.8;"><span style="position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;">•</span><a href="https://www.chosun.com/economy/real_estate/2026/03/02/MNRDINLBGNRWGYRTGU2GMNJTGE/" style="color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;" target="_blank">2월 서울 아파트 경매 낙찰가율 하락 전환</a> - (조선일보)</div></li>
+</ul>
+</blockquote>
+
+<p style="font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;"><em>By Lan Analyst at 2026-03-03 07:11:45</em></p>
+<div style="background: linear-gradient(to right, #FFF8E1, #FFFFFF); border-left: 4px solid #FF9800; padding: 20px; margin-top: 50px; color: #666666; font-size: 14px; line-height: 1.6;">
+<strong>⚠️ 면책 조항 (Disclaimer)</strong><br/>
+        본 보고서는 단순한 정보 제공을 목적으로 작성되었으며, 투자 권유나 조언을 의도하지 않습니다. 
+        제공되는 정보는 신뢰할 수 있는 출처를 바탕으로 하나, 그 정확성이나 완전성을 보장하지 않습니다. 
+        모든 투자의 책임은 투자자 본인에게 있습니다.
+    </div>
+
+
+Tags: 美-이란, 충돌, 격화, 랜선애널리스트
