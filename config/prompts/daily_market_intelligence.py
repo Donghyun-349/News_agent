@@ -175,7 +175,7 @@ Analyze the provided news topics (t=Title, n=Count, a=Articles) and generate:
 1. A **concise blog post title** (English)
 2. **Key Takeaways with 3-5 numbered points** (English)
 
-Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
+Each article has: t=Title, s=Snippet, u=URL.
 
 # Requirements
 1. **Output Language:** **ENGLISH** only.
@@ -218,7 +218,7 @@ Analyze the provided news topics (t=Title, n=Count, a=Articles) and generate:
 1. A **concise blog post title**
 2. **Executive Summary with 3-5 numbered key points**
 
-Each article has: t=Title, p=Publisher, s=Snippet, u=URL.
+Each article has: t=Title, s=Snippet, u=URL.
 
 # Requirements
 1. **Output Language:** **KOREAN (한국어)** only.
@@ -307,7 +307,7 @@ def get_section_body_prompt(section_name: str, lang: str = 'ko') -> str:
         return f"""
 # Task
 Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **"{section_name}"** section.
-Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
+Each article has: i=ID, t=Title, s=Snippet. (No URLs provided).
 
 # Requirements
 1. **Output Language:** **ENGLISH** only.
@@ -369,7 +369,7 @@ DO NOT output any section headers (like #, ##, ###). Start directly with the con
     return f"""
 # Task
 Analyze the provided news topics (t=Title, n=Count, a=Articles) and write the **"{section_name}"** section.
-Each article has: i=ID, t=Title, p=Publisher, s=Snippet. (No URLs provided).
+Each article has: i=ID, t=Title, s=Snippet. (No URLs provided).
 
 # Section Header Writing Rules (CRITICAL for Edge)
 - **명사형 나열 금지:** '~동향', '~현황', '~발표' 등 단순 요약형 제목을 절대 금지합니다.
@@ -511,7 +511,7 @@ def get_combined_section_body_prompt(section_name: str) -> str:
     return f"""
 # Task
 Analyze the provided news topics and write the **"{section_name}"** section in **BOTH Korean and English**.
-Each article has: i=ID, t=Title, p=Publisher, s=Snippet.
+Each article has: i=ID, t=Title, s=Snippet.
 
 # Target Audience
 - **Korean (ko):** Local investors interested in global trends & local impact.

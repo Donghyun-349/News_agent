@@ -400,7 +400,7 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
                     # logger.debug(f"[{section_name}] Topic {tid}: URLs after sanitize: {urls_after_sanitize}")
 
                     # Curation
-                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=5)
                     
                     # DEBUG: Check URLs after curation
                     urls_after_curate = [bool(a.get('url')) for a in curated_articles]
@@ -418,8 +418,8 @@ def process_section_task(section_name: str, topic_ids: List[int], topic_map: Dic
                         "t": t_obj['title'],
                         "n": t_obj['count'],
                         "a": [
-                            # ID(i) included, URL(u) REMOVED for token efficiency
-                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            # ID(i) included, URL(u) and Publisher(p) REMOVED for token efficiency
+                            {"i": ca['id'], "t": ca['title'], "s": ca['snippet'][:150] + "..." if len(ca['snippet']) > 150 else ca['snippet']}
                             for ca in curated_articles
                         ]
                     })
@@ -516,7 +516,7 @@ def process_combined_section_task(section_name: str, topic_ids: List[int], topic
                     news_ids = json.loads(t_obj['news_ids_json'])
                     articles = fetch_article_details(local_db, news_ids)
                     articles = sanitize_article_data(articles)
-                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=5)
 
                     # Build Article Map for Reference ID Pattern
                     for ca in curated_articles:
@@ -530,7 +530,7 @@ def process_combined_section_task(section_name: str, topic_ids: List[int], topic
                         "t": t_obj['title'],
                         "n": t_obj['count'],
                         "a": [
-                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            {"i": ca['id'], "t": ca['title'], "s": ca['snippet'][:150] + "..." if len(ca['snippet']) > 150 else ca['snippet']}
                             for ca in curated_articles
                         ]
                     })
@@ -649,7 +649,7 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
                     articles = sanitize_article_data(articles)
                     
                     # Curation
-                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=5)
 
                     # Build Article Map
                     for ca in curated_articles:
@@ -664,8 +664,8 @@ def process_executive_summary_task(exec_summary_ids: List[int], topic_map: Dict,
                         "c": t_obj['display_category'],
                         "n": t_obj['count'],
                         "a": [
-                            # ID(i) included, URL(u) REMOVED
-                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            # ID(i) included, URL(u) and Publisher(p) REMOVED for token efficiency
+                            {"i": ca['id'], "t": ca['title'], "s": ca['snippet'][:150] + "..." if len(ca['snippet']) > 150 else ca['snippet']}
                             for ca in curated_articles
                         ]
                     })
@@ -738,14 +738,14 @@ def process_combined_executive_summary_task(exec_summary_ids: List[int], topic_m
                     news_ids = json.loads(t_obj['news_ids_json'])
                     articles = fetch_article_details(local_db, news_ids)
                     articles = sanitize_article_data(articles)
-                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=8)
+                    curated_articles = curate_articles(articles, trusted_publishers, max_candidates=5)
 
                     exec_context_data.append({
                         "t": t_obj['title'],
                         "c": t_obj['display_category'],
                         "n": t_obj['count'],
                         "a": [
-                            {"i": ca['id'], "t": ca['title'], "p": ca['publisher'], "s": ca['snippet']}
+                            {"i": ca['id'], "t": ca['title'], "s": ca['snippet'][:150] + "..." if len(ca['snippet']) > 150 else ca['snippet']}
                             for ca in curated_articles
                         ]
                     })
@@ -1139,10 +1139,10 @@ def main():
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = []
         
-        # 1. Submit Executive Summary (Combined)
+        # 1. Submit Executive Summary (KO Only)
         futures.append(executor.submit(
-            process_combined_executive_summary_task, 
-            exec_summary_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER
+            process_executive_summary_task, 
+            exec_summary_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER, 'ko'
         ))
         
         # 2. Submit Section Tasks
@@ -1155,10 +1155,10 @@ def main():
                 topic_ids = topic_ids[:5]
                 
             if full_section_name in combined_sections:
-                # Unified Task (KO + EN)
+                # Switched Unified Task to Korea Only Task (KO)
                 futures.append(executor.submit(
-                    process_combined_section_task,
-                    full_section_name, topic_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER
+                    process_section_task,
+                    full_section_name, topic_ids, topic_map, model, get_system_prompt('ko'), TRUSTED_PUBLISHERS_ORDER, 'ko'
                 ))
             elif full_section_name in korea_sections:
                 # Korea Only Task (KO)
@@ -1182,25 +1182,12 @@ def main():
                 content = result[1]
                 
                 if sec_name == "Executive Summary":
-                    # Content is dict: {'ko': (title, sum), 'en': (title, sum)}
-                    ko_res = content.get('ko', ("주요 시장 이슈", ""))
-                    en_res = content.get('en', ("Daily Market Brief", ""))
-                    
-                    posting_title_ko = ko_res[0]
-                    generated_sections_ko["Executive Summary"] = ko_res[1]
-                    
-                    posting_title_en = en_res[0]
-                    generated_sections_en["Executive Summary"] = en_res[1]
-                    
+                    # Content is tuple: (title, sum)
+                    posting_title_ko = content[0]
+                    generated_sections_ko["Executive Summary"] = content[1]
                 else:
-                    # Check if combined or single result
-                    if isinstance(content, dict) and 'ko' in content and 'en' in content:
-                        # Combined Result
-                        generated_sections_ko[sec_name] = content['ko']
-                        generated_sections_en[sec_name] = content['en']
-                    else:
-                        # Single Result (Korea Only)
-                        generated_sections_ko[sec_name] = content
+                    # Single Result (Korea Only)
+                    generated_sections_ko[sec_name] = content
                         
             except Exception as e:
                 logger.error(f"❌ Task failed: {e}")
@@ -1254,9 +1241,9 @@ def main():
             logger.info(f"💾 [{lang}] Markdown Report saved: {md_output_file}")
             created_files.append(md_output_file)
 
-    # Save BOTH reports
+    # Save report
     save_report('ko', generated_sections_ko, posting_title_ko)
-    save_report('en', generated_sections_en, posting_title_en)
+    # save_report('en', generated_sections_en, posting_title_en)
     
     if google_drive_folder_id and created_files:
         logger.info(f"📤 Uploading {len(created_files)} files to Google Drive (Folder ID: {google_drive_folder_id})...")
@@ -1275,7 +1262,7 @@ def main():
             logger.error(f"❌ Google Drive Adapter Init Failed: {e}")
 
     logger.info("="*80)
-    logger.info("✅ Phase 6 Complete (Unified KO+EN Generation)")
+    logger.info("✅ Phase 6 Complete (KO Generation Only)")
     
     # Close DBs (only once)
     topics_db.close()

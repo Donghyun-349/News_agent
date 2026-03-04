@@ -57,7 +57,7 @@ def main():
         "run_p6.py",   # Report Generation
         "run_p6_1.py", # Telegram Reporting
         "run_p6_2.py", # WordPress Auto-Posting (KR) - Generating HTML Only
-        "run_p6_3.py", # WordPress Auto-Posting (EN)
+        # "run_p6_3.py", # WordPress Auto-Posting (EN) - DISABLED: English content generation disabled
         # "run_p7.py",   # Evergreen Content Generation (Blog/YouTube) - DISABLED: Logic improvement needed
         "run_summary.py" # Final Summary Export
     ]
