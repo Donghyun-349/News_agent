@@ -49,17 +49,12 @@ def main():
     
     # List of scripts to run in order
     scripts = [
-        "run_p1.py",  # Collect News
-        "run_p2.py",  # Deduplicate & Filter
-        "run_p3.py",  # Pre-processing (deprecated? check logic) - Wait, run_p3 is usually keyword filtering
-        "run_p4.py",  # LLM Classification
-        "run_p5.py",  # Clustering/Topic Generation
-        "run_p6.py",   # Report Generation
-        "run_p6_1.py", # Telegram Reporting
-        "run_p6_2.py", # WordPress Auto-Posting (KR) - Generating HTML Only
-        # "run_p6_3.py", # WordPress Auto-Posting (EN) - DISABLED: English content generation disabled
-        # "run_p7.py",   # Evergreen Content Generation (Blog/YouTube) - DISABLED: Logic improvement needed
-        "run_summary.py" # Final Summary Export
+        "run_p1.py",   # Collect News
+        "run_p2.py",   # Deduplicate & Filter
+        "run_p3.py",   # Keyword Filtering
+        "run_p4.py",   # LLM Classification
+        "run_p5_1.py", # Event Clustering (Language Separated)
+        "run_p5_2.py"  # WordPress Auto-Posting
     ]
     
     for script in scripts:
