@@ -35,6 +35,7 @@ from config.settings import (
     LOG_LEVEL, GOOGLE_SHEET_ID, BASE_DIR
 )
 from src.exporters.gsheet import GSheetAdapter
+from src.utils.retry import retry_with_backoff
 
 # Load env variables for WP/GDrive
 WP_URL = os.getenv("WP_URL")
@@ -78,23 +79,16 @@ THUMBNAIL_MAP = {
     6: 74  # Sun
 }
 
-# Style Definitions (Matching run_p6_3.py exactly)
-STYLES = {
-    "primary": "#2E7D32",       # Dark Green
-    "h2": "font-size: 20px; font-weight: 700; color: #2E7D32; border-bottom: 2px solid #4CAF50; margin-top: 30px; margin-bottom: 15px; padding-bottom: 8px;",
-    "h3": "font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px;",
-    "h4": "font-size: 20px; font-weight: 600; color: #2E7D32; border-bottom: 2px solid #4CAF50; margin-top: 25px; margin-bottom: 12px; padding-bottom: 8px;",
-    "p": "font-size: 16px; line-height: 1.8; color: #333333; margin-bottom: 16px;",
-    "strong": "color: #666666; font-weight: 700;",
-    "briefing_box": "background: linear-gradient(135deg, #E8F5E9 0%, #D5F4E6 100%); border-left: 5px solid #4CAF50; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 24px 28px; margin-bottom: 30px; border-radius: 4px;",
-    "briefing_item": "position: relative; padding-left: 24px; margin: 8px 0; line-height: 1.5; color: #333333;",
-    "briefing_bullet": "position: absolute; left: 0; top: 0; color: #4CAF50; font-weight: bold; font-size: 18px;",
-    "body_list_item": "position: relative; padding-left: 24px; margin-bottom: 8px; line-height: 1.8; font-size: 16px;",
-    "body_list_bullet": "position: absolute; left: 0; color: #333333; font-weight: bold; font-size: 18px;",
-    "disclaimer_box": "background: linear-gradient(to right, #FFF8E1, #FFFFFF); border-left: 4px solid #FF9800; padding: 20px; margin-top: 50px; color: #666666; font-size: 14px; line-height: 1.6;",
-    "link": "color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px;",
-    "blockquote": "font-size: 16px; line-height: 1.8; color: #333333; margin: 0; padding: 0; border: none;"
-}
+# CSS Definitions (Moving to a single <style> block to reduce payload size)
+CSS_BLOCK = """
+<style>
+    .wp-h2 { font-size: 20px; font-weight: 700; color: #2E7D32; border-bottom: 2px solid #4CAF50; margin-top: 30px; margin-bottom: 15px; padding-bottom: 8px; }
+    .wp-h3 { font-size: 20px; font-weight: 600; color: #2E7D32; margin-top: 20px; margin-bottom: 12px; }
+    .wp-box { background: linear-gradient(135deg, #E8F5E9 0%, #D5F4E6 100%); border-left: 5px solid #4CAF50; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 15px 18px; margin-bottom: 30px; border-radius: 4px; }
+    .wp-link { color: #1976D2; text-decoration: none; border-bottom: 1px dotted #1976D2; font-size: 16px; }
+    .wp-disc { background: linear-gradient(to right, #FFF8E1, #FFFFFF); border-left: 4px solid #FF9800; padding: 20px; margin-top: 50px; color: #666666; font-size: 14px; line-height: 1.6; }
+</style>
+"""
 
 def get_headers():
     if not WP_USERNAME or not WP_PASSWORD: return {}
@@ -102,6 +96,7 @@ def get_headers():
     token = base64.b64encode(credentials.encode()).decode('utf-8')
     return {"Authorization": f"Basic {token}", "Content-Type": "application/json"}
 
+@retry_with_backoff(max_attempts=3, initial_delay=2.0, exceptions=(requests.exceptions.RequestException,))
 def post_to_wordpress(title: str, html_content: str, media_id: int):
     """Post to WordPress REST API."""
     if not WP_URL:
@@ -116,21 +111,31 @@ def post_to_wordpress(title: str, html_content: str, media_id: int):
         "content": html_content,
         "status": "publish",
         "featured_media": media_id,
-        "categories": [1], # Default Category
+        "categories": [29], # Global Outlook
         "comment_status": "closed"
     }
     
     try:
-        resp = requests.post(url, headers=headers, json=payload, timeout=20)
+        logger.info(f"📤 Posting to WordPress (Size: {len(html_content)/1024:.1f} KB)...")
+        resp = requests.post(url, headers=headers, json=payload, timeout=60)
+        resp.raise_for_status()
+        
         if resp.status_code in [200, 201]:
             logger.info(f"✅ WordPress Post Successful: {resp.json().get('link')}")
             return True
         else:
             logger.error(f"❌ WordPress Post Failed: {resp.status_code} - {resp.text}")
             return False
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code >= 500:
+            logger.warning(f"⚠️ WordPress Server Error (5xx): {e}. Retrying...")
+            raise # Let retry_with_backoff handle it
+        else:
+            logger.error(f"❌ WordPress Client Error (4xx): {e}")
+            return False
     except Exception as e:
         logger.error(f"❌ WordPress API Error: {e}")
-        return False
+        raise
 
 def save_to_txt(title: str, content: str, date_str: str):
     """Save content to TXT for manual upload."""
@@ -222,7 +227,7 @@ def generate_html(rows: List[List[str]]):
     if not category_groups:
         return ""
         
-    html = []
+    html = [CSS_BLOCK]
     
     # Body Content by Ordered Categories
     for cat_id in CATEGORY_ORDER:
@@ -232,25 +237,23 @@ def generate_html(rows: List[List[str]]):
         topics = category_groups[cat_id]
         
         # Section Header
-        html.append(f'<h2 style="{STYLES["h2"]}">{display_cat}</h2>')
+        html.append(f'<h2 class="wp-h2">{display_cat}</h2>')
         
         for i, tdata in enumerate(topics, 1):
-            html.append(f'<h3 style="{STYLES["h3"]}">{i}. {tdata["title"]}</h3>')
+            html.append(f'<h3 class="wp-h3">{i}. {tdata["title"]}</h3>')
             
             # Briefing Box for articles
-            html.append(f'<div style="{STYLES["briefing_box"]}">')
+            html.append(f'<div class="wp-box">')
             html.append(f'<ul style="list-style-type: none; padding: 0; margin: 0;">')
             for art in tdata["articles"]:
-                html.append(f'<li style="margin-bottom: 8px;">')
-                html.append(f'<div style="{STYLES["briefing_item"]}">')
-                html.append(f'<span style="{STYLES["briefing_bullet"]}">•</span>')
-                html.append(f'[{art["pub"]}] <a href="{art["url"]}" target="_blank" style="{STYLES["link"]}">{art["title"]}</a>')
-                html.append(f'</div></li>')
+                html.append(f'<li style="margin-bottom: 10px;">')
+                html.append(f'[{art["pub"]}] <a href="{art["url"]}" target="_blank" class="wp-link">{art["title"]}</a>')
+                html.append(f'</li>')
             html.append('</ul></div>')
             
     # Disclaimer
     disclaimer = f"""
-    <div style="{STYLES['disclaimer_box']}">
+    <div class="wp-disc">
         <strong>⚠️ 면책 조항 (Disclaimer)</strong><br>
         본 보고서는 단순한 정보 제공을 목적으로 작성되었으며, 투자 권유나 조언을 의도하지 않습니다. 
         제공되는 정보는 신뢰할 수 있는 출처를 바탕으로 하나, 그 정확성이나 완전성을 보장하지 않습니다. 
