@@ -414,7 +414,7 @@ def append_topics_to_sheet(sheet_id: str, tab_name: str, topic_list: List[Dict[s
             # A, B, C, D, E, F, G, H, I
             # Title is now G (7th column)
             
-            titles_kr_formula = f'=IF(ISBLANK(G{row_idx}), "", GOOGLETRANSLATE(G{row_idx}, "en", "ko"))'
+            titles_kr_formula = f'=IF(ISBLANK(G{row_idx}), "", GOOGLETRANSLATE(G{row_idx}, "auto", "ko"))'
             
             sheet_rows.append([category, title, original_count, len(news_ids), reasons_str, pubs_str, titles_str, titles_kr_formula, urls_str])
 
