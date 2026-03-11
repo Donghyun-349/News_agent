@@ -44,7 +44,12 @@ If the article is relevant, assign **one** of the following tags. If not, **DROP
 3.  **Social/Political Noise**: Elections, Feuds, Welfare, Accidents.
     * **EXCEPTION**: Keep if it triggers **Market Volatility, Supply Chain Disruption, or Energy Shock**.
 4.  **Life/Entertainment**: Obituaries, Personnel([인사]), Reviews, Travel, Gossip.
-5.  **Opinion vs. Authority (Who is speaking?)**:
+5.  **Tech/Game Consumer Updates (Non-Investment)**:
+    * **DROP**: Pure graphics tech updates, gaming software features, DLSS, VFX, modding news, consumer product reviews.
+    * **KEEP**: Only if focus is on **Enterprise hardware demand, Cloud CAPEX, or Shipments/Revenue impact**.
+    * *Example DROP*: "NVIDIA DLSS 4 adds frame generation to 10 more games"
+    * *Example KEEP*: "NVIDIA B200 shipments delayed by supply chain constraints"
+6.  **Opinion vs. Authority (Who is speaking?)**:
     * **DROP**: Op-Eds, Analyst guesses, Political commentary.
     * **KEEP**: Direct quotes from **Key Decision Makers** (Fed Chair, Finance Ministers) or **Big Tech CEOs** impacting Policy/Industry.
 6.  **Irrelevant Regional Markets**:

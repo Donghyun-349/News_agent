@@ -219,9 +219,13 @@ def generate_html(rows: List[List[str]]):
             })
             
         if articles:
+            # Selection Criteria: Select top 6 based on pre-sorting in P5_1
+            # Sorting in P5_1 already accounts for Source Tier and Recency.
+            selected_articles = articles[:6]
+            
             category_groups[cat].append({
                 "title": topic_title,
-                "articles": articles
+                "articles": selected_articles
             })
             
     if not category_groups:
