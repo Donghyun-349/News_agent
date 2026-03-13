@@ -157,7 +157,10 @@ def save_to_txt(title: str, content: str, date_str: str):
         return None
 
 def fetch_data_from_sheet(sheet_name: str):
-    """Read data from GSheet tab using GSheetAdapter."""
+    """Read data from GSheet tab using GSheetAdapter.
+    Adds wait logic for translation formulas.
+    """
+    import time
     adapter = GSheetAdapter(sheet_id=GOOGLE_SHEET_ID)
     try:
         adapter.connect()
@@ -165,11 +168,41 @@ def fetch_data_from_sheet(sheet_name: str):
             logger.error("❌ GSheet client not initialized.")
             return []
             
-        worksheet = adapter.client.open_by_key(GOOGLE_SHEET_ID).worksheet(sheet_name)
-        data = worksheet.get_all_values()
-        logger.info(f"📊 Total rows fetched including header: {len(data)}")
-        if len(data) <= 1: return []
-        return data[1:]
+        spreadsheet = adapter.client.open_by_key(GOOGLE_SHEET_ID)
+        worksheet = spreadsheet.worksheet(sheet_name)
+        
+        # Max wait: 6 attempts * 10 seconds = 60 seconds
+        max_wait_attempts = 6
+        wait_interval = 10
+        
+        for attempt in range(1, max_wait_attempts + 1):
+            data = worksheet.get_all_values()
+            logger.info(f"📊 Attempt {attempt}: Total rows fetched: {len(data)}")
+            
+            if len(data) <= 1:
+                return []
+                
+            # Check for "로드 중" or "Loading" in "Title (Korean)" column (index 7, H)
+            # We only check the first few data rows for efficiency
+            is_loading = False
+            for r in data[1:min(6, len(data))]: # Check top 5 topics
+                if len(r) > 7 and ("로드 중" in r[7] or "Loading" in r[7]):
+                    is_loading = True
+                    break
+            
+            if is_loading:
+                if attempt < max_wait_attempts:
+                    logger.warning(f"⏳ Google Sheets translation is still loading. Waiting {wait_interval}s... (Attempt {attempt}/{max_wait_attempts})")
+                    time.sleep(wait_interval)
+                    continue
+                else:
+                    logger.error("❌ Translation timeout: Proceeding with potentially incomplete data.")
+                    return data[1:]
+            else:
+                if attempt > 1:
+                    logger.info("✅ Translation completed.")
+                return data[1:]
+                
     except Exception as e:
         logger.error(f"❌ Failed to read sheet '{sheet_name}': {e}")
         return []
