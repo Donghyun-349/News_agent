@@ -44,7 +44,7 @@ def run_script(script_name):
 def main():
     start_time = time.time()
     print("="*60)
-    print(f" Daily News Agent Automation - {format_kst_datetime('%Y-%m-%d %H:%M:%S')}")
+    print(f" Daily News Agent (Manual Execution) - {format_kst_datetime('%Y-%m-%d %H:%M:%S')}")
     print("="*60)
     
     # List of scripts to run in order
