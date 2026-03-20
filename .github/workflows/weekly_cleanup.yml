@@ -2,10 +2,10 @@
 name: Weekly File Cleanup
 
 on:
-  schedule:
-    # Runs at 15:00 UTC on Sunday (which is 00:00 KST on Monday)
-    # This ensures "Weekly" cleanup at a leisurely time
-    - cron: '0 15 * * 0'
+#  schedule:
+#    # Runs at 15:00 UTC on Sunday (which is 00:00 KST on Monday)
+#    # This ensures "Weekly" cleanup at a leisurely time
+#    - cron: '0 15 * * 0'
   workflow_dispatch:
     # Allows manual trigger
 
